@@ -5,9 +5,9 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
 import PropTypes from "prop-types"
 import Header from "./header"
+import Navigation from "./navigation"
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
 
@@ -17,6 +17,7 @@ const Layout = ({ children }) => (
 
   <div>
     <Header />
+    <Navigation />
     <main
       css={css`
         display: none;

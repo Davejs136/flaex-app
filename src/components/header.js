@@ -1,40 +1,39 @@
-import { Link } from "gatsby"
-import Head from "../components/head"
-import Tag from "../components/tag"
+import {Link} from "gatsby"
+
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core'
+import {jsx} from '@emotion/core'
+import {StaticQuery, graphql} from "gatsby"
+import Img from "gatsby-image"
 
-const Header = () => (
-  <header
-    css={css`
-      @media only screen and (min-width:320px) and (max-width:767px) {
-        max-width:125px;
-      }
-    `}
-  >
-    <div
-      css={css`
-        margin-bottom:8px;
-      `}
-    >
-      <Link to="/">
-        <Head/>
-      </Link>
-    </div>
-    <div>
-      <Link to="/bio">
-        <Tag />
-      </Link>
-    </div>
-    <nav>
-      <ul>
-        <li><Link to="/design">graphic design</Link></li>
-        <li><Link to="/development">front-end development</Link></li>
-        <li><Link to="/contact">contacv</Link></li>
-      </ul>
-    </nav>
-  </header>
+const Header = () => (<header >
+  <div>
+    <StaticQuery query={graphql `
+          query {
+            head: file(relativePath: { eq: "logo.png" }) {
+              childImageSharp {
+                fluid(maxWidth: 230) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            tag: file(relativePath: { eq: "tag.png" }) {
+              childImageSharp {
+                fluid(maxWidth: 230) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        `} render={data => <div>
+        <Link to="/">
+          <Img fluid={data.head.childImageSharp.fluid}/>
+        </Link>
+        <Link to="/bio">
+          <Img fluid={data.tag.childImageSharp.fluid}/>
+        </Link>
+      </div>}/>
+  </div>
 
-)
+</header>)
 
 export default Header

@@ -1,25 +1,9 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
-import Layout from '../components/layout'
+import Home from '../components/home'
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core'
 
-const IndexPage = ({ data }) => (
-  <Layout>
-    <div>&nbsp;</div>  
-  </Layout>
+const IndexPage = () => (
+  <Home></Home>
 )
 
 export default IndexPage
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    allStrapiArticle {
-      edges {
-        node {
-          id
-          title
-          description
-        }
-      }
-    }
-  }
-`
