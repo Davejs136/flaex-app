@@ -1,37 +1,34 @@
 /**
  * Home layout
  */
-
+import React from "react"
+import {Link} from "gatsby"
 import Header from "./header"
 import Navigation from "./navigation"
 import Footer from "./footer"
-/** @jsx jsx */
-import { css, jsx } from '@emotion/core'
+import containerStyles from "./home.module.css"
 
-const Home = () => (
+export default () => (
   <section>
-    <div
-      css={css `
-        @media only screen and (min-width:320px) and (max-width:767px) {
-          display: flex;
-          justify-content: center;
-
-        }
-      `}
-    >
-      <div
-        css={css `
-          @media only screen and (min-width:320px) and (max-width:767px) {
-            max-width: 125px;
-          }
-        `}
-      >
-        <Header />
-        <Navigation />
-      </div>
+    <div className={containerStyles.menu}>
+      <Header />
+      <Navigation />
     </div>
     <Footer />
   </section>
 )
 
-export default Home
+export const pageQuery = graphql`
+  query IndexQuery {
+    allStrapiLink {
+  	  edges {
+  	    node {
+  	      id
+          name
+          icon
+          URL
+  	    }
+  	  }
+  	}
+  }
+`

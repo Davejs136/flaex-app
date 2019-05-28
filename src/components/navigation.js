@@ -1,20 +1,18 @@
+import React from "react"
 import {Link} from "gatsby"
-/** @jsx jsx */
-import { css, jsx } from '@emotion/core'
+import containerStyles from "./Navigation.module.css"
 
 const Navigation = () => (
   <nav>
-    <ul>
-      <li>
-        <Link to="/design">graphic design</Link>
-      </li>
-      <li>
-        <Link to="/development">front-end development</Link>
-      </li>
-      <li>
-        <Link to="/contact">contact</Link>
-      </li>
-    </ul>
+    <div>
+      <Link to="/design">graphic<br/> design</Link>
+    </div>
+    <div>
+      <Link to="/development">front-end development</Link>
+    </div>
+    <div>
+      <Link to="/contact">contact</Link>
+    </div>
   </nav>
 )
 

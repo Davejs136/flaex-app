@@ -1,8 +1,7 @@
 import {Link} from "gatsby"
-
-/** @jsx jsx */
-import {jsx} from '@emotion/core'
 import {StaticQuery, graphql} from "gatsby"
+/** @jsx jsx */
+import {css,jsx} from '@emotion/core'
 import Img from "gatsby-image"
 
 const Header = () => (<header >
@@ -25,12 +24,23 @@ const Header = () => (<header >
             }
           }
         `} render={data => <div>
-        <Link to="/">
-          <Img fluid={data.head.childImageSharp.fluid}/>
-        </Link>
-        <Link to="/bio">
-          <Img fluid={data.tag.childImageSharp.fluid}/>
-        </Link>
+        <div
+          css={css `
+            @media only screen and (min-width:320px) and (max-width:767px) {
+              margin-bottom: 4px
+            }
+          `}
+        >
+          <Link to="/">
+            <Img fluid={data.head.childImageSharp.fluid}/>
+          </Link>
+        </div>
+        <div>
+          <Link to="/bio">
+            <Img fluid={data.tag.childImageSharp.fluid}/>
+          </Link>
+        </div>
+
       </div>}/>
   </div>
 
