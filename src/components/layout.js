@@ -1,34 +1,16 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
+import React from "react"
 import PropTypes from "prop-types"
-import Header from "./header"
-import Navigation from "./navigation"
-/** @jsx jsx */
-import { css, jsx } from '@emotion/core'
+import { graphql } from "gatsby"
 
+import Header from "./header"
 import "./layout.css"
 
 const Layout = ({ children }) => (
 
   <div>
-    <Header />
-    <Navigation />
-    <main
-      css={css`
-        display: none;
-      `}
-    >{children}</main>
-    <footer>
-      © {new Date().getFullYear()}, Built with
-      {` `}
-      <a href="https://www.gatsbyjs.org">Gatsby</a>
-    </footer>
+    <main>{children}</main>
   </div>
+
 )
 
 Layout.propTypes = {

@@ -1,6 +1,6 @@
 import React from "react"
 import {Link} from "gatsby"
-import containerStyles from "./Navigation.module.css"
+import containerStyles from "./navigation.module.css"
 
 const Navigation = () => (
   <nav>
