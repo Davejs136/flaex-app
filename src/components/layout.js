@@ -1,8 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+/* import { graphql } from "gatsby" */
 
-import Header from "./header"
 import "./layout.css"
 
 const Layout = ({ children }) => (
