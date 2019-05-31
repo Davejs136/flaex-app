@@ -4,8 +4,9 @@ import {StaticQuery, graphql} from "gatsby"
 import {css,jsx} from '@emotion/core'
 import Img from "gatsby-image"
 
-const Header = () => (<header >
-  <div>
+const Header = () => (
+
+  <header>
     <StaticQuery query={graphql `
           query {
             head: file(relativePath: { eq: "logo.png" }) {
@@ -23,27 +24,27 @@ const Header = () => (<header >
               }
             }
           }
-        `} render={data => <div>
-        <div
-          css={css `
-            @media only screen and (min-width:320px) and (max-width:767px) {
-              margin-bottom: 4px
-            }
-          `}
-        >
-          <Link to="/">
-            <Img fluid={data.head.childImageSharp.fluid}/>
-          </Link>
-        </div>
-        <div>
-          <Link to="/bio">
-            <Img fluid={data.tag.childImageSharp.fluid}/>
-          </Link>
-        </div>
+        `}
 
-      </div>}/>
-  </div>
-
-</header>)
+        render={data => <div>
+          <div
+            css={css `
+              @media only screen and (min-width:320px) and (max-width:767px) {
+                margin-bottom: 4px
+              }
+            `}
+          >
+            <Link to="/">
+              <Img fluid={data.head.childImageSharp.fluid}/>
+            </Link>
+          </div>
+          <div>
+            <Link to="/bio">
+              <Img fluid={data.tag.childImageSharp.fluid}/>
+            </Link>
+          </div>
+        </div>}/>
+  </header>
+)
 
 export default Header

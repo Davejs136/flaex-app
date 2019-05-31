@@ -2,13 +2,12 @@ import React from "react"
 import PropTypes from "prop-types"
 /* import { graphql } from "gatsby" */
 
-import "./layout.css"
+import "./boilerplate.css"
+
 
 const Layout = ({ children }) => (
 
-  <div>
     <main>{children}</main>
-  </div>
 
 )
 

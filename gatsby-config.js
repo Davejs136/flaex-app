@@ -42,7 +42,6 @@ module.exports = {
         icon: 'src/images/logo.png', // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-offline',
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
@@ -50,6 +49,8 @@ module.exports = {
           `Ubuntu Condensed\:400` // you can also specify font weights and styles
         ]
       }
-    }
+    },
+    'gatsby-plugin-offline',
+    `gatsby-plugin-less`
   ],
 }
