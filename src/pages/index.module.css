@@ -1,5 +1,12 @@
+div.links>div>a>svg { color: white; background-color:#000;}
+
 @media only screen and (min-width:320px) and (max-width:767px) {
   main {display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100vh}
-  .menu {max-width: 110px;}
-  ul>li>a>i { font-size: 20px}
+  .menu {max-width: 110px; height: 80vh}
+
+  footer { width: 100%; align-self: flex-end }
+  div.links { display: flex; width: 100%; list-style: none; padding-left: 19%; padding-right: 19%}
+  div.links>div>a>svg { padding: 10%}
+  div.links>div {width:20%; text-align: center; }
+  footer p {text-align: center;}
 }
