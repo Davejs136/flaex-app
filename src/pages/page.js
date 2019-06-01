@@ -17,6 +17,9 @@ const IndexPage = ({ data }) => (
         <Header />
         <Navigation />
       </div>
+
+      <h1>Internal page</h1>
+
       <footer>
         <p>flaex.design ® Freddy Polanía {new Date().getFullYear()}</p>
         <div className={containerStyles.links}>
