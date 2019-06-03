@@ -1,54 +1,20 @@
 import React from "react"
-import { graphql } from "gatsby"
-import Header from "../components/header"
-import Navigation from "../components/navigation"
+import {Link} from "gatsby"
+import PropTypes from "prop-types"
 import Layout from "../components/layout"
-import containerStyles from "./styles.module.less"
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 library.add(fab)
-let faicon = null
-const Page = ({ data }) => (
+
+const Page = ({ children }) => (
   <Layout>
-    <div className={containerStyles.page}>
-      <div className={containerStyles.menu}>
-        <Header />
-        <Navigation />
-      </div>
-
-      <h1>Internal page</h1>
-
-      <footer>
-        <p>flaex.design ® Freddy Polanía {new Date().getFullYear()}</p>
-        <div className={containerStyles.links}>
-          {data.allStrapiLink.edges.map(document => (
-            <div key={document.node.id}>
-              <a href={document.node.URL} rel="noopener noreferrer" target="_blank">
-                <FontAwesomeIcon icon={['fab', faicon = document.node.icon.replace(/'/g,'')]} size="lg" />
-              </a>
-            </div>
-          ))}
-        </div>
-      </footer>
-    </div>
+      <main>{children}</main>
   </Layout>
 )
 
-export default Page
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
-export const pageQuery = graphql`
-  query PageQuery {
-    allStrapiLink {
-      edges {
-        node {
-          id
-          icon
-          url
-        }
-      }
-    }
-  }
-`
+export default Page

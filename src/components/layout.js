@@ -1,13 +1,24 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { StaticQuery } from "gatsby"
+import Header from "./header"
+import Navigation from "./navigation"
+import Footer from "./footer"
+import containerStyles from "../pages/styles.module.less"
+
 
 import "./boilerplate.css"
 
 
 const Layout = ({ children }) => (
 
-    <main>{children}</main>
+  <div className={containerStyles.page}>
+    <div className={containerStyles.menu}>
+      <Header />
+      <Navigation />
+    </div>
+    <main className={containerStyles.content}>{children}</main>
+    <Footer />
+  </div>
 
 )
 

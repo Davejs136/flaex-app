@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'My super blog',
-    description: 'Gatsby blog with Strapi',
-    author: 'Strapi team'
+    title: '@flaex_ website',
+    description: 'Gatsby portfolio with Strapi and MongoDB',
+    author: 'Freddy Polania'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -12,6 +12,7 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+
     },
     {
       resolve: 'gatsby-source-strapi',

@@ -1,5 +1,4 @@
-import {Link} from "gatsby"
-import {StaticQuery, graphql} from "gatsby"
+import { Link, StaticQuery, graphql} from "gatsby"
 /** @jsx jsx */
 import {css,jsx} from '@emotion/core'
 import Img from "gatsby-image"
