@@ -39,7 +39,7 @@ export const pageQuery = graphql`
         node {
           id
           icon
-          URL
+          url
         }
       }
     }

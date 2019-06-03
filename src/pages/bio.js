@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 library.add(fab)
 let faicon = null
-const Page = ({ data }) => (
+const BioPage = ({ data }) => (
   <Layout>
     <div className={containerStyles.page}>
       <div className={containerStyles.menu}>
@@ -37,10 +37,19 @@ const Page = ({ data }) => (
   </Layout>
 )
 
-export default Page
+export default BioPage
 
-export const pageQuery = graphql`
-  query PageQuery {
+export const bioQuery = graphql`
+  query BioQuery {
+    allStrapiSkill {
+  	  edges {
+  	    node {
+  	      id
+          title
+          icon
+  	    }
+  	  }
+  	}
     allStrapiLink {
       edges {
         node {
@@ -50,5 +59,16 @@ export const pageQuery = graphql`
         }
       }
     }
+    allStrapiLocation {
+  	  edges {
+  	    node {
+  	      id
+          city
+          description
+          longitude
+          latitude
+  	    }
+  	  }
+  	}
   }
 `
