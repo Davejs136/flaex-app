@@ -28,7 +28,7 @@ const Navigation = ({ data }) => (
         <div className={containerStyles.links}>
           {data.allStrapiLink.edges.map(document => (
             <div key={document.node.id}>
-              <a href={document.node.URL} rel="noopener noreferrer" target="_blank">
+              <a href={document.node.url} rel="noopener noreferrer" target="_blank">
                 <FontAwesomeIcon icon={['fab', faicon = document.node.icon.replace(/'/g,'')]} size="lg" />
               </a>
             </div>

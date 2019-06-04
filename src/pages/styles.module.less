@@ -45,6 +45,13 @@ div.links {
     nav div {
       display: flex;
       align-items: center;
+      &:hover {
+        -webkit-filter: invert(1);
+         filter: invert(1);
+         animation:
+          1.5s
+          ease-out
+      }
     }
     footer {
       display: flex;
@@ -118,11 +125,10 @@ div.links {
   }
   //Page styles
   .page {
-    height: 100vh;
     margin: 2%;
 
     .menu {
-      width: 100vh;
+      width: 100vw;
       heigh: 10vh;
 
       nav div {
@@ -148,6 +154,19 @@ div.links {
         width: 75px;
         height: 75px;
         margin-left: 4%;
+      }
+    }
+
+    .navsec {
+      display: flex;
+      div {
+        height: 25px;
+        margin: 8px 4PX;
+      }
+      div a {
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 15px;
       }
     }
 

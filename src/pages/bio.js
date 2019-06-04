@@ -1,10 +1,20 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { Link, StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
+import containerStyles from "../pages/styles.module.less"
+
 
 const BioTemplate = ({ data }) => (
   <Layout>
+      <div className={containerStyles.navsec}>
+        <div>
+          <Link to="/bio">bio</Link>
+        </div>
+        <div>
+          <Link to="/blog">blog</Link>
+        </div>
+      </div>
       <StaticQuery
         query={graphql`
           query BioTemplate {
