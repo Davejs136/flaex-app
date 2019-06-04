@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+/** @jsx jsx */
+import {css,jsx} from '@emotion/core'
 import Layout from '../components/layout'
 import containerStyles from "../pages/styles.module.less"
 
@@ -11,7 +13,14 @@ const BlogTemplate = ({ data }) => (
         <Link to="/bio">bio</Link>
       </div>
       <div>
-        <Link to="/blog">blog</Link>
+        <Link
+          to="/blog"
+          css={css `
+            font-weight:bolder;
+            text-decoration: underline !important;
+            font-weight: 900;
+          `}
+        >blog</Link>
       </div>
     </div>
     <StaticQuery

@@ -22,6 +22,8 @@
     "gatsby-source-strapi": "0.0.8",
     "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.19",
+    "google-map-react": "^1.1.4",
+    "google-maps-react": "^2.0.2",
     "less": "^3.9.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",

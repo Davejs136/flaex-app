@@ -16,7 +16,7 @@ const Layout = ({ children }) => (
       <Header />
       <Navigation />
     </div>
-    <main className={containerStyles.content}>{children}</main>
+    <main>{children}</main>
     <Footer />
   </div>
 
