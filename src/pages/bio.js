@@ -18,10 +18,10 @@ const BioTemplate = ({ data }) => (
                text-decoration: underline !important;
                font-weight: 900;
              `}
-          >bio</Link>
+          >[ bio ]</Link>
         </div>
         <div>
-          <Link to="/blog">blog</Link>
+          <Link to="/blog">[ blog ]</Link>
         </div>
       </div>
       <StaticQuery
@@ -35,7 +35,7 @@ const BioTemplate = ({ data }) => (
               story
               avatar {
                 childImageSharp {
-                  fixed( width: 80) {
+                  fixed( width: 70) {
                     ...GatsbyImageSharpFixed
                   }
                 }
@@ -48,10 +48,12 @@ const BioTemplate = ({ data }) => (
         `}
       render={data => (
         <section>
-          <Img fixed={data.strapiProfile.avatar.childImageSharp.fixed}/>
-          <h1 className={containerStyles.avatar}>Hi name is <br/> {data.strapiProfile.name}</h1>
+          <div className={containerStyles.avatar}>
+            <Img fixed={data.strapiProfile.avatar.childImageSharp.fixed}/>
+            <h1 >Hey! my name is <br/> {data.strapiProfile.name}</h1>
+          </div>          
           <p>{data.strapiProfile.summary}</p>
-          <h1>Im located in {data.strapiLocation.city} </h1>
+          <h2>Im located in {data.strapiLocation.city} </h2>
           <GoogleMap />
         </section>
       )}

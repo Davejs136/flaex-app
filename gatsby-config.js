@@ -41,15 +41,7 @@ module.exports = {
         display: 'minimal-ui',
         icon: 'src/images/logo.png', // This path is relative to the root of the site.
       },
-    },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Ubuntu Condensed\:400` // you can also specify font weights and styles
-        ]
-      }
-    },
+    },    
     'gatsby-plugin-offline',
     `gatsby-plugin-less`
   ],

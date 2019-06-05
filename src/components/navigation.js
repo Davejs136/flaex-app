@@ -7,10 +7,10 @@ const Navigation = () => (
       <Link to="/design">graphic<br/> design</Link>
     </div>
     <div>
-      <Link to="/development">front-end development</Link>
+      <Link to="/development">front-end<br/> dev</Link>
     </div>
     <div>
-      <Link to="/contact">contact</Link>
+      <Link to="/contact">contact<br/>me</Link>
     </div>
   </nav>
 )
