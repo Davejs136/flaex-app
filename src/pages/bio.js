@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 /** @jsx jsx */
 import {css,jsx} from '@emotion/core'
@@ -51,7 +50,7 @@ const BioTemplate = ({ data }) => (
           <div className={containerStyles.avatar}>
             <Img fixed={data.strapiProfile.avatar.childImageSharp.fixed}/>
             <h1 >Hey! my name is <br/> {data.strapiProfile.name}</h1>
-          </div>          
+          </div>
           <p>{data.strapiProfile.summary}</p>
           <h2>Im located in {data.strapiLocation.city} </h2>
           <GoogleMap />

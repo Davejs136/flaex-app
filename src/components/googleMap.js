@@ -6,10 +6,8 @@ const defaultProps = {
     lat: 10.489139,
     lng: -66.878127,
   },
-  zoom: 12,
+  zoom: 15,
 }
-
-const AnyReactComponent = ({ text }) => <div>{text}</div>
 
 const GoogleMap = () => (
   <div style={{ height: '30vh', width: '100%' }}>
@@ -18,11 +16,6 @@ const GoogleMap = () => (
       defaultCenter={defaultProps.center}
       defaultZoom={defaultProps.zoom}
     >
-      <AnyReactComponent
-        lat={10.489139}
-        lng={-66.878127}
-        text={'Hola amigo'}
-      />
     </GoogleMapReact>
   </div>
 )

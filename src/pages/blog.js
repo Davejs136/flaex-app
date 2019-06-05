@@ -45,7 +45,6 @@ const BlogTemplate = ({ data }) => (
         }
       `}
     render={data => (
-      <>
         <ul>
           {data.allStrapiArticle.edges.map(document => (
             <li key={document.node.id}>
@@ -56,9 +55,7 @@ const BlogTemplate = ({ data }) => (
             </li>
           ))}
         </ul>
-      </>
-    )}
-  />
+    )}/>
   </Layout>
 
 )
