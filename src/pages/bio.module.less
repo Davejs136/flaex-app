@@ -25,31 +25,56 @@
     }
   }
 
-  h1 {
-    font-size: 1.4em;
-    line-height: 1.25em;
-    padding-top:0;
-    margin-bottom: 0;
-  }
-
-  h2 {
-    margin-bottom: 1.5%;
-  }
-
   .avatar {
     display: flex;
     width: 100%;
     margin-bottom: 1.5%;
 
     h1{
-      width:50%;
-      padding-top: 2%;
-      padding-left:2%;
+      width:77%;
+      padding: 3.5%;
       background-color: #eee;
+      word-break: keep-all;
     }
   }
 
   p {
-     font-size: 1.15em;
-   }
+    font-size: 1.15em;
+  }
+
+  div.skills {
+    display: flex;
+    flex-wrap: wrap;
+
+    div {
+      width: 44%;
+      margin: 3%;
+      padding: 6% 0 6% 0;
+      border: 1px black;
+      border-style: solid solid solid solid;
+      box-sizing: border-box;
+      text-align: center;
+
+      &:hover {
+        background: #1a1b1a;
+        color: white;
+        font-weight: 100;
+        transition-timing-function: ease-in;
+        transition: 0.2s;
+      }
+
+      p {
+        font-size: 0.95em;
+        line-height: 1.2em;
+        font-weight: 600;
+        text-transform: capitalize;
+        margin-bottom: 0;
+        padding-top: 8%
+      }
+    }
+  }
+
+  .map {
+    margin-bottom: 2%;
+  }
 }

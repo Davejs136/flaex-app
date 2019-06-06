@@ -214,7 +214,7 @@ html {
 }
 
 body {
-  color: hsla(0, 0%, 0%, 0.8);
+  color: #1a1b1a;
   font-family: 'Ubuntu Condensed', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
