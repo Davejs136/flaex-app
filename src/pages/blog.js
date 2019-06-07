@@ -4,25 +4,24 @@ import Img from 'gatsby-image'
 /** @jsx jsx */
 import {css,jsx} from '@emotion/core'
 import Layout from '../components/layout'
-import containerStyles from "../pages/styles.module.less"
+import containerStyles from "../pages/blog.module.less"
 
 const BlogTemplate = ({ data }) => (
   <Layout>
-    <div className={containerStyles.navsec}>
-      <div>
-        <Link to="/bio">bio</Link>
-      </div>
-      <div>
-        <Link
-          to="/blog"
-          css={css `
-            font-weight:bolder;
-            text-decoration: underline !important;
-            font-weight: 900;
-          `}
-        >blog</Link>
-      </div>
+  <div className={containerStyles.navsec}>
+    <div>
+      <Link to="/bio">bio</Link>
     </div>
+    <div
+      css={css `
+        text-decoration: underline !important;
+        -webkit-filter: invert(1);
+        filter: invert(1);
+      `}
+    >
+    <Link to="/blog">blog</Link>
+    </div>
+  </div>
     <StaticQuery
       query={graphql`
         query BlogTemplate {
@@ -32,10 +31,14 @@ const BlogTemplate = ({ data }) => (
                 id
                title
                description
+               date (
+                formatString: "DD MMMM YYYY"
+                locale: "en-US"
+               )
                image {
                   childImageSharp {
-                    fixed(width: 250) {
-                     ...GatsbyImageSharpFixed
+                    fluid(maxWidth: 600) {
+                     ...GatsbyImageSharpFluid
                     }
                   }
                 }
@@ -45,13 +48,16 @@ const BlogTemplate = ({ data }) => (
         }
       `}
     render={data => (
-        <ul>
+        <ul className={containerStyles.articles}>
           {data.allStrapiArticle.edges.map(document => (
             <li key={document.node.id}>
+              <Link to={`/${document.node.id}`}>
+                <Img fluid={document.node.image.childImageSharp.fluid} />
+              </Link>  
+              <date>{document.node.date}</date>
               <h2>
                 <Link to={`/${document.node.id}`}>{document.node.title}</Link>
               </h2>
-              <Img fixed={document.node.image.childImageSharp.fixed} />
             </li>
           ))}
         </ul>

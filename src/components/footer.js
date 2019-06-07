@@ -5,6 +5,7 @@ import containerStyles from "../pages/styles.module.less"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 let faicon = null
+let faprefix = null
 const Navigation = ({ data }) => (
 
   <StaticQuery
@@ -16,6 +17,7 @@ const Navigation = ({ data }) => (
               id
               icon
               url
+              prefix
             }
           }
         }
@@ -29,7 +31,7 @@ const Navigation = ({ data }) => (
           {data.allStrapiLink.edges.map(document => (
             <div key={document.node.id}>
               <a href={document.node.url} rel="noopener noreferrer" target="_blank">
-                <FontAwesomeIcon icon={['fab', faicon = document.node.icon.replace(/'/g,'')]} size="lg" />
+                <FontAwesomeIcon icon={[faprefix = document.node.prefix.replace(/'/g,''), faicon = document.node.icon.replace(/'/g,'')]} size="lg" />
               </a>
             </div>
           ))}

@@ -13,18 +13,20 @@ let faprefix = null
 const BioTemplate = ({ data }) => (
   <Layout>
       <div className={containerStyles.navsec}>
-        <div>
+        <div
+          css={css `
+            text-decoration: underline !important;
+            -webkit-filter: invert(1);
+            filter: invert(1);
+          `}
+        >
           <Link
              to="/bio"
-             css={css `
-               font-weight:bolder;
-               text-decoration: underline !important;
-               font-weight: 900;
-             `}
-          >[ bio ]</Link>
+
+          >bio</Link>
         </div>
         <div>
-          <Link to="/blog">[ blog ]</Link>
+          <Link to="/blog">blog</Link>
         </div>
       </div>
       <StaticQuery
