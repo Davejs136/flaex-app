@@ -53,8 +53,8 @@ const BlogTemplate = ({ data }) => (
             <li key={document.node.id}>
               <Link to={`/${document.node.id}`}>
                 <Img fluid={document.node.image.childImageSharp.fluid} />
-              </Link>  
-              <date>{document.node.date}</date>
+              </Link>
+              <time>{document.node.date}</time>
               <h2>
                 <Link to={`/${document.node.id}`}>{document.node.title}</Link>
               </h2>

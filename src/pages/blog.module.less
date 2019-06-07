@@ -6,15 +6,17 @@
   background-size: cover;
 }
 
-date {
-  font-style: italic;
-}
-
 ul.articles {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
+
+  li {
+    time {
+      font-style: italic;
+    }
+  }
 
   h2  {
     a {
@@ -65,7 +67,7 @@ ul.articles {
         margin-right: 0 !important;
       }
 
-      date {
+      time {
         font-size: 0.95em;
       }
 
