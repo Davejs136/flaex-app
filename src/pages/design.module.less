@@ -1,0 +1,54 @@
+/* Bio page general styles */
+
+.bg {
+  background-image: url("../images/btn_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (min-width:320px) and (max-width:767px) {
+
+  //Secondary navigation
+  .navsec {
+    display: flex;
+    margin:10px 0 15px 0;
+
+    div {
+      padding: 0.5% 4%;
+      margin: 0 8px 0 0;
+      .bg();
+    }
+
+    div.active {
+      text-decoration: underline !important;
+      -webkit-filter: invert(1);
+      filter: invert(1);
+    }
+
+    div a {
+      color: white;
+      text-decoration: none;
+      font-size: 13px;
+    }
+  }
+
+  ul.works {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin:0;
+
+    li {
+      width: 31%;
+      margin-right: 3.5%;
+      &:nth-child(3n) {
+        margin-right: 0 !important;
+      }
+    }
+  }
+
+  p {
+    font-size: 1.15em;
+  }
+
+}

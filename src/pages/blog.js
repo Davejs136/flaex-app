@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-/** @jsx jsx */
-import {css,jsx} from '@emotion/core'
 import Layout from '../components/layout'
 import containerStyles from "../pages/blog.module.less"
 
@@ -12,13 +10,7 @@ const BlogTemplate = ({ data }) => (
     <div>
       <Link to="/bio">bio</Link>
     </div>
-    <div
-      css={css `
-        text-decoration: underline !important;
-        -webkit-filter: invert(1);
-        filter: invert(1);
-      `}
-    >
+    <div className={containerStyles.active}>
     <Link to="/blog">blog</Link>
     </div>
   </div>

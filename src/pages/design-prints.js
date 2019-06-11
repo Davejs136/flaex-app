@@ -4,13 +4,13 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import containerStyles from "../pages/design.module.less"
 
-const DesignTemplate = ({ data }) => (
+const DesignPrintsTemplate = ({ data }) => (
   <Layout>
   <div className={containerStyles.navsec}>
-    <div className={containerStyles.active}>
+    <div>
       <Link to="/design">logo</Link>
     </div>
-    <div>
+    <div className={containerStyles.active}>
     <Link to="/design-prints">prints</Link>
     </div>
     <div>
@@ -22,8 +22,8 @@ const DesignTemplate = ({ data }) => (
   </div>
     <StaticQuery
       query={graphql`
-        query DesignTemplate {
-          allStrapiWork(filter: {subcategory: {eq: "logo"}}) {
+        query DesignPrintsTemplate {
+          allStrapiWork(filter: {subcategory: {eq: "prints"}}) {
             edges {
               node {
                 id
@@ -55,4 +55,4 @@ const DesignTemplate = ({ data }) => (
 
 )
 
-export default DesignTemplate
+export default DesignPrintsTemplate

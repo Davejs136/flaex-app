@@ -15,13 +15,7 @@ const ArticleTemplate = ({ data }) => (
       <div>
         <Link to="/bio">bio</Link>
       </div>
-      <div
-        css={css `
-          text-decoration: underline !important;
-          -webkit-filter: invert(1);
-          filter: invert(1);
-        `}
-      >
+      <div className={containerStyles.active}>
       <Link to="/blog">blog</Link>
       </div>
     </div>

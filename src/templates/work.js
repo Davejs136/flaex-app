@@ -4,27 +4,21 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 /** @jsx jsx */
 import {css,jsx} from '@emotion/core'
-import containerStyles from "../pages/blog.module.less"
+import containerStyles from "../pages/design.module.less"
 
 
 const WorkTemplate = ({ data }) => (
 
   <Layout>
     <div className={containerStyles.navsec}>
-      <div
-        css={css `
-          text-decoration: underline !important;
-          -webkit-filter: invert(1);
-          filter: invert(1);
-        `}
-      >
+      <div>
         <Link to="/design">logo</Link>
       </div>
       <div>
-      <Link to="/blog">prints</Link>
+      <Link to="/design-prints">prints</Link>
       </div>
       <div>
-      <Link to="/blog">web design</Link>
+      <Link to="/design-web">web design</Link>
       </div>
       <div>
       <Link to="/blog">typography</Link>

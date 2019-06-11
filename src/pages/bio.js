@@ -13,13 +13,7 @@ let faprefix = null
 const BioTemplate = ({ data }) => (
   <Layout>
       <div className={containerStyles.navsec}>
-        <div
-          css={css `
-            text-decoration: underline !important;
-            -webkit-filter: invert(1);
-            filter: invert(1);
-          `}
-        >
+        <div className={containerStyles.active}>
           <Link
              to="/bio"
 
