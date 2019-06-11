@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: '@flaex_ website',
-    description: 'Gatsby portfolio with Strapi and MongoDB',
+    description: 'Gatsby portfolio and blog with Strapi and MongoDB',
     author: 'Freddy Polania'
   },
   plugins: [
@@ -23,6 +23,7 @@ module.exports = {
           'skill',
           'link',
           'article',
+          'work',
           'user'
         ],
         queryLimit: 1000,
@@ -41,7 +42,7 @@ module.exports = {
         display: 'minimal-ui',
         icon: 'src/images/logo.png', // This path is relative to the root of the site.
       },
-    },    
+    },
     'gatsby-plugin-offline',
     `gatsby-plugin-less`
   ],

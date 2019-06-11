@@ -9,9 +9,6 @@ import containerStyles from "../pages/blog.module.less"
 const DesignTemplate = ({ data }) => (
   <Layout>
   <div className={containerStyles.navsec}>
-    <div>
-      <Link to="/bio">bio</Link>
-    </div>
     <div
       css={css `
         text-decoration: underline !important;
@@ -19,26 +16,30 @@ const DesignTemplate = ({ data }) => (
         filter: invert(1);
       `}
     >
-    <Link to="/blog">blog</Link>
+      <Link to="/design">logo</Link>
+    </div>
+    <div>
+    <Link to="/blog">prints</Link>
+    </div>
+    <div>
+    <Link to="/blog">web design</Link>
+    </div>
+    <div>
+    <Link to="/blog">typography</Link>
     </div>
   </div>
     <StaticQuery
       query={graphql`
         query DesignTemplate {
-          allStrapiArticle {
+          allStrapiWork(filter: {subcategory: {eq: "logo"}}) {
             edges {
               node {
                 id
-               title
-               description
-               date (
-                formatString: "DD MMMM YYYY"
-                locale: "en-US"
-               )
-               image {
+                title
+                thumbnail {
                   childImageSharp {
-                    fluid(maxWidth: 600) {
-                     ...GatsbyImageSharpFluid
+                    fluid(maxWidth: 500) {
+                      ...GatsbyImageSharpFluid
                     }
                   }
                 }
@@ -48,13 +49,12 @@ const DesignTemplate = ({ data }) => (
         }
       `}
     render={data => (
-        <ul className={containerStyles.articles}>
-          {data.allStrapiArticle.edges.map(document => (
+        <ul>
+          {data.allStrapiWork.edges.map(document => (
             <li key={document.node.id}>
               <Link to={`/${document.node.id}`}>
-                <Img fluid={document.node.image.childImageSharp.fluid} />
+                <Img fluid={document.node.thumbnail.childImageSharp.fluid} />
               </Link>
-              <time>{document.node.date}</time>
               <h2>
                 <Link to={`/${document.node.id}`}>{document.node.title}</Link>
               </h2>
