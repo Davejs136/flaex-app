@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import * as emailjs from 'emailjs-com';
 
-export default class IndexPage extends React.Component {
+export default class ContactPage extends React.Component {
 
   handleSubmit = event => {
     emailjs.sendForm('contact_service','contact_form', '#contact-form', 'user_RfSf1tcSTDweZVWXo3B3m')

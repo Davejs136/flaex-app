@@ -1,58 +1,54 @@
-import React from 'react'
-import { Link, StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import React, { Component } from 'react';
+import Loadable from 'react-loadable';
 import Layout from '../components/layout'
-import containerStyles from "../pages/design.module.less"
+import Logos from '../components/logos'
+import containerStyles from "./portfolio.module.less"
 
-const DesignTemplate = ({ data }) => (
-  <Layout>
-  <div className={containerStyles.navsec}>
-    <div className={containerStyles.active}>
-      <Link to="/design">logo</Link>
-    </div>
-    <div>
-    <Link to="/design-prints">prints</Link>
-    </div>
-    <div>
-    <Link to="/design-web">web design</Link>
-    </div>
-    <div>
-    <Link to="/design-typography">typography</Link>
-    </div>
-  </div>
-    <StaticQuery
-      query={graphql`
-        query DesignTemplate {
-          allStrapiWork(filter: {subcategory: {eq: "logo"}}) {
-            edges {
-              node {
-                id
-                title
-                thumbnail {
-                  childImageSharp {
-                    fluid(maxWidth: 300, maxHeight: 300) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      `}
-    render={data => (
-        <ul className={containerStyles.works}>
-          {data.allStrapiWork.edges.map(document => (
-            <li key={document.node.id}>
-              <Link to={`/${document.node.id}`}>
-                <Img fluid={document.node.thumbnail.childImageSharp.fluid} />
-              </Link>
-            </li>
+// Components configured. This can come from a database...
+const available = ['logos', 'prints', 'web', 'typography']
+
+export default class Design extends Component {
+  state = { components: [], active: [] }
+  // Toggle component
+  toggleComponent = (nome) => {
+
+    //Reseting active and components array to show one component at a time
+    const active = [], components = []
+    const subFixed = document.querySelector('#Logos')
+    while (subFixed.firstChild) subFixed.removeChild(subFixed.firstChild)
+
+    // Add or remove from list
+    let i = active.indexOf(nome)
+    if (i > -1) active.splice(i, 1)
+    else active.push(nome)
+
+    // Create loadables. THIS IS THE MAGIC!
+    active.map(m => {
+      return components.push(Loadable({
+        loader: () => import('../components/'+m),
+        loading: () => <div>Loading { m }...</div>,
+      }));
+    });
+    this.setState({ ...this.state, components, active })
+  }
+  render() {
+    const { components, active } = this.state
+    return (
+      <Layout>
+        <div className={containerStyles.navsec}>
+          { available.map((name, i) => (
+            <div key={i}>
+              <input type="submit" value={name} onClick={e => this.toggleComponent(name)} />
+            </div>
           ))}
-        </ul>
-    )}/>
-  </Layout>
-
-)
-
-export default DesignTemplate
+        </div>
+        { components.map((item, i) => {
+          let Module = components[i]
+          return <Module key={i} />
+        }) }
+        {/* Default component to avoid showing an empty page */}
+        <Logos />
+      </Layout>
+    )
+  }
+}

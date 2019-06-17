@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 /** @jsx jsx */
 import {css,jsx} from '@emotion/core'
-import containerStyles from "../pages/design.module.less"
+import containerStyles from "../pages/portfolio.module.less"
 
 
 const WorkTemplate = ({ data }) => (

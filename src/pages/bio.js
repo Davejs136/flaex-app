@@ -3,7 +3,7 @@ import { Link, StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import GoogleMap from '../components/googleMap'
-import containerStyles from "../pages/bio.module.less"
+import containerStyles from "./bio.module.less"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const ReactMarkdown = require('react-markdown/with-html')
