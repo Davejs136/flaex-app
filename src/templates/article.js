@@ -1,38 +1,42 @@
-
-import { Link, graphql } from "gatsby"
+import React  from 'react';
+import { Link, graphql } from 'gatsby'
 import Img from "gatsby-image"
 import Layout from "../components/layout"
-/** @jsx jsx */
-import {css,jsx} from '@emotion/core'
-import containerStyles from "../pages/blog.module.less"
+import containerStyles from "../pages/bio.module.less"
 
 const ReactMarkdown = require('react-markdown/with-html')
 
-const ArticleTemplate = ({ data }) => (
 
-  <Layout>
-    <div className={containerStyles.navsec}>
-      <div>
-        <Link to="/bio">bio</Link>
-      </div>
-      <div className={containerStyles.active}>
-      <Link to="/blog">blog</Link>
-      </div>
-    </div>
-    <article>
-      <h1>{data.strapiArticle.title}</h1>
-      <p>
-        by{" "}
-        <Link to="/bio">
-          {data.strapiArticle.author.username}
-        </Link>
-      </p>
-      <Img fluid={data.strapiArticle.image.childImageSharp.fluid} />
-      <ReactMarkdown source={data.strapiArticle.description} escapeHtml={false} />
-    </article>
-  </Layout>
+class ArticleTemplate extends React.Component  {
 
-)
+  constructor(props) {
+    super(props);
+    this.data = query
+  }
+
+  render() {
+    const { data } = this.props
+
+    return (
+      <Layout>
+        <div className={containerStyles.navsec}>
+          <Link to="/blog">&#60;&#60; back</Link>
+        </div>
+        <article>
+          <h1>{data.strapiArticle.title}</h1>
+          <p>
+            by{" "}
+            <Link to="/about-me">
+              {data.strapiArticle.author.username}
+            </Link>
+          </p>
+          <Img fluid={data.strapiArticle.image.childImageSharp.fluid} />
+          <ReactMarkdown source={data.strapiArticle.description} escapeHtml={false} />
+        </article>
+      </Layout>
+    )
+  }
+}
 
 export default ArticleTemplate
 

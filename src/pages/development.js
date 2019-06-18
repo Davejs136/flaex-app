@@ -32,7 +32,7 @@ export default class Design extends Component {
     this.setState({ ...this.state, components, active })
   }
   render() {
-    const { components, active } = this.state
+    const { components } = this.state
     return (
       <Layout>
         <div className={containerStyles.navsec}>

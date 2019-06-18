@@ -11,7 +11,6 @@ export default class Design extends Component {
   state = { components: [], active: [] }
   // Toggle component
   toggleComponent = (nome) => {
-
     //Reseting active and components array to show one component at a time
     const active = [], components = []
     const subFixed = document.querySelector('#Logos')
@@ -32,7 +31,7 @@ export default class Design extends Component {
     this.setState({ ...this.state, components, active })
   }
   render() {
-    const { components, active } = this.state
+    const { components } = this.state
     return (
       <Layout>
         <div className={containerStyles.navsec}>

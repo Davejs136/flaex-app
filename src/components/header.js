@@ -3,6 +3,10 @@ import { Link, StaticQuery, graphql} from "gatsby"
 import {css,jsx} from '@emotion/core'
 import Img from "gatsby-image"
 
+const activeStyles = {
+  filter: 'invert(1)',
+}
+
 const Header = () => (
 
   <header>
@@ -33,12 +37,12 @@ const Header = () => (
               }
             `}
           >
-            <Link to="/">
+            <Link to="/" activeStyle={activeStyles}>
               <Img fluid={data.head.childImageSharp.fluid}/>
             </Link>
           </div>
           <div>
-            <Link to="/bio">
+            <Link to="/about-me" activeStyle={activeStyles}>
               <Img fluid={data.tag.childImageSharp.fluid}/>
             </Link>
           </div>

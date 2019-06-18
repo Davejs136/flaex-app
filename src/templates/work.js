@@ -1,9 +1,7 @@
-
-import { Link, graphql } from "gatsby"
+import React from 'react';
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
-/** @jsx jsx */
-import {css,jsx} from '@emotion/core'
 import containerStyles from "../pages/portfolio.module.less"
 
 
@@ -11,18 +9,7 @@ const WorkTemplate = ({ data }) => (
 
   <Layout>
     <div className={containerStyles.navsec}>
-      <div>
-        <Link to="/design">logo</Link>
-      </div>
-      <div>
-      <Link to="/design-prints">prints</Link>
-      </div>
-      <div>
-      <Link to="/design-web">web design</Link>
-      </div>
-      <div>
-      <Link to="/blog">typography</Link>
-      </div>
+      <input type="submit" value="&#60;&#60; back" onClick={() => window.history.back()} />      
     </div>
     <article>
       <h1>{data.strapiWork.title}</h1>

@@ -2,18 +2,12 @@ import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
+import Navsec from '../components/navsec'
 import containerStyles from "../pages/blog.module.less"
 
 const BlogTemplate = ({ data }) => (
   <Layout>
-  <div className={containerStyles.navsec}>
-    <div>
-      <Link to="/bio">bio</Link>
-    </div>
-    <div className={containerStyles.active}>
-    <Link to="/blog">blog</Link>
-    </div>
-  </div>
+  <Navsec />
     <StaticQuery
       query={graphql`
         query BlogTemplate {
