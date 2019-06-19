@@ -41,7 +41,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     })
   });
 
-  const getWorksPrints = makeRequest(graphql, `
+  const getWorks = makeRequest(graphql, `
     {
       allStrapiWork {
         edges {
@@ -65,5 +65,5 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   });
 
   // Queries for articles and authors nodes to use in creating pages.
-    return Promise.all([getArticles, getWorksPrints])
+    return Promise.all([getArticles, getWorks])
 }
