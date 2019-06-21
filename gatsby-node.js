@@ -59,11 +59,34 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         component: path.resolve(`src/templates/work.js`),
         context: {
           id: node.id,
-        },
+        }
       })
     })
-  });
+  })
+
+  const getPrints = makeRequest(graphql, `
+    {
+      allStrapiWork {
+        edges {
+          node {
+            id
+          }
+        }
+      }
+    }
+    `).then(result => {
+    // Create pages for each article.
+    result.data.allStrapiWork.edges.forEach(({ node }) => {
+      createPage({
+        path: `/${node.id}`,
+        component: path.resolve(`src/templates/subcat.js`),
+        context: {
+          id: node.id,
+        }
+      })
+    })
+  })
 
   // Queries for articles and authors nodes to use in creating pages.
-    return Promise.all([getArticles, getWorks])
+    return Promise.all([getArticles, getWorks, getPrints])
 }
