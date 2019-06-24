@@ -1,14 +1,15 @@
 import React from "react"
+import Layout from "../../components/layout"
+import Desnav from "../../components/desnav"
 import { Link, StaticQuery, graphql } from "gatsby"
-import Layout from "../components/layout"
 import Img from "gatsby-image"
-import containerStyles from "../pages/portfolio.module.less"
+import containerStyles from "../../pages/portfolio.module.less"
 
-const DesignPage = () => (
+const TypographyPage = () => (
   <StaticQuery
     query={graphql`
-      query DesignPage {
-        allStrapiWork(filter: { subcategory: { eq: "logo" } }) {
+      query TypographyPage {
+        allStrapiWork(filter: { subcategory: { eq: "typography" } }) {
           edges {
             node {
               id
@@ -29,14 +30,7 @@ const DesignPage = () => (
     `}
     render={data => (
       <Layout>
-        <div className={containerStyles.navsec}>
-          <Link className={containerStyles.active} to="/design">
-            logos
-          </Link>
-          <Link to="/design/prints">prints</Link>
-          <Link to="/design/web">web</Link>
-          <Link to="/design/typography">typography</Link>
-        </div>
+        <Desnav />
         <ul className={containerStyles.works}>
           {data.allStrapiWork.edges.map(document => (
             <li key={document.node.id}>
@@ -55,4 +49,4 @@ const DesignPage = () => (
   />
 )
 
-export default DesignPage
+export default TypographyPage

@@ -6,16 +6,15 @@
   background-size: cover;
 }
 
-@media only screen and (min-width:320px) and (max-width:767px) {
-
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   //Secondary navigation
 
   //Secondary navigation
 
   .navsec {
     display: flex;
-    margin:10px 0 15px 0;
-    input {
+    margin: 10px 0 15px 0;
+    a {
       font-size: 13px;
       color: white;
       padding: 4px 15px 4px 15px;
@@ -23,23 +22,35 @@
       border: none;
       cursor: zoom-out;
       .bg();
-      &:focus{
-        -webkit-filter: invert(1);
-        filter: invert(1);
-        border: 1px;
-        border-color: #dedede;
-        border-style: solid;
-        outline: none;
-      }
+      text-decoration: none;           
     }
-
+    
+    button {
+      font-size: 13px;
+      color: white;
+      padding: 4px 15px 4px 15px;
+      margin: 0 8px 0 0;
+      border: none;
+      cursor: zoom-out;
+      .bg();
+      text-decoration: none;           
+    }  
   }
+
+  .active {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    border: 1px;
+    border-color: #dedede;
+    border-style: solid;
+    
+  } 
 
   ul.works {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    margin:0;
+    margin: 0;
 
     li {
       width: 31%;
@@ -53,5 +64,4 @@
   p {
     font-size: 1.15em;
   }
-
 }

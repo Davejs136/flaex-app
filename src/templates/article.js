@@ -1,15 +1,13 @@
-import React  from 'react';
-import { Link, graphql } from 'gatsby'
+import React from "react"
+import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import containerStyles from "../pages/bio.module.less"
-const ReactMarkdown = require('react-markdown/with-html')
+const ReactMarkdown = require("react-markdown/with-html")
 
-
-class ArticleTemplate extends React.Component  {
-
+class ArticleTemplate extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.data = query
   }
 
@@ -24,13 +22,13 @@ class ArticleTemplate extends React.Component  {
         <article>
           <h1>{data.strapiArticle.title}</h1>
           <p>
-            by{" "}
-            <Link to="/about-me">
-              {data.strapiArticle.author.username}
-            </Link>
+            by <Link to="/about-me">{data.strapiArticle.author.username}</Link>
           </p>
           <Img fluid={data.strapiArticle.image.childImageSharp.fluid} />
-          <ReactMarkdown source={data.strapiArticle.description} escapeHtml={false} />
+          <ReactMarkdown
+            source={data.strapiArticle.description}
+            escapeHtml={false}
+          />
         </article>
       </Layout>
     )

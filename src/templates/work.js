@@ -1,15 +1,13 @@
-import React from 'react';
+import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import containerStyles from "../pages/portfolio.module.less"
 
-
 const WorkTemplate = ({ data }) => (
-
   <Layout>
     <div className={containerStyles.navsec}>
-      <input type="submit" value="&#60;&#60; back" onClick={() => window.history.back()} />      
+      <button onClick={() => window.history.back()}>&#60;&#60; back</button>
     </div>
     <article>
       <h1>{data.strapiWork.title}</h1>
@@ -17,7 +15,6 @@ const WorkTemplate = ({ data }) => (
       <Img fluid={data.strapiWork.thumbnail.childImageSharp.fluid} />
     </article>
   </Layout>
-
 )
 
 export default WorkTemplate

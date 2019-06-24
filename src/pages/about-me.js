@@ -1,67 +1,76 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import Layout from '../components/layout'
-import Navsec from '../components/navsec'
-import GoogleMap from '../components/googleMap'
+import React from "react"
+import { StaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+import Layout from "../components/layout"
+import Blognav from "../components/blognav"
+import GoogleMap from "../components/googleMap"
 import containerStyles from "./bio.module.less"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-const ReactMarkdown = require('react-markdown/with-html')
+const ReactMarkdown = require("react-markdown/with-html")
 
 let faicon = null
 let faprefix = null
 
 const BioTemplate = ({ data }) => (
   <Layout>
-      <Navsec />
-      <StaticQuery
-        query={graphql`
-          query BioTemplate {
-            strapiProfile {
-              name
-              summary
-              headline
-              summary
-              story
-              avatar {
-                childImageSharp {
-                  fixed( width: 80) {
-                    ...GatsbyImageSharpFixed
-                  }
+    <Blognav />
+    <StaticQuery
+      query={graphql`
+        query BioTemplate {
+          strapiProfile {
+            name
+            summary
+            headline
+            summary
+            story
+            avatar {
+              childImageSharp {
+                fixed(width: 80) {
+                  ...GatsbyImageSharpFixed
                 }
               }
-            },
-            strapiLocation {
-          		city
-              description
-           	},
-            allStrapiSkill {
-             edges {
-               node {
-                 id
-                 title
-                 icon
-                 prefix
-               }
-             }
-           }
+            }
           }
-        `}
+          strapiLocation {
+            city
+            description
+          }
+          allStrapiSkill {
+            edges {
+              node {
+                id
+                title
+                icon
+                prefix
+              }
+            }
+          }
+        }
+      `}
       render={data => (
         <section>
           <div className={containerStyles.avatar}>
-            <Img fixed={data.strapiProfile.avatar.childImageSharp.fixed}/>
+            <Img fixed={data.strapiProfile.avatar.childImageSharp.fixed} />
             <h1>{data.strapiProfile.headline}</h1>
           </div>
-          <p>Hello, my name is <i>{data.strapiProfile.name}.</i> {data.strapiProfile.summary}</p>
+          <p>
+            Hello, my name is <i>{data.strapiProfile.name}.</i>{" "}
+            {data.strapiProfile.summary}
+          </p>
           <h2>My skills</h2>
           <div className={containerStyles.skills}>
             {data.allStrapiSkill.edges.map(document => (
-                <div key={document.node.id}>
-                  <FontAwesomeIcon icon={[faprefix = document.node.prefix.replace(/'/g,''), faicon = document.node.icon.replace(/'/g,'')]} size="2x" />
-                  <p>{document.node.title}</p>
-                </div>
+              <div key={document.node.id}>
+                <FontAwesomeIcon
+                  icon={[
+                    (faprefix = document.node.prefix.replace(/'/g, "")),
+                    (faicon = document.node.icon.replace(/'/g, "")),
+                  ]}
+                  size="2x"
+                />
+                <p>{document.node.title}</p>
+              </div>
             ))}
           </div>
 
@@ -74,7 +83,6 @@ const BioTemplate = ({ data }) => (
       )}
     />
   </Layout>
-
 )
 
 export default BioTemplate
