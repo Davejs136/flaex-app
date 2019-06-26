@@ -39,7 +39,7 @@ const BlogTemplate = ({ data }) => (
               </Link>
               <time>{document.node.date}</time>
               <h2>
-                <Link to={`/blog/${document.node.id}`}>
+                <Link to={`/blog/${document.node.title.replace(/\s+/g, '-').toLowerCase()}`}>
                   {document.node.title}
                 </Link>
               </h2>

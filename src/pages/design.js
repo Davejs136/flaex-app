@@ -42,7 +42,7 @@ const DesignPage = () => (
             <li key={document.node.id}>
               <Link
                 to={`/${document.node.category}/${document.node.subcategory}/${
-                  document.node.id
+                  document.node.title.replace(/\s+/g, '-').toLowerCase()
                 }`}
               >
                 <Img fluid={document.node.thumbnail.childImageSharp.fluid} />

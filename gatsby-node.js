@@ -27,6 +27,7 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             id
+            title
           }
         }
       }
@@ -36,7 +37,7 @@ exports.createPages = ({ actions, graphql }) => {
     // Create pages for each article.
     result.data.allStrapiArticle.edges.forEach(({ node }) => {
       createPage({
-        path: `/blog/${node.id}`,
+        path: `/blog/${node.title.replace(/\s+/g, '-').toLowerCase()}`,
         component: path.resolve(`src/templates/article.js`),
         context: {
           id: node.id,
@@ -63,12 +64,12 @@ exports.createPages = ({ actions, graphql }) => {
     `
   ).then(result => {
     // Create pages for each article.
-    result.data.allStrapiWork.edges.forEach(({ node }) => {
+    result.data.allStrapiWork.edges.forEach(({ node }) => {      
       createPage({
-        path: `/${node.category}/${node.subcategory}/${node.id}`,
+        path: `/${node.category}/${node.subcategory}/${node.title.replace(/\s+/g, '-').toLowerCase()}`,
         component: path.resolve(`src/templates/work.js`),
         context: {
-          id: node.id,
+          id: node.id          
         },
       })
     })
