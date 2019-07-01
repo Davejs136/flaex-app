@@ -34,7 +34,7 @@ const BlogTemplate = ({ data }) => (
         <ul className={containerStyles.articles}>
           {data.allStrapiArticle.edges.map(document => (
             <li key={document.node.id}>
-              <Link to={`/blog/${document.node.id}`}>
+              <Link to={`/blog/${document.node.title.replace(/\s+/g, '-').toLowerCase()}`}>
                 <Img fluid={document.node.image.childImageSharp.fluid} />
               </Link>
               <time>{document.node.date}</time>

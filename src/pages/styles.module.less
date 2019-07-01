@@ -33,6 +33,39 @@ div.links {
     .bg();
   }
 }
+
+//Contact form
+.contact_form {
+  margin-top: 5%;
+  input[type=text], input[type=email], textarea {    
+    margin-bottom: 5%;
+    border-style: solid;
+    border-color: #000;
+    border-width: 0 0 1px 0
+
+  }
+  input {
+    width: 80%;
+  }
+  textarea {
+    width: 100%;
+  }
+  input[type=submit] {
+    width: 50%;
+    color: white;
+    .bg();
+    border: none
+  }  
+  label {    
+    font-size: 13px;
+    color: white;
+    padding: 5px 15px 5px 15px;
+    margin-right:12px;
+    border: none;
+    cursor: zoom-out;
+    .bg();    
+  }
+}
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   //Main views styles
   .home,
@@ -179,6 +212,7 @@ div.links {
 
     main {
       min-height: 81vh;
+      padding-top:3.5vh;
     }
 
     section {
