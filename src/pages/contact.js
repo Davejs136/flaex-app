@@ -34,6 +34,7 @@ const onSubmit = async values => {
 
 const TestPage = () => (
   <Layout>
+    <h2>Send me a message</h2>
     <Form
       onSubmit={onSubmit}
       render={({ handleSubmit, pristine, invalid }) => (
@@ -41,8 +42,7 @@ const TestPage = () => (
           id="contact-form" 
           className={containerStyles.contact_form} 
           onSubmit={event =>{
-            const promise = onSubmit(event);
-            console.log('heyyy :-D', promise);
+            const promise = onSubmit(event)           
             promise.then(() => {
             reset()
             })
@@ -81,9 +81,10 @@ const TestPage = () => (
         </form>
       )}
     />
+    <h2>This site was built using:</h2>
+
   </Layout>  
 
 )
 
 export default TestPage
-
