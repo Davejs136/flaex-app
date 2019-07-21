@@ -8,7 +8,7 @@ import { fab } from "@fortawesome/free-brands-svg-icons"
 
 library.add(fab)
 
-const IndexPage = ({ data }) => (
+const IndexPage = () => (
   <div className={containerStyles.home}>
     <div className={containerStyles.menu}>
       <Header />

@@ -9,7 +9,7 @@ const activeStyles = {
   borderStyle: "solid",
 }
 
-const BlognavComponent = ({ data }) => (
+const BlognavComponent = () => (
   <div className={containerStyles.navsec}>
     <Link to="/about-me" activeStyle={activeStyles}>
       bio

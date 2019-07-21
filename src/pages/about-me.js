@@ -12,7 +12,7 @@ const ReactMarkdown = require("react-markdown/with-html")
 let faicon = null
 let faprefix = null
 
-const BioTemplate = ({ data }) => (
+const BioTemplate = () => (
   <Layout>
     <Blognav />
     <StaticQuery

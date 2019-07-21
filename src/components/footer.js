@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 let faicon = null
 let faprefix = null
-const Navigation = ({ data }) => (
+const Navigation = () => (
   <StaticQuery
     query={graphql`
       query FooterTemplate {

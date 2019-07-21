@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Blognav from "../components/blognav"
 import containerStyles from "../pages/blog.module.less"
 
-const BlogTemplate = ({ data }) => (
+const BlogTemplate = () => (
   <Layout>
     <Blognav />
     <StaticQuery

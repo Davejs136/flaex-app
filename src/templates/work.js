@@ -4,6 +4,13 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import containerStyles from "../pages/portfolio.module.less"
 
+
+const openLightbox = (event) => { 
+  const node = document.querySelector('#___gatsby');  
+  node.insertAdjacentHTML ('afterbegin', `<div id="button-close" class=${containerStyles.lightbox}><p onClick="document.getElementById('button-close').remove()">&#128473;</p><img src=${event} alt="Project gallery image"  /></div>`)  
+
+}
+
 const WorkTemplate = ({ data }) => (
   <Layout>
     <div className={containerStyles.navsec}>
@@ -15,8 +22,8 @@ const WorkTemplate = ({ data }) => (
       <p>{data.strapiWork.description}</p>    
       <ul className={containerStyles.works}>
         {data.strapiWork.images.map(document => (
-          <li key={document.localFile.name}>            
-              <Img fluid={document.localFile.childImageSharp.fluid} />            
+          <li key={document.localFile.name} onClick={(event) => openLightbox(event.target.src)}>                              
+            <Img fluid={document.localFile.childImageSharp.fluid} alt="Project gallery image" />               
           </li>
         ))}        
       </ul>
@@ -30,25 +37,25 @@ export const query = graphql`
   query WorkTemplate($id: String!) {
     strapiWork(id: { eq: $id }) {
       id
-      title
-      description
-      images {
-        localFile {
-          name
-          childImageSharp {
-            fluid(maxWidth: 120) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }       
+      title               
       thumbnail {
         childImageSharp {
-          fluid(maxWidth: 500) {
+          fluid(maxWidth: 600, maxHeight: 500) {
             ...GatsbyImageSharpFluid
           }
         }
       }
+      description   
+      images {
+        localFile {
+          name
+          childImageSharp {
+            fluid(maxWidth: 900) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      } 
     }
   }
 `

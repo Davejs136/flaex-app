@@ -32,7 +32,7 @@ const onSubmit = async values => {
     
 }
 
-const TestPage = () => (
+const ContactPage = () => (
   <Layout>
     <h2>Send me a message</h2>
     <Form
@@ -87,4 +87,4 @@ const TestPage = () => (
 
 )
 
-export default TestPage
+export default ContactPage
