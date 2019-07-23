@@ -5,8 +5,6 @@ import Navigation from "./navigation"
 import Footer from "./footer"
 import containerStyles from "../pages/styles.module.less"
 
-import "./boilerplate.css"
-
 const Layout = ({ children }) => (
   <div className={containerStyles.page}>
     <div className={containerStyles.menu}>

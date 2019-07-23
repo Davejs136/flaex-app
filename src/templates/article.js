@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
-import containerStyles from "../pages/bio.module.less"
+import containerStyles from "../pages/blog.module.less"
 const ReactMarkdown = require("react-markdown/with-html")
 
 const ArticleTemplate = ({ data }) => (
@@ -16,8 +16,9 @@ const ArticleTemplate = ({ data }) => (
       <p>
         by <Link to="/about-me">{data.strapiArticle.author.username}</Link>
       </p>
-      <Img fluid={data.strapiArticle.image.childImageSharp.fluid} />
+      <Img fluid={data.strapiArticle.image.childImageSharp.fluid} />      
       <ReactMarkdown
+        className={containerStyles.description}
         source={data.strapiArticle.description}
         escapeHtml={false}
       />

@@ -81,7 +81,7 @@ const ContactPage = () => (
         </form>
       )}
     />
-    <h2>This site was built using:</h2>
+    <h4>This site was built using:</h4>
 
   </Layout>  
 

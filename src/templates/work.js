@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import containerStyles from "../pages/portfolio.module.less"
+const ReactMarkdown = require("react-markdown/with-html")
 
 
 const openLightbox = (event) => { 
@@ -18,12 +19,16 @@ const WorkTemplate = ({ data }) => (
     </div>
     <article>
       <h1>{data.strapiWork.title}</h1>
-      <Img fluid={data.strapiWork.thumbnail.childImageSharp.fluid} />
-      <p>{data.strapiWork.description}</p>    
+      <Img fluid={data.strapiWork.thumbnail.childImageSharp.fluid} />      
+      <ReactMarkdown
+        className={containerStyles.description}
+        source={data.strapiWork.description}
+        escapeHtml={false}
+      />       
       <ul className={containerStyles.works}>
         {data.strapiWork.images.map(document => (
           <li key={document.localFile.name} onClick={(event) => openLightbox(event.target.src)}>                              
-            <Img fluid={document.localFile.childImageSharp.fluid} alt="Project gallery image" />               
+            <Img className={containerStyles.galleryImage} fluid={document.localFile.childImageSharp.fluid} alt="Project gallery image" />               
           </li>
         ))}        
       </ul>

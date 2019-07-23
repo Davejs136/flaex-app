@@ -1,9 +1,17 @@
-/* Bio page general styles */
+/* Portfolio page general styles */
 
 .bg {
   background-image: url("../images/btn_bg.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.description {
+  margin-top: 0.5rem;
+}
+
+.galleryImage {
+  cursor: zoom-in
 }
 
 .lightbox {
@@ -94,11 +102,14 @@
 
     li {
       width: 49%;
-      margin-right: 2%;
+      max-height: 10em;
+      overflow: hidden;
+      margin-right: 2%; 
+      margin-bottom: 2%;      
       &:nth-child(2n) {
         margin-right: 0 !important;
-      }
-    }
+      }          
+    }    
   }
 
   p {
