@@ -668,11 +668,9 @@ div.links {
     border-color: #000;
     border-width: 0 0 1px 0
 
-  }
-  input {
-    width: 80%;
-  }
-  textarea {
+  }   
+  input, textarea {
+    margin-top: 2%;
     width: 100%;
   }
   input[type=submit] {
@@ -690,6 +688,17 @@ div.links {
     cursor: zoom-out;
     .bg();    
   }
+}
+
+//Software
+.stack, .software {  
+  margin:0;
+  list-style: none;  
+}
+.software { 
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -795,9 +804,7 @@ div.links {
       font-size: 1.4em;
       line-height: 1.25em;
       padding-top: 0;      
-    }
-
-    
+    }    
 
     //Main navigation internal links
     .menu {
@@ -857,6 +864,37 @@ div.links {
     div.links {
       width: 46%;
     }
+  }
+
+  //Contact page software logos
+  ul.stack {  
+    p {
+      font-size:1em;
+      margin-bottom:0;
+    }    
+    li {
+      width: 45%;
+    }
+  }
+  ul.software {    
+    margin-bottom: 5%;
+    p {
+      width: 100%;
+      font-size:1em;
+      margin-bottom:0;
+    }  
+    li {
+      width: 33.3333333%;
+      padding: 0% 5% 5% 0;
+      margin: 0;
+      p {
+        color: #aaa;
+        font-size:0.9em;
+        font-style: italic;      
+        margin-bottom:0;
+        text-align: center; 
+      }       
+    }    
   }
 
 }

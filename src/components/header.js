@@ -1,7 +1,8 @@
 import { Link, StaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core"
-import Img from "gatsby-image"
+
 
 const activeStyles = {
   filter: "invert(1)",
