@@ -1,7 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import containerStyles from "../pages/styles.module.less"
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 let faicon = null

@@ -510,7 +510,7 @@ th {
   font-weight: bold;
 }
 li {
-  margin-bottom: calc(1.45rem / 2);
+  margin-bottom: calc(1rem / 2);
 }
 ol li {
   padding-left: 0;
@@ -623,74 +623,119 @@ pre tt:after {
 }
 
 
-/* Home page general styles */
-
-// Main navigation
+/* Static Home page general styles */
+.bg {
+  background-image: url("../images/btn_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Main navigation */
 nav a {
   color: #fff;
   text-decoration: none;
   width: 100%;
 }
-
 nav a:nth-child(2) {
   transform: rotate(90deg);
   span {
     transform: rotate(-90deg);
   }
 }
-
 nav a:nth-child(3) {
   transform: rotate(180deg);
   span {
     transform: rotate(-180deg);
   }
 }
-
-.bg {
-  background-image: url("../images/btn_bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+/* Main views styles */
+.home,
+.page {
+  display: flex;
+  flex-direction: column;  
+  .menu {
+    display: flex;
+  }  
+  footer {
+    display: flex;
+    align-items: flex-end;
+    p {    
+      color: white;
+      .bg();
+    } 
+    div.links {
+      display: flex;
+      list-style: none;
+    }
+    div.links > div > a > svg {    
+      .bg();
+      color: white;
+    }   
+  }   
 }
-
-div.links {
-  div > a > svg {
-    color: white;
-    .bg();
+/* Index styles */
+.home { 
+  /* Main navigation home */
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    nav a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;      
+      .bg();
+      box-sizing: border-box;      
+    }
+  }  
+}
+/* Page styles */
+.page {
+    /* Main navigation internal links */
+  .menu {
+    nav {
+      display: flex;     
+      justify-content: space-evenly;
+    }
+    nav a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;      
+      .bg();
+      box-sizing: border-box;      
+    }    
+  }  
+  section {
+    display: flex;
+    flex-wrap: wrap;    
   }
+  footer {  
+    margin-top: 0.7vh;   
+  }  
 }
-
-//Contact form
-.contact_form {
-  margin-top: 5%;
-  input[type=text], input[type=email], textarea {    
-    margin-bottom: 5%;
+/* Contact form */
+.contact_form { 
+  input[type=text], input[type=email], textarea {      
     border-style: solid;
     border-color: #000;
-    border-width: 0 0 1px 0
-
   }   
-  input, textarea {
-    margin-top: 2%;
-    width: 100%;
-  }
-  input[type=submit] {
-    width: 50%;
+  input[type=submit] {    
     color: white;
     .bg();
     border: none
   }  
-  label, button {    
-    font-size: 13px;
-    color: white;
-    padding: 5px 15px 5px 15px;
-    margin-right:12px;
+  label, button {  
+    color: white;   
     border: none;
     cursor: zoom-out;
     .bg();    
   }
 }
-
-//Software
+/* Software */
 .stack, .software {  
   margin:0;
   list-style: none;  
@@ -702,171 +747,137 @@ div.links {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-  //Main views styles
+  /* Main views styles */
   .home,
-  .page {
-    display: flex;
-    flex-direction: column;
-
-    .menu {
-      display: flex;
-    }
-
-    footer {
-      display: flex;
+  .page { 
+    min-height: 100vh;
+    footer {     
       width: 100%;
       height: 4vh;
-    }
-
+      p {
+        font-size: 13px;
+        font-weight: 100;
+        padding-left: 2.5%;      
+      }      
+    }  
     div.links {
-      display: flex;
-      list-style: none;
+      width: 47%;
     }
-
-    footer p {
-      font-size: 13px;
-      font-weight: 100;
-      color: white;
-      .bg();
-    }
-
-    div.links > div > a > svg {
-      padding: 19%;
-    }
-
     div.links > div {
       height: 20%;
       margin-left: 3.15vw;
     }
+    div.links > div > a > svg {
+      padding: 19%;      
+    }
   }
-  // Index styles
-  .home {
-    align-items: center;
-    height: 100vh;
-
-    //Main navigation home
-    .menu {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+  /* Index styles */
+    .home {
+    align-items: center;   
+    /* Main navigation home */
+    .menu {      
       width: 110px;
       height: 96vh;
-
-      nav {
-        display: flex;
-        height: 56vh;
-        flex-direction: column;
-        justify-content: space-evenly;
+      header {
+        .logohead {
+          margin-bottom: 3%;
+        }
       }
-
-      nav a {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+      nav {        
+        height: 56vh;        
+      }
+      nav a {       
         width: 110px;
         height: 110px;
         font-size: 15px;
-        line-height: 19px;
-        .bg();
-        box-sizing: border-box;
+        line-height: 19px;         
         span {
           padding-left: 12%;
         }
       }
-    }
-
-    footer {
-      display: flex;
-      align-items: flex-end;
-      padding-bottom: 0.7vh;
-    }
-
+    }    
     div.links {
       width: 47%;
     }
-
-    footer p {
-      width: 53%;
-      margin-left: 1.5vw;
-      margin-bottom: 0;
-      padding-left: 1.5vh;
-    }
+    footer {
+      padding-bottom: 2%;
+      p {
+        width: 53%;
+        margin-left: 2vw;
+        margin-bottom: 0;        
+      }      
+    }    
   }
-  //Page styles
-  .page {
-    display: flex;
-    padding: 2.5%;
-    box-sizing: border-box;
-    min-height: 100vh;
-    flex-direction: column;
-
+  /* Page styles */
+  .page { 
+    padding: 2%;      
     h1 {
       font-size: 1.4em;
       line-height: 1.25em;
       padding-top: 0;      
     }    
-
-    //Main navigation internal links
+    /* Main navigation internal links */
     .menu {
       width: 100%;
       height: 12vh;
-
-      nav {
-        display: flex;
-        width: 80vw;
-        justify-content: space-evenly;
+      nav {     
+        width: 80vw;       
       }
-
-      nav a {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+      nav a {        
         width: 75px;
         height: 75px;
         font-size: 15px;
-        line-height: 19px;
-        .bg();
-        box-sizing: border-box;
+        line-height: 19px;        
         span {
           padding-left: 12%;
         }
       }
-
       header {
-        width: 22.7vw;
+        width: 22.7vw;        
+        .logohead {
+          margin-bottom: 2%;
+        }        
       }
     }
-
     main {
       min-height: 81vh;
       padding-top:3.5vh;
     }
-
-    section {
-      display: flex;
-      flex-wrap: wrap;
+    section {      
       p br {
         margin-bottom: 4%;
       }
     }
-
-    footer {
-      height: 4vh;
-      align-items: flex-end;
-
+    footer {           
       p {
         width: 54%;
-        margin-bottom: 0;
-        padding-left: 2.5%;
+        margin-bottom: 0;       
       }
     }
-
     div.links {
       width: 46%;
     }
   }
-
-  //Contact page software logos
+  .contact_form {
+    margin-top: 5%;
+    input[type=text], input[type=email], textarea {    
+      margin-bottom: 5%;     
+      border-width: 0 0 1px 0  
+    }   
+    input, textarea {
+      margin-top: 2%;
+      width: 100%;
+    }
+    input[type=submit] {
+      width: 50%;      
+    }  
+    label, button {    
+      font-size: 13px;      
+      padding: 5px 15px 5px 15px;
+      margin-right:12px;         
+    }
+  }
+  /* Contact page software logos */
   ul.stack {  
     p {
       font-size:1em;
@@ -876,25 +887,22 @@ div.links {
       width: 45%;
     }
   }
-  ul.software {    
-    margin-bottom: 5%;
+  ul.software {         
     p {
       width: 100%;
       font-size:1em;
-      margin-bottom:0;
+      margin-bottom:2%;
     }  
-    li {
+    li {      
       width: 33.3333333%;
-      padding: 0% 5% 5% 0;
+      padding: 0 10% 2% 0;
       margin: 0;
-      p {
-        color: #aaa;
-        font-size:0.9em;
-        font-style: italic;      
-        margin-bottom:0;
-        text-align: center; 
-      }       
+      box-sizing:border-box;        
     }    
   }
-
+  /* 404:Not found */
+  .notfound {
+    width: 50%;
+    margin-bottom: 4%;
+  }
 }

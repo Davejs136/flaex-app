@@ -138,25 +138,11 @@ const ContactPage = () => (
         <ul className={containerStyles.software}> 
         <p>Developed using:</p>  
           <li>
-            <Img fluid={data.strapi.childImageSharp.fluid} />
-            <p>Headless CMS</p> 
-          </li>
+            <Img fluid={data.strapi.childImageSharp.fluid} />            
+          </li>        
           <li>
-            <Img fluid={data.react.childImageSharp.fluid} />
-            <p>UI library</p> 
-          </li>
-          <li>
-            <Img fluid={data.gatsby.childImageSharp.fluid} />
-            <p>Static generator</p> 
-          </li>
-          <li>
-            <Img fluid={data.graphql.childImageSharp.fluid} />
-            <p>Data query</p> 
-          </li>
-          <li>
-            <Img fluid={data.mongo.childImageSharp.fluid} />
-            <p>Database</p> 
-          </li>
+            <Img fluid={data.gatsby.childImageSharp.fluid} />            
+          </li>          
         </ul>
       </Layout>  
       )}

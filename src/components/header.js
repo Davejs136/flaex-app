@@ -1,8 +1,7 @@
+import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core"
-
+import containerStyles from "../pages/styles.module.less"
 
 const activeStyles = {
   filter: "invert(1)",
@@ -31,13 +30,7 @@ const Header = () => (
       `}
       render={data => (
         <div>
-          <div
-            css={css`
-              @media only screen and (min-width: 320px) and (max-width: 767px) {
-                margin-bottom: 4px;
-              }
-            `}
-          >
+          <div className={containerStyles.logohead}>
             <Link to="/" activeStyle={activeStyles}>
               <Img fluid={data.head.childImageSharp.fluid} />
             </Link>
