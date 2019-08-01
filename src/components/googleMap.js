@@ -11,10 +11,7 @@ const defaultProps = {
 }
 
 const GoogleMap = () => (
-  <div
-    className={containerStyles.map}
-    style={{ height: "25vh", width: "100%" }}
-  >
+  <div className={containerStyles.map}>
     <GoogleMapReact
       bootstrapURLKeys={{ key: "AIzaSyAQhe9nSUBaOnvNSv7DRj7g430Gqt94umQ" }}
       defaultCenter={defaultProps.center}

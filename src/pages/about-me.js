@@ -26,8 +26,8 @@ const BioTemplate = () => (
             story
             avatar {
               childImageSharp {
-                fixed(width: 80) {
-                  ...GatsbyImageSharpFixed
+                fluid(maxWidth: 80) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -50,8 +50,10 @@ const BioTemplate = () => (
       `}
       render={data => (
         <section>
-          <div className={containerStyles.avatar}>
-            <Img fixed={data.strapiProfile.avatar.childImageSharp.fixed} />
+          <div className={containerStyles.profile}>
+            <div className={containerStyles.avatar}>
+              <Img fluid={data.strapiProfile.avatar.childImageSharp.fluid} />
+            </div>
             <h1>{data.strapiProfile.headline}</h1>
           </div>
           <p>

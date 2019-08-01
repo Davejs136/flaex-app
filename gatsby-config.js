@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: '@flaex_ website',
-    description: 'Gatsby portfolio and blog with Strapi and MongoDB',
+    title: '@flaex_ portfolio and blog',
+    description: 'Gatsby portfolio and blog with Strapi',
     author: 'Freddy Polania'
   },
   plugins: [
