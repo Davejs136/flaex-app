@@ -6,10 +6,6 @@
   background-size: cover;
 }
 
-.description {
-  margin-top: 0.5rem;
-}
-
 .galleryImage {
   cursor: zoom-in;
 }
@@ -54,15 +50,25 @@
     opacity: 1;
   }
 }
+article {
+  .imgContainer {
+    border: solid 1px #bbb;
+  }
+}
+.works {
+  li {
+    border: solid 1px #bbb;
+  }
+}
 
 @media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   //Secondary navigation
 
   .navsec {
     display: flex;
-    margin: 10px 0 15px 0;
+    padding: 4vh 0 2vh 0;
     a {
-      font-size: 13px;
+      font-size: 0.8em;
       color: white;
       padding: 4px 15px 4px 15px;
       margin: 0 8px 0 0;
@@ -97,7 +103,6 @@
     flex-wrap: wrap;
     list-style: none;
     margin: 0;
-
     li {
       width: 49%;
       max-height: 118px;
@@ -105,7 +110,7 @@
       margin-right: 2%;
       margin-bottom: 2%;
       &:nth-child(2n) {
-        margin-right: 0 !important;
+        margin-right: 0;
       }
     }
   }
@@ -183,6 +188,111 @@
     button {
       font-size: 18px;
       padding: 10px 22px 10px 22px;
+    }
+  }
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    h1 {
+      width: 100%;
+    }
+    .imgContainer {
+      width: 31%;
+    }
+    .works {
+      margin-top: 2%;
+      width: 100%;
+      li {
+        width: 23%;
+        padding-right: 0.5%;
+      }
+    }
+  }
+  ul.articles {
+    li {
+      time {
+        font-size: 1.2em;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+  }
+  ul.works {
+    li {
+      width: 32%;
+      max-height: 360px;
+      &:nth-child(2n) {
+        margin-right: 2%;
+      }
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  h2 {
+    font-size: 1.7em;
+  }
+  .navsec {
+    a,
+    button {
+      font-size: 1em;
+      padding: 10px 22px 10px 22px;
+    }
+  }
+  .articles {
+    li {
+      time {
+        font-size: 1.2em;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+  }
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    h1 {
+      width: 100%;
+    }
+    .imgContainer {
+      width: 45%;
+    }
+    .description {
+      width: 53%;
+      margin-top: 0;
+      padding: 0 0.5% 0 1.5%;
+      p {
+        font-size: 1em;
+      }
+    }
+  }
+  ul.works {
+    margin-top: 2%;
+    width: 100%;
+    li {
+      min-height: 226px;
+      width: 23%;
+      padding-right: 0.5%;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (min-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+  h1 {
+    font-size: 2.2em;
+  }
+  .navsec {
+    a,
+    button {
+      font-size: 1.5em;
+      padding: 10px 22px 14px 22px;
     }
   }
   ul.articles {

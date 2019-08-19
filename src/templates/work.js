@@ -5,11 +5,14 @@ import Layout from "../components/layout"
 import containerStyles from "../pages/portfolio.module.less"
 const ReactMarkdown = require("react-markdown/with-html")
 
-
-const openLightbox = (event) => { 
-  const node = document.querySelector('#___gatsby');  
-  node.insertAdjacentHTML ('afterbegin', `<div id="button-close" class=${containerStyles.lightbox}><p onClick="document.getElementById('button-close').remove()">&#128473;</p><img src=${event} alt="Project gallery image"  /></div>`)  
-
+const openLightbox = event => {
+  const node = document.querySelector("#___gatsby")
+  node.insertAdjacentHTML(
+    "afterbegin",
+    `<div id="button-close" class=${
+      containerStyles.lightbox
+    }><p onClick="document.getElementById('button-close').remove()">&#128473;</p><img src=${event} alt="Project gallery image"  /></div>`
+  )
 }
 
 const WorkTemplate = ({ data }) => (
@@ -19,19 +22,25 @@ const WorkTemplate = ({ data }) => (
     </div>
     <article>
       <h1>{data.strapiWork.title}</h1>
-      <Img fluid={data.strapiWork.thumbnail.childImageSharp.fluid} />      
+      <ul className={containerStyles.works}>
+        {data.strapiWork.images.map(document => (
+          <li
+            key={document.localFile.name}
+            onClick={event => openLightbox(event.target.src)}
+          >
+            <Img
+              className={containerStyles.galleryImage}
+              fluid={document.localFile.childImageSharp.fluid}
+              alt="Project gallery image"
+            />
+          </li>
+        ))}
+      </ul>
       <ReactMarkdown
         className={containerStyles.description}
         source={data.strapiWork.description}
         escapeHtml={false}
-      />       
-      <ul className={containerStyles.works}>
-        {data.strapiWork.images.map(document => (
-          <li key={document.localFile.name} onClick={(event) => openLightbox(event.target.src)}>                              
-            <Img className={containerStyles.galleryImage} fluid={document.localFile.childImageSharp.fluid} alt="Project gallery image" />               
-          </li>
-        ))}        
-      </ul>
+      />
     </article>
   </Layout>
 )
@@ -42,7 +51,7 @@ export const query = graphql`
   query WorkTemplate($id: String!) {
     strapiWork(id: { eq: $id }) {
       id
-      title               
+      title
       thumbnail {
         childImageSharp {
           fluid(maxWidth: 600, maxHeight: 500) {
@@ -50,7 +59,7 @@ export const query = graphql`
           }
         }
       }
-      description   
+      description
       images {
         localFile {
           name
@@ -60,7 +69,7 @@ export const query = graphql`
             }
           }
         }
-      } 
+      }
     }
   }
 `

@@ -6,7 +6,6 @@ import containerStyles from "../pages/blog.module.less"
 const ReactMarkdown = require("react-markdown/with-html")
 
 const ArticleTemplate = ({ data }) => (
-
   <Layout>
     <div className={containerStyles.navsec}>
       <Link to="/blog">&#60;&#60; back</Link>
@@ -16,7 +15,9 @@ const ArticleTemplate = ({ data }) => (
       <p>
         by <Link to="/about-me">{data.strapiArticle.author.username}</Link>
       </p>
-      <Img fluid={data.strapiArticle.image.childImageSharp.fluid} />      
+      <div className={containerStyles.mainImage}>
+        <Img fluid={data.strapiArticle.image.childImageSharp.fluid} />
+      </div>
       <ReactMarkdown
         className={containerStyles.description}
         source={data.strapiArticle.description}
@@ -24,7 +25,6 @@ const ArticleTemplate = ({ data }) => (
       />
     </article>
   </Layout>
-  
 )
 
 export default ArticleTemplate
@@ -36,7 +36,7 @@ export const query = graphql`
       description
       image {
         childImageSharp {
-          fluid(maxWidth: 500) {
+          fluid(maxWidth: 900) {
             ...GatsbyImageSharpFluid
           }
         }

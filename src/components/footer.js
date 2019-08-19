@@ -24,7 +24,7 @@ const Navigation = () => (
     render={data => (
       <>
         <footer>
-          <p>flaex.com ® Freddy Polanía {new Date().getFullYear()}</p>
+          <p>@flaex_ ® {new Date().getFullYear()} - EN</p>
           <div className={containerStyles.links}>
             {data.allStrapiLink.edges.map(document => (
               <div key={document.node.id}>
