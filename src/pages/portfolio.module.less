@@ -120,12 +120,12 @@ article {
   }
 }
 
-@media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+@media only screen and (min-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .navsec {
     display: flex;
-    margin: 10px 0 15px 0;
+    padding: 4vh 0 3vh 0;
     a {
-      font-size: 13px;
+      font-size: 0.8em;
       color: white;
       padding: 4px 15px 4px 15px;
       margin: 0 8px 0 0;
@@ -233,58 +233,17 @@ article {
   }
 }
 
-@media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
-  h2 {
-    font-size: 1.7em;
-  }
+@media only screen and (min-device-width: 800px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
   .navsec {
     a,
     button {
-      font-size: 1em;
+      font-size: 1.2em;
       padding: 10px 22px 10px 22px;
-    }
-  }
-  .articles {
-    li {
-      time {
-        font-size: 1.2em;
-      }
-
-      h2 {
-        font-size: 1.5em;
-      }
-    }
-  }
-  article {
-    display: flex;
-    flex-wrap: wrap;
-    h1 {
-      width: 100%;
-    }
-    .imgContainer {
-      width: 45%;
-    }
-    .description {
-      width: 53%;
-      margin-top: 0;
-      padding: 0 0.5% 0 1.5%;
-      p {
-        font-size: 1em;
-      }
-    }
-  }
-  ul.works {
-    margin-top: 2%;
-    width: 100%;
-    li {
-      min-height: 226px;
-      width: 23%;
-      padding-right: 0.5%;
     }
   }
 }
 
-@media only screen and (min-device-width: 1024px) and (min-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+@media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
   h1 {
     font-size: 2.2em;
   }
@@ -309,6 +268,80 @@ article {
   ul.works {
     li {
       max-height: 360px;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 736px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  ul.works {
+    li {
+      max-height: 360px;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  h2 {
+    font-size: 1.5em;
+  }
+  .navsec {
+    padding: 2vh 0 1.5vh 0;
+    a,
+    button {
+      font-size: 0.85em;
+      padding: 5px 11px 5px 11px;
+    }
+  }
+  .articles {
+    li {
+      time {
+        font-size: 1.2em;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+  }
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    h1 {
+      width: 100%;
+    }
+    .imgContainer {
+      width: 45%;
+    }
+    .description {
+      p {
+        font-size: 1em;
+      }
+    }
+  }
+  ul.works {
+    width: 100%;
+    li {
+      width: 23%;
+      padding-right: 0.5%;
+      &:nth-child(3n) {
+        margin-right: 2% !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  .navsec {
+    a,
+    button {
+      font-size: 1em;
+      padding: 7px 13px 7px 13px;
+    }
+  }
+  .description {
+    p {
+      font-size: 1.2em !important;
+      line-height: 1.4em;
     }
   }
 }

@@ -15,8 +15,7 @@ div.skills {
   a {
     text-decoration: none;
     color: white;
-    padding: 4px 15px 4px 15px;
-    margin: 0 8px 0 0;
+
     .bg();
   }
 }
@@ -102,6 +101,8 @@ div.skills {
     padding: 4vh 0 2vh 0;
     a {
       font-size: 0.8em;
+      padding: 4px 15px 4px 15px;
+      margin: 0 8px 0 0;
     }
   }
 }
@@ -136,11 +137,19 @@ div.skills {
       min-height: 80px;
     }
   }
+  .navsec {
+    padding: 4vh 0 2vh 0;
+    a {
+      font-size: 0.8em;
+      padding: 4px 15px 4px 15px;
+      margin: 0 8px 0 0;
+    }
+  }
 }
 @media only screen and (min-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .profile {
     h1 {
-      padding: 3.5%;
+      padding: 3.4% 0 0 2%;
     }
   }
 }
@@ -184,42 +193,12 @@ div.skills {
   }
 }
 
-@media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+@media only screen and (min-device-width: 800px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .navsec {
     a,
     button {
-      font-size: 0.85em;
-      padding: 6px 18px px 18px;
-    }
-  }
-  .profile {
-    margin-bottom: 1.5%;
-    .avatar {
-      width: 120px;
-      height: 120px;
-    }
-    h1 {
-      font-size: 1.9em;
-      min-height: 120px;
-    }
-    h2 {
-      font-size: 1.8em;
-    }
-  }
-  div.skills {
-    width: 100%;
-    div {
-      width: 30%;
-      margin: 1.5%;
-
-      p {
-        font-size: 1.4em;
-        line-height: 1.5em;
-        font-weight: 600;
-        text-transform: capitalize;
-        margin-bottom: 0;
-        padding-top: 8%;
-      }
+      font-size: 1.2em;
+      padding: 10px 22px 10px 22px;
     }
   }
 }
@@ -259,6 +238,70 @@ div.skills {
       }
       width: 30%;
       margin: 1.5%;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .navsec {
+    padding: 2vh 0 1.5vh 0;
+    a {
+      font-size: 0.8em;
+      margin: 0 8px 0 0;
+    }
+  }
+  .profile {
+    margin-bottom: 1.5%;
+    .avatar {
+      width: 100px;
+      height: 100px;
+    }
+    h1 {
+      font-size: 1.3em;
+      min-height: 100px;
+    }
+    h2 {
+      font-size: 1.8em;
+    }
+  }
+  div.skills {
+    width: 100%;
+    div {
+      width: 30%;
+      margin: 1.5%;
+
+      p {
+        font-size: 1.1em;
+        line-height: 1.5em;
+        font-weight: 600;
+        text-transform: capitalize;
+        margin-bottom: 0;
+        padding-top: 8%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  .navsec {
+    a,
+    button {
+      font-size: 1em;
+      padding: 7px 13px 7px 13px;
+    }
+  }
+  div.skills {
+    div {
+      p {
+        font-size: 1.3em;
+        line-height: 1.7em;
+      }
+    }
+  }
+  .profile {
+    h1 {
+      font-size: 1.5em;
+      padding: 2.5% 0 0 2%;
     }
   }
 }

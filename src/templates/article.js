@@ -12,7 +12,7 @@ const ArticleTemplate = ({ data }) => (
     </div>
     <article>
       <h1>{data.strapiArticle.title}</h1>
-      <p>
+      <p className={containerStyles.author}>
         by <Link to="/about-me">{data.strapiArticle.author.username}</Link>
       </p>
       <div className={containerStyles.mainImage}>
