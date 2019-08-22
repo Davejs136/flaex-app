@@ -187,7 +187,6 @@ textarea {
 html {
   font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
-  overflow-y: scroll;
 }
 * {
   box-sizing: inherit;
@@ -340,7 +339,6 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  margin-left: 1.45rem;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
@@ -1267,7 +1265,6 @@ nav a:nth-child(3) {
     }
     footer {
       p {
-        width: 40%;
         margin-bottom: 0;
       }
     }
@@ -1313,7 +1310,7 @@ nav a:nth-child(3) {
       }
     }
     footer {
-      p {       
+      p {
         margin-bottom: 0;
       }
     }
@@ -1667,5 +1664,169 @@ nav a:nth-child(3) {
         padding: 6px 18px 6px 18px;
       }
     }
+  }
+}
+
+/* Desktop responsive*/
+
+@media only screen and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
+  .home,
+  .page {
+    footer {
+      p {
+        font-size: 0.85em;
+        font-weight: 100;
+        padding-left: 1%;
+      }
+    }
+    div.links {
+      width: 47%;
+    }
+    div.links > div {
+      margin-left: 0.75vw;
+    }
+    div.links > div > a {
+      font-size: 0.6em;
+      padding: 0.3em 0.6em 0 0.6em;
+    }
+  }
+  /* Index styles */
+  .home {
+    align-items: center;
+    /* Main navigation home */
+    .menu {
+      width: 44vw;
+      height: 90vh;
+      flex-direction: row;
+      align-items: center;
+      header {
+        div {
+          width: 135px;
+        }
+        .logohead {
+          margin-bottom: 6%;
+        }
+      }
+      nav {
+        width: 85vw;
+      }
+      nav a {
+        width: 130px;
+        height: 130px;
+        font-size: 1em;
+        line-height: 1.5em;
+        span {
+          padding-left: 13%;
+        }
+      }
+    }
+    div.links {
+      width: 47%;
+    }
+    footer {
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+  /* Page styles */
+  .page {
+    h1 {
+      font-size: 1.4em;
+      line-height: 1.25em;
+      padding-top: 0;
+    }
+    /* Main navigation internal links */
+    .menu {
+      padding: 1vw;
+      width: 100%;
+      header {
+        div {
+          width: 110px;
+        }
+        .logohead {
+          margin-bottom: 6%;
+        }
+      }
+      nav {
+        width: 30vw;
+        a {
+          width: 110px;
+          height: 110px;
+          font-size: 1em;
+          line-height: 19px;
+          span {
+            padding-left: 12%;
+          }
+        }
+      }
+    }
+    main {
+      padding: 1vw;
+    }
+    section {
+      p br {
+        margin-bottom: 4%;
+      }
+    }
+    footer {
+      p {
+        margin-bottom: 0;
+      }
+    }
+    div.links {
+      width: 46%;
+    }
+  }
+  .contact_form {
+    margin-top: 5%;
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      margin-bottom: 5%;
+      border-width: 0 0 1px 0;
+    }
+    input,
+    textarea {
+      margin-top: 2%;
+      width: 100%;
+    }
+    input[type="submit"] {
+      width: 50%;
+    }
+    label,
+    button {
+      font-size: 13px;
+      padding: 5px 15px 5px 15px;
+      margin-right: 12px;
+    }
+  }
+  /* Contact page software logos */
+  .stack {
+    p {
+      font-size: 1em;
+      margin-bottom: 0;
+    }
+    li {
+      width: 36%;
+    }
+  }
+  ul.software {
+    p {
+      width: 100%;
+      font-size: 1em;
+      margin-bottom: 2%;
+    }
+    li {
+      width: 33.3333333%;
+      padding: 0 10% 2% 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+  }
+  /* 404:Not found */
+  .notfound {
+    width: 50%;
+    margin-bottom: 4%;
   }
 }

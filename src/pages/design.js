@@ -30,7 +30,7 @@ const DesignPage = () => (
     render={data => (
       <Layout>
         <div className={containerStyles.navsec}>
-          <Link className={containerStyles.active} to="/design">
+          <Link className={containerStyles.firstactive} to="/design">
             logos
           </Link>
           <Link to="/design/prints">prints</Link>
