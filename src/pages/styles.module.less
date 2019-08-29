@@ -60,10 +60,6 @@ strong {
 dfn {
   font-style: italic;
 }
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
 mark {
   background-color: #ff0;
   color: #000;
@@ -250,7 +246,7 @@ h1 {
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   line-height: 1.1;
 }
 h2 {
@@ -389,7 +385,7 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 figure {
   margin-left: 0;
@@ -634,6 +630,7 @@ pre tt:after {
 }
 /* Main navigation */
 nav a {
+  font-size: 1rem;
   color: #fff;
   text-decoration: none;
   width: 100%;
@@ -665,6 +662,7 @@ nav a:nth-child(3) {
     width: 100%;
     margin-top: auto;
     p {
+      font-size: 0.8rem;
       padding: 0.5vh 2vh 0.5vh 2vh;
       color: white;
       .bg();
@@ -735,17 +733,24 @@ nav a:nth-child(3) {
   }
   label,
   button {
+    font-size: 0.85rem;
     color: white;
     border: none;
     cursor: zoom-out;
     .bg();
   }
 }
+
 /* Software */
 .stack,
 .software {
   margin: 0;
   list-style: none;
+}
+.stack {
+  p {
+    font-size: 1rem;
+  }
 }
 .software {
   display: flex;
@@ -760,7 +765,6 @@ nav a:nth-child(3) {
   .page {
     footer {
       p {
-        font-size: 0.8em;
         font-weight: 100;
         margin-bottom: 0;
       }
@@ -773,7 +777,7 @@ nav a:nth-child(3) {
       padding: 0 0.1em 0 0.1em;
     }
     div.links > div > a {
-      font-size: 1em;
+      font-size: 1rem;
     }
     div.links > div > a > svg {
       padding-top: 0.2em;
@@ -802,7 +806,6 @@ nav a:nth-child(3) {
         a {
           width: 85px;
           height: 85px;
-          font-size: 1em;
           line-height: 1.35em;
           span {
             padding-left: 12%;
@@ -817,8 +820,6 @@ nav a:nth-child(3) {
   /* Page styles */
   .page {
     h1 {
-      font-size: 1.4em;
-      line-height: 1.25em;
       padding-top: 0;
     }
     /* Main navigation internal links */
@@ -836,7 +837,6 @@ nav a:nth-child(3) {
         a {
           width: 68px;
           height: 68px;
-          font-size: 15px;
           line-height: 19px;
           span {
             padding-left: 12%;
@@ -875,7 +875,6 @@ nav a:nth-child(3) {
     }
     label,
     button {
-      font-size: 13px;
       padding: 5px 15px 5px 15px;
       margin-right: 12px;
     }
@@ -883,17 +882,15 @@ nav a:nth-child(3) {
   /* Contact page software logos */
   .stack {
     p {
-      font-size: 1em;
       margin-bottom: 0;
     }
     li {
       width: 36%;
     }
   }
-  ul.software {
+  .software {
     p {
       width: 100%;
-      font-size: 1em;
       margin-bottom: 2%;
     }
     li {
@@ -941,7 +938,6 @@ nav a:nth-child(3) {
         a {
           width: 115px;
           height: 115px;
-          font-size: 1.1em;
           line-height: 1.25em;
         }
       }
@@ -956,7 +952,6 @@ nav a:nth-child(3) {
         a {
           width: 80px;
           height: 80px;
-          font-size: 1em;
           line-height: 1.15em;
         }
       }
@@ -990,7 +985,6 @@ nav a:nth-child(3) {
         a {
           width: 125px;
           height: 125px;
-          font-size: 1.1em;
           line-height: 1.25em;
         }
       }
@@ -1015,18 +1009,9 @@ nav a:nth-child(3) {
 @media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .home,
   .page {
-    footer {
-      p {
-        font-size: 1em;
-        margin-bottom: 0;
-      }
-    }
     div.links > div {
       margin-left: 2.25vw;
       padding: 0 0.2em 0 0.2em;
-    }
-    div.links > div > a {
-      font-size: 1.2em;
     }
   }
   .home {
@@ -1037,7 +1022,6 @@ nav a:nth-child(3) {
         a {
           width: 150px;
           height: 150px;
-          font-size: 1.3em;
           line-height: 1.35em;
         }
       }
@@ -1053,38 +1037,22 @@ nav a:nth-child(3) {
         a {
           width: 120px;
           height: 120px;
-          font-size: 1.2em;
           line-height: 1.25em;
         }
       }
     }
   }
   .contact_form {
+    width: 95%;
     label,
     button {
-      font-size: 1.02em;
       padding: 10px 22px 10px 22px;
       margin-right: 12px;
-    }
-    input,
-    textarea {
-      font-size: 1.2em;
     }
   }
 }
 
 @media only screen and (min-device-width: 800px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-  .home,
-  .page {
-    footer {
-      p {
-        font-size: 1.2em;
-      }
-    }
-    div.links > div > a {
-      font-size: 1.5em;
-    }
-  }
   .home {
     /* Main navigation home */
     .menu {
@@ -1093,7 +1061,6 @@ nav a:nth-child(3) {
         a {
           width: 185px;
           height: 185px;
-          font-size: 1.5em;
           line-height: 1.3em;
         }
       }
@@ -1109,7 +1076,6 @@ nav a:nth-child(3) {
         a {
           width: 155px;
           height: 155px;
-          font-size: 1.5em;
           line-height: 1.3em;
         }
       }
@@ -1118,39 +1084,13 @@ nav a:nth-child(3) {
   .contact_form {
     label,
     button {
-      font-size: 1.4em;
       padding: 10px 22px 12px 22px;
       margin-right: 12px;
-    }
-    input,
-    textarea {
-      font-size: 1.6em;
-    }
-  }
-  ul.stack {
-    p {
-      font-size: 1.4em;
-    }
-  }
-  ul.software {
-    p {
-      font-size: 1.4em;
     }
   }
 }
 
 @media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-  .home,
-  .page {
-    footer {
-      p {
-        font-size: 1.4em;
-      }
-    }
-    div.links > div > a {
-      font-size: 1.7em;
-    }
-  }
   .home {
     /* Main navigation home */
     .menu {
@@ -1159,7 +1099,6 @@ nav a:nth-child(3) {
         a {
           width: 190px;
           height: 190px;
-          font-size: 1.7em;
           line-height: 1.4em;
         }
       }
@@ -1175,7 +1114,6 @@ nav a:nth-child(3) {
         a {
           width: 160px;
           height: 160px;
-          font-size: 1.7em;
           line-height: 1.5em;
         }
       }
@@ -1184,23 +1122,8 @@ nav a:nth-child(3) {
   .contact_form {
     label,
     button {
-      font-size: 1.6em;
       padding: 10px 22px 12px 22px;
       margin-right: 12px;
-    }
-    input,
-    textarea {
-      font-size: 1.6em;
-    }
-  }
-  ul.stack {
-    p {
-      font-size: 1.4em;
-    }
-  }
-  ul.software {
-    p {
-      font-size: 1.4em;
     }
   }
 }
@@ -1214,7 +1137,6 @@ nav a:nth-child(3) {
       width: 100%;
       padding: 1vw;
       p {
-        font-size: 0.8em;
         font-weight: 100;
         padding-left: 1.5%;
       }
@@ -1226,7 +1148,6 @@ nav a:nth-child(3) {
       margin-left: 1.25vw;
     }
     div.links > div > a {
-      font-size: 0.6em;
       padding: 0 0.6em 0 0.6em;
     }
   }
@@ -1253,7 +1174,6 @@ nav a:nth-child(3) {
       nav a {
         width: 85px;
         height: 85px;
-        font-size: 15px;
         line-height: 19px;
         span {
           padding-left: 12%;
@@ -1263,17 +1183,10 @@ nav a:nth-child(3) {
     div.links {
       width: 47%;
     }
-    footer {
-      p {
-        margin-bottom: 0;
-      }
-    }
   }
   /* Page styles */
   .page {
     h1 {
-      font-size: 1.4em;
-      line-height: 1.25em;
       padding-top: 0;
     }
     /* Main navigation internal links */
@@ -1285,7 +1198,6 @@ nav a:nth-child(3) {
         a {
           width: 70px;
           height: 70px;
-          font-size: 15px;
           line-height: 19px;
           span {
             padding-left: 12%;
@@ -1307,11 +1219,6 @@ nav a:nth-child(3) {
     section {
       p br {
         margin-bottom: 4%;
-      }
-    }
-    footer {
-      p {
-        margin-bottom: 0;
       }
     }
     div.links {
@@ -1336,7 +1243,6 @@ nav a:nth-child(3) {
     }
     label,
     button {
-      font-size: 13px;
       padding: 5px 15px 5px 15px;
       margin-right: 12px;
     }
@@ -1344,7 +1250,6 @@ nav a:nth-child(3) {
   /* Contact page software logos */
   .stack {
     p {
-      font-size: 1em;
       margin-bottom: 0;
     }
     li {
@@ -1354,7 +1259,6 @@ nav a:nth-child(3) {
   ul.software {
     p {
       width: 100%;
-      font-size: 1em;
       margin-bottom: 2%;
     }
     li {
@@ -1374,9 +1278,6 @@ nav a:nth-child(3) {
 @media only screen and (min-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .home,
   .page {
-    p {
-      font-size: 1em;
-    }
     footer p {
       padding-top: 0.2em;
     }
@@ -1515,7 +1416,6 @@ nav a:nth-child(3) {
   .home,
   .page {
     p {
-      font-size: 1em;
       line-height: 1.4em;
     }
 
@@ -1523,7 +1423,6 @@ nav a:nth-child(3) {
       margin-left: 1.25vw;
     }
     div.links > div > a {
-      font-size: 0.65em;
       padding: 0 0.6em 0 0.6em;
     }
   }
@@ -1536,7 +1435,6 @@ nav a:nth-child(3) {
       }
       nav {
         a {
-          font-size: 1em;
           line-height: 1.25em;
           width: 130px;
           height: 130px;
@@ -1554,7 +1452,6 @@ nav a:nth-child(3) {
       nav {
         width: 34vw;
         a {
-          font-size: 1em;
           line-height: 1.25em;
           width: 100px;
           height: 100px;
@@ -1563,9 +1460,9 @@ nav a:nth-child(3) {
     }
   }
   .contact_form {
+    width: 70%;
     label,
     button {
-      font-size: 0.85em;
       padding: 6px 18px 6px 18px;
     }
   }
@@ -1585,19 +1482,12 @@ nav a:nth-child(3) {
   .home,
   .page {
     p {
-      font-size: 1.2em;
       line-height: 1.4em;
-    }
-    footer {
-      p {
-        font-size: 0.95em;
-      }
     }
     div.links > div {
       margin-left: 1.25vw;
     }
     div.links > div > a {
-      font-size: 0.7em;
       padding: 0.5em 0.6em 0 0.6em;
     }
   }
@@ -1610,7 +1500,6 @@ nav a:nth-child(3) {
       }
       nav {
         a {
-          font-size: 1.2em;
           line-height: 1.5em;
           width: 170px;
           height: 170px;
@@ -1621,7 +1510,6 @@ nav a:nth-child(3) {
   .page {
     /* Main navigation home */
     h1 {
-      font-size: 1.7em;
       line-height: 1.45em;
     }
     .menu {
@@ -1632,7 +1520,6 @@ nav a:nth-child(3) {
       nav {
         width: 34vw;
         a {
-          font-size: 1.15em;
           line-height: 1.25em;
           width: 130px;
           height: 130px;
@@ -1640,27 +1527,19 @@ nav a:nth-child(3) {
       }
     }
     .stack {
-      p {
-        font-size: 1.4em;
-        margin-bottom: 0;
-      }
       li {
-        width: 25%;
+        width: 20%;
       }
     }
     .software {
-      p {
-        font-size: 1.4em;
-        margin-bottom: 0;
-      }
       li {
         width: 21%;
       }
     }
     .contact_form {
+      width: 90%;
       label,
       button {
-        font-size: 1.15em;
         padding: 6px 18px 6px 18px;
       }
     }
@@ -1674,8 +1553,6 @@ nav a:nth-child(3) {
   .page {
     footer {
       p {
-        font-size: 0.85em;
-        font-weight: 100;
         padding-left: 1%;
       }
     }
@@ -1686,7 +1563,6 @@ nav a:nth-child(3) {
       margin-left: 0.75vw;
     }
     div.links > div > a {
-      font-size: 0.6em;
       padding: 0.3em 0.6em 0 0.6em;
     }
   }
@@ -1713,7 +1589,6 @@ nav a:nth-child(3) {
       nav a {
         width: 130px;
         height: 130px;
-        font-size: 1em;
         line-height: 1.5em;
         span {
           padding-left: 13%;
@@ -1723,17 +1598,10 @@ nav a:nth-child(3) {
     div.links {
       width: 47%;
     }
-    footer {
-      p {
-        margin-bottom: 0;
-      }
-    }
   }
   /* Page styles */
   .page {
     h1 {
-      font-size: 1.4em;
-      line-height: 1.25em;
       padding-top: 0;
     }
     /* Main navigation internal links */
@@ -1753,8 +1621,7 @@ nav a:nth-child(3) {
         a {
           width: 110px;
           height: 110px;
-          font-size: 1em;
-          line-height: 19px;
+          line-height: 1.2em;
           span {
             padding-left: 12%;
           }
@@ -1767,11 +1634,6 @@ nav a:nth-child(3) {
     section {
       p br {
         margin-bottom: 4%;
-      }
-    }
-    footer {
-      p {
-        margin-bottom: 0;
       }
     }
     div.links {
@@ -1796,25 +1658,19 @@ nav a:nth-child(3) {
     }
     label,
     button {
-      font-size: 13px;
       padding: 5px 15px 5px 15px;
       margin-right: 12px;
     }
   }
   /* Contact page software logos */
   .stack {
-    p {
-      font-size: 1em;
-      margin-bottom: 0;
-    }
     li {
       width: 36%;
     }
   }
-  ul.software {
+  .software {
     p {
       width: 100%;
-      font-size: 1em;
       margin-bottom: 2%;
     }
     li {
