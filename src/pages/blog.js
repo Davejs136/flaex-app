@@ -3,7 +3,7 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import Blognav from "../components/blognav"
-import containerStyles from "../pages/blog.module.less"
+import containerStyles from "../pages/styles.module.less"
 
 const BlogTemplate = () => (
   <Layout>

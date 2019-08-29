@@ -1,6 +1,6 @@
 import React from "react"
 import GoogleMapReact from "google-map-react"
-import containerStyles from "../pages/bio.module.less"
+import containerStyles from "../pages/styles.module.less"
 
 const defaultProps = {
   center: {

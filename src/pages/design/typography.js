@@ -3,7 +3,7 @@ import Layout from "../../components/layout"
 import Desnav from "../../components/desnav"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import containerStyles from "../../pages/portfolio.module.less"
+import containerStyles from "../../pages/styles.module.less"
 
 const TypographyPage = () => (
   <StaticQuery

@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
-import containerStyles from "../pages/blog.module.less"
+import containerStyles from "../pages/styles.module.less"
 const ReactMarkdown = require("react-markdown/with-html")
 
 const ArticleTemplate = ({ data }) => (

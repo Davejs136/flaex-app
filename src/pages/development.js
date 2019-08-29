@@ -2,7 +2,7 @@ import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
-import containerStyles from "../pages/portfolio.module.less"
+import containerStyles from "../pages/styles.module.less"
 
 const DevelopmentPage = () => (
   <StaticQuery
