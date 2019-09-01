@@ -3,7 +3,6 @@ import Layout from "../../components/layout"
 import Desnav from "../../components/desnav"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import containerStyles from "../../pages/styles.module.less"
 
 const WebPage = () => (
   <StaticQuery
@@ -31,7 +30,7 @@ const WebPage = () => (
     render={data => (
       <Layout>
         <Desnav />
-        <ul className={containerStyles.works}>
+        <ul className="works">
           {data.allStrapiWork.edges.map(document => (
             <li key={document.node.id}>
               <Link

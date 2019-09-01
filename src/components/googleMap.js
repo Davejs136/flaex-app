@@ -1,6 +1,5 @@
 import React from "react"
 import GoogleMapReact from "google-map-react"
-import containerStyles from "../pages/styles.module.less"
 
 const defaultProps = {
   center: {
@@ -11,7 +10,7 @@ const defaultProps = {
 }
 
 const GoogleMap = () => (
-  <div className={containerStyles.map}>
+  <div className="map">
     <GoogleMapReact
       bootstrapURLKeys={{ key: "AIzaSyAQhe9nSUBaOnvNSv7DRj7g430Gqt94umQ" }}
       defaultCenter={defaultProps.center}

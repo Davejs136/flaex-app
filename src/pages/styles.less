@@ -815,13 +815,10 @@ This container renders outside home and page containers
       padding: 3%;
     }
   }
-  div.skills {
+  .skills {
     display: flex;
     flex-wrap: wrap;
     div {
-      width: 44%;
-      margin: 3%;
-      padding: 6% 0 6% 0;
       border: 1px black;
       border-style: solid solid solid solid;
       box-sizing: border-box;
@@ -935,17 +932,17 @@ This container renders outside home and page containers
         margin-bottom: 0;
       }
     }
-    div.links {
+    .links {
       width: 47%;
     }
-    div.links > div {
+    .links > div {
       margin-left: 2.25vw;
       padding: 0 0.1em 0 0.1em;
     }
-    div.links > div > a {
+    .links > div > a {
       font-size: 0.9rem;
     }
-    div.links > div > a > svg {
+    .links > div > a > svg {
       padding-left: 0.2em;
       padding-right: 0.2em;
     }
@@ -976,9 +973,6 @@ This container renders outside home and page containers
           }
         }
       }
-    }
-    div.links {
-      width: 47%;
     }
   }
   /* Page styles */
@@ -1013,9 +1007,6 @@ This container renders outside home and page containers
         margin-bottom: 4%;
       }
     }
-    div.links {
-      width: 46%;
-    }
     /* Portfolio */
     .works {
       margin: 0;
@@ -1032,12 +1023,21 @@ This container renders outside home and page containers
     }
     /* Bio styles */
     .skills {
+      width: 100%;
       div {
-        width: 44%;
+      }
+    }
+    /* Bio styles */
+    .skills {
+      div {
+        width: 48.5%;
+        margin-right: 3%;
+        margin-bottom: 3%;
+        padding: 6% 0 6% 0;
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
         p {
-          font-size: 0.95rem;
-          font-weight: 600;
-          text-transform: capitalize;
           margin-bottom: 0;
           padding-top: 8%;
         }
@@ -1158,10 +1158,10 @@ This container renders outside home and page containers
     /* Blog styles */
     .articles {
       li {
-        width: 48%;
-        margin-right: 3.5%;
+        width: 49%;
+        margin-right: 2%;
         &:nth-child(2n) {
-          margin-right: 0 !important;
+          margin-right: 0;
         }
       }
     }
@@ -1293,13 +1293,6 @@ This container renders outside home and page containers
       }
     }
     /* Blog styles */
-    .skills {
-      width: 100%;
-      div {
-        width: 30% !important;
-        margin: 1.5% !important;
-      }
-    }
     .profile {
       margin-bottom: 1.5%;
       .avatar {
@@ -1308,6 +1301,21 @@ This container renders outside home and page containers
       }
       h1 {
         min-height: 135px;
+      }
+    }
+    .skills {
+      width: 100%;
+      div {
+        width: 32%;
+        margin-right: 2%;
+        margin-bottom: 2%;
+        padding: 2.5% 0 2.5% 0;
+        &:nth-child(2n) {
+          margin-right: 2%;
+        }
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
       }
     }
     /* Contact */
@@ -1436,10 +1444,8 @@ This container renders outside home and page containers
         padding: 3.5%;
       }
     }
-    div.skills {
+    .skills {
       div {
-        width: 30%;
-        margin: 1.5%;
         p {
           font-size: 1.7rem;
         }
@@ -1512,9 +1518,6 @@ This container renders outside home and page containers
         }
       }
     }
-    div.links {
-      width: 47%;
-    }
   }
   /* Page styles */
   .page {
@@ -1552,9 +1555,6 @@ This container renders outside home and page containers
         margin-bottom: 4%;
       }
     }
-    div.links {
-      width: 46%;
-    }
     /* Portfolio  */
     .works {
       margin: 0;
@@ -1566,16 +1566,21 @@ This container renders outside home and page containers
         margin-bottom: 2%;
         box-sizing: border-box;
         &:nth-child(3n) {
-          margin-right: 0 !important;
+          margin-right: 0;
         }
       }
     }
     /* Bio styles */
-    div.skills {
+    .skills {
       width: 100%;
       div {
-        width: 30%;
-        margin: 1.5%;
+        width: 32%;
+        margin-right: 2%;
+        margin-bottom: 2%;
+        padding: 6% 0 6% 0;
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
       }
     }
     .map {
@@ -1591,9 +1596,9 @@ This container renders outside home and page containers
     .articles {
       li {
         width: 49%;
-        margin-right: 2%;
+        margin-right: 1.5%;
         &:nth-child(2n) {
-          margin-right: 0 !important;
+          margin-right: 0;
         }
       }
     }
@@ -1725,6 +1730,19 @@ This container renders outside home and page containers
         }
       }
     }
+    /* Blog */
+    .articles {
+      li {
+        width: 32.4%;
+        margin-right: 1.4%;
+        &:nth-child(2n) {
+          margin-right: 1.4%;
+        }
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+    }
   }
 }
 
@@ -1851,19 +1869,20 @@ This container renders outside home and page containers
         width: 23%;
         padding-right: 0.5%;
         &:nth-child(3n) {
-          margin-right: 2% !important;
+          margin-right: 2%;
         }
       }
     }
-    /* Blog styles */
+    /* Blog */
     .articles {
       li {
-        width: 48%;
-        margin-right: 3.5%;
-        box-sizing: border-box;
-        margin-bottom: 6%;
+        width: 32.4%;
+        margin-right: 1.4%;
         &:nth-child(2n) {
-          margin-right: 0 !important;
+          margin-right: 1.4%;
+        }
+        &:nth-child(3n) {
+          margin-right: 0;
         }
       }
     }
@@ -1890,11 +1909,21 @@ This container renders outside home and page containers
       }
     }
     .skills {
+      width: 100%;
       div {
-        width: 16% !important;
-        margin: 0.3% !important;
-        padding: 2.5% 0 2.5% 0 !important;
-      }      
+        width: 16%;
+        margin-right: 0.8%;
+        padding: 2.5% 0 2.5% 0;
+        &:nth-child(3n) {
+          margin-right: 0.8%;
+        }
+        &:nth-child(6n) {
+          margin-right: 0;
+        }
+        p {
+          font-size: 0.9rem;
+        }
+      }
     }
     /* Contact */
     .contact_form {
@@ -1911,7 +1940,7 @@ This container renders outside home and page containers
     }
     .software {
       li {
-        width: 22% !important;
+        width: 22%;
       }
     }
   }
@@ -1933,7 +1962,6 @@ This container renders outside home and page containers
         padding: 0.2em 0.6em 0 0.6em;
       }
     }
-    
   }
   .home {
     /* Main navigation home */
@@ -1953,13 +1981,13 @@ This container renders outside home and page containers
   }
   .page {
     h1 {
-      font-size: 1.7rem;     
+      font-size: 1.7rem;
     }
     h2 {
-      font-size: 1.5rem;     
+      font-size: 1.5rem;
     }
     p {
-      font-size: 1.2rem;     
+      font-size: 1.2rem;
     }
     /* Main navigation home */
     .menu {
@@ -1975,14 +2003,14 @@ This container renders outside home and page containers
           height: 130px;
         }
       }
-    }  
+    }
     .navsec {
       a,
       button {
         font-size: 0.95rem;
         padding: 0.7em 1em 0.7em 1em;
       }
-    }  
+    }
     .stack {
       li {
         width: 20%;
@@ -1994,13 +2022,12 @@ This container renders outside home and page containers
       }
     }
     .contact_form {
-      width: 90%;      
+      width: 90%;
       label,
       button {
         font-size: 0.95rem;
         padding: 0.7em 1em 0.7em 1em;
       }
-      
     }
   }
 }
@@ -2102,7 +2129,7 @@ This container renders outside home and page containers
         margin-bottom: 2%;
         box-sizing: border-box;
         &:nth-child(3n) {
-          margin-right: 0 !important;
+          margin-right: 0;
         }
       }
     }

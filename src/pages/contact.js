@@ -3,7 +3,6 @@ import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import * as emailjs from "emailjs-com"
-import containerStyles from "./styles.module.less"
 import { Form } from "react-final-form"
 import { Field } from "react-final-form-html5-validation"
 
@@ -68,7 +67,7 @@ const ContactPage = () => (
           render={({ handleSubmit, pristine, invalid }) => (
             <form
               id="contact-form"
-              className={containerStyles.contact_form}
+              className="contact_form"
               onSubmit={event => {
                 const promise = onSubmit(event)
                 promise.then(() => {
@@ -102,13 +101,13 @@ const ContactPage = () => (
             </form>
           )}
         />
-        <ul className={containerStyles.stack}>
+        <ul className="stack">
           <p>This is web app was built with:</p>
-          <li className={containerStyles.jam}>
+          <li className="jam">
             <Img fluid={data.jam.childImageSharp.fluid} />
           </li>
         </ul>
-        <ul className={containerStyles.software}>
+        <ul className="software">
           <p>Developed using:</p>
           <li>
             <Img fluid={data.strapi.childImageSharp.fluid} />

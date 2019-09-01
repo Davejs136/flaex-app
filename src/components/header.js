@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import containerStyles from "../pages/styles.module.less"
 
 const activeStyles = {
   filter: "invert(1)",
@@ -30,12 +29,12 @@ const Header = () => (
       `}
       render={data => (
         <div>
-          <div className={containerStyles.logohead}>
+          <div className="logohead">
             <Link to="/" activeStyle={activeStyles}>
               <Img fluid={data.head.childImageSharp.fluid} />
             </Link>
           </div>
-          <div className={containerStyles.logohead}>
+          <div className="logohead">
             <Link to="/about-me" activeStyle={activeStyles}>
               <Img fluid={data.tag.childImageSharp.fluid} />
             </Link>

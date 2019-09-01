@@ -2,7 +2,6 @@ import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
-import containerStyles from "../pages/styles.module.less"
 
 const DesignPage = () => (
   <StaticQuery
@@ -29,15 +28,15 @@ const DesignPage = () => (
     `}
     render={data => (
       <Layout>
-        <div className={containerStyles.navsec}>
-          <Link className={containerStyles.firstactive} to="/design">
+        <div className="navsec">
+          <Link className="firstactive" to="/design">
             logos
           </Link>
           <Link to="/design/prints">prints</Link>
           <Link to="/design/web">web</Link>
           <Link to="/design/typography">typography</Link>
         </div>
-        <ul className={containerStyles.works}>
+        <ul className="works">
           {data.allStrapiWork.edges.map(document => (
             <li key={document.node.id}>
               <Link

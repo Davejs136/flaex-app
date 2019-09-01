@@ -4,7 +4,6 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import Blognav from "../components/blognav"
 import GoogleMap from "../components/googleMap"
-import containerStyles from "./styles.module.less"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const ReactMarkdown = require("react-markdown/with-html")
@@ -50,8 +49,8 @@ const BioTemplate = () => (
       `}
       render={data => (
         <section>
-          <div className={containerStyles.profile}>
-            <div className={containerStyles.avatar}>
+          <div className="profile">
+            <div className="avatar">
               <Img fluid={data.strapiProfile.avatar.childImageSharp.fluid} />
             </div>
             <h1>{data.strapiProfile.headline}</h1>
@@ -61,7 +60,7 @@ const BioTemplate = () => (
             {data.strapiProfile.summary}
           </p>
           <h2>My skills</h2>
-          <div className={containerStyles.skills}>
+          <div className="skills">
             {data.allStrapiSkill.edges.map(document => (
               <div key={document.node.id}>
                 <FontAwesomeIcon

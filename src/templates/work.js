@@ -2,34 +2,31 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
-import containerStyles from "../pages/styles.module.less"
 const ReactMarkdown = require("react-markdown/with-html")
 
 const openLightbox = event => {
   const node = document.querySelector("#___gatsby")
   node.insertAdjacentHTML(
     "afterbegin",
-    `<div id="button-close" class=${
-      containerStyles.lightbox
-    }><p onClick="document.getElementById('button-close').remove()">&#128473;</p><img src=${event} alt="Project gallery image"  /></div>`
+    `<div id="button-close" class="lightbox"><p onClick="document.getElementById('button-close').remove()">&#128473;</p><img src=${event} alt="Project gallery image"  /></div>`
   )
 }
 
 const WorkTemplate = ({ data }) => (
   <Layout>
-    <div className={containerStyles.navsec}>
+    <div className="navsec">
       <button onClick={() => window.history.back()}>&#60;&#60; back</button>
     </div>
     <article>
       <h1>{data.strapiWork.title}</h1>
-      <ul className={containerStyles.works}>
+      <ul className="works">
         {data.strapiWork.images.map(document => (
           <li
             key={document.localFile.name}
             onClick={event => openLightbox(event.target.src)}
           >
             <Img
-              className={containerStyles.galleryImage}
+              className="galleryImage"
               fluid={document.localFile.childImageSharp.fluid}
               alt="Project gallery image"
             />
@@ -37,7 +34,7 @@ const WorkTemplate = ({ data }) => (
         ))}
       </ul>
       <ReactMarkdown
-        className={containerStyles.description}
+        className="description"
         source={data.strapiWork.description}
         escapeHtml={false}
       />

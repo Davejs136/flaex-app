@@ -3,7 +3,6 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import Blognav from "../components/blognav"
-import containerStyles from "../pages/styles.module.less"
 
 const BlogTemplate = () => (
   <Layout>
@@ -31,7 +30,7 @@ const BlogTemplate = () => (
         }
       `}
       render={data => (
-        <ul className={containerStyles.articles}>
+        <ul className="articles">
           {data.allStrapiArticle.edges.map(document => (
             <li key={document.node.id}>
               <Link
@@ -39,7 +38,7 @@ const BlogTemplate = () => (
                   .replace(/\s+/g, "-")
                   .toLowerCase()}`}
               >
-                <div className={containerStyles.mainImage}>
+                <div className="mainImage">
                 <Img fluid={document.node.image.childImageSharp.fluid} />
                 </div>                
               </Link>

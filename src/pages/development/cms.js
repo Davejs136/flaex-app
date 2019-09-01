@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../../components/layout"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import containerStyles from "../../pages/styles.module.less"
 
 const CMSPage = () => (
   <StaticQuery
@@ -29,13 +28,13 @@ const CMSPage = () => (
     `}
     render={data => (
       <Layout>
-        <div className={containerStyles.navsec}>
+        <div className="navsec">
           <Link to="/development">front-end</Link>
-          <Link to="/development/cms" className={containerStyles.active}>
+          <Link to="/development/cms" className="active">
             CMS Themes
           </Link>
         </div>
-        <ul className={containerStyles.works}>
+        <ul className="works">
           {data.allStrapiWork.edges.map(document => (
             <li key={document.node.id}>
               <Link

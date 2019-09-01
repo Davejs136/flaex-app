@@ -3,11 +3,11 @@ import PropTypes from "prop-types"
 import Header from "./header"
 import Navigation from "./navigation"
 import Footer from "./footer"
-import containerStyles from "../pages/styles.module.less"
+
 
 const Layout = ({ children }) => (
-  <div className={containerStyles.page}>
-    <div className={containerStyles.menu}>
+  <div className="page">
+    <div className="menu">
       <Header />
       <Navigation />
     </div>

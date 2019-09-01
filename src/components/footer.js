@@ -1,6 +1,5 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import containerStyles from "../pages/styles.module.less"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 let faicon = null
@@ -25,7 +24,7 @@ const Navigation = () => (
       <>
         <footer>
           <p>@flaex_ ® {new Date().getFullYear()} - EN</p>
-          <div className={containerStyles.links}>
+          <div className="links">
             {data.allStrapiLink.edges.map(document => (
               <div key={document.node.id}>
                 <a

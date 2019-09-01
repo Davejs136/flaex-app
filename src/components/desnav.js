@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import containerStyles from "../pages/styles.module.less"
+
 
 const activeStyles = {
   filter: "invert(1)",
@@ -10,7 +10,7 @@ const activeStyles = {
 }
 
 const DesnavComponent = () => (
-  <div className={containerStyles.navsec}>
+  <div className="navsec">
     <Link to="/design">logos</Link>
     <Link to="/design/prints" activeStyle={activeStyles}>
       prints
