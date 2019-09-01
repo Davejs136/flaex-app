@@ -39,7 +39,9 @@ const BlogTemplate = () => (
                   .replace(/\s+/g, "-")
                   .toLowerCase()}`}
               >
+                <div className={containerStyles.mainImage}>
                 <Img fluid={document.node.image.childImageSharp.fluid} />
+                </div>                
               </Link>
               <time>{document.node.date}</time>
               <h2>
