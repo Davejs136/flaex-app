@@ -48,7 +48,7 @@ const BioTemplate = () => (
         }
       `}
       render={data => (
-        <section>
+        <section className="bio">
           <div className="profile">
             <div className="avatar">
               <Img fluid={data.strapiProfile.avatar.childImageSharp.fluid} />
