@@ -751,7 +751,7 @@ This container renders outside home and page containers
     button {
       font-size: 0.8rem;
       color: white;
-      border: none; 
+      border: none;
       .bg();
       text-decoration: none;
       padding: 0.4em 0.8em 0.4em 0.8em;
@@ -885,13 +885,17 @@ This container renders outside home and page containers
   }
   /* Contact form */
   .contact_form {
+    margin-top: 5%;
     input[type="text"],
     input[type="email"],
     textarea {
       border-style: solid;
       border-color: #000;
+      border-width: 0 0 1px 0;
+      margin-bottom: 5%;
     }
     input[type="submit"] {
+      font-size: 0.8rem;
       color: white;
       .bg();
       border: none;
@@ -899,7 +903,7 @@ This container renders outside home and page containers
     label,
     button {
       font-size: 0.8rem;
-      padding: 0.4em 0.8em 0.4em 0.8em;
+      padding: 0.5em 0.8em 0.5em 0.8em;
       margin: 0 0.7em 0 0;
       color: white;
       border: none;
@@ -1020,9 +1024,7 @@ This container renders outside home and page containers
     }
     /* Bio styles */
     .skills {
-      width: 100%;
-      div {
-      }
+      width: 100%;      
     }
     /* Bio styles */
     .skills {
@@ -1058,21 +1060,11 @@ This container renders outside home and page containers
     }
     /* Contact */
     .contact_form {
-      margin-top: 5%;
-      input[type="text"],
-      input[type="email"],
-      textarea {
-        margin-bottom: 5%;
-        border-width: 0 0 1px 0;
-      }
       input,
       textarea {
         margin-top: 2%;
         width: 100%;
       }
-      input[type="submit"] {
-        width: 50%;
-      }      
     }
     .stack {
       li {
@@ -1255,12 +1247,6 @@ This container renders outside home and page containers
         }
       }
     }
-    .navsec {
-      a,
-      button {
-        font-size: 1rem;
-      }
-    }
     /* Portfolio */
     article {
       h1 {
@@ -1309,11 +1295,11 @@ This container renders outside home and page containers
           margin-right: 0;
         }
       }
-    }  
+    }
     /* Contact */
     .contact_form {
-      width: 70%;      
-    } 
+      width: 70%;
+    }
   }
 }
 
@@ -1342,7 +1328,7 @@ This container renders outside home and page containers
           height: 155px;
         }
       }
-    }    
+    }
   }
 }
 
@@ -1433,18 +1419,6 @@ This container renders outside home and page containers
         }
       }
     }
-    /* Contact */ 
-    .contact_form {
-      label,
-      button {
-        font-size: 1.4rem;
-        padding: 0.7em 1em 0.7em 1em;
-      }
-      input  {
-        font-size: 1.5rem;
-        margin:6% 0 10% 0 !important;
-      }
-    }   
   }
 }
 
@@ -1586,13 +1560,6 @@ This container renders outside home and page containers
     }
     /* Contact  */
     .contact_form {
-      margin-top: 5%;
-      input[type="text"],
-      input[type="email"],
-      textarea {
-        margin-bottom: 5%;
-        border-width: 0 0 1px 0;
-      }
       input,
       textarea {
         margin-top: 2%;
@@ -1600,7 +1567,7 @@ This container renders outside home and page containers
       }
       input[type="submit"] {
         width: 50%;
-      }      
+      }
     }
     .stack {
       p {
@@ -1912,7 +1879,7 @@ This container renders outside home and page containers
     }
     /* Contact */
     .contact_form {
-      width: 50%;      
+      width: 50%;
     }
     .stack {
       li {
@@ -2008,11 +1975,6 @@ This container renders outside home and page containers
     }
     .contact_form {
       width: 90%;
-      label,
-      button {
-        font-size: 0.95rem;
-        padding: 0.7em 1em 0.7em 1em;
-      }
     }
   }
 }
@@ -2024,32 +1986,31 @@ This container renders outside home and page containers
     img {
       max-width: 900px;
     }
-  } i
+  }
   .home,
   .page {
     footer {
       p {
-        font-size: 0.75rem;
-        padding:0.5%;
+        font-size: 0.7rem;
+        padding: 0.5em 0.6em 0 0.6em;
       }
-    }
-    div.links {
-      width: 47%;
-    }
-    div.links > div {
-      margin-left: 0.75vw;
-    }
-    div.links > div > a {
-      font-size: 0.65rem;
-      padding: 0.3em 0.6em 0 0.6em;
+      div.links {
+        width: 47%;
+      }
+      div.links > div {
+        margin-left: 0.85vw;
+      }
+      div.links > div > a {
+        font-size: 0.55rem;
+        padding: 0 0.6em 0 0.6em;
+      }
     }
   }
   /* Index styles */
   .home {
     align-items: center;
-    /* Main navigation home */
     .menu {
-      width: 44vw;
+      width: 50vw;
       height: 90vh;
       flex-direction: row;
       align-items: center;
@@ -2062,34 +2023,34 @@ This container renders outside home and page containers
         }
       }
       nav {
-        width: 85vw;
-      }
-      nav a {
-        width: 130px;
-        height: 130px;
-        span {
-          padding-left: 13%;
+        width: 100%;
+        a {
+          font-size: 1.1rem;
+          width: 135px;
+          height: 135px;
+          span {
+            padding-left: 13%;
+          }
         }
       }
-    }    
+    }
   }
   .page {
-    /* Main navigation internal links */
     h1 {
       font-size: 1.5rem;
     }
     h2 {
       font-size: 1.3rem;
-      width: 100%
+      width: 100%;
     }
     p {
       font-size: 1.02rem;
-    } 
+    }
     .description {
       -webkit-column-count: 2; /* Old Chrome, Safari and Opera */
       -moz-column-count: 2; /* Old Firefox */
       column-count: 2;
-    }  
+    }
     .menu {
       padding: 1vw;
       width: 100%;
@@ -2104,6 +2065,7 @@ This container renders outside home and page containers
       nav {
         width: 30vw;
         a {
+          font-size: 1.02rem;
           width: 110px;
           height: 110px;
           span {
@@ -2120,9 +2082,6 @@ This container renders outside home and page containers
         margin-bottom: 4%;
       }
     }
-    div.links {
-      width: 46%;
-    }
     /* Portfolio */
     .works {
       margin-bottom: 0;
@@ -2138,7 +2097,6 @@ This container renders outside home and page containers
         }
       }
     }
-   
     /* Bio styles */
     .bio > p {
       -webkit-column-count: 2; /* Old Chrome, Safari and Opera */
@@ -2152,7 +2110,7 @@ This container renders outside home and page containers
         height: 100px;
       }
       h1 {
-        min-height: 100px;
+        padding: 2.25% 2.25% 2.25% 1.25%;
       }
     }
     .skills {
@@ -2173,7 +2131,7 @@ This container renders outside home and page containers
       }
     }
     .map {
-      height: 30vh;      
+      height: 30vh;
     }
     /* Blog */
     .articles {
@@ -2200,16 +2158,9 @@ This container renders outside home and page containers
       }
     }
     /* Contact */
-    
     .contact_form {
       width: 60%;
-      margin-top: 5%;
-      input[type="text"],
-      input[type="email"],
-      textarea {
-        margin-bottom: 5%;
-        border-width: 0 0 1px 0;
-      }
+      margin-top: 2.5%;
       input,
       textarea {
         margin-top: 2%;
@@ -2217,11 +2168,11 @@ This container renders outside home and page containers
       }
       input[type="submit"] {
         width: 50%;
-      }      
+      }
     }
     .stack {
       li {
-        width: 22%;
+        width: 15%;
       }
     }
     .software {
@@ -2244,10 +2195,10 @@ This container renders outside home and page containers
   }
 }
 
-@media only screen and (min-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-device-width: 1360px) and (-webkit-min-device-pixel-ratio: 1) {
   .home {
     .menu {
-      width: 42vw;
+      width: 43vw;
     }
   }
   .page {
@@ -2255,90 +2206,353 @@ This container renders outside home and page containers
       nav {
         width: 28vw;
       }
-    }     
+    }
   }
 }
 
 @media only screen and (min-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 1) {
   .home {
     .menu {
-      width: 40vw;
-      nav {
-        a {
-          font-size: 1.03rem;
-        }
-      }
-    }
-    footer {
-      p {
-        font-size: 0.8rem;
-      }
+      width: 41vw;
     }
   }
   .page {
     .menu {
       nav {
         width: 26vw;
-        a {
-          font-size: 1.03rem;
-        }
       }
-    }     
+    }
   }
 }
 
 @media only screen and (min-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
-  .home {
-    .menu {
-      width: 36vw;
-      nav {
-        a {
-          font-size: 1.05rem;
-        }
+  .home,
+  .page {
+    footer {
+      div.links > div {
+        margin-left: 0.7vw;
       }
     }
-    footer {
-      p {
-        font-size: 0.9rem;
-      }
+  }
+  .home {
+    .menu {
+      width: 37vw;
     }
   }
   .page {
     .menu {
       nav {
-        width: 23vw;
-        a {
-          font-size: 1.05rem;
-        }
+        width: 24vw;
       }
-    }     
+    }
+    .skills {
+      div {
+        p { font-size: 1.1rem}
+      }
+    }
   }
 }
 
 @media only screen and (min-device-width: 1920px) and (-webkit-min-device-pixel-ratio: 1) {
-  .home {
+  .home,
+  .page {
     .menu {
-      width: 30vw;
+      header div {
+        width: 150px;
+      }
       nav {
         a {
-          font-size: 1.02rem;
+          font-size: 1.1rem;
+          width: 150px;
+          height: 150px;
+          span {
+            padding-left: 13%;
+          }
         }
       }
     }
     footer {
       p {
-        font-size: 0.7rem;
-      }      
+        font-size: 1rem;
+        padding: 0.4vh 1.5vh 0.4vh 1.5vh;
+      }
+      div.links > div {
+        margin-left: 0.5vw;
+        padding: 0.15em 0.2em 0 0.2em;
+        a {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+  .home {
+    .menu {
+      width: 34vw;
+      nav {
+        width: 100vw;
+      }
     }
   }
   .page {
+    h1 {
+      font-size: 1.7rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1.027rem;
+    }
     .menu {
       nav {
-        width: 20vw;
-        a {
-          font-size: 1.02rem;
+        width: 26vw;
+      }
+    }
+    .navsec {
+      a,
+      button {
+        font-size: 0.95rem;
+      }
+    }
+    .profile {
+      .avatar {
+        width: 120px;
+        height: 120px;
+      }
+    }
+    .skills {
+      div {
+        p { font-size: 1.2rem}
+      }
+    }
+    .contact_form {
+      label,
+      input,
+      button {
+        font-size: 0.95rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 2048px) and (-webkit-min-device-pixel-ratio: 1) {
+  .home,
+  .page {
+    .menu {
+      width: 34vw;
+      header {
+        div {
+          width: 160px;
         }
       }
-    }     
+      nav {
+        a {
+          font-size: 1.3rem;
+          width: 160px;
+          height: 160px;
+        }
+      }
+    }
+  }
+  .page {
+    p {
+      font-size: 1.3rem;
+    }
+    .menu {
+      width: 36vw;
+    }
+    .navsec {
+      a,
+      button {
+        font-size: 1.1rem;
+      }
+    }
+    .profile {
+      .avatar {
+        width: 135px;
+        height: 135px;
+      }
+    }
+    .skills {
+      div {
+        p { font-size: 1.2rem}
+      }
+    }
+    .contact_form {
+      label,
+      button {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 1) {
+  .home,
+  .page {
+    .menu {
+      width: 38vw;
+      header {
+        div {
+          width: 220px;
+        }
+      }
+      nav {
+        a {
+          font-size: 1.8rem;
+          width: 220px;
+          height: 220px;
+        }
+      }
+    }
+    footer {
+      p {
+        font-size: 1.3rem;       
+      }
+      div.links > div {
+        margin-left: 0.75vw;
+        padding: 0.4em 0.2em 0 0.2em;        
+        a {
+          font-size: 1rem;              
+        }
+      }
+    }
+  }
+  .page {
+    h1 {
+      font-size: 2.2rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.6rem;
+    }   
+    .menu {
+      width: 40vw;
+      nav {
+        width: 100%;
+      }
+    }
+    .navsec {
+      a,
+      button {
+        font-size: 1.45rem;
+      }
+    }
+    .profile {
+      .avatar {
+        width: 180px;
+        height: 180px;
+      }
+    }    
+    /* Bio */  
+    .skills {
+      div {
+        p {
+          font-size: 1.8rem;
+        }
+      }
+    }  
+    .contact_form {
+      label,
+      button {
+        font-size: 1.45rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 3840px) and (-webkit-min-device-pixel-ratio: 1) {
+  .home,
+  .page {
+    .menu {
+      width: 37vw;
+      header {
+        div {
+          width: 320px;
+        }
+      }
+      nav {
+        a {
+          font-size: 2.8rem;
+          width: 320px;
+          height: 320px;
+        }
+      }
+    }
+    footer {
+      p {
+        font-size: 2.2rem;       
+      }
+      div.links > div {
+        margin-left: 0.75vw;
+        padding: 1em 0.2em 0 0.2em;        
+        a {
+          font-size: 1.6rem;              
+        }
+      }
+    }
+  }
+  .page {
+    h1 {
+      font-size: 3.8rem;
+    }
+    h2 {
+      font-size: 3.4rem;
+    }
+    p {
+      font-size: 2.6rem;
+    }   
+    .menu {
+      width: 39vw;
+      nav {
+        width: 100%;
+      }
+    }
+    .navsec {
+      margin-bottom: 1%; 
+      a,
+      button {
+        font-size: 2.2rem;
+        padding: 0.8em;
+      }
+    }
+    /* Portafolio */
+    .works {
+      li {
+        min-height: 550px;
+      }
+    }
+    /* Bio */  
+    .profile {
+      .avatar {
+        width: 270px;
+        height: 270px;
+      }
+    }    
+    .skills {
+      div {
+        p {
+          font-size: 2.8rem;
+        }
+        svg {
+          font-size: 3.6rem;
+        }
+      }
+    }  
+    .contact_form {
+      label,
+      button {
+        font-size: 2.2rem;
+        padding: 0.8em;
+      }
+      input,
+      textarea {
+        font-size: 2.8rem;
+        margin-top: 4%;
+        width: 100%;
+      }
+    }
   }
 }
