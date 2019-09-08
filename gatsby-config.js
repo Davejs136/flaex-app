@@ -24,7 +24,8 @@ module.exports = {
           'link',
           'article',
           'work',
-          'user'
+          'user',
+          'position'
         ],
         queryLimit: 1000,
       },
