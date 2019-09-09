@@ -34,7 +34,7 @@ const Header = () => (
               <Img fluid={data.head.childImageSharp.fluid} />
             </Link>
           </div>
-          <div className="logohead">
+          <div className="logotag">
             <Link to="/about-me" activeStyle={activeStyles}>
               <Img fluid={data.tag.childImageSharp.fluid} />
             </Link>

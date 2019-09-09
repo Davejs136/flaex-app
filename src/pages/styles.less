@@ -929,14 +929,18 @@ This container renders outside home and page containers
   /* Main views styles */
   .home,
   .page {
+    header {
+      div {
+        .logotag {
+          margin-top: 5.5%; 
+        }
+      }
+    }
     footer {
       p {
         margin-bottom: 0;
       }
-    }
-    .links {
-      width: 47%;
-    }
+    }    
     .links > div {
       margin-left: 2.25vw;
       padding: 0 0.1em 0 0.1em;
@@ -957,13 +961,7 @@ This container renders outside home and page containers
       width: 85px;
       height: 92vh;
       flex-direction: column;
-      justify-content: center;
-      header {
-        .logohead {
-          max-width: 100%;
-          margin-bottom: 3%;
-        }
-      }
+      justify-content: center;      
       nav {
         height: 58vh;
         flex-direction: column;
@@ -984,10 +982,7 @@ This container renders outside home and page containers
       padding: 1vw;
       width: 100%;
       header div {
-        width: 68px;
-        .logohead {
-          margin-bottom: 6%;
-        }
+        width: 68px;        
       }
       nav {
         width: 80vw;
@@ -1441,22 +1436,28 @@ This container renders outside home and page containers
   /* Main views styles */
   .home,
   .page {
+    header {
+      div {
+        .logotag {
+          margin-top: 5.5%; 
+        }
+      }
+    }
     footer {
       width: 100%;
       padding: 1vw;
       p {
         font-weight: 100;
+        padding-top: 0.5em;
         padding-left: 1.5%;
       }
-    }
-    div.links {
-      width: 47%;
-    }
+    }    
     div.links > div {
       margin-left: 1.25vw;
     }
     div.links > div > a {
       font-size: 0.6rem;
+      line-height: 1.5rem;
       padding: 0 0.6em 0 0.6em;
     }
   }
@@ -1471,11 +1472,8 @@ This container renders outside home and page containers
       align-items: center;
       header {
         div {
-          width: 85px;
-        }
-        .logohead {
-          margin-bottom: 7%;
-        }
+          width: 85px;          
+        }        
       }
       nav {
         width: 85vw;
@@ -1510,11 +1508,9 @@ This container renders outside home and page containers
       }
       header {
         div {
-          width: 70px;
-        }
-        .logohead {
-          margin-bottom: 6%;
-        }
+          width: 70px;          
+                     
+        }        
       }
     }
     main {
@@ -1997,14 +1993,21 @@ This container renders outside home and page containers
   }
   .home,
   .page {
+    header {
+      div {
+        .logotag {
+          margin-top: 5.5%; 
+        }
+      }
+    }
     footer {
       p {
         font-size: 0.7rem;
         padding: 0.5em 0.6em 0 0.6em;
-      }
-      div.links {
-        width: 47%;
-      }
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+      }      
       div.links > div {
         margin-left: 0.85vw;
       }
@@ -2025,10 +2028,10 @@ This container renders outside home and page containers
       header {
         div {
           width: 135px;
-        }
-        .logohead {
-          margin-bottom: 6%;
-        }
+          .logotag {
+            margin-top: 5.5%; 
+          }
+        }        
       }
       nav {
         width: 100%;
@@ -2063,10 +2066,7 @@ This container renders outside home and page containers
       header {
         div {
           width: 110px;
-        }
-        .logohead {
-          margin-bottom: 6%;
-        }
+        }        
       }
       nav {
         width: 30vw;
@@ -2312,11 +2312,11 @@ This container renders outside home and page containers
     .menu {
       header {
         div {
-          width: 135px;
+          width: 125px;
         }
       }
       nav {
-        width: 24vw;
+        width: 22vw;
         a {
           font-size: 1.1rem;
           width: 125px;
@@ -2374,6 +2374,14 @@ This container renders outside home and page containers
         }
       }
     }
+    footer {
+      div.links > div {
+        padding-top: 0.5em;
+        a {
+          font-size: 0.8rem;        
+        }
+      }
+    }
   }
   .page {
     h1 {
@@ -2387,13 +2395,14 @@ This container renders outside home and page containers
       line-height: 2.2rem;
     }
     .menu {
-      width: 36vw;
+      width: 38vw;
       header {
         div {
           width: 145px;
         }
       }
       nav {
+        width: 24vw;
         a {
           font-size: 1.3rem;
           width: 145px;
