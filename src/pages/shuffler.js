@@ -1,8 +1,11 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
-let shuffle = (array) => {
+
+
+
+const shuffle = (array) => {
   let currentIndex = array.length,
     temporaryValue, randomIndex;
 
@@ -21,22 +24,36 @@ let shuffle = (array) => {
   return array;
 }
 
+let positonZero = (array) => {
+  shuffle(array)
+  let newArray = array[0]
+  return newArray
+}
 
+const randomizer = (array) => {  
+  positonZero(array)
+  const videoContainer = document.querySelector('.video-container') 
+  videoContainer.innerHTML = `<div key=${array[0].node.id}>             
+  <video autoPlay>
+    <source src=${array[0].node.video.publicURL} type="video/mp4" />                           
+  </video>
+</div>`
+  
+}
 
 const Shuffler = ({ data }) => (
-  <Layout>
-    <ul>
-      {shuffle(data.allStrapiPosition.edges).map(document => (
-        <li key={document.node.id}>             
-          <video autoplay="autoplay">
-            <source src={document.node.video.publicURL} type="video/mp4" />                           
+  <Layout>    
+      <h1>Randomizer</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <button type="button" onClick={(event) => randomizer(data.allStrapiPosition.edges)}>Shuffle position! ..🌪</button>
+      <div className="video-container">         
+        <div key={data.allStrapiPosition.edges[0].node.id}>             
+          <video autoPlay>
+            <source src={data.allStrapiPosition.edges[0].node.video.publicURL} type="video/mp4" />                           
           </video>
-        </li>
-      ))}
-    </ul>  
-    <div>
-
-    </div>         
+        </div>              
+      </div>            
   </Layout>
 )
 

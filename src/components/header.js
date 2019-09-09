@@ -30,7 +30,7 @@ const Header = () => (
       render={data => (
         <div>
           <div className="logohead">
-            <Link to="/" activeStyle={activeStyles}>
+            <Link to="/shuffler" activeStyle={activeStyles}>
               <Img fluid={data.head.childImageSharp.fluid} />
             </Link>
           </div>

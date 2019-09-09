@@ -8,7 +8,7 @@ const openLightbox = event => {
   const node = document.querySelector("#___gatsby")
   node.insertAdjacentHTML(
     "afterbegin",
-    `<div id="button-close" class="lightbox"><p onClick="document.getElementById('button-close').remove()">&#128473;</p><img src=${event} alt="Project gallery image"  /></div>`
+    `<div id="button-close" class="lightbox"><p onClick="document.getElementById('button-close').remove()">✖</p><img src=${event} alt="Project gallery image" /></div>`
   )
 }
 
