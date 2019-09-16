@@ -39,8 +39,8 @@ const BlogTemplate = () => (
                   .toLowerCase()}`}
               >
                 <div className="mainImage">
-                <Img fluid={document.node.image.childImageSharp.fluid} />
-                </div>                
+                  <Img fluid={document.node.image.childImageSharp.fluid} />
+                </div>
               </Link>
               <time>{document.node.date}</time>
               <h2>

@@ -8,6 +8,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const ReactMarkdown = require("react-markdown/with-html")
 
+/* eslint-disable */
+
 let faicon = null
 let faprefix = null
 

@@ -6,7 +6,7 @@ const activeStyles = {
   filter: "invert(1)",
 }
 
-const Header = () => (
+const HeaderPage = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -30,10 +30,10 @@ const Header = () => (
       <header>
         <div>
           <div className="logohead">
-            <Link to="/shuffler" activeStyle={activeStyles}>
+            <Link to="/" activeStyle={activeStyles}>
               <Img fluid={data.head.childImageSharp.fluid} />
             </Link>
-            <span className="tooltiptext">shuffler</span>
+            <span className="tooltiptext">home</span>
           </div>
           <div className="logotag">
             <Link to="/about-me" activeStyle={activeStyles}>
@@ -47,4 +47,4 @@ const Header = () => (
   />
 )
 
-export default Header
+export default HeaderPage

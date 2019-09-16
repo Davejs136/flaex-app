@@ -2,6 +2,8 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
+/* eslint-disable */
+
 let faicon = null
 let faprefix = null
 const Navigation = () => (

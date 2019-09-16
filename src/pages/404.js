@@ -20,15 +20,23 @@ const NotFoundPage = () => (
     render={data => (
       <Layout>
         <SEO title="404: Not found" />
-        <h1>There has been an error 😔</h1>
+        <h1>
+          There has been an error{" "}
+          <span aria-label="emoji" role="img">
+            😔
+          </span>
+        </h1>
         <p>You just hit a route that doesn&#39;t exist.</p>
+        <p>
+          Do not feel bad. Use the main menu to follow the path of
+          righteousness!{" "}
+          <span aria-label="emoji" role="img">
+            😃
+          </span>
+        </p>
         <div className="notfound">
           <Img fluid={data.notFound.childImageSharp.fluid} />
         </div>
-        <p>
-          Do not feel bad. Use the main menu to follow the path of
-          righteousness! 😃
-        </p>
       </Layout>
     )}
   />

@@ -635,7 +635,7 @@ pre tt:after {
   cursor: zoom-in;
 }
 /* Portfolio
-This container renders outside home and page containers
+This element renders outside home and page containers
 */
 .lightbox {
   width: 100%;
@@ -664,7 +664,7 @@ This container renders outside home and page containers
     text-align: right;
     padding-top: 2%;
     padding-right: 2%;
-    font-size:1.6rem;
+    font-size: 1.6rem;
   }
 }
 @keyframes fadeInOpacity {
@@ -675,6 +675,29 @@ This container renders outside home and page containers
     opacity: 1;
   }
 }
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOutIn {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .home,
 .page {
   display: flex;
@@ -776,9 +799,63 @@ This container renders outside home and page containers
 .home {
   /* Main navigation home */
   .menu {
+    header {
+      div {
+        .logohead,
+        .logotag {
+          position: relative;
+          .tooltiptext {
+            right: 110%;
+            text-align: left;
+            font-size: 1rem;
+            color: #999;
+            padding: 0.25em;
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+            top: -4px;
+            opacity: 1;             
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-duration: 2.5s;
+            &:after {
+              content: " ";
+              position: absolute;
+              top: 50%;
+              left: 100%; /* To the right of the tooltip */
+              margin-top: -6px;
+              border-width: 6px;
+              border-style: solid;
+              border-color: transparent transparent transparent #999;
+            }
+          }          
+        }
+        .logohead {
+          .tooltiptext {
+            animation-name: fadeInOut;
+          }
+        }
+        .logotag {
+          .tooltiptext {
+            animation-name: fadeOutIn;
+          }
+        }
+      }
+    }
+    header,
+    nav {
+      opacity: 1;
+      animation-name: fadeInOpacity;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+    }
+    header {
+      animation-duration: 0.1s;
+    }
     nav {
       display: flex;
       justify-content: space-evenly;
+      animation-duration: 0.3s;
     }
     nav a {
       display: flex;
@@ -788,11 +865,62 @@ This container renders outside home and page containers
       box-sizing: border-box;
     }
   }
+  footer {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+  }
 }
 /* Page styles */
 .page {
   /* Main navigation internal links */
   .menu {
+    header {
+      div {
+        .logohead,
+        .logotag {
+          position: relative;
+          .tooltiptext {
+            visibility: hidden;
+            width: 90px;
+            font-size: 0.75rem;
+            background-color: #fff;
+            color: #999;
+            text-align: center;
+            border-style: solid;
+            border-color:#999;
+            border-width: thin;
+            padding: 0.25em;            
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+            top: 80%;
+            left: 50%;
+            margin-left: -45px; /* Use half of the width (120/2 = 60), to center the tooltip */
+          }
+        }
+        .logohead,
+        .logotag {
+         &:hover {
+           .tooltiptext {
+            visibility: visible;
+              &:after {
+                content: " ";
+                position: absolute;
+                bottom: 100%;  /* At the top of the tooltip */
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: transparent transparent #999 transparent;
+              }
+            }
+          }  
+        }
+      }
+    }
     nav {
       display: flex;
       justify-content: space-evenly;
@@ -922,8 +1050,23 @@ This container renders outside home and page containers
     width: 100%;
     flex-wrap: wrap;
   }
+  /* Randomizer */
+  .shuffle-btn {
+    color: white;
+    .bg();
+    border: none;
+    padding: 0.4em 0.6em 0.4em 0.6em;
+    margin-top: 0.7em;
+  }
+  .video-container {
+    min-height: 450px;
+  }
+  /* 404:Not found */
+  .notfound {
+    max-width: 50%;
+    margin-top: 6%;
+  }
 }
-
 /* Mobile Portrait */
 @media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   /* Main views styles */
@@ -932,7 +1075,7 @@ This container renders outside home and page containers
     header {
       div {
         .logotag {
-          margin-top: 5.5%; 
+          margin-top: 5.5%;
         }
       }
     }
@@ -940,7 +1083,7 @@ This container renders outside home and page containers
       p {
         margin-bottom: 0;
       }
-    }    
+    }
     .links > div {
       margin-left: 2.25vw;
       padding: 0 0.1em 0 0.1em;
@@ -961,7 +1104,7 @@ This container renders outside home and page containers
       width: 85px;
       height: 92vh;
       flex-direction: column;
-      justify-content: center;      
+      justify-content: center;
       nav {
         height: 58vh;
         flex-direction: column;
@@ -982,7 +1125,7 @@ This container renders outside home and page containers
       padding: 1vw;
       width: 100%;
       header div {
-        width: 68px;        
+        width: 68px;
       }
       nav {
         width: 80vw;
@@ -1078,11 +1221,6 @@ This container renders outside home and page containers
         margin: 0;
         box-sizing: border-box;
       }
-    }
-    /* 404:Not found */
-    .notfound {
-      width: 50%;
-      margin-bottom: 4%;
     }
   }
 }
@@ -1439,7 +1577,7 @@ This container renders outside home and page containers
     header {
       div {
         .logotag {
-          margin-top: 5.5%; 
+          margin-top: 5.5%;
         }
       }
     }
@@ -1451,7 +1589,7 @@ This container renders outside home and page containers
         padding-top: 0.5em;
         padding-left: 1.5%;
       }
-    }    
+    }
     div.links > div {
       margin-left: 1.25vw;
     }
@@ -1472,8 +1610,8 @@ This container renders outside home and page containers
       align-items: center;
       header {
         div {
-          width: 85px;          
-        }        
+          width: 85px;
+        }
       }
       nav {
         width: 85vw;
@@ -1508,9 +1646,8 @@ This container renders outside home and page containers
       }
       header {
         div {
-          width: 70px;          
-                     
-        }        
+          width: 70px;
+        }
       }
     }
     main {
@@ -1601,8 +1738,7 @@ This container renders outside home and page containers
     }
     /* 404:Not found */
     .notfound {
-      width: 50%;
-      margin-bottom: 4%;
+      max-width: 35%;
     }
   }
 }
@@ -1797,7 +1933,7 @@ This container renders outside home and page containers
     p {
       -webkit-column-count: 2; /* Old Chrome, Safari and Opera */
       -moz-column-count: 2; /* Old Firefox */
-      column-count: 2;  
+      column-count: 2;
     }
     /* Main navigation home */
     .menu {
@@ -1851,9 +1987,9 @@ This container renders outside home and page containers
       }
       .mainImage {
         width: 50%;
-      }      
+      }
     }
-    /* Bio styles */    
+    /* Bio styles */
     .profile {
       margin-bottom: 1.5%;
       .avatar {
@@ -1996,7 +2132,7 @@ This container renders outside home and page containers
     header {
       div {
         .logotag {
-          margin-top: 5.5%; 
+          margin-top: 5.5%;
         }
       }
     }
@@ -2007,13 +2143,14 @@ This container renders outside home and page containers
         -webkit-column-count: 1;
         -moz-column-count: 1;
         column-count: 1;
-      }      
+      }
       div.links > div {
         margin-left: 0.85vw;
       }
       div.links > div > a {
         font-size: 0.55rem;
         padding: 0 0.6em 0 0.6em;
+        line-height: 1.7rem;
       }
     }
   }
@@ -2021,7 +2158,7 @@ This container renders outside home and page containers
   .home {
     align-items: center;
     .menu {
-      width: 50vw;
+      width: 46vw;
       height: 90vh;
       flex-direction: row;
       align-items: center;
@@ -2029,9 +2166,9 @@ This container renders outside home and page containers
         div {
           width: 135px;
           .logotag {
-            margin-top: 5.5%; 
+            margin-top: 5.5%;
           }
-        }        
+        }
       }
       nav {
         width: 100%;
@@ -2053,20 +2190,20 @@ This container renders outside home and page containers
     h2 {
       font-size: 1.3rem;
       width: 100%;
-    }    
+    }
     p {
-      font-size: 1.02rem; 
+      font-size: 1.02rem;
       -webkit-column-count: 2; /* Old Chrome, Safari and Opera */
       -moz-column-count: 2; /* Old Firefox */
-      column-count: 2;       
-    }    
+      column-count: 2;
+    }
     .menu {
       padding: 1vw;
       width: 100%;
       header {
         div {
           width: 110px;
-        }        
+        }
       }
       nav {
         width: 30vw;
@@ -2106,7 +2243,7 @@ This container renders outside home and page containers
         box-sizing: border-box;
       }
     }
-    /* Bio styles */    
+    /* Bio styles */
     .profile {
       margin-bottom: 1.5%;
       .avatar {
@@ -2193,8 +2330,7 @@ This container renders outside home and page containers
     }
     /* 404:Not found */
     .notfound {
-      width: 50%;
-      margin-bottom: 4%;
+      max-width: 20%;
     }
   }
 }
@@ -2233,6 +2369,9 @@ This container renders outside home and page containers
   .home,
   .page {
     footer {
+      p {
+        padding-top: 0.7em;
+      }
       div.links > div {
         margin-left: 0.7vw;
       }
@@ -2280,20 +2419,21 @@ This container renders outside home and page containers
     footer {
       p {
         font-size: 1rem;
-        padding: 0.4vh 1.5vh 0.4vh 1.5vh;
+        padding-top: 0.45em;
       }
       div.links > div {
         margin-left: 0.5vw;
         padding: 0.15em 0.2em 0 0.2em;
         a {
           font-size: 0.7rem;
+          line-height: 2.2rem;
         }
       }
     }
   }
   .home {
     .menu {
-      width: 34vw;
+      width: 32vw;
       nav {
         width: 100vw;
       }
@@ -2375,17 +2515,20 @@ This container renders outside home and page containers
       }
     }
     footer {
+      p {
+        padding-top: 0.55em;
+      }
       div.links > div {
-        padding-top: 0.5em;
         a {
-          font-size: 0.8rem;        
+          font-size: 0.8rem;
+          line-height: 2.4rem;
         }
       }
     }
   }
   .page {
     h1 {
-      font-size: 2.0rem;
+      font-size: 2rem;
     }
     h2 {
       font-size: 1.8rem;
@@ -2459,12 +2602,16 @@ This container renders outside home and page containers
     footer {
       p {
         font-size: 1.3rem;
+        padding-top: 0.4em;
       }
       div.links > div {
         margin-left: 0.75vw;
         padding: 0.4em 0.2em 0 0.2em;
         a {
           font-size: 1rem;
+          svg {
+            vertical-align: -0.1em;
+          }
         }
       }
     }
@@ -2546,12 +2693,16 @@ This container renders outside home and page containers
     footer {
       p {
         font-size: 2.2rem;
+        padding-bottom: 0.3em;
       }
       div.links > div {
         margin-left: 0.75vw;
         padding: 1em 0.2em 0 0.2em;
         a {
           font-size: 1.6rem;
+          svg {
+            vertical-align: -0.3em;
+          }
         }
       }
     }
@@ -2565,7 +2716,7 @@ This container renders outside home and page containers
     }
     p {
       font-size: 2.6rem;
-      line-height: 3.0rem;
+      line-height: 3rem;
     }
     .menu {
       width: 39vw;
