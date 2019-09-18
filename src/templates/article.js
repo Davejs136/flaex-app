@@ -20,6 +20,9 @@ const ArticleTemplate = ({ data }) => (
       <ReactMarkdown
         className="description"
         source={data.strapiArticle.description}
+        transformImageUri={uri =>
+          uri.startsWith("http") ? uri : `${process.env.IMAGE_BASE_URL}${uri}`
+        }
         escapeHtml={false}
       />
     </article>

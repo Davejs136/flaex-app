@@ -78,7 +78,15 @@ const BioTemplate = () => (
           </div>
 
           <h2>A brief story</h2>
-          <ReactMarkdown source={data.strapiProfile.story} escapeHtml={false} />
+          <ReactMarkdown
+            source={data.strapiProfile.story}
+            escapeHtml={false}
+            transformImageUri={uri =>
+              uri.startsWith("http")
+                ? uri
+                : `${process.env.IMAGE_BASE_URL}${uri}`
+            }
+          />
           <h2>Where I live</h2>
           <GoogleMap />
           <p>{data.strapiLocation.description} </p>
