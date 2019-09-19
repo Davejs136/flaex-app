@@ -71,7 +71,7 @@ const BioTemplate = () => (
                     (faicon = document.node.icon.replace(/'/g, "")),
                   ]}
                   fixedWidth
-                  
+                  size="2x"
                 />
                 <p>{document.node.title}</p>
               </div>
