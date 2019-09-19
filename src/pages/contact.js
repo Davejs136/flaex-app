@@ -2,11 +2,19 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
+import emailjs from "emailjs-com"
 import { Form } from "react-final-form"
 import { Field } from "react-final-form-html5-validation"
 
 
-const onSubmit =  {}
+const reset = () => {
+  document.getElementById("contact-form").reset()
+}
+
+const onSubmit = async values => {
+  
+  alert(`Your message has been sent`)
+}
 
 const ContactPage = () => (
   <StaticQuery
@@ -44,7 +52,13 @@ const ContactPage = () => (
             <form
               id="contact-form"
               className="contact_form"
-              method="POST" data-netlify="true"              
+              onSubmit={event => {
+                const promise = onSubmit(event)
+                promise.then(() => {
+                  reset()
+                })
+                return promise
+              }}
             >
               <Field name="contact_number" component="input" type="hidden" />
               <label>Name</label>
