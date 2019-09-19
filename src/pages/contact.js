@@ -2,35 +2,11 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
-import * as emailjs from "emailjs-com"
 import { Form } from "react-final-form"
 import { Field } from "react-final-form-html5-validation"
 
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
-const reset = () => {
-  document.getElementById("contact-form").reset()
-}
-
-const onSubmit = async values => {
-  await sleep(300)
-  emailjs
-    .sendForm(
-      "contact_service",
-      "contact_form",
-      "#contact-form",
-      "user_RfSf1tcSTDweZVWXo3B3m"
-    )
-    .then(
-      response => {
-        console.log("SUCCESS!", response.status, response.text)
-      },
-      err => {
-        console.log("FAILED...", err)
-      }
-    )
-  alert(`Your message has been sent`)
-}
+const onSubmit =  {}
 
 const ContactPage = () => (
   <StaticQuery
@@ -68,13 +44,7 @@ const ContactPage = () => (
             <form
               id="contact-form"
               className="contact_form"
-              onSubmit={event => {
-                const promise = onSubmit(event)
-                promise.then(() => {
-                  reset()
-                })
-                return promise
-              }}
+              method="POST" data-netlify="true"              
             >
               <Field name="contact_number" component="input" type="hidden" />
               <label>Name</label>
@@ -85,7 +55,7 @@ const ContactPage = () => (
                 required
                 maxLength={20}
                 tooLong="That name is too long!"
-                pattern="[A-Z].+"
+                pattern="[A-Z].+"                
               />
               <label>Email</label>
               <Field
@@ -93,10 +63,14 @@ const ContactPage = () => (
                 type="email"
                 typeMismatch="That's not an email address"
                 component="input"
-                required
+                required                
               />
               <label>Message</label>
-              <Field name="text" component="textarea" required />
+              <Field
+                name="text"
+                component="textarea"
+                required                
+              />
               <button type="submit">Submit</button>
             </form>
           )}
