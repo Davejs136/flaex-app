@@ -5,7 +5,7 @@ import Navigation from "./navigation"
 import Footer from "./footer"
 
 const Layout = ({ children }) => (
-  <div className="home">
+  <div className="page">
     <div className="menu">
       <HeaderPage />
       <Navigation />
