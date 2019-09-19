@@ -6,13 +6,6 @@ import emailjs from "emailjs-com"
 import { Form } from "react-final-form"
 import { Field } from "react-final-form-html5-validation"
 
-const reset = () => {
-  document.getElementById("contact-form").reset()
-}
-
-const onSubmit = async values => {
-  
-}
 
 const ContactPage = () => (
   <StaticQuery
@@ -45,7 +38,6 @@ const ContactPage = () => (
       <Layout>
         <h2>Send me a message</h2>
         <Form
-          onSubmit={onSubmit}
           render={({ handleSubmit, pristine, invalid }) => (
             <form
               id="contact-form"
