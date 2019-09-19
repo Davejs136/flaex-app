@@ -52,13 +52,7 @@ const ContactPage = () => (
             <form
               id="contact-form"
               className="contact_form"
-              onSubmit={event => {
-                const promise = onSubmit(event)
-                promise.then(() => {
-                  reset()
-                })
-                return promise
-              }}
+              method="POST" data-netlify="true"
             >
               <Field name="contact_number" component="input" type="hidden" />
               <label>Name</label>
