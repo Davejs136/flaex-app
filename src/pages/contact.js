@@ -6,8 +6,7 @@ import emailjs from "emailjs-com"
 import { Form } from "react-final-form"
 import { Field } from "react-final-form-html5-validation"
 
-
-const onSubmit = ()  => {}
+const onSubmit = () => {}
 
 const ContactPage = () => (
   <StaticQuery
@@ -46,7 +45,7 @@ const ContactPage = () => (
               id="contact-form"
               className="contact_form"
               method="POST"
-              data-netlify-recaptcha="true"
+              netlify-honeypot="bot-field"
               data-netlify="true"
             >
               <Field name="contact_number" component="input" type="hidden" />
@@ -70,7 +69,12 @@ const ContactPage = () => (
               />
               <label>Message</label>
               <Field name="text" component="textarea" required />
-              <div data-netlify-recaptcha="true" />
+              <div class="hidden">
+                <label>
+                  Don’t fill this out if you're human:{" "}
+                  <input name="bot-field" />
+                </label>
+              </div>
               <button type="submit">Submit</button>
             </form>
           )}
