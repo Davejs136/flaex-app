@@ -11,7 +11,7 @@ const reset = () => {
 }
 
 const onSubmit = async values => {
-  alert(`Your message has been sent`)
+  
 }
 
 const ContactPage = () => (
