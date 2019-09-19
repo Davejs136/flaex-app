@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import Blognav from "../components/blognav"
 import GoogleMap from "../components/googleMap"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const ReactMarkdown = require("react-markdown/with-html")
 
