@@ -7,6 +7,8 @@ import { Form } from "react-final-form"
 import { Field } from "react-final-form-html5-validation"
 
 
+const onSubmit = ()  => {}
+
 const ContactPage = () => (
   <StaticQuery
     query={graphql`
@@ -38,6 +40,7 @@ const ContactPage = () => (
       <Layout>
         <h2>Send me a message</h2>
         <Form
+          onSubmit={onSubmit}
           render={({ handleSubmit, pristine, invalid }) => (
             <form
               id="contact-form"
