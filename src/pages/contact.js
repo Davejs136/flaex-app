@@ -2,11 +2,11 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
-import emailjs from "emailjs-com"
+/* import emailjs from "emailjs-com"*/
 import { Form } from "react-final-form"
 import { Field } from "react-final-form-html5-validation"
+import ReCAPTCHA from "react-google-recaptcha";
 
-const onSubmit = () => {}
 
 const ContactPage = () => (
   <StaticQuery
@@ -39,16 +39,18 @@ const ContactPage = () => (
       <Layout>
         <h2>Send me a message</h2>
         <Form
-          onSubmit={onSubmit}
+          onSubmit
           render={({ handleSubmit, pristine, invalid }) => (
             <form
               id="contact-form"
               className="contact_form"
+              name="Contact Form"
               method="POST"
-              netlify-honeypot="bot-field"
               data-netlify="true"
+              data-netlify-recaptcha="true"
+              action="/thank-you"
             >
-              <Field name="contact_number" component="input" type="hidden" />
+              <input type="hidden" name="Contact Form" value="Contact Form" />
               <label>Name</label>
               <Field
                 name="user_name"
@@ -69,12 +71,7 @@ const ContactPage = () => (
               />
               <label>Message</label>
               <Field name="text" component="textarea" required />
-              <div class="hidden">
-                <label>
-                  Don’t fill this out if you're human:{" "}
-                  <input name="bot-field" />
-                </label>
-              </div>
+              <ReCAPTCHA sitekey={process.env.GATSBY_RECAPTCHA_KEY} />
               <button type="submit">Submit</button>
             </form>
           )}
