@@ -6,13 +6,11 @@ import emailjs from "emailjs-com"
 import { Form } from "react-final-form"
 import { Field } from "react-final-form-html5-validation"
 
-
 const reset = () => {
   document.getElementById("contact-form").reset()
 }
 
 const onSubmit = async values => {
-  
   alert(`Your message has been sent`)
 }
 
@@ -52,7 +50,9 @@ const ContactPage = () => (
             <form
               id="contact-form"
               className="contact_form"
-              method="POST" data-netlify="true"
+              method="POST"
+              data-netlify-recaptcha="true"
+              data-netlify="true"
             >
               <Field name="contact_number" component="input" type="hidden" />
               <label>Name</label>
@@ -63,7 +63,7 @@ const ContactPage = () => (
                 required
                 maxLength={20}
                 tooLong="That name is too long!"
-                pattern="[A-Z].+"                
+                pattern="[A-Z].+"
               />
               <label>Email</label>
               <Field
@@ -71,15 +71,11 @@ const ContactPage = () => (
                 type="email"
                 typeMismatch="That's not an email address"
                 component="input"
-                required                
+                required
               />
               <label>Message</label>
-              <Field
-                name="text"
-                component="textarea"
-                required                
-              />
-              <div data-netlify-recaptcha="true"></div>
+              <Field name="text" component="textarea" required />
+              <div data-netlify-recaptcha="true" />
               <button type="submit">Submit</button>
             </form>
           )}
