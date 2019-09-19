@@ -1,15 +1,11 @@
-import * as React from 'react';
+
+
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import Blognav from "../components/blognav"
 import GoogleMap from "../components/googleMap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// This ensures that the icon CSS is loaded immediately before attempting to render icons
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
-// Prevent fontawesome from dynamically adding its css since we did it manually above
-config.autoAddCss = false;
 
 const ReactMarkdown = require("react-markdown/with-html")
 
@@ -75,6 +71,7 @@ const BioTemplate = () => (
                     (faprefix = document.node.prefix.replace(/'/g, "")),
                     (faicon = document.node.icon.replace(/'/g, "")),
                   ]}
+                  fixedWidth
                   size="2x"
                 />
                 <p>{document.node.title}</p>

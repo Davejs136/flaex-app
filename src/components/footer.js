@@ -1,11 +1,6 @@
-import * as React from 'react'
+import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// This ensures that the icon CSS is loaded immediately before attempting to render icons
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
-// Prevent fontawesome from dynamically adding its css since we did it manually above
-config.autoAddCss = false;
 
 /* eslint-disable */
 
@@ -28,30 +23,29 @@ const Navigation = () => (
       }
     `}
     render={data => (
-      <>
-        <footer>
-          <p>@flaex_ ® {new Date().getFullYear()} - EN</p>
-          <div className="links">
-            {data.allStrapiLink.edges.map(document => (
-              <div key={document.node.id}>
-                <a
-                  href={document.node.url}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon
-                    icon={[
-                      (faprefix = document.node.prefix.replace(/'/g, "")),
-                      (faicon = document.node.icon.replace(/'/g, "")),
-                    ]}
-                    size="lg"
-                  />
-                </a>
-              </div>
-            ))}
-          </div>
-        </footer>
-      </>
+      <footer>
+        <p>@flaex_ ® {new Date().getFullYear()} - EN</p>
+        <div className="links">
+          {data.allStrapiLink.edges.map(document => (
+            <div key={document.node.id}>
+              <a
+                href={document.node.url}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <FontAwesomeIcon
+                  icon={[
+                    (faprefix = document.node.prefix.replace(/'/g, "")),
+                    (faicon = document.node.icon.replace(/'/g, "")),
+                  ]}
+                  fixedWidth
+                  size="lg"
+                />
+              </a>
+            </div>
+          ))}
+        </div>
+      </footer>
     )}
   />
 )
