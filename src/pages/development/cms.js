@@ -38,9 +38,9 @@ const CMSPage = () => (
           {data.allStrapiWork.edges.map(document => (
             <li key={document.node.id}>
               <Link
-                to={`/${document.node.category}/${document.node.subcategory}/${
-                  document.node.title.replace(/\s+/g, '-').toLowerCase()
-                }`}
+                to={`/${document.node.category}/${
+                  document.node.subcategory
+                }/${document.node.title.replace(/\s+/g, "-").toLowerCase()}`}
               >
                 <Img fluid={document.node.thumbnail.childImageSharp.fluid} />
               </Link>

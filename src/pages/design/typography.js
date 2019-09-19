@@ -4,7 +4,6 @@ import Desnav from "../../components/desnav"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-
 const TypographyPage = () => (
   <StaticQuery
     query={graphql`

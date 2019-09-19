@@ -4,7 +4,6 @@ import HeaderPage from "./headerpage"
 import Navigation from "./navigation"
 import Footer from "./footer"
 
-
 const Layout = ({ children }) => (
   <div className="page">
     <div className="menu">

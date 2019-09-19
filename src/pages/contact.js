@@ -2,11 +2,9 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
-/* import emailjs from "emailjs-com"*/
 import { Form } from "react-final-form"
 import { Field } from "react-final-form-html5-validation"
-import ReCAPTCHA from "react-google-recaptcha";
-
+import ReCAPTCHA from "react-google-recaptcha"
 
 const ContactPage = () => (
   <StaticQuery
