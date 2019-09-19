@@ -6,7 +6,6 @@ import Blognav from "../components/blognav"
 import GoogleMap from "../components/googleMap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-
 const ReactMarkdown = require("react-markdown/with-html")
 
 /* eslint-disable */
