@@ -79,6 +79,7 @@ const ContactPage = () => (
                 component="textarea"
                 required                
               />
+              <div data-netlify-recaptcha="true"></div>
               <button type="submit">Submit</button>
             </form>
           )}
