@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-strapi-flaex",
+  "name": "gatsby-starter-default",
   "private": true,
-  "description": "Theme for @flaex_ site",
-  "version": "1.0",
+  "description": "Theme for Flaex website",
+  "version": "1.0.0",
   "author": "Freddy Polania <fpolania@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.24",
