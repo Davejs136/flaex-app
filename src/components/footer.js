@@ -36,7 +36,7 @@ const Navigation = () => (
                 <FontAwesomeIcon
                   icon={[
                     (faprefix = document.node.prefix.replace(/'/g, "")),
-                    (faicon = document.node.icon.replace(/'/g, "")),
+                    (faicon = document.node.icon.replace(/'/g, ""))
                   ]}
                   fixedWidth
                   size="lg"
