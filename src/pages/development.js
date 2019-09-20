@@ -16,7 +16,7 @@ const DevelopmentPage = () => (
               subcategory
               thumbnail {
                 childImageSharp {
-                  fluid(maxWidth: 300, maxHeight: 300) {
+                  fluid(maxWidth: 675, maxHeight: 675) {
                     ...GatsbyImageSharpFluid
                   }
                 }
