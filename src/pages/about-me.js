@@ -67,9 +67,8 @@ const BioTemplate = () => (
             {data.allStrapiSkill.edges.map(document => (
               <div key={document.node.id}>
                 <FontAwesomeIcon
-                  icon={[
-                    (faprefix = document.node.prefix.replace(/'/g, "")),
-                    (faicon = document.node.icon.replace(/'/g, "")),
+                  icon={[                    
+                    (faicon = document.node.icon.replace(/'/g, ""))
                   ]}
                   fixedWidth
                   size="2x"
