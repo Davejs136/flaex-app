@@ -760,10 +760,13 @@ This element renders outside home and page containers
     }
   }
   .works {
-    display: flex;
+    display: flex; 
+    flex-direction: column; 
     flex-wrap: wrap;
-    list-style: none;
+    height: 100vw;
+    max-height: 800px;  
     width: 100%;
+    align-content: flex-start;
     li {
       border: solid 1px #bbb;
     }
