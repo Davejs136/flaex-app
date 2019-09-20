@@ -19,7 +19,7 @@ const WorkTemplate = ({ data }) => (
     </div>
     <article>
       <h1>{data.strapiWork.title}</h1>
-      <ul className="work-gallery">
+      <ul className="works">
         {data.strapiWork.images.map(document => (
           <li
             key={document.localFile.name}
