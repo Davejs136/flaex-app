@@ -68,6 +68,7 @@ const BioTemplate = () => (
               <div key={document.node.id}>
                 <FontAwesomeIcon
                   icon={[                    
+                    (faprefix = document.node.prefix.replace(/'/g, "")),
                     (faicon = document.node.icon.replace(/'/g, ""))
                   ]}
                   fixedWidth
