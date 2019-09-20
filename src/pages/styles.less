@@ -761,11 +761,14 @@ This element renders outside home and page containers
   }
   .works {
     display: flex;
-    flex-wrap: wrap;
-    list-style: none;
+    flex-flow: column wrap;
+    max-height: 800px;
+    margin-left: -8px; /* Adjustment for the gutter */
     width: 100%;
+    align-content: start;
     li {
       border: solid 1px #bbb;
+   
     }
   }
   .navsec {
