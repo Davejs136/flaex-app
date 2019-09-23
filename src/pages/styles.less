@@ -702,8 +702,7 @@ This element renders outside home and page containers
 .page {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
+  min-height: 100vh;
   /* Main navigation */
   nav a {
     font-size: 0.95rem;

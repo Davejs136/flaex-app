@@ -12,15 +12,6 @@ export default function HTML(props) {
           name="viewport"
         />
         {props.headComponents}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              let vh = window.innerHeight * 0.01;
-              // Then we set the value in the --vh custom property to the root of the document
-              document.documentElement.style.setProperty('--vh', `${vh}px`);
-            `,
-          }}
-        />
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
@@ -33,7 +24,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-      </body>
+      </body>      
     </html>
   )
 }
