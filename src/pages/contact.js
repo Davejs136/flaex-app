@@ -4,7 +4,6 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import { Form } from "react-final-form"
 import { Field } from "react-final-form-html5-validation"
-import ReCAPTCHA from "react-google-recaptcha"
 
 const ContactPage = () => (
   <StaticQuery
@@ -42,12 +41,14 @@ const ContactPage = () => (
             <form
               id="contact-form"
               className="contact_form"
-              name="Contact Form"
-              method="POST"
+              name="contact form"
+              method="post"
+              action="/thank-you"
               data-netlify="true"
-              data-netlify-recaptcha="true"             
+              data-netlify-honeypot="bot-field"
             >
-              <input type="hidden" name="Contact Form" value="Contact Form" />
+              <input type="hidden" name="bot-field" />
+              <input type="hidden" name="contact form" value="contact" />      
               <label>Name</label>
               <Field
                 name="user_name"
@@ -68,7 +69,6 @@ const ContactPage = () => (
               />
               <label>Message</label>
               <Field name="text" component="textarea" required />
-              <ReCAPTCHA className="g-recaptcha" sitekey={process.env.GATSBY_RECAPTCHA_KEY} />
               <button type="submit">Submit</button>
             </form>
           )}
