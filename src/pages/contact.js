@@ -71,7 +71,7 @@ export default function ContactPage() {
                 className="contact_form"
                 name="contact"
                 method="post"
-                action="/thanks/"
+                action="/thank-you/"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
               >
