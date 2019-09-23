@@ -68,7 +68,7 @@ const ContactPage = () => (
               />
               <label>Message</label>
               <Field name="text" component="textarea" required />
-              <ReCAPTCHA sitekey={process.env.GATSBY_RECAPTCHA_KEY} />
+              <ReCAPTCHA className="g-recaptcha" sitekey={process.env.GATSBY_RECAPTCHA_KEY} />
               <button type="submit">Submit</button>
             </form>
           )}
