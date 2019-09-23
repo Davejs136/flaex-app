@@ -764,10 +764,12 @@ This element renders outside home and page containers
     flex-wrap: wrap;
     list-style: none;
     width: 100%;
-    li img {
-      border: solid 1px #bbb;
-      max-height: 500px
-    }
+    li {
+      max-height: 500px;
+      img {
+        border: solid 1px #bbb;      
+      }
+    } 
   }
   .navsec {
     display: flex;
@@ -1038,10 +1040,7 @@ This element renders outside home and page containers
       color: white;
       border: none; 
       .bg();
-    }
-    button {
-      margin-top: 5%;
-    }    
+    }       
   }
   .stack,
   .software {

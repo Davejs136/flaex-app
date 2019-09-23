@@ -62,7 +62,7 @@ export default function ContactPage() {
       `}
       render={data => (
         <Layout>
-          <h1>Contact</h1>
+          <h1>Send me a message</h1>
           <Form
             onSubmit={handleSubmit}
             render={({ handleSubmit, pristine, invalid }) => (
@@ -85,7 +85,7 @@ export default function ContactPage() {
                 </p>
                 <label>Name</label>
                 <Field
-                  name="user_name"
+                  name="name"
                   component="input"
                   type="text"
                   required
@@ -95,14 +95,14 @@ export default function ContactPage() {
                 />
                 <label>Email</label>
                 <Field
-                  name="user_email"
+                  name="email"
                   type="email"
                   typeMismatch="That's not an email address"
                   component="input"
                   required
                 />
                 <label>Message</label>
-                <Field name="text" component="textarea" required />
+                <Field name="message" component="textarea" required />
                 <button type="submit">Submit</button>
               </form>
             )}
