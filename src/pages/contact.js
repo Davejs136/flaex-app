@@ -45,8 +45,7 @@ const ContactPage = () => (
               name="Contact Form"
               method="POST"
               data-netlify="true"
-              data-netlify-recaptcha="true"
-              action="/thank-you"
+              data-netlify-recaptcha="true"             
             >
               <input type="hidden" name="Contact Form" value="Contact Form" />
               <label>Name</label>
