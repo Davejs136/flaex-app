@@ -979,10 +979,12 @@ This element renders outside home and page containers
   .works {
     display: flex;
     flex-wrap: wrap;
+    flex-flow: row wrap;
     list-style: none;
     width: 100%;
-    li {
-      max-height: 500px;
+    li { 
+      flex: auto;  
+      margin: 1%;    
       img {
         border: solid 1px #bbb;      
       }
@@ -1151,14 +1153,9 @@ This element renders outside home and page containers
     }
     /* Portfolio */
     .works {
-      margin: 0;
-      li {
-        width: 49%;        
-        margin-right: 2%;
-        margin-bottom: 2%;
-        &:nth-child(2n) {
-          margin-right: 0;
-        }
+      margin: 0;            
+      li {    
+        width: 46%;          
       }
     }
     /* Bio styles */
@@ -1436,13 +1433,7 @@ This element renders outside home and page containers
       margin-top: 2%;
       width: 100%;
       li {
-        width: 32%;        
-        &:nth-child(2n) {
-          margin-right: 2%;
-        }
-        &:nth-child(3n) {
-          margin-right: 0;
-        }
+        width: 32%;
       }
     }
     /* Blog styles */
@@ -1691,14 +1682,7 @@ This element renders outside home and page containers
     .works {
       margin: 0;
       li {
-        width: 32%;        
-        overflow: hidden;
-        margin-right: 2%;
-        margin-bottom: 2%;
-        box-sizing: border-box;
-        &:nth-child(3n) {
-          margin-right: 0;
-        }
+        width: 32%;
       }
     }
     /* Bio styles */
@@ -1984,10 +1968,7 @@ This element renders outside home and page containers
       width: 100%;
       li {
         width: 23%;
-        padding-right: 0.5%;
-        &:nth-child(3n) {
-          margin-right: 2%;
-        }
+        
       }
     }
     /* Blog */
@@ -2257,11 +2238,7 @@ This element renders outside home and page containers
     .works {
       margin-bottom: 0;
       li {
-        width: 19.2%;
-        overflow: hidden;
-        margin-right: 2%;
-        margin-bottom: 2%;        
-        box-sizing: border-box;
+        width: 20%;        
       }
     }
     /* Bio styles */
