@@ -6,7 +6,7 @@ import { navigate } from "gatsby-link"
 import Layout from "../components/layout"
 import { Form } from "react-final-form"
 import { Field } from "react-final-form-html5-validation"
-
+import { window, document, exists } from 'browser-monads'
 
 function encode(data) {
   return Object.keys(data)
