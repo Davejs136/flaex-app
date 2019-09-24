@@ -1,5 +1,6 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { Helmet } from 'react-helmet'
+import { withPrefix, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { navigate } from "gatsby-link"
 import Layout from "../components/layout"
@@ -62,7 +63,10 @@ export default function ContactPage() {
         }
       `}
       render={data => (
-        <Layout>          
+        <Layout>
+          <Helmet>
+            <script src={withPrefix("script.js")} type="text/javascript" />
+          </Helmet>          
           <h1>Send me a message</h1>
           <Form
             onSubmit={handleSubmit}

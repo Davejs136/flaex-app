@@ -1,6 +1,4 @@
 import React from "react"
-import { Helmet } from 'react-helmet'
-import { withPrefix } from "gatsby"
 import PropTypes from "prop-types"
 import Layout from "../components/layout"
 import { library } from "@fortawesome/fontawesome-svg-core"
@@ -10,10 +8,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons"
 library.add(fab, fas)
 
 const Page = ({ children }) => (
-  <Layout>
-    <Helmet>
-      <script src={withPrefix("script.js")} type="text/javascript" />
-    </Helmet>
+  <Layout>    
     <main>{children}</main>
   </Layout>
 )
