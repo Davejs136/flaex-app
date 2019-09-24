@@ -1240,6 +1240,41 @@ This element renders outside home and page containers
   }
 }
 
+@media only screen and (min-device-width: 360px) and (min-device-height: 720px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .home,
+  .page {
+    footer {
+      p {
+        padding: 0.75vh 2vh 0 2vh;
+      }
+      div.links > div {
+        padding: 0.1em 0.3em 0 0.3em;
+      }
+    }
+  }
+  .home {
+    /* Main navigation home */
+    .menu {
+      nav {
+        height: 47vh;
+      }
+    }
+  }
+  .page {
+    .menu {
+      header div {
+        width: 80px;
+      }
+      nav {
+        a {
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .home,
   .page {
@@ -1252,6 +1287,7 @@ This element renders outside home and page containers
     .menu {
       width: 115px;
       nav {
+        height: 47vh;
         a {
           font-size: 1.09rem;
           line-height: 1.4;
