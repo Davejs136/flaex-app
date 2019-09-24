@@ -1,12 +1,11 @@
 import React from "react"
-import { Helmet } from 'react-helmet'
-import { withPrefix, StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { navigate } from "gatsby-link"
 import Layout from "../components/layout"
 import { Form } from "react-final-form"
 import { Field } from "react-final-form-html5-validation"
-import { window, document, exists } from 'browser-monads'
+
 
 function encode(data) {
   return Object.keys(data)
@@ -63,10 +62,7 @@ export default function ContactPage() {
         }
       `}
       render={data => (
-        <Layout>
-          <Helmet>
-            <script src={withPrefix("script.js")} type="text/javascript" />
-          </Helmet>          
+        <Layout>                   
           <h1>Send me a message</h1>
           <Form
             onSubmit={handleSubmit}

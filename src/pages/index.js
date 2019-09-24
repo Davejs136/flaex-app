@@ -1,6 +1,4 @@
 import React from "react"
-import { Helmet } from 'react-helmet'
-import { withPrefix } from "gatsby"
 import Header from "../components/header"
 import Navigation from "../components/navigation"
 import Footer from "../components/footer"
@@ -12,10 +10,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons"
 library.add(fab, fas)
 
 const IndexPage = () => (
-  <div className="home">
-    <Helmet>
-      <script src={withPrefix("script.js")} type="text/javascript" />
-    </Helmet>
+  <div className="home">    
     <div className="menu">
       <Header />
       <Navigation />

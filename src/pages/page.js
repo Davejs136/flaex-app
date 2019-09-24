@@ -8,7 +8,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons"
 library.add(fab, fas)
 
 const Page = ({ children }) => (
-  <Layout>    
+  <Layout>
     <main>{children}</main>
   </Layout>
 )
