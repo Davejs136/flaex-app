@@ -747,57 +747,7 @@ This element renders outside home and page containers
     div.links > div > a {
       color: white;
     }
-  }
-  article {
-    display: flex;
-    flex-wrap: wrap;
-    h1 {
-      width: 100%;
-      margin-bottom: 0.3rem;
-    }
-    .imgContainer {
-      border: solid 1px #bbb;
-    }
-  }
-  .works {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    width: 100%;
-    li {
-      max-height: 500px;
-      img {
-        border: solid 1px #bbb;      
-      }
-    } 
-  }
-  .navsec {
-    display: flex;
-    padding: 0.5em 0 0.5em 0;
-    a,
-    button {
-      font-size: 0.8rem;
-      color: white;
-      border: none;
-      .bg();
-      text-decoration: none;
-      padding: 0.4em 0.8em 0.4em 0.8em;
-      margin: 0 0.7em 0 0;
-    }
-  }
-  .active {
-    -webkit-filter: invert(1);
-    filter: invert(1);
-    border: 1px;
-    border-color: #dedede;
-    border-style: solid;
-  }
-  a.firstactive {
-    -webkit-filter: invert(1);
-    filter: invert(1);
-    border: 1px;
-    border-style: solid;
-  }
+  } 
 }
 .home {
   /* Main navigation home */
@@ -1014,6 +964,56 @@ This element renders outside home and page containers
   .mainImage {
     width: 100%;
     margin-bottom: 0.3%;
+  }
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    h1 {
+      width: 100%;
+      margin-bottom: 0.3rem;
+    }
+    .imgContainer {
+      border: solid 1px #bbb;
+    }
+  }
+  .works {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100%;
+    li {
+      max-height: 500px;
+      img {
+        border: solid 1px #bbb;      
+      }
+    } 
+  }
+  .navsec {
+    display: flex;
+    padding: 0.5em 0 0.5em 0;
+    a,
+    button {
+      font-size: 0.8rem;
+      color: white;
+      border: none;
+      .bg();
+      text-decoration: none;
+      padding: 0.4em 0.8em 0.4em 0.8em;
+      margin: 0 0.7em 0 0;
+    }
+  }
+  .active {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    border: 1px;
+    border-color: #dedede;
+    border-style: solid;
+  }
+  a.firstactive {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    border: 1px;
+    border-style: solid;
   }
   /* Contact form */
   .contact_form {
