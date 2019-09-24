@@ -20,11 +20,11 @@ export const onServiceWorkerUpdateReady = () => {
   export const onClientEntry = () => {
     window.onload = () => {
       setTimeout(function () {
-        let viewheight = window.innerWidth
-        let viewwidth = window.innerHeight
-        let viewport = document.querySelector("meta[name=viewport]");
-        viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth + "px, initial-scale=1.0");
-      }, 300);
+        let viewheight = window.visualViewport.height
+        let viewwidth = window.visualViewport.width
+        let viewport = document.querySelector("meta[name=viewport]")
+        viewport.setAttribute("content", "height=" + viewheight + ", width=" + viewwidth + ", initial-scale=1.0")
+      }, 300)
     }
   }
   
