@@ -16,3 +16,15 @@ export const onServiceWorkerUpdateReady = () => {
       window.location.reload()
     }
   }
+
+  export const onClientEntry = () => {
+    window.onload = () => {
+      setTimeout(function () {
+        let viewheight = window.innerWidth
+        let viewwidth = window.innerHeight
+        let viewport = document.querySelector("meta[name=viewport]");
+        viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth + "px, initial-scale=1.0");
+      }, 300);
+    }
+  }
+  
