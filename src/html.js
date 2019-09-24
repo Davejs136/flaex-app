@@ -8,7 +8,7 @@ export default function HTML(props) {
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"
           name="viewport"
         />
         {props.headComponents}
