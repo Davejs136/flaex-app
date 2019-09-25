@@ -45,6 +45,7 @@ const DesignPage = () => (
                 }/${document.node.title.replace(/\s+/g, "-").toLowerCase()}`}
               >
                 <Img fluid={document.node.thumbnail.childImageSharp.fluid} />
+                <h2>{document.node.title}</h2>
               </Link>
             </li>
           ))}
