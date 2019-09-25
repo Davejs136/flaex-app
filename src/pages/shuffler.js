@@ -41,7 +41,7 @@ const randomizer = array => {
 
 const Shuffler = ({ data }) => (
   <Layout>
-    <h1>Randomizer</h1>
+    <h1 className="bgsize">Randomizer</h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
     </p>

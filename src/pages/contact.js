@@ -63,7 +63,7 @@ export default function ContactPage() {
       `}
       render={data => (
         <Layout>                   
-          <h1>Send me a message</h1>
+          <h1 className="bgsize">Send me a message</h1>
           <Form
             onSubmit={handleSubmit}
             render={({ handleSubmit, pristine, invalid }) => (
