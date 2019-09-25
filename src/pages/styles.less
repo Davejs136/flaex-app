@@ -912,7 +912,7 @@ This element renders outside home and page containers
                 margin-left: -5px;
                 border-width: 5px;
                 border-style: solid;
-                border-color: transparent transparent #1a1b1a transparent;
+                border-color: transparent transparent #fff transparent;
               }
             }
           }
@@ -940,7 +940,7 @@ This element renders outside home and page containers
     display: flex;
     flex-wrap: wrap;
     div {
-      border: 1px black;
+      border: 1px #1a1b1a;
       border-style: solid solid solid solid;
       box-sizing: border-box;
       text-align: center;
@@ -1047,7 +1047,7 @@ This element renders outside home and page containers
   }
   .video-container {
     min-height: 450px;
-    margin-top: 0.75%;
+    margin-top: 3%;
   }
   /* 404:Not found */
   .notfound {
@@ -1090,7 +1090,7 @@ This element renders outside home and page containers
     /* Main navigation home */
     .menu {
       width: 85px;
-      height: 79vh;
+      height: 87vh;
       flex-direction: column;
       justify-content: center;
       nav {
@@ -1170,7 +1170,7 @@ This element renders outside home and page containers
     .profile {      
       .avatar {
         width: 90px; 
-        margin-bottom: 1.5%;      
+        margin-bottom: 2%;      
       }
     }
     /* Blog */
@@ -1224,7 +1224,7 @@ This element renders outside home and page containers
 
 @media only screen and (min-device-width: 360px) and (min-device-height: 720px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .home,
-  .page {
+  .page {    
     footer {
       p {
         padding: 0.75vh 2vh 0 2vh;
@@ -1233,10 +1233,9 @@ This element renders outside home and page containers
         padding: 0.1em 0.3em 0 0.3em;
       }
     }
-  }
-  
+  }  
   .page {
-    .menu {
+    .menu {           
       header div {
         width: 80px;
       }
@@ -1250,7 +1249,7 @@ This element renders outside home and page containers
   }
 }
 
-@media only screen and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+@media only screen and (min-device-width: 360px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .home,
   .page {
     div.links > div {
@@ -1261,6 +1260,7 @@ This element renders outside home and page containers
     /* Main navigation home */
     .menu {
       width: 115px;
+      height: 92vh;  
       nav {        
         a {
           font-size: 1.09rem;
@@ -1420,8 +1420,8 @@ This element renders outside home and page containers
     .profile {
       margin-bottom: 1.5%;
       .avatar {
-        width: 120px;
-        height: 120px;
+        width: 122px;
+        height: 122px;
       }     
     }
     .skills {
@@ -1976,6 +1976,7 @@ This element renders outside home and page containers
       .avatar {
         width: 100px;
         height: 100px;
+        margin-bottom: 2%; 
       }      
     }
     .skills {
@@ -2207,8 +2208,9 @@ This element renders outside home and page containers
     /* Bio styles */
     .profile {      
       .avatar {
-        width: 110px;
-        height: 110px;        
+        width: 115px;
+        height: 115px;  
+        margin-bottom: 2%;       
       }      
     }
     .skills {

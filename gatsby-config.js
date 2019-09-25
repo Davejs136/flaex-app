@@ -38,7 +38,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "gatsby-strapi-flaex",
+        name: "flaex-website",
         short_name: "flaex",
         start_url: "/",
         background_color: "#000",
