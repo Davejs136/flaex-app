@@ -240,12 +240,12 @@ h1 {
   margin-right: 0;
   margin-top: 0;
   margin-bottom: 0;
-  padding:0.8rem;
+  padding:0.65rem;
   .bg();
   color: #fff;
   font-weight: 100;
   text-rendering: optimizeLegibility;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.1;  
 }
 h2 {
@@ -253,12 +253,12 @@ h2 {
   margin-right: 0;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
-  padding:0.4rem;
+  padding:0.55rem;
   .bg();
   color: #fff;
   font-weight: 100;
   text-rendering: optimizeLegibility;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.1;
 }
 h3 {
@@ -272,7 +272,7 @@ h3 {
   margin-bottom: 0.5rem;
   font-weight: 100;
   text-rendering: optimizeLegibility;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.1;
 }
 h4 {
@@ -731,7 +731,7 @@ This element renders outside home and page containers
     width: 100%;
     margin-top: auto;
     p {
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       padding: 1vh 2vh 0 2vh;
       color: white;
       .bg();
@@ -905,7 +905,7 @@ This element renders outside home and page containers
       list-style: none;
       width: 100%;
       li {    
-        max-height: 250px;
+        max-height: 500px;
         overflow: hidden; 
         background-image: none;       
         a {
@@ -1167,7 +1167,6 @@ This element renders outside home and page containers
       }
     }
     /* Portfolio */
-    .work,
     .works {
       margin: 0;
       li {
@@ -1178,7 +1177,15 @@ This element renders outside home and page containers
           margin-right: 0;
         }
       }
-    }   
+    } 
+    article {
+      .works {
+        li {
+          max-height: 210px;
+          overflow: hidden; 
+        }
+      }
+    }  
     /* Bio styles */
     .skills {
       width: 100%;
@@ -1201,7 +1208,7 @@ This element renders outside home and page containers
     }
     .profile {      
       .avatar {
-        width: 90px; 
+        width: 98px; 
         margin-bottom: 2%;      
       }
     }
@@ -1435,7 +1442,6 @@ This element renders outside home and page containers
         width: 31%;
       }
     }
-    .work,
     .works {
       margin-top: 2%;
       width: 100%;
@@ -1683,7 +1689,6 @@ This element renders outside home and page containers
       }
     }
     /* Portfolio  */
-    .work,
     .works {
       margin: 0;
       li {
@@ -1697,6 +1702,14 @@ This element renders outside home and page containers
         }
       }
     }
+    article {
+      .works {
+        li {
+          max-height: 210px;
+          overflow: hidden; 
+        }
+      }
+    } 
     /* Bio styles */
     .skills {
       width: 100%;
@@ -1973,7 +1986,6 @@ This element renders outside home and page containers
         width: 45%;
       }
     }
-    .work,
     .works {
       width: 100%;
       li {
@@ -2230,7 +2242,6 @@ This element renders outside home and page containers
       }
     }
     /* Portfolio */
-    .work,
     .works {
       margin-bottom: 0;
       li {
@@ -2763,7 +2774,6 @@ This element renders outside home and page containers
         }
       }
     }
-    .work,
     .works {
       li {
         max-height: 730px;   
