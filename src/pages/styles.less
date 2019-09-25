@@ -747,7 +747,57 @@ This element renders outside home and page containers
     div.links > div > a {
       color: white;
     }
-  } 
+  }
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    h1 {
+      width: 100%;
+      margin-bottom: 0.3rem;
+    }
+    .imgContainer {
+      border: solid 1px #bbb;
+    }
+  }
+  .works {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100%;
+    li {
+      max-height: 500px;
+      img {
+        border: solid 1px #bbb;
+      }
+    }
+  }
+  .navsec {
+    display: flex;
+    padding: 0.5em 0 0.5em 0;
+    a,
+    button {
+      font-size: 0.8rem;
+      color: white;
+      border: none;
+      .bg();
+      text-decoration: none;
+      padding: 0.4em 0.8em 0.4em 0.8em;
+      margin: 0 0.7em 0 0;
+    }
+  }
+  .active {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    border: 1px;
+    border-color: #dedede;
+    border-style: solid;
+  }
+  a.firstactive {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    border: 1px;
+    border-style: solid;
+  }
 }
 .home {
   /* Main navigation home */
@@ -965,59 +1015,6 @@ This element renders outside home and page containers
     width: 100%;
     margin-bottom: 0.3%;
   }
-  article {
-    display: flex;
-    flex-wrap: wrap;
-    h1 {
-      width: 100%;
-      margin-bottom: 0.3rem;
-    }
-    .imgContainer {
-      border: solid 1px #bbb;
-    }
-  }
-  .works {
-    display: flex;
-    flex-wrap: wrap;
-    flex-flow: row wrap;
-    list-style: none;
-    width: 100%;
-    li { 
-      flex: auto;  
-      margin: 1%; 
-      max-height: 500px;   
-      img {
-        border: solid 1px #bbb;      
-      }
-    } 
-  }
-  .navsec {
-    display: flex;
-    padding: 0.5em 0 0.5em 0;
-    a,
-    button {
-      font-size: 0.8rem;
-      color: white;
-      border: none;
-      .bg();
-      text-decoration: none;
-      padding: 0.4em 0.8em 0.4em 0.8em;
-      margin: 0 0.7em 0 0;
-    }
-  }
-  .active {
-    -webkit-filter: invert(1);
-    filter: invert(1);
-    border: 1px;
-    border-color: #dedede;
-    border-style: solid;
-  }
-  a.firstactive {
-    -webkit-filter: invert(1);
-    filter: invert(1);
-    border: 1px;
-    border-style: solid;
-  }
   /* Contact form */
   .contact_form {
     margin-top: 5%;
@@ -1033,7 +1030,7 @@ This element renders outside home and page containers
       font-size: 0.8rem;
       color: white;
       .bg();
-      border: none;      
+      border: none;
     }
     label,
     button {
@@ -1041,9 +1038,9 @@ This element renders outside home and page containers
       padding: 0.5em 0.8em 0.5em 0.8em;
       margin: 0 0.7em 0 0;
       color: white;
-      border: none; 
+      border: none;
       .bg();
-    }       
+    }
   }
   .stack,
   .software {
@@ -1154,9 +1151,14 @@ This element renders outside home and page containers
     }
     /* Portfolio */
     .works {
-      margin: 0;            
-      li {    
-            
+      margin: 0;
+      li {
+        width: 49%;
+        margin-right: 2%;
+        margin-bottom: 2%;
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
       }
     }
     /* Bio styles */
@@ -1254,7 +1256,7 @@ This element renders outside home and page containers
     /* Main navigation home */
     .menu {
       nav {
-        height: 50vh;
+        height: 47vh;
       }
     }
   }
@@ -1268,11 +1270,6 @@ This element renders outside home and page containers
           width: 80px;
           height: 80px;
         }
-      }
-    }
-    .works {
-      li {
-        width: 32%
       }
     }
   }
@@ -1440,6 +1437,12 @@ This element renders outside home and page containers
       width: 100%;
       li {
         width: 32%;
+        &:nth-child(2n) {
+          margin-right: 2%;
+        }
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
       }
     }
     /* Blog styles */
@@ -1563,7 +1566,7 @@ This element renders outside home and page containers
         font-size: 1.4rem;
         padding: 0.7em 1em 0.7em 1em;
       }
-    }    
+    }
     /* Bio styles */
     .profile {
       margin-bottom: 1.5%;
@@ -1688,7 +1691,14 @@ This element renders outside home and page containers
     .works {
       margin: 0;
       li {
-       
+        width: 32%;
+        overflow: hidden;
+        margin-right: 2%;
+        margin-bottom: 2%;
+        box-sizing: border-box;
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
       }
     }
     /* Bio styles */
@@ -1878,7 +1888,7 @@ This element renders outside home and page containers
           height: 88px;
         }
       }
-    }    
+    }
   }
 }
 
@@ -1974,7 +1984,10 @@ This element renders outside home and page containers
       width: 100%;
       li {
         width: 23%;
-        
+        padding-right: 0.5%;
+        &:nth-child(3n) {
+          margin-right: 2%;
+        }
       }
     }
     /* Blog */
@@ -2244,7 +2257,11 @@ This element renders outside home and page containers
     .works {
       margin-bottom: 0;
       li {
-        width: 20%;        
+        width: 19.2%;
+        overflow: hidden;
+        margin-right: 2%;
+        margin-bottom: 2%;
+        box-sizing: border-box;
       }
     }
     /* Bio styles */
@@ -2748,7 +2765,7 @@ This element renders outside home and page containers
         font-size: 2.4rem;
         padding: 0.8em;
       }
-    }   
+    }
     /* Bio */
     .profile {
       .avatar {
