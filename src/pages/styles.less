@@ -215,6 +215,7 @@ html {
 
 body {
   color: #1a1b1a;
+  background-image: url("../images/bg.jpg");
   font-family: "Ubuntu Condensed", sans-serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -239,29 +240,25 @@ h1 {
   margin-right: 0;
   margin-top: 0;
   margin-bottom: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  color: inherit;
-  font-weight: bold;
+  padding:0.65rem;
+  .bg();
+  color: #fff;
+  font-weight: 100;
   text-rendering: optimizeLegibility;
-  font-size: 1.4rem;
-  line-height: 1.1;
+  font-size: 1.2rem;
+  line-height: 1.1;  
 }
 h2 {
   margin-left: 0;
   margin-right: 0;
-  margin-top: 1rem;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
+  margin-top: 1.5rem;
   margin-bottom: 0.5rem;
-  color: inherit;
-  font-weight: bold;
+  padding:0.55rem;
+  .bg();
+  color: #fff;
+  font-weight: 100;
   text-rendering: optimizeLegibility;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   line-height: 1.1;
 }
 h3 {
@@ -273,10 +270,9 @@ h3 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 0.5rem;
-  color: inherit;
-  font-weight: bold;
+  font-weight: 100;
   text-rendering: optimizeLegibility;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.1;
 }
 h4 {
@@ -289,7 +285,7 @@ h4 {
   padding-top: 0;
   margin-bottom: 0.5rem;
   color: inherit;
-  font-weight: bold;
+  font-weight: 100;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
   line-height: 1.1;
@@ -304,7 +300,7 @@ h5 {
   padding-top: 0;
   margin-bottom: 0.5rem;
   color: inherit;
-  font-weight: bold;
+  font-weight: 100;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
   line-height: 1.1;
@@ -386,7 +382,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 0;
-  font-size: 1.02rem;
+  font-size: 1.05rem;
   line-height: 1.4;
   font-weight: 100;
 }
@@ -629,7 +625,10 @@ pre tt:after {
 .bg {
   background-image: url("../images/btn_bg.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover
+}
+.bgsize {
+  background-size: auto !important;
 }
 .galleryImage {
   cursor: zoom-in;
@@ -732,7 +731,7 @@ This element renders outside home and page containers
     width: 100%;
     margin-top: auto;
     p {
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       padding: 1vh 2vh 0 2vh;
       color: white;
       .bg();
@@ -740,6 +739,7 @@ This element renders outside home and page containers
     div.links {
       display: flex;
       list-style: none;
+      flex-direction: row-reverse;
     }
     div.links > div > {
       .bg();
@@ -747,57 +747,7 @@ This element renders outside home and page containers
     div.links > div > a {
       color: white;
     }
-  }
-  article {
-    display: flex;
-    flex-wrap: wrap;
-    h1 {
-      width: 100%;
-      margin-bottom: 0.3rem;
-    }
-    .imgContainer {
-      border: solid 1px #bbb;
-    }
-  }
-  .works {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    width: 100%;
-    li {
-      max-height: 500px;
-      img {
-        border: solid 1px #bbb;
-      }
-    }
-  }
-  .navsec {
-    display: flex;
-    padding: 0.5em 0 0.5em 0;
-    a,
-    button {
-      font-size: 0.8rem;
-      color: white;
-      border: none;
-      .bg();
-      text-decoration: none;
-      padding: 0.4em 0.8em 0.4em 0.8em;
-      margin: 0 0.7em 0 0;
-    }
-  }
-  .active {
-    -webkit-filter: invert(1);
-    filter: invert(1);
-    border: 1px;
-    border-color: #dedede;
-    border-style: solid;
-  }
-  a.firstactive {
-    -webkit-filter: invert(1);
-    filter: invert(1);
-    border: 1px;
-    border-style: solid;
-  }
+  }  
 }
 .home {
   /* Main navigation home */
@@ -811,7 +761,7 @@ This element renders outside home and page containers
             right: 110%;
             text-align: left;
             font-size: 1rem;
-            color: #999;
+            color: #1a1b1a;
             padding: 0.25em;
             /* Position the tooltip */
             position: absolute;
@@ -829,7 +779,7 @@ This element renders outside home and page containers
               margin-top: -6px;
               border-width: 6px;
               border-style: solid;
-              border-color: transparent transparent transparent #999;
+              border-color: transparent transparent transparent #1a1b1a;
             }
           }
         }
@@ -890,10 +840,10 @@ This element renders outside home and page containers
             width: 90px;
             font-size: 0.75rem;
             background-color: #fff;
-            color: #999;
+            color: #1a1b1a;;
             text-align: center;
             border-style: solid;
-            border-color: #999;
+            border-color: #1a1b1a;
             border-width: thin;
             padding: 0.25em;
             /* Position the tooltip */
@@ -917,7 +867,7 @@ This element renders outside home and page containers
                 margin-left: -5px;
                 border-width: 5px;
                 border-style: solid;
-                border-color: transparent transparent #999 transparent;
+                border-color: transparent transparent #fff transparent;
               }
             }
           }
@@ -940,17 +890,83 @@ This element renders outside home and page containers
     display: flex;
     flex-wrap: wrap;
   }
-  //* Bio styles */
-  .profile {
+  article {
+    display: flex;
+    flex-wrap: wrap;
     h1 {
-      padding: 3%;
+      margin-bottom: 0.3rem;
+    }
+    .imgContainer {
+      border: solid 1px #bbb;
+    }
+    .works {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      width: 100%;
+      li {    
+        max-height: 500px;
+        overflow: hidden; 
+        background-image: none;       
+        a {
+          text-decoration: none;                
+          h2 {
+            background-image: none;
+            margin-top: 0;
+          }
+        }            
+      }
+    }  
+  }
+  .works {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100%;
+    li {      
+      .bg();      
+      a {
+        text-decoration: none;                
+        h2 {
+          background-image: none;
+          margin-top: 0;
+        }
+      }            
+    }
+  }  
+  .active {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    border: 1px;
+    border-color: #dedede;
+    border-style: solid;
+  }
+  a.firstactive {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    border: 1px;
+    border-style: solid;
+  }
+  .navsec {
+    display: flex;
+    padding: 0.5em 0 0.5em 0;
+    a,
+    button {
+      font-size: 0.9rem;
+      color: white;
+      border: none;
+      .bg();
+      text-decoration: none;
+      padding: 0.4em 0.8em 0.4em 0.8em;
+      margin: 0 0.7em 0 0;
     }
   }
+  //* Bio styles */  
   .skills {
     display: flex;
     flex-wrap: wrap;
     div {
-      border: 1px black;
+      border: 1px #1a1b1a;
       border-style: solid solid solid solid;
       box-sizing: border-box;
       text-align: center;
@@ -972,14 +988,7 @@ This element renders outside home and page containers
   .map {
     width: 100%;
   }
-  .profile {
-    display: flex;
-    width: 100%;
-    h1 {
-      width: 77%;
-      word-break: keep-all;
-    }
-  }
+  
   /* Blog styles */
   .articles {
     display: flex;
@@ -987,16 +996,21 @@ This element renders outside home and page containers
     list-style: none;
     margin: 0;
     li {
+      .bg();
       time {
+        color: #fff;
         font-size: 0.95rem;
         font-style: italic;
+        padding-top:0.4rem;
+        padding-left:0.4rem;
       }
     }
     h2 {
       margin-top: 0;
-      margin-bottom: 1rem;
+      margin-bottom: 0;
+      background-image: none;
       a {
-        color: #1a1b1a;
+        color: #fff;
         text-decoration: none;
       }
     }
@@ -1013,6 +1027,7 @@ This element renders outside home and page containers
   }
   .mainImage {
     width: 100%;
+    margin-top: 0.5%;
     margin-bottom: 0.3%;
   }
   /* Contact form */
@@ -1025,6 +1040,7 @@ This element renders outside home and page containers
       border-color: #000;
       border-width: 0 0 1px 0;
       margin-bottom: 5%;
+      background: none;
     }
     input[type="submit"] {
       font-size: 0.8rem;
@@ -1062,6 +1078,7 @@ This element renders outside home and page containers
   }
   .video-container {
     min-height: 450px;
+    margin-top: 3%;
   }
   /* 404:Not found */
   .notfound {
@@ -1070,7 +1087,7 @@ This element renders outside home and page containers
   }
 }
 /* Mobile Portrait */
-@media only screen and (min-device-width: 320px) {
+@media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   /* Main views styles */
   .home,
   .page {
@@ -1104,7 +1121,7 @@ This element renders outside home and page containers
     /* Main navigation home */
     .menu {
       width: 85px;
-      height: 92vh;
+      height: 87vh;
       flex-direction: column;
       justify-content: center;
       nav {
@@ -1160,13 +1177,22 @@ This element renders outside home and page containers
           margin-right: 0;
         }
       }
-    }
+    } 
+    article {
+      .works {
+        li {
+          max-height: 210px;
+          overflow: hidden; 
+        }
+      }      
+      .author {
+        width: 100%;
+        }
+      
+    }  
     /* Bio styles */
     .skills {
       width: 100%;
-    }
-    /* Bio styles */
-    .skills {
       div {
         width: 48.5%;
         margin-right: 3%;
@@ -1184,166 +1210,10 @@ This element renders outside home and page containers
     .map {
       height: 25vh;
     }
-    .profile {
-      margin-bottom: 1.5%;
+    .profile {      
       .avatar {
-        width: 80px;
-        height: 80px;
-      }
-    }
-    /* Blog */
-    .articles {
-      li {
-        width: 100%;
-      }
-    }
-    /* Contact */
-    .contact_form {
-      input,
-      textarea {
-        margin-top: 2%;
-        width: 100%;
-      }
-    }
-    .stack {
-      li {
-        width: 36%;
-      }
-    }
-    .software {
-      p {
-        width: 100%;
-        margin-bottom: 2%;
-      }
-      li {
-        width: 33.3333333%;
-        padding: 0 10% 2% 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-    }
-  }
-}
-/* Mobile Portrait */
-@media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait) {
-  /* Main views styles */
-  .home,
-  .page {
-    header {
-      div {
-        .logotag {
-          margin-top: 5.5%;
-        }
-      }
-    }
-    footer {
-      p {
-        margin-bottom: 0;
-      }
-    }
-    .links > div {
-      margin-left: 2.25vw;
-      padding: 0 0.1em 0 0.1em;
-    }
-    .links > div > a {
-      font-size: 0.7rem;
-    }
-    .links > div > a > svg {
-      padding-left: 0.2em;
-      padding-right: 0.2em;
-    }
-  }
-  /* Index styles */
-  .home {
-    align-items: center;
-    /* Main navigation home */
-    .menu {
-      width: 85px;
-      height: 92vh;
-      flex-direction: column;
-      justify-content: center;
-      nav {
-        height: 58vh;
-        flex-direction: column;
-        a {
-          width: 85px;
-          height: 85px;
-          span {
-            padding-left: 12%;
-          }
-        }
-      }
-    }
-  }
-  /* Page styles */
-  .page {
-    /* Main navigation internal links */
-    .menu {
-      padding: 1vw;
-      width: 100%;
-      header div {
-        width: 68px;
-      }
-      nav {
-        width: 80vw;
-        a {
-          width: 68px;
-          height: 68px;
-          span {
-            padding-left: 12%;
-          }
-        }
-      }
-    }
-    main {
-      padding: 1vh;
-      width: 100%;
-    }
-    section {
-      p br {
-        margin-bottom: 4%;
-      }
-    }
-    /* Portfolio */
-    .works {
-      margin: 0;
-      li {
-        width: 49%;
-        margin-right: 2%;
-        margin-bottom: 2%;
-        &:nth-child(2n) {
-          margin-right: 0;
-        }
-      }
-    }
-    /* Bio styles */
-    .skills {
-      width: 100%;
-    }
-    /* Bio styles */
-    .skills {
-      div {
-        width: 48.5%;
-        margin-right: 3%;
-        margin-bottom: 3%;
-        padding: 6% 0 6% 0;
-        &:nth-child(2n) {
-          margin-right: 0;
-        }
-        p {
-          margin-bottom: 0;
-          padding-top: 8%;
-        }
-      }
-    }
-    .map {
-      height: 25vh;
-    }
-    .profile {
-      margin-bottom: 1.5%;
-      .avatar {
-        width: 80px;
-        height: 80px;
+        width: 98px; 
+        margin-bottom: 2%;      
       }
     }
     /* Blog */
@@ -1397,7 +1267,7 @@ This element renders outside home and page containers
 
 @media only screen and (min-device-width: 360px) and (min-device-height: 720px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .home,
-  .page {
+  .page {    
     footer {
       p {
         padding: 0.75vh 2vh 0 2vh;
@@ -1406,17 +1276,9 @@ This element renders outside home and page containers
         padding: 0.1em 0.3em 0 0.3em;
       }
     }
-  }
-  .home {
-    /* Main navigation home */
-    .menu {
-      nav {
-        height: 47vh;
-      }
-    }
-  }
+  }  
   .page {
-    .menu {
+    .menu {           
       header div {
         width: 80px;
       }
@@ -1430,7 +1292,7 @@ This element renders outside home and page containers
   }
 }
 
-@media only screen and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+@media only screen and (min-device-width: 360px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .home,
   .page {
     div.links > div {
@@ -1441,8 +1303,8 @@ This element renders outside home and page containers
     /* Main navigation home */
     .menu {
       width: 115px;
-      nav {
-        height: 47vh;
+      height: 92vh;  
+      nav {        
         a {
           font-size: 1.09rem;
           line-height: 1.4;
@@ -1464,7 +1326,7 @@ This element renders outside home and page containers
         }
       }
     }
-    /* Blog styles */
+    /* Blog styles */      
     .articles {
       li {
         width: 49%;
@@ -1540,7 +1402,7 @@ This element renders outside home and page containers
         margin-left: 2.25vw;
         padding: 0.15em 0.2em 0 0.2em;
         a {
-          font-size: 1.1rem;
+          font-size: 0.8rem;
         }
       }
     }
@@ -1578,11 +1440,8 @@ This element renders outside home and page containers
         font-size: 1rem;
       }
     }
-    /* Portfolio */
-    article {
-      h1 {
-        width: 100%;
-      }
+    /* Portfolio */   
+    article {      
       .imgContainer {
         width: 31%;
       }
@@ -1604,12 +1463,9 @@ This element renders outside home and page containers
     .profile {
       margin-bottom: 1.5%;
       .avatar {
-        width: 120px;
-        height: 120px;
-      }
-      h1 {
-        min-height: 135px;
-      }
+        width: 122px;
+        height: 122px;
+      }     
     }
     .skills {
       width: 100%;
@@ -1664,16 +1520,7 @@ This element renders outside home and page containers
 
 @media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .home,
-  .page {
-    h1 {
-      font-size: 2.2rem;
-    }
-    h2 {
-      font-size: 2rem;
-    }
-    p {
-      font-size: 1.7rem;
-    }
+  .page {   
     footer {
       p {
         font-size: 1.2rem;
@@ -1702,6 +1549,15 @@ This element renders outside home and page containers
     }
   }
   .page {
+    h1 {   
+      font-size: 1.65rem;
+    }
+    p {   
+      font-size: 1.55rem;
+    }
+    p {   
+      font-size: 1.45rem;
+    }
     .menu {
       header div {
         width: 160px;
@@ -1721,16 +1577,13 @@ This element renders outside home and page containers
         font-size: 1.4rem;
         padding: 0.7em 1em 0.7em 1em;
       }
-    }
+    }    
     /* Bio styles */
     .profile {
       margin-bottom: 1.5%;
       .avatar {
         width: 160px;
         height: 160px;
-      }
-      h1 {
-        padding: 3.5%;
       }
     }
     .skills {
@@ -1811,9 +1664,6 @@ This element renders outside home and page containers
   }
   /* Page styles */
   .page {
-    h1 {
-      padding-top: 0;
-    }
     /* Main navigation internal links */
     .menu {
       padding: 1vw;
@@ -1856,6 +1706,14 @@ This element renders outside home and page containers
         }
       }
     }
+    article {
+      .works {
+        li {
+          max-height: 210px;
+          overflow: hidden; 
+        }
+      }
+    } 
     /* Bio styles */
     .skills {
       width: 100%;
@@ -2127,10 +1985,7 @@ This element renders outside home and page containers
       }
     }
     /* Portfolio */
-    article {
-      h1 {
-        width: 100%;
-      }
+    article {    
       .imgContainer {
         width: 45%;
       }
@@ -2172,10 +2027,8 @@ This element renders outside home and page containers
       .avatar {
         width: 100px;
         height: 100px;
-      }
-      h1 {
-        min-height: 100px;
-      }
+        margin-bottom: 2%; 
+      }      
     }
     .skills {
       width: 100%;
@@ -2244,16 +2097,7 @@ This element renders outside home and page containers
       }
     }
   }
-  .page {
-    h1 {
-      font-size: 1.7rem;
-    }
-    h2 {
-      font-size: 1.5rem;
-    }
-    p {
-      font-size: 1.2rem;
-    }
+  .page {   
     /* Main navigation home */
     .menu {
       width: 44vw;
@@ -2360,16 +2204,9 @@ This element renders outside home and page containers
       }
     }
   }
-  .page {
-    h1 {
-      font-size: 1.5rem;
-    }
-    h2 {
-      font-size: 1.3rem;
-      width: 100%;
-    }
-    p {
-      font-size: 1.02rem;
+  .page {    
+    p {   
+      font-size: 1.12rem;
       -webkit-column-count: 2; /* Old Chrome, Safari and Opera */
       -moz-column-count: 2; /* Old Firefox */
       column-count: 2;
@@ -2420,15 +2257,12 @@ This element renders outside home and page containers
       }
     }
     /* Bio styles */
-    .profile {
-      margin-bottom: 1.5%;
+    .profile {      
       .avatar {
-        width: 110px;
-        height: 110px;
-      }
-      h1 {
-        padding: 2.25% 2.25% 2.25% 1.25%;
-      }
+        width: 115px;
+        height: 115px;  
+        margin-bottom: 2%;       
+      }      
     }
     .skills {
       width: 100%;
@@ -2618,16 +2452,10 @@ This element renders outside home and page containers
       }
     }
   }
-  .page {
-    h1 {
-      font-size: 1.7rem;
-    }
-    h2 {
-      font-size: 1.5rem;
-    }
-    p {
-      font-size: 1.35rem;
-    }
+  .page {   
+    p {   
+      font-size: 1.2rem;
+    }  
     .menu {
       header {
         div {
@@ -2705,17 +2533,19 @@ This element renders outside home and page containers
       }
     }
   }
-  .page {
+  .page { 
+    .bgsize {
+      background-size: 250px !important 
+    }
     h1 {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
     h2 {
-      font-size: 1.8rem;
+      font-size: 1.4rem;
     }
-    p {
-      font-size: 1.5rem;
-      line-height: 2.2rem;
-    }
+    p {   
+      font-size: 1.3rem;
+    }    
     .menu {
       width: 38vw;
       header {
@@ -2795,17 +2625,20 @@ This element renders outside home and page containers
       }
     }
   }
-  .page {
+  .page {  
+    .bgsize {
+      background-size: 300px !important 
+    } 
     h1 {
-      font-size: 2.8rem;
+      font-size: 1.9rem;
     }
     h2 {
-      font-size: 2.4rem;
+      font-size: 1.8rem;
+      padding: 0.5%;
     }
-    p {
-      font-size: 2rem;
-      line-height: 2.8rem;
-    }
+    p {   
+      font-size: 1.7rem;
+    } 
     .menu {
       width: 36vw;
       header {
@@ -2828,7 +2661,7 @@ This element renders outside home and page containers
         font-size: 1.7rem;
       }
     }
-    .profile {
+    .profile {      
       .avatar {
         width: 180px;
         height: 180px;
@@ -2886,17 +2719,19 @@ This element renders outside home and page containers
       }
     }
   }
-  .page {
+  .page { 
+    .bgsize {
+      background-size: 400px !important 
+    }
     h1 {
-      font-size: 3.8rem;
+      font-size: 2.8em;
     }
     h2 {
-      font-size: 3.4rem;
-    }
-    p {
       font-size: 2.6rem;
-      line-height: 3rem;
     }
+    p {   
+      font-size: 2.4rem;
+    }  
     .menu {
       width: 39vw;
       header {
@@ -2920,7 +2755,7 @@ This element renders outside home and page containers
         font-size: 2.4rem;
         padding: 0.8em;
       }
-    }
+    }    
     /* Bio */
     .profile {
       .avatar {
@@ -2936,6 +2771,11 @@ This element renders outside home and page containers
         svg {
           font-size: 3.6rem;
         }
+      }
+    }
+    .works {
+      li {
+        max-height: 730px;   
       }
     }
     .contact_form {
