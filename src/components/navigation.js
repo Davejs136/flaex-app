@@ -2,9 +2,11 @@ import React from "react"
 import { Link } from "gatsby"
 
 const activeStyles = {
-  filter: "invert(1)",
+  backgroundColor: "#ffffff",
+  backgroundImage: "none",
+  color: "#1a1a1a",
   border: "1px",
-  borderColor: "#dedede",
+  borderColor: "#1a1a1a",
   borderStyle: "solid",
 }
 
