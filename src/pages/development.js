@@ -1,9 +1,10 @@
 import React from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
+import { injectIntl, Link } from "gatsby-plugin-intl"
 import Img from "gatsby-image"
 
-const DevelopmentPage = () => (
+const DevelopmentPage = ({ intl }) => (
   <StaticQuery
     query={graphql`
       query DevelopmentPage {
@@ -30,9 +31,11 @@ const DevelopmentPage = () => (
       <Layout>
         <div className="navsec">
           <Link className="firstactive" to="/development">
-            front-end
+            {intl.formatMessage({ id: "navsec_to_front" })}
           </Link>
-          <Link to="/development/cms">CMS Themes</Link>
+          <Link to="/development/cms">
+            {intl.formatMessage({ id: "navsec_to_cms" })}
+          </Link>
         </div>
         <ul className="works">
           {data.allStrapiWork.edges.map(document => (
@@ -53,4 +56,4 @@ const DevelopmentPage = () => (
   />
 )
 
-export default DevelopmentPage
+export default injectIntl(DevelopmentPage)

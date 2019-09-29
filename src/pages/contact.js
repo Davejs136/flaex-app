@@ -5,6 +5,7 @@ import { navigate } from "gatsby-link"
 import Layout from "../components/layout"
 import { Form } from "react-final-form"
 import { Field } from "react-final-form-html5-validation"
+import { injectIntl } from "gatsby-plugin-intl"
 
 
 function encode(data) {
@@ -13,7 +14,7 @@ function encode(data) {
     .join("&")
 }
 
-export default function ContactPage() {
+export default injectIntl(function ContactPage({ intl }) {
   const [state, setState] = React.useState({})
 
   const handleChange = e => {
@@ -63,7 +64,9 @@ export default function ContactPage() {
       `}
       render={data => (
         <Layout>                   
-          <h1 className="bgsize">Send me a message</h1>
+          <h1 className="bgsize">
+          {intl.formatMessage({ id: "contact_page_title" })}
+          </h1>
           <Form
             onSubmit={handleSubmit}
             render={({ handleSubmit, pristine, invalid }) => (
@@ -84,7 +87,9 @@ export default function ContactPage() {
                     <input name="bot-field" onChange={handleChange} />
                   </label>
                 </p>
-                <label>Name</label>
+                <label>
+                  {intl.formatMessage({ id: "contact_form_label_name" })}
+                </label>
                 <Field
                   name="name"
                   component="input"
@@ -94,7 +99,9 @@ export default function ContactPage() {
                   tooLong="That name is too long!"
                   pattern="[A-Z].+"
                 />
-                <label>Email</label>
+                <label>
+                  {intl.formatMessage({ id: "contact_form_label_email" })}
+                </label>
                 <Field
                   name="email"
                   type="email"
@@ -102,20 +109,24 @@ export default function ContactPage() {
                   component="input"
                   required
                 />
-                <label>Message</label>
+                <label>
+                  {intl.formatMessage({ id: "contact_form_label_message" })}
+                </label>
                 <Field name="message" component="textarea" required />
-                <button type="submit">Submit</button>
+                <button type="submit">
+                {intl.formatMessage({ id: "contact_form_cta" })}
+                </button>
               </form>
             )}
           />
           <ul className="stack">
-            <p>This is web app was built with:</p>
+          <p>{intl.formatMessage({ id: "contact_page_stack" })}</p>
             <li className="jam">
               <Img fluid={data.jam.childImageSharp.fluid} />
             </li>
           </ul>
           <ul className="software">
-            <p>Developed using:</p>
+            <p>{intl.formatMessage({ id: "contact_page_software" })}</p>
             <li>
               <Img fluid={data.strapi.childImageSharp.fluid} />
             </li>
@@ -127,4 +138,4 @@ export default function ContactPage() {
       )}
     />
   )
-}
+})

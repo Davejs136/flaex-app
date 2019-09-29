@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { injectIntl, Link } from "gatsby-plugin-intl"
 
 const activeStyles = {
   backgroundColor: "#ffffff",
@@ -12,7 +12,7 @@ const activeStyles = {
 
 const linkStyles = {}
 
-const Navigation = () => (
+const Navigation = ({ intl }) => (
   <nav>
     <Link
       to="/design"
@@ -24,9 +24,9 @@ const Navigation = () => (
       }
     >
       <span>
-        graphic
+        {intl.formatMessage({ id: "navigation_to_designA" })}
         <br />
-        design
+        {intl.formatMessage({ id: "navigation_to_designB" })}
       </span>
     </Link>
     <Link
@@ -39,19 +39,19 @@ const Navigation = () => (
       }
     >
       <span>
-        front-end
+        {intl.formatMessage({ id: "navigation_to_developmentA" })}
         <br />
-        dev
+        {intl.formatMessage({ id: "navigation_to_developmentB" })}
       </span>
     </Link>
     <Link to="/contact" activeStyle={activeStyles}>
       <span>
-        contact
+        {intl.formatMessage({ id: "navigation_to_contactA" })}
         <br />
-        me
+        {intl.formatMessage({ id: "navigation_to_contactB" })}
       </span>
     </Link>
   </nav>
 )
 
-export default Navigation
+export default injectIntl(Navigation)

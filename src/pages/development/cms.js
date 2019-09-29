@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../../components/layout"
+import Devnav from "../../components/devnav"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -28,12 +29,7 @@ const CMSPage = () => (
     `}
     render={data => (
       <Layout>
-        <div className="navsec">
-          <Link to="/development">front-end</Link>
-          <Link to="/development/cms" className="active">
-            CMS Themes
-          </Link>
-        </div>
+        <Devnav />
         <ul className="works">
           {data.allStrapiWork.edges.map(document => (
             <li key={document.node.id}>

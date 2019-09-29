@@ -1,0 +1,36 @@
+ 
+{
+    "title": "@flaex_ sitio web",
+    "description": "Kick off your next, great Gatsby project with this default-starter-intl. This barebones starter ships with the main Gatsby configuration files you might need.",
+    "author": "@flaex_",    
+    "head_tooltip": "randomizador",
+    "tag_tooltip": "sobre mi",    
+    "navigation_to_designA": "diseño",
+    "navigation_to_designB": "gráfico",
+    "navigation_to_developmentA": "desarrollo",
+    "navigation_to_developmentB": "front-end",
+    "navigation_to_contactA": "contacto",   
+    "navigation_to_contactB": "e info",   
+    "navsec_to_logo": "logos",
+    "navsec_to_print": "impresos" ,
+    "navsec_to_web": "web",
+    "navsec_to_typography": "tipografía" ,
+    "navsec_to_front": "front-end",
+    "navsec_to_cms": "temas CMS" ,
+    "shuffler_page_title": "Randomizador",
+    "shuffler_page_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+    "shuffler_page_cta":"Cambiar!",
+    "contact_page_title": "Envíame un mensaje",    
+    "contact_form_label_name": "nombre", 
+    "contact_form_label_email": "correo", 
+    "contact_form_label_message": "mensaje", 
+    "contact_form_cta": "enviar",
+    "contact_page_stack": "Este sitio estárealizado en:",
+    "contact_page_software": "Desarrollado con:",
+    "go_back": "volver",
+    "notfound": {
+      "title": "Ha habido un error",
+      "descriptionA": "La página que intentas vistar no existe", 
+      "descriptionB": "No tesientas mal, usa el menú para volver al sitio web!" 
+    }
+  }   

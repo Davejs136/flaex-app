@@ -758,6 +758,7 @@ This element renders outside home and page containers
         .logotag {
           position: relative;
           .tooltiptext {
+            min-width: 75px;
             right: 110%;
             text-align: left;
             font-size: 1rem;
@@ -935,8 +936,7 @@ This element renders outside home and page containers
     }
   }  
   .active {
-    -webkit-filter: invert(1);
-    filter: invert(1);
+    
     border: 1px;
     border-color: #dedede;
     border-style: solid;
@@ -959,7 +959,9 @@ This element renders outside home and page containers
       .bg();
       text-decoration: none;
       padding: 0.4em 0.8em 0.4em 0.8em;
-      margin: 0 0.7em 0 0;
+      margin: 0 0.7em 0 0;     
+    }
+    button {
       border: none;
     }
   }

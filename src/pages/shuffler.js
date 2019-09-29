@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import { injectIntl } from "gatsby-plugin-intl"
 
 const shuffle = array => {
   let currentIndex = array.length,
@@ -39,18 +40,18 @@ const randomizer = array => {
   </div>`
 }
 
-const Shuffler = ({ data }) => (
+const Shuffler = ({ data, intl }) => (
   <Layout>
-    <h1 className="bgsize">Randomizer</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
-    </p>
+    <h1 className="bgsize">
+      {intl.formatMessage({ id: "shuffler_page_title" })}
+    </h1>
+    <p>{intl.formatMessage({ id: "shuffler_page_text" })}</p>
     <button
       className="shuffle-btn"
       type="button"
       onClick={event => randomizer(data.allStrapiPosition.edges)}
     >
-      Shuffle it! ..🌪
+      {intl.formatMessage({ id: "shuffler_page_cta" })} ...<span aria-label="emoji" role="img">🌪</span>
     </button>
     <div className="video-container">
       <div key={data.allStrapiPosition.edges[0].node.id}>
@@ -65,7 +66,7 @@ const Shuffler = ({ data }) => (
   </Layout>
 )
 
-export default Shuffler
+export default injectIntl(Shuffler)
 
 export const query = graphql`
   query Shuffler {
