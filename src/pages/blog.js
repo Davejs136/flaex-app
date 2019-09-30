@@ -1,10 +1,11 @@
 import React from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import Blognav from "../components/blognav"
+import { injectIntl, Link } from "gatsby-plugin-intl"
 
-const BlogTemplate = () => (
+const BlogPage = () => (
   <Layout>
     <Blognav />
     <StaticQuery
@@ -60,4 +61,6 @@ const BlogTemplate = () => (
   </Layout>
 )
 
-export default BlogTemplate
+export default injectIntl(BlogPage)
+
+

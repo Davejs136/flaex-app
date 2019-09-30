@@ -13,10 +13,10 @@ const activeStyles = {
 const DevnavComponent = ({ intl }) => (
   <div className="navsec">
     <Link to="/development">
-      {intl.formatMessage({ id: "navsec_to_front" })}
+      {intl.formatMessage({ id: "navsec.to_front" })}
     </Link>
     <Link to="/development/cms" activeStyle={activeStyles}>
-      {intl.formatMessage({ id: "navsec_to_cms" })}
+      {intl.formatMessage({ id: "navsec.to_cms" })}
     </Link>    
   </div>
 )

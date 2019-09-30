@@ -31,7 +31,7 @@ const HeaderPage = ({ intl }) => (
               <Img fluid={data.head.childImageSharp.fluid} />
             </Link>
             <span className="tooltiptext">
-              {intl.formatMessage({ id: "head_tooltip" })}
+              {intl.formatMessage({ id: "header.head" })}
             </span>
           </div>
           <div className="logotag">
@@ -39,7 +39,7 @@ const HeaderPage = ({ intl }) => (
               <Img fluid={data.tag.childImageSharp.fluid} />
             </Link>
             <span className="tooltiptext">
-              {intl.formatMessage({ id: "tag_tooltip" })}
+              {intl.formatMessage({ id: "header.tag" })}
             </span>
           </div>
         </div>

@@ -24,9 +24,9 @@ const Navigation = ({ intl }) => (
       }
     >
       <span>
-        {intl.formatMessage({ id: "navigation_to_designA" })}
+        {intl.formatMessage({ id: "navigation.to_designA" })}
         <br />
-        {intl.formatMessage({ id: "navigation_to_designB" })}
+        {intl.formatMessage({ id: "navigation.to_designB" })}
       </span>
     </Link>
     <Link
@@ -39,16 +39,16 @@ const Navigation = ({ intl }) => (
       }
     >
       <span>
-        {intl.formatMessage({ id: "navigation_to_developmentA" })}
+        {intl.formatMessage({ id: "navigation.to_developmentA" })}
         <br />
-        {intl.formatMessage({ id: "navigation_to_developmentB" })}
+        {intl.formatMessage({ id: "navigation.to_developmentB" })}
       </span>
     </Link>
     <Link to="/contact" activeStyle={activeStyles}>
       <span>
-        {intl.formatMessage({ id: "navigation_to_contactA" })}
+        {intl.formatMessage({ id: "navigation.to_contactA" })}
         <br />
-        {intl.formatMessage({ id: "navigation_to_contactB" })}
+        {intl.formatMessage({ id: "navigation.to_contactB" })}
       </span>
     </Link>
   </nav>

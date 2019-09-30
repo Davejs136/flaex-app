@@ -4,8 +4,8 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import Blognav from "../components/blognav"
 import GoogleMap from "../components/googleMap"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import '@fortawesome/fontawesome-svg-core/styles.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { injectIntl } from "gatsby-plugin-intl"
 
 const ReactMarkdown = require("react-markdown/with-html")
 
@@ -67,9 +67,9 @@ const BioTemplate = () => (
             {data.allStrapiSkill.edges.map(document => (
               <div key={document.node.id}>
                 <FontAwesomeIcon
-                  icon={[                    
+                  icon={[
                     (faprefix = document.node.prefix.replace(/'/g, "")),
-                    (faicon = document.node.icon.replace(/'/g, ""))
+                    (faicon = document.node.icon.replace(/'/g, "")),
                   ]}
                   fixedWidth
                   size="2x"
@@ -98,4 +98,4 @@ const BioTemplate = () => (
   </Layout>
 )
 
-export default BioTemplate
+export default injectIntl(BioTemplate)

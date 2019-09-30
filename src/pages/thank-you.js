@@ -1,13 +1,14 @@
 import React from "react"
 import Layout from "../components/layout"
+import { injectIntl } from "gatsby-plugin-intl"
 
-const ThankYouPage = () => (
+const ThankYouPage = ({ intl }) => (
 
     <Layout>
-      <h2>Send me a message</h2>
-      <p>Thank you for your message. I will be contacting you soon</p>
+      <h1 className="bgsize">{intl.formatMessage({ id: "thank_you.title" })}</h1 >
+      <p>{intl.formatMessage({ id: "thank_you.message" })}</p>
     </Layout>
  
 )
 
-export default ThankYouPage
+export default injectIntl(ThankYouPage)

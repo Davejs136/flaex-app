@@ -65,7 +65,7 @@ export default injectIntl(function ContactPage({ intl }) {
       render={data => (
         <Layout>                   
           <h1 className="bgsize">
-          {intl.formatMessage({ id: "contact_page_title" })}
+          {intl.formatMessage({ id: "contact.page_title" })}
           </h1>
           <Form
             onSubmit={handleSubmit}
@@ -88,7 +88,7 @@ export default injectIntl(function ContactPage({ intl }) {
                   </label>
                 </p>
                 <label>
-                  {intl.formatMessage({ id: "contact_form_label_name" })}
+                  {intl.formatMessage({ id: "contact.form_label_name" })}
                 </label>
                 <Field
                   name="name"
@@ -100,7 +100,7 @@ export default injectIntl(function ContactPage({ intl }) {
                   pattern="[A-Z].+"
                 />
                 <label>
-                  {intl.formatMessage({ id: "contact_form_label_email" })}
+                  {intl.formatMessage({ id: "contact.form_label_email" })}
                 </label>
                 <Field
                   name="email"
@@ -110,23 +110,23 @@ export default injectIntl(function ContactPage({ intl }) {
                   required
                 />
                 <label>
-                  {intl.formatMessage({ id: "contact_form_label_message" })}
+                  {intl.formatMessage({ id: "contact.form_label_message" })}
                 </label>
                 <Field name="message" component="textarea" required />
                 <button type="submit">
-                {intl.formatMessage({ id: "contact_form_cta" })}
+                {intl.formatMessage({ id: "contact.form_cta" })}
                 </button>
               </form>
             )}
           />
           <ul className="stack">
-          <p>{intl.formatMessage({ id: "contact_page_stack" })}</p>
+          <p>{intl.formatMessage({ id: "contact.stack" })}</p>
             <li className="jam">
               <Img fluid={data.jam.childImageSharp.fluid} />
             </li>
           </ul>
           <ul className="software">
-            <p>{intl.formatMessage({ id: "contact_page_software" })}</p>
+            <p>{intl.formatMessage({ id: "contact.software" })}</p>
             <li>
               <Img fluid={data.strapi.childImageSharp.fluid} />
             </li>

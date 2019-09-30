@@ -43,15 +43,15 @@ const randomizer = array => {
 const Shuffler = ({ data, intl }) => (
   <Layout>
     <h1 className="bgsize">
-      {intl.formatMessage({ id: "shuffler_page_title" })}
+      {intl.formatMessage({ id: "shuffler.page_title" })}
     </h1>
-    <p>{intl.formatMessage({ id: "shuffler_page_text" })}</p>
+    <p>{intl.formatMessage({ id: "shuffler.page_text" })}</p>
     <button
       className="shuffle-btn"
       type="button"
       onClick={event => randomizer(data.allStrapiPosition.edges)}
     >
-      {intl.formatMessage({ id: "shuffler_page_cta" })} ...<span aria-label="emoji" role="img">🌪</span>
+      {intl.formatMessage({ id: "shuffler.page_cta" })} ...<span aria-label="emoji" role="img">🌪</span>
     </button>
     <div className="video-container">
       <div key={data.allStrapiPosition.edges[0].node.id}>

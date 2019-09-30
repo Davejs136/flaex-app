@@ -31,10 +31,10 @@ const DevelopmentPage = ({ intl }) => (
       <Layout>
         <div className="navsec">
           <Link className="firstactive" to="/development">
-            {intl.formatMessage({ id: "navsec_to_front" })}
+            {intl.formatMessage({ id: "navsec.to_front" })}
           </Link>
           <Link to="/development/cms">
-            {intl.formatMessage({ id: "navsec_to_cms" })}
+            {intl.formatMessage({ id: "navsec.to_cms" })}
           </Link>
         </div>
         <ul className="works">

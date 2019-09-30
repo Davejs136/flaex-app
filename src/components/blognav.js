@@ -1,22 +1,24 @@
 import React from "react"
-import { Link } from "gatsby"
+import { injectIntl, Link } from "gatsby-plugin-intl"
 
 const activeStyles = {
-  filter: "invert(1)",
+  backgroundColor: "#ffffff",
+  backgroundImage: "none",
+  color: "#1a1a1a",
   border: "1px",
-  borderColor: "#dedede",
+  borderColor: "#1a1a1a",
   borderStyle: "solid",
 }
 
-const BlognavComponent = () => (
+const BlognavComponent = ({ intl }) => (
   <div className="navsec">
-    <Link to="/about-me" activeStyle={activeStyles}>
-      bio
+    <Link className="firstactive" to="/about-me" activeStyle={activeStyles}>
+    {intl.formatMessage({ id: "navsec.to_bio" })}
     </Link>
     <Link to="/blog" activeStyle={activeStyles}>
-      blog
+    {intl.formatMessage({ id: "navsec.to_blog" })}
     </Link>
   </div>
 )
 
-export default BlognavComponent
+export default injectIntl(BlognavComponent)

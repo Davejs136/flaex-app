@@ -1,36 +1,51 @@
- 
 {
-    "title": "@flaex_ website",
-    "description": "Kick off your next, great Gatsby project with this default-starter-intl. This barebones starter ships with the main Gatsby configuration files you might need.",
-    "author": "@flaex_",    
-    "head_tooltip": "shuffler",
-    "tag_tooltip": "about me",    
-    "navigation_to_designA": "graphic",
-    "navigation_to_designB": "design",
-    "navigation_to_developmentA": "front-end",
-    "navigation_to_developmentB": "development",
-    "navigation_to_contactA": "contact",   
-    "navigation_to_contactB": "me",  
-    "navsec_to_logo": "logos",
-    "navsec_to_print": "prints",
-    "navsec_to_web": "web",
-    "navsec_to_typography": "typography", 
-    "navsec_to_front": "front-end",
-    "navsec_to_cms": "CMS themes" ,
-    "go_back": "back",
-    "shuffler_page_title": "Randomizer",
-    "shuffler_page_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
-    "shuffler_page_cta":"Shuffle it!",
-    "contact_page_title": "Send me a message",    
-    "contact_form_label_name": "name", 
-    "contact_form_label_email": "email", 
-    "contact_form_label_message": "message",
-    "contact_form_cta": "submit",
-    "contact_page_stack": "This is web app was built with:",
-    "contact_page_software": "Developed using:",   
-    "notfound": {
-        "title": "Not found page",
-        "descriptionA": "You just hit a route that doesn't exist.", 
-        "descriptionB": "Do not feel bad, use the main menu to follow the path of righteousness!" 
-      }
-}   
+  "title": "@flaex_ website",
+  "description": "Kick off your next, great Gatsby project with this default-starter-intl. This barebones starter ships with the main Gatsby configuration files you might need.",
+  "author": "@flaex_",
+  "go_back": "volver",
+  "header": {
+    "head": "shuffler",
+    "tag": "about me"
+  },
+  "navigation": {
+    "to_designA": "graphic",
+    "to_designB": "design",
+    "to_developmentA": "front-end",
+    "to_developmentB": "development",
+    "to_contactA": "contact",
+    "to_contactB": "me"
+  },
+  "navsec": {
+    "to_logo": "logos",
+    "to_print": "prints",
+    "to_web": "web",
+    "to_typography": "typography",
+    "to_front": "front-end",
+    "to_cms": "CMS themes",
+    "to_bio": "bio",
+    "to_blog": "blog"
+  },
+  "shuffler": {
+    "page_title": "Randomizer",
+    "page_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+    "page_cta": "Shuffle it!"
+  },
+  "contact": {
+    "page_title": "Send me a message",
+    "form_label_name": "name",
+    "form_label_email": "email",
+    "form_label_message": "message",
+    "form_cta": "submit",
+    "stack": "This is web app was built with:",
+    "software": "Developed using:"
+  },
+  "notfound": {
+    "title": "Not found page",
+    "descriptionA": "You just hit a route that doesn't exist.",
+    "descriptionB": "Do not feel bad, use the main menu to go any page you like!"
+  },
+  "thank_you": {
+    "title": "Message sent!",
+    "message": "I will be contacting you soon"
+  }
+}
