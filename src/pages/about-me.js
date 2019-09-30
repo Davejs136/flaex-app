@@ -94,7 +94,7 @@ const BioTemplate = () => (
           />
           <h2>Where I live</h2>
           <GoogleMap />
-          <p>{data.strapiLocation.description_es} </p>
+          <p>{data.strapiLocation.description} </p>
         </section>
       )}
     />
