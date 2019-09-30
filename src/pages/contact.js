@@ -5,8 +5,6 @@ import { navigate } from "gatsby-link"
 import Layout from "../components/layout"
 import { Form } from "react-final-form"
 import { Field } from "react-final-form-html5-validation"
-import { injectIntl } from "gatsby-plugin-intl"
-
 
 function encode(data) {
   return Object.keys(data)
@@ -14,7 +12,7 @@ function encode(data) {
     .join("&")
 }
 
-export default injectIntl(function ContactPage({ intl }) {
+export default function ContactPage() {
   const [state, setState] = React.useState({})
 
   const handleChange = e => {
@@ -63,10 +61,8 @@ export default injectIntl(function ContactPage({ intl }) {
         }
       `}
       render={data => (
-        <Layout>                   
-          <h1 className="bgsize">
-          {intl.formatMessage({ id: "contact.page_title" })}
-          </h1>
+        <Layout>
+          <h1 className="bgsize">Envíame un mensaje</h1>
           <Form
             onSubmit={handleSubmit}
             render={({ handleSubmit, pristine, invalid }) => (
@@ -87,9 +83,7 @@ export default injectIntl(function ContactPage({ intl }) {
                     <input name="bot-field" onChange={handleChange} />
                   </label>
                 </p>
-                <label>
-                  {intl.formatMessage({ id: "contact.form_label_name" })}
-                </label>
+                <label>nombre</label>
                 <Field
                   name="name"
                   component="input"
@@ -99,9 +93,7 @@ export default injectIntl(function ContactPage({ intl }) {
                   tooLong="That name is too long!"
                   pattern="[A-Z].+"
                 />
-                <label>
-                  {intl.formatMessage({ id: "contact.form_label_email" })}
-                </label>
+                <label>email</label>
                 <Field
                   name="email"
                   type="email"
@@ -109,24 +101,20 @@ export default injectIntl(function ContactPage({ intl }) {
                   component="input"
                   required
                 />
-                <label>
-                  {intl.formatMessage({ id: "contact.form_label_message" })}
-                </label>
+                <label>mensaje</label>
                 <Field name="message" component="textarea" required />
-                <button type="submit">
-                {intl.formatMessage({ id: "contact.form_cta" })}
-                </button>
+                <button type="submit">enviar</button>
               </form>
             )}
           />
           <ul className="stack">
-          <p>{intl.formatMessage({ id: "contact.stack" })}</p>
+            <p>Este sitio estár ealizado en:</p>
             <li className="jam">
               <Img fluid={data.jam.childImageSharp.fluid} />
             </li>
           </ul>
           <ul className="software">
-            <p>{intl.formatMessage({ id: "contact.software" })}</p>
+            <p>Desarrollado con:</p>
             <li>
               <Img fluid={data.strapi.childImageSharp.fluid} />
             </li>
@@ -138,4 +126,4 @@ export default injectIntl(function ContactPage({ intl }) {
       )}
     />
   )
-})
+}

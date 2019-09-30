@@ -1,5 +1,5 @@
 import React from "react"
-import { injectIntl, Link } from "gatsby-plugin-intl"
+import { Link } from "gatsby"
 
 const activeStyles = {
   backgroundColor: "#ffffff",
@@ -10,15 +10,13 @@ const activeStyles = {
   borderStyle: "solid",
 }
 
-const DevnavComponent = ({ intl }) => (
+const DevnavComponent = () => (
   <div className="navsec">
-    <Link to="/development">
-      {intl.formatMessage({ id: "navsec.to_front" })}
-    </Link>
+    <Link to="/development">front-end</Link>
     <Link to="/development/cms" activeStyle={activeStyles}>
-      {intl.formatMessage({ id: "navsec.to_cms" })}
-    </Link>    
+      temas CMS
+    </Link>
   </div>
 )
 
-export default injectIntl(DevnavComponent)
+export default DevnavComponent

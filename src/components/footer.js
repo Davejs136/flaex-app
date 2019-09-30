@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 /* eslint-disable */
 
@@ -24,7 +24,7 @@ const Navigation = () => (
     `}
     render={data => (
       <footer>
-        <p>@flaex_ ® {new Date().getFullYear()} - EN</p>
+        <p>flaex.com - {new Date().getFullYear()}</p>
         <div className="links">
           {data.allStrapiLink.edges.map(document => (
             <div key={document.node.id}>
@@ -36,7 +36,7 @@ const Navigation = () => (
                 <FontAwesomeIcon
                   icon={[
                     (faprefix = document.node.prefix.replace(/'/g, "")),
-                    (faicon = document.node.icon.replace(/'/g, ""))
+                    (faicon = document.node.icon.replace(/'/g, "")),
                   ]}
                   fixedWidth
                   size="lg"

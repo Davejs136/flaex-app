@@ -2,10 +2,9 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
-import { injectIntl } from "gatsby-plugin-intl"
 import SEO from "../components/seo"
 
-const NotFoundPage = ({ intl }) => (
+const NotFoundPage = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -22,13 +21,14 @@ const NotFoundPage = ({ intl }) => (
       <Layout>
         <SEO title="404: Not found" />
         <h1 className="bgsize">
-          {intl.formatMessage({ id: "notfound.title" })}{" "}
+          Not found page
           <span aria-label="emoji" role="img">
             😔
           </span>
         </h1>
-        <p>{intl.formatMessage({ id: "notfound.descriptionA" })}</p>
-        <p>{intl.formatMessage({ id: "notfound.descriptionB" })}{" "}
+        <p>You just hit a route that doesn't exist.</p>
+        <p>
+          Do not feel bad, use the main menu to go any page you like!{" "}
           <span aria-label="emoji" role="img">
             😃
           </span>
@@ -41,4 +41,4 @@ const NotFoundPage = ({ intl }) => (
   />
 )
 
-export default injectIntl(NotFoundPage)
+export default NotFoundPage

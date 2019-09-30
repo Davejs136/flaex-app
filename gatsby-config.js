@@ -47,19 +47,6 @@ module.exports = {
         icon: "src/images/favicon.png", // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-plugin-intl`,
-      options: {
-        // language JSON resource path
-        path: `${__dirname}/src/intl`,
-        // supported language
-        languages: [`en`, `es`],
-        // language file path
-        defaultLanguage: `es`,
-        // option to redirect to `/ko` when connecting `/`
-        redirect: true,
-      },
-    },
     "gatsby-plugin-offline",
     `gatsby-plugin-less`,
   ],
