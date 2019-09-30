@@ -62,10 +62,10 @@ const BioTemplate = () => (
             <h1>{data.strapiProfile.headline}</h1>
           </div>
           <p>
-            Hello, my name is <i>{data.strapiProfile.name}.</i>{" "}
+            Hola, mi nombre es <i>{data.strapiProfile.name}.</i>{" "}
             {data.strapiProfile.summary}
           </p>
-          <h2>My skills</h2>
+          <h2>Habilidades</h2>
           <div className="skills">
             {data.allStrapiSkill.edges.map(document => (
               <div key={document.node.id}>
@@ -82,7 +82,7 @@ const BioTemplate = () => (
             ))}
           </div>
 
-          <h2>A brief story</h2>
+          <h2>Historia</h2>
           <ReactMarkdown
             source={data.strapiProfile.story}
             escapeHtml={false}
@@ -92,7 +92,7 @@ const BioTemplate = () => (
                 : `${process.env.IMAGE_BASE_URL}${uri}`
             }
           />
-          <h2>Where I live</h2>
+          <h2>Donde vivo</h2>
           <GoogleMap />
           <p>{data.strapiLocation.description} </p>
         </section>
