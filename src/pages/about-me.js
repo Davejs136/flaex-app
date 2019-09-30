@@ -39,7 +39,7 @@ const BioTemplate = () => (
           }
           strapiLocation {
             city
-            description_es
+            description
           }
           allStrapiSkill {
             edges {
@@ -59,11 +59,11 @@ const BioTemplate = () => (
             <div className="avatar">
               <Img fluid={data.strapiProfile.avatar.childImageSharp.fluid} />
             </div>
-            <h1>{data.strapiProfile.headline_es}</h1>
+            <h1>{data.strapiProfile.headline}</h1>
           </div>
           <p>
             Hello, my name is <i>{data.strapiProfile.name}.</i>{" "}
-            {data.strapiProfile.summary_es}
+            {data.strapiProfile.summary}
           </p>
           <h2>My skills</h2>
           <div className="skills">
@@ -84,7 +84,7 @@ const BioTemplate = () => (
 
           <h2>A brief story</h2>
           <ReactMarkdown
-            source={data.strapiProfile.story_es}
+            source={data.strapiProfile.story}
             escapeHtml={false}
             transformImageUri={uri =>
               uri.startsWith("http")
