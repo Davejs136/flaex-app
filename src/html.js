@@ -11,6 +11,8 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"
         />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>

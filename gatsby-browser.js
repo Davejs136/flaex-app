@@ -7,6 +7,8 @@
 // You can delete this file if you're not using it
 import "./src/pages/styles.less"
 
+
+
 export const onServiceWorkerUpdateReady = () => {
     const answer = window.confirm(
       `This application has been updated. ` +
@@ -18,6 +20,7 @@ export const onServiceWorkerUpdateReady = () => {
   }
 
   export const onClientEntry = () => {
+    window.scrollTo(0,1)
     window.onload = () => {
       setTimeout(function () {
         let viewheight = window.visualViewport.height
