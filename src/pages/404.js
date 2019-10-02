@@ -21,14 +21,14 @@ const NotFoundPage = () => (
       <Layout>
         <SEO title="404: Not found" />
         <h1 className="bgsize">
-          Not found page
+          Página inexistente{" "}
           <span aria-label="emoji" role="img">
             😔
           </span>
         </h1>
-        <p>You just hit a route that doesn't exist.</p>
+        <p>Intentaste visitar un vínculo que no existe</p>
         <p>
-          Do not feel bad, use the main menu to go any page you like!{" "}
+          Usa el menú para volver al sitio!{" "}
           <span aria-label="emoji" role="img">
             😃
           </span>

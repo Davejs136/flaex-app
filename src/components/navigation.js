@@ -46,8 +46,9 @@ const Navigation = () => (
     </Link>
     <Link to="/contact" activeStyle={activeStyles}>
       <span>
-        contactame
-        <br />+ info
+        info +
+        <br />
+        contacto
       </span>
     </Link>
   </nav>

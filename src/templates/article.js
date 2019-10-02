@@ -7,12 +7,12 @@ const ReactMarkdown = require("react-markdown/with-html")
 const ArticleTemplate = ({ data }) => (
   <Layout>
     <div className="navsec">
-      <Link to="/blog">&#60;&#60; back</Link>
+      <Link to="/blog">&#8592;volver</Link>
     </div>
     <article>
       <h1>{data.strapiArticle.title}</h1>
       <p className="author">
-        by <Link to="/about-me">{data.strapiArticle.author.username}</Link>
+        por <Link to="/about-me">{data.strapiArticle.author.username}</Link>
       </p>
       <div className="mainImage">
         <Img fluid={data.strapiArticle.image.childImageSharp.fluid} />

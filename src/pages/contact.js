@@ -108,7 +108,7 @@ export default function ContactPage() {
             )}
           />
           <ul className="stack">
-            <p>Este sitio estár ealizado en:</p>
+            <p>Este sitio está realizado en:</p>
             <li className="jam">
               <Img fluid={data.jam.childImageSharp.fluid} />
             </li>
