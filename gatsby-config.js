@@ -38,12 +38,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "flaex-website",
+        name: "@flaex_",
         short_name: "flaex",
         start_url: "/",
-        background_color: "#000",
+        background_color: "#fff",
         theme_color: "#000",
-        display: "minimal-ui",
+        display: "standalone",
         icon: "src/images/favicon.png", // This path is relative to the root of the site.
       },
     },
