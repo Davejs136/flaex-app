@@ -33,14 +33,16 @@ const WorkTemplate = ({ data }) => (
           </li>
         ))}
       </ul>
-      <ReactMarkdown
-        className="description"
-        source={data.strapiWork.description}
-        transformImageUri={uri =>
-          uri.startsWith("http") ? uri : `${process.env.IMAGE_BASE_URL}${uri}`
-        }
-        escapeHtml={false}
-      />
+      <div className="two-columns">
+        <ReactMarkdown
+          className="description"
+          source={data.strapiWork.description}
+          transformImageUri={uri =>
+            uri.startsWith("http") ? uri : `${process.env.IMAGE_BASE_URL}${uri}`
+          }
+          escapeHtml={false}
+        />
+        </div>
     </article>
   </Layout>
 )

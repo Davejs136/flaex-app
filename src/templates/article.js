@@ -17,14 +17,16 @@ const ArticleTemplate = ({ data }) => (
       <div className="mainImage">
         <Img fluid={data.strapiArticle.image.childImageSharp.fluid} />
       </div>
-      <ReactMarkdown
-        className="description"
-        source={data.strapiArticle.description}
-        transformImageUri={uri =>
-          uri.startsWith("http") ? uri : `${process.env.IMAGE_BASE_URL}${uri}`
-        }
-        escapeHtml={false}
-      />
+      <div className="two-columns">
+        <ReactMarkdown
+          className="description"
+          source={data.strapiArticle.description}
+          transformImageUri={uri =>
+            uri.startsWith("http") ? uri : `${process.env.IMAGE_BASE_URL}${uri}`
+          }
+          escapeHtml={false}
+        />
+      </div>
     </article>
   </Layout>
 )

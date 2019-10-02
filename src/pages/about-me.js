@@ -24,7 +24,6 @@ const BioTemplate = () => (
       query={graphql`
         query BioTemplateEs {
           strapiProfile {
-            name
             summary
             headline
             summary
@@ -60,11 +59,18 @@ const BioTemplate = () => (
               <Img fluid={data.strapiProfile.avatar.childImageSharp.fluid} />
             </div>
             <h1>{data.strapiProfile.headline}</h1>
+          </div>       
+          <div className="two-columns">
+            <ReactMarkdown
+              source={data.strapiProfile.summary}
+              escapeHtml={false}
+              transformImageUri={uri =>
+                uri.startsWith("http")
+                  ? uri
+                  : `${process.env.IMAGE_BASE_URL}${uri}`
+              }
+            />
           </div>
-          <p>
-            Hola, mi nombre es <i>{data.strapiProfile.name}.</i>{" "}
-            {data.strapiProfile.summary}
-          </p>
           <h2>Habilidades</h2>
           <div className="skills">
             {data.allStrapiSkill.edges.map(document => (
@@ -83,6 +89,7 @@ const BioTemplate = () => (
           </div>
 
           <h2>Historia</h2>
+          <div className="two-columns">
           <ReactMarkdown
             source={data.strapiProfile.story}
             escapeHtml={false}
@@ -92,12 +99,13 @@ const BioTemplate = () => (
                 : `${process.env.IMAGE_BASE_URL}${uri}`
             }
           />
-          <h2>Donde vivo</h2>
-          <GoogleMap />
-          <p>{data.strapiLocation.description} </p>
+          </div>
+        <h2>Donde vivo</h2>
+        <GoogleMap />
+        <p>{data.strapiLocation.description} </p>
         </section>
-      )}
-    />
+  )}
+/>
   </Layout>
 )
 
