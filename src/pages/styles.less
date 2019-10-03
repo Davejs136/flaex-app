@@ -215,7 +215,8 @@ html {
 
 body {
   color: #1a1b1a;
-  background-color: #dcdcdc;
+  background-image: url("../images/bg.jpg");
+  background-repeat: repeat;
   font-family: "Ubuntu Condensed", sans-serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -224,6 +225,9 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  #___gatsby {
+    background-color: rgba(255, 255, 255, 0.75);
+  }
 }
 img {
   max-width: 100%;
@@ -965,6 +969,9 @@ This element renders outside home and page containers
     }
   }
   //* Bio styles */
+  .profile {
+    margin-bottom: .5%;
+  }
   .skills {
     display: flex;
     flex-wrap: wrap;
@@ -1212,7 +1219,7 @@ This element renders outside home and page containers
     .map {
       height: 25vh;
     }
-    .profile {
+    .profile {      
       .avatar {
         width: 98px;
         margin-bottom: 2%;
@@ -2376,7 +2383,7 @@ This element renders outside home and page containers
       column-count: 2;
     }
     p {
-      font-size: 1.12rem;    
+      font-size: 1.12rem;
     }
     .menu {
       padding: 1vw;

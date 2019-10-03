@@ -7,7 +7,7 @@ const ReactMarkdown = require("react-markdown/with-html")
 const ArticleTemplate = ({ data }) => (
   <Layout>
     <div className="navsec">
-      <Link to="/blog">&#8592;volver</Link>
+      <Link to="/blog">&#10229; volver</Link>
     </div>
     <article>
       <h1>{data.strapiArticle.title}</h1>

@@ -15,7 +15,7 @@ const openLightbox = event => {
 const WorkTemplate = ({ data }) => (
   <Layout>
     <div className="navsec">
-      <button onClick={() => window.history.back()}>&#8592;volver</button>
+      <button onClick={() => window.history.back()}>&#10229; volver</button>
     </div>
     <article>
       <h1>{data.strapiWork.title}</h1>
