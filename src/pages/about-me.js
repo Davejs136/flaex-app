@@ -71,7 +71,7 @@ const BioTemplate = () => (
               }
             />
           </div>
-          <h2>Habilidades</h2>
+          <h2>Mis habilidades</h2>
           <div className="skills">
             {data.allStrapiSkill.edges.map(document => (
               <div key={document.node.id}>
@@ -88,7 +88,7 @@ const BioTemplate = () => (
             ))}
           </div>
 
-          <h2>Historia</h2>
+          <h2>Mi historia</h2>
           <div className="two-columns">
           <ReactMarkdown
             source={data.strapiProfile.story}
