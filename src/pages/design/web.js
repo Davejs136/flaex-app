@@ -8,7 +8,7 @@ const WebPage = () => (
   <StaticQuery
     query={graphql`
       query WebPage {
-        allStrapiWork(filter: { subcategory: { eq: "web" } }) {
+        allStrapiWork(filter: { tag: { eq: "web" } }) {
           edges {
             node {
               id
