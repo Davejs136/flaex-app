@@ -1,34 +1,31 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../components/layout"
 
-const ThankYouPage = ({ data }) => (
-  <Layout>
-    <h1 className="bgsize">¡Mensaje enviado!</h1>
+const ThankYouPage = () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        notFound: file(relativePath: { eq: "ty.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <Layout>        
+        <h1 className="bgsize">¡Mensaje enviado!</h1>
     <p>Te responderé a la bredad posible</p>
-    <div className="video-container">
-      <div key={data.strapiPosition.id}>
-        <video autoPlay>
-          <source
-            src={data.strapiPosition.video.publicURL}
-            type="video/mp4"
-          />
-        </video>
-      </div>
-    </div>
-  </Layout>
+        <div className="notfound">
+          <Img fluid={data.notFound.childImageSharp.fluid} />
+        </div>
+      </Layout>
+    )}
+  />
 )
 
 export default ThankYouPage
-
-export const query = graphql`
-  query ThankYouPage {
-    strapiPosition(name: { eq: "3a" }) {
-      id
-      name
-      video {
-        publicURL
-      }
-    }
-  }
-`
