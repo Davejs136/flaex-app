@@ -64,10 +64,10 @@ const Shuffler = ({ data }) => (
     </button>
     <div>
       <div className="video-container">
-        <div key={data.allStrapiPosition.id}>
+        <div key={data.allStrapiPosition.edges[0].node.id}>
           <video autoPlay>
             <source
-              src={data.allStrapiPosition.video.publicURL}
+              src={data.allStrapiPosition.edges[0].node.video.publicURL}
               type="video/mp4"
             />
           </video>
