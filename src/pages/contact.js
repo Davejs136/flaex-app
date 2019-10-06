@@ -64,8 +64,8 @@ export default function ContactPage() {
         <Layout>          
           <h1 className="bgsize">Info + contacto</h1>
           <div className="two-columns">
-            <p>Flaex lo inventé de niño mezclando letras de mi nombre; en el logo están presentes mis iniciales puestas de tal  manera que la F semeja los ojos y la P la boca. La idea del diseño de la identidad está inspirada en el trabajo manual utilizando tijeras, cartulina negra, papel bond blanco y pega; similar al proceso que se hace cuando se balancea el peso y volumen en el diseño tipográfico.</p>
-            <p>Mi intención es presentar un concepto que salga de lo convencional apartándose de las tendencias del diseño web a través de una navegación sencilla en donde el contenido del sitio web es el factor principal. @flaex_ es el vehículo para mostrar mi portafolio y compartir temas relacionados al diseño y la tecnología.</p>
+            <p>Flaex lo inventé de niño mezclando letras de mi nombre. La idea del diseño del logo está inspirada en el trabajo manual utilizando tijeras, cartulina negra, papel bond blanco y pega.</p>
+            <p>Mi intención es presentar un concepto que salga de lo convencional apartándose de las tendencias del diseño web a través de una navegación sencilla en donde el contenido del sitio web es el factor principal. </p>
           </div>
           <h2 className="bgsize">¡Envíame un mensaje!</h2>
           <Form
