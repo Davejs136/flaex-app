@@ -102,7 +102,15 @@ const BioTemplate = () => (
           </div>
         <h2>Donde vivo</h2>
         <GoogleMap />
-        <p>{data.strapiLocation.description} </p>
+        <ReactMarkdown
+            source={data.strapiLocation.description}
+            escapeHtml={false}
+            transformImageUri={uri =>
+              uri.startsWith("http")
+                ? uri
+                : `${process.env.IMAGE_BASE_URL}${uri}`
+            }
+          />
         </section>
   )}
 />
