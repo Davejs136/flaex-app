@@ -29,7 +29,7 @@ const HeaderPage = () => (
             <Link to="/">
               <Img fluid={data.head.childImageSharp.fluid} />
             </Link>
-            <span className="tooltiptext">randomizador</span>
+            <span className="tooltiptext">inicio</span>
           </div>
           <div className="logotag">
             <Link to="/about-me">

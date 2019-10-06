@@ -762,10 +762,11 @@ This element renders outside home and page containers
         .logotag {
           position: relative;
           .tooltiptext {
-            min-width: 75px;
+            min-width: 110px;
             right: 110%;
-            text-align: left;
-            font-size: 1rem;
+            text-align: right;
+            font-size: 0.9rem;
+            line-height: 1.2rem;
             color: #1a1b1a;
             padding: 0.25em;
             /* Position the tooltip */
@@ -842,7 +843,6 @@ This element renders outside home and page containers
           position: relative;
           .tooltiptext {
             visibility: hidden;
-            width: 90px;
             font-size: 0.75rem;
             background-color: #fff;
             color: #1a1b1a;
@@ -1041,7 +1041,16 @@ This element renders outside home and page containers
     margin-bottom: 0.3%;
   }
   /* Contact form */
-  .contact_form {
+  .contact_form {   
+    input:required,
+    input:invalid,
+    textarea:required {
+      box-shadow:none;
+  }
+  input:invalid {
+    box-shadow:none;
+  }
+    
     margin-top: 5%;
     input[type="text"],
     input[type="email"],
@@ -1219,7 +1228,7 @@ This element renders outside home and page containers
     .map {
       height: 25vh;
     }
-    .profile {      
+    .profile {
       .avatar {
         width: 98px;
         margin-bottom: 2%;

@@ -29,7 +29,7 @@ const Header = () => (
             <Link to="/shuffler">
               <Img fluid={data.head.childImageSharp.fluid} />
             </Link>
-            <span className="tooltiptext">randomizador</span>
+            <span className="tooltiptext">Cabezas de @flaex_</span>
           </div>
           <div className="logotag">
             <Link to="/about-me">
