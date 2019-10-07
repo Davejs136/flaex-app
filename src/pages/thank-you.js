@@ -19,7 +19,7 @@ const ThankYouPage = () => (
     render={data => (
       <Layout>        
         <h1 className="bgsize">¡Mensaje enviado!</h1>
-    <p>Te responderé a la bredad posible</p>
+    <p>Te responderé a la brevedad posible</p>
         <div className="notfound">
           <Img fluid={data.notFound.childImageSharp.fluid} />
         </div>
