@@ -6,7 +6,7 @@ module.exports = {
     keywords: "Diseño gráfico desarrollo fron-end pwa",
     author: "Freddy Polania",
     url: "https://www.flaex.netlify.com",
-    image: "/images/snape.jpg", 
+    image: "/static/seo-img.gif", 
     twitterUsername: "@Flaex_",
   },
   plugins: [
