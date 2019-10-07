@@ -226,7 +226,7 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
   #___gatsby {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.85);
   }
 }
 img {
@@ -761,10 +761,9 @@ This element renders outside home and page containers
         .logohead,
         .logotag {
           position: relative;
-          .tooltiptext {
-            min-width: 110px;
+          .tooltiptext { 
             right: 110%;
-            text-align: right;
+            text-align: left;
             font-size: 0.9rem;
             line-height: 1.2rem;
             color: #1a1b1a;
@@ -1268,7 +1267,7 @@ This element renders outside home and page containers
 }
 
 /* No pixel-ratio devices */
-@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
   /* Main views styles */
   .home,
   .page {
@@ -1306,8 +1305,7 @@ This element renders outside home and page containers
       flex-direction: column;
       justify-content: center;
       nav {
-        height: 58vh;
-        flex-direction: column;
+        
         a {
           width: 85px;
           height: 85px;

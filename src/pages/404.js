@@ -26,9 +26,9 @@ const NotFoundPage = () => (
             😔
           </span>
         </h1>
-        <p>Intentaste visitar un vínculo que no existe</p>
+        <p>Intentaste visitar un vínculo que no existe.</p>
         <p>
-          Usa el menú para volver al sitio!{" "}
+          ¡Usa el menú para volver al sitio!{" "}
           <span aria-label="emoji" role="img">
             😃
           </span>

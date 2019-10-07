@@ -42,7 +42,7 @@ const WorkTemplate = ({ data }) => (
           }
           escapeHtml={false}
         />
-        </div>
+      </div>
     </article>
   </Layout>
 )

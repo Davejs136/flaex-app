@@ -44,12 +44,9 @@ const Shuffler = ({ data }) => (
     <h1 className="bgsize">Cabezas de @flaex_</h1>
     <div className="two-columns">
       <p>
-        Esto es un experimento donde se mezclan caracteres tipográficos para
-        crear diferentes expresiones animadas en video. Cada expresión está
-        acompañada de una posición del cuerpo distinta para reforzar sus rasgos.
-        Hice este ejercicio para ver cómo se relacionan las formas del personaje
-        con cada “cabeza” o expresión. ¡Presiona el botón de abajo para verlo en
-        acción!
+        Cada expresión está acompañada de una posición del cuerpo distinta para
+        reforzar los rasgos. Hice esto para ver cómo se relacionan las formas
+        del personaje. ¡Presiona el botón para cambiar la animación!
       </p>
     </div>
     <button
@@ -57,9 +54,9 @@ const Shuffler = ({ data }) => (
       type="button"
       onClick={event => randomizer(data.allStrapiPosition.edges)}
     >
-      ¡cambiar cabeza!
+      ¡cambiar!{" "}
       <span aria-label="emoji" role="img">
-        🌪
+        &#10227;
       </span>
     </button>
     <div>
