@@ -1,8 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: "@flaex_ portfolio and blog",
-    description: "Gatsby portfolio and blog with Strapi",
+    title: "@flaex_ diseñador gráfico desarrollador front-end",
+    titleTemplate: "%s · The Real Hero",
+    description: "Portafolio y blog @flaex_ Freddy Polanía",
+    keywords: "Diseño gráfico desarrollo fron-end pwa",
     author: "Freddy Polania",
+    url: "https://www.flaex.netlify.com",
+    image: "/images/snape.jpg", 
+    twitterUsername: "@Flaex_",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
