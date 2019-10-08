@@ -31,37 +31,36 @@ const BlogPage = () => (
         }
       `}
       render={data => (
-        <ul className="articles">
-          <SEO title="blog" />
-          <h1 className="hidden">blog</h1>
-          {data.allStrapiArticle.edges.map(document => (
-            <li key={document.node.id}>
-              <Link
-                to={`/blog/${document.node.title
-                  .replace(/\s+/g, "-")
-                  .toLowerCase()}`
-                }
-                aria-label={`Ir al artículo ${document.node.title}`}  
-              >
-                <div className="mainImage">
-                  <Img fluid={document.node.image.childImageSharp.fluid} />
-                </div>
-              </Link>
-              <time>{document.node.date}</time>
-              <h2>
+        <div>
+          <ul className="articles">
+            <SEO title="blog" />
+            {data.allStrapiArticle.edges.map(document => (
+              <li key={document.node.id}>
                 <Link
                   to={`/blog/${document.node.title
                     .replace(/\s+/g, "-")
-                    .toLowerCase()}`
-                  }
-                  aria-label={`Ir al artículo ${document.node.title}`}  
+                    .toLowerCase()}`}
+                  aria-label={`Ir al artículo ${document.node.title}`}
                 >
-                  {document.node.title}
+                  <div className="mainImage">
+                    <Img fluid={document.node.image.childImageSharp.fluid} />
+                  </div>
                 </Link>
-              </h2>
-            </li>
-          ))}
-        </ul>
+                <time>{document.node.date}</time>
+                <h2>
+                  <Link
+                    to={`/blog/${document.node.title
+                      .replace(/\s+/g, "-")
+                      .toLowerCase()}`}
+                    aria-label={`Ir al artículo ${document.node.title}`}
+                  >
+                    {document.node.title}
+                  </Link>
+                </h2>
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
     />
   </Layout>
