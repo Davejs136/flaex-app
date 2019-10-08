@@ -22,6 +22,7 @@ const Navigation = () => (
           ? { style: { ...linkStyles, ...activeStyles } }
           : null
       }
+      aria-label="Ir al portafolio de diseño gráfico"
     >
       <span>
         diseño
@@ -37,6 +38,8 @@ const Navigation = () => (
           ? { style: { ...linkStyles, ...activeStyles } }
           : null
       }
+
+      aria-label="Ir al portafolio de desarrollo front-end"
     >
       <span>
         desarrollo
@@ -44,7 +47,7 @@ const Navigation = () => (
         front-end
       </span>
     </Link>
-    <Link to="/contact" activeStyle={activeStyles}>
+    <Link to="/contact" activeStyle={activeStyles} aria-label="Ir a la información de contacto">
       <span>
         info +
         <br />

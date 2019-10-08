@@ -14,6 +14,7 @@ const Navigation = () => (
           edges {
             node {
               id
+              title
               icon
               url
               prefix
@@ -32,6 +33,7 @@ const Navigation = () => (
                 href={document.node.url}
                 rel="noopener noreferrer"
                 target="_blank"
+                aria-label={`Ir a ${document.node.title}`}
               >
                 <FontAwesomeIcon
                   icon={[

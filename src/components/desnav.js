@@ -12,14 +12,14 @@ const activeStyles = {
 
 const DesnavComponent = () => (
   <div className="navsec">
-    <Link to="/design">logos</Link>
-    <Link to="/design/prints" activeStyle={activeStyles}>
+    <Link to="/design" aria-label="Ir al portafolio de diseño gráfico">logos</Link>
+    <Link to="/design/prints" activeStyle={activeStyles} aria-label="Ir al portafolio de impresos">
       impresos
     </Link>
-    <Link to="/design/web" activeStyle={activeStyles}>
+    <Link to="/design/web" activeStyle={activeStyles} aria-label="Ir al portafolio de diseño web">
       web
     </Link>
-    <Link to="/design/typography" activeStyle={activeStyles}>
+    <Link to="/design/typography" activeStyle={activeStyles} aria-label="Ir al portafolio de diseño tipográfico">
       tipografía
     </Link>
   </div>

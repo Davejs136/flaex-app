@@ -17,10 +17,10 @@ const BioTemplate = () => (
   <Layout>
     <SEO title="sobre mi" />
     <div className="navsec">
-      <Link className="firstactive" to="/about-me">
+      <Link className="firstactive" to="/about-me" aria-label="Ir al perfil">
         bio
       </Link>
-      <Link to="/blog">blog</Link>
+      <Link to="/blog" aria-label="Ir al blog">blog</Link>
     </div>
     <StaticQuery
       query={graphql`

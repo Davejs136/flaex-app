@@ -32,12 +32,12 @@ const DesignPage = () => (
         <SEO title="diseño logotipos" />
         <h1 className="hidden">diseño logotipos</h1>  
         <div className="navsec">
-          <Link className="firstactive" to="/design">
+          <Link className="firstactive" to="/design" aria-label="Ir al portafolio de logotipos">
             logos
           </Link>
-          <Link to="/design/prints">impresos</Link>
-          <Link to="/design/web">web</Link>
-          <Link to="/design/typography">tipografía</Link>
+          <Link to="/design/prints" aria-label="Ir al portafolio de impresos">impresos</Link>
+          <Link to="/design/web" aria-label="Ir al portafolio de diseño web">web</Link>
+          <Link to="/design/typography" aria-label="Ir al portafolio de diseño tipográfico">tipografía</Link>
         </div>
         <ul className="works">
           {data.allStrapiWork.edges.map(document => (
@@ -45,7 +45,9 @@ const DesignPage = () => (
               <Link
                 to={`/${document.node.category}/${
                   document.node.subcategory
-                }/${document.node.title.replace(/\s+/g, "-").toLowerCase()}`}
+                }/${document.node.title.replace(/\s+/g, "-").toLowerCase()}`
+              }
+              aria-label={`Ir al artículo ${document.node.title}`}  
               >
                 <Img fluid={document.node.thumbnail.childImageSharp.fluid} />
                 <h2>{document.node.title}</h2>

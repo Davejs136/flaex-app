@@ -12,8 +12,8 @@ const activeStyles = {
 
 const BlognavComponent = () => (
   <div className="navsec">
-    <Link to="/about-me">bio</Link>
-    <Link to="/blog" activeStyle={activeStyles}>
+    <Link to="/about-me" aria-label="Ir al perfil">bio</Link>
+    <Link to="/blog" activeStyle={activeStyles} aria-label="Ir al al blog">
       blog
     </Link>
   </div>

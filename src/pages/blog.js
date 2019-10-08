@@ -39,7 +39,9 @@ const BlogPage = () => (
               <Link
                 to={`/blog/${document.node.title
                   .replace(/\s+/g, "-")
-                  .toLowerCase()}`}
+                  .toLowerCase()}`
+                }
+                aria-label={`Ir al artículo ${document.node.title}`}  
               >
                 <div className="mainImage">
                   <Img fluid={document.node.image.childImageSharp.fluid} />
@@ -50,7 +52,9 @@ const BlogPage = () => (
                 <Link
                   to={`/blog/${document.node.title
                     .replace(/\s+/g, "-")
-                    .toLowerCase()}`}
+                    .toLowerCase()}`
+                  }
+                  aria-label={`Ir al artículo ${document.node.title}`}  
                 >
                   {document.node.title}
                 </Link>

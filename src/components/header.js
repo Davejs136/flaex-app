@@ -26,13 +26,13 @@ const Header = () => (
       <header>
         <div>
           <div className="logohead">
-            <Link to="/shuffler">
+            <Link to="/shuffler" aria-label="Ir al randomizador">
               <Img fluid={data.head.childImageSharp.fluid} />
             </Link>
             <span className="tooltiptext">cabezas</span>
           </div>
           <div className="logotag">
-            <Link to="/about-me">
+            <Link to="/about-me" aria-label="Ir al perfil">
               <Img fluid={data.tag.childImageSharp.fluid} />
             </Link>
             <span className="tooltiptext">sobre mi</span>

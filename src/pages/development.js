@@ -32,10 +32,10 @@ const DevelopmentPage = () => (
         <SEO title="desarrollo front-end" />
         <h1 className="hidden">desarrollo front-end</h1>  
         <div className="navsec">
-          <Link className="firstactive" to="/development">
+          <Link className="firstactive" to="/development" aria-label="Ir al portafolio de desarrollo front-end">
             front-end
           </Link>
-          <Link to="/development/cms">temas CMS</Link>
+          <Link to="/development/cms" aria-label="Ir al portafolio de temas CMS">temas CMS</Link>
         </div>
         <ul className="works">
           {data.allStrapiWork.edges.map(document => (

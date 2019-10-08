@@ -26,13 +26,13 @@ const HeaderPage = () => (
       <header>
         <div>
           <div className="logohead">
-            <Link to="/">
+            <Link to="/" aria-label="Ir al inicio">
               <Img fluid={data.head.childImageSharp.fluid} />
             </Link>
             <span className="tooltiptext">inicio</span>
           </div>
           <div className="logotag">
-            <Link to="/about-me">
+            <Link to="/about-me" aria-label="Ir al perfil">
               <Img fluid={data.tag.childImageSharp.fluid} />
             </Link>
             <span className="tooltiptext">sobre mi</span>

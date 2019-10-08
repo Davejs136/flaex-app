@@ -10,12 +10,12 @@ const ArticleTemplate = ({ data }) => (
   <Layout>
     <SEO title={data.strapiArticle.title} />          
     <div className="navsec">
-      <Link to="/blog">&#10229; volver</Link>
+      <Link to="/blog" aria-label="volver a la página anterior">&#10229; volver</Link>
     </div>
     <article>
       <h1>{data.strapiArticle.title}</h1>
       <p className="author">
-        por <Link to="/about-me">{data.strapiArticle.author.username}</Link>
+        por <Link to="/about-me" aria-label="Ir al perfil">{data.strapiArticle.author.username}</Link>
       </p>
       <div className="mainImage">
         <Img fluid={data.strapiArticle.image.childImageSharp.fluid} />
