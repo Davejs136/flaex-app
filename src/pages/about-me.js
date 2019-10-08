@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import GoogleMap from "../components/googleMap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import SEO from "../components/seo"
 
 const ReactMarkdown = require("react-markdown/with-html")
 
@@ -14,6 +15,7 @@ let faprefix = null
 
 const BioTemplate = () => (
   <Layout>
+    <SEO title="sobre mi" />
     <div className="navsec">
       <Link className="firstactive" to="/about-me">
         bio

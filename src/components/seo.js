@@ -2,6 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+
 const SEO = ({ title, description, keywords, image, pathname, article }) => (
   <StaticQuery
     query={query}
@@ -27,9 +28,13 @@ const SEO = ({ title, description, keywords, image, pathname, article }) => (
       }
       return (
         <>
-          <Helmet htmlAttributes={{
-            lang: "es"
-          }} title={seo.title} titleTemplate={titleTemplate}>
+          <Helmet
+            htmlAttributes={{
+              lang: "es",
+            }}
+            title={seo.title}
+            titleTemplate={titleTemplate}
+          >
             <meta name="description" content={seo.description} />
             <meta name="keywords" content={seo.keywords} />
             <meta name="image" content={seo.image} />

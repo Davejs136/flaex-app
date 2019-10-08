@@ -3,6 +3,7 @@ import { StaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import Blognav from "../components/blognav"
+import SEO from "../components/seo"
 
 const BlogPage = () => (
   <Layout>
@@ -31,6 +32,8 @@ const BlogPage = () => (
       `}
       render={data => (
         <ul className="articles">
+          <SEO title="blog" />
+          <h1 className="hidden">blog</h1>
           {data.allStrapiArticle.edges.map(document => (
             <li key={document.node.id}>
               <Link

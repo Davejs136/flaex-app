@@ -5,6 +5,7 @@ import { navigate } from "gatsby-link"
 import Layout from "../components/layout"
 import { Form } from "react-final-form"
 import { Field } from "react-final-form-html5-validation"
+import SEO from "../components/seo"
 
 function encode(data) {
   return Object.keys(data)
@@ -62,6 +63,7 @@ export default function ContactPage() {
       `}
       render={data => (
         <Layout>
+          <SEO title="contacto" />
           <h1 className="bgsize">Info + contacto</h1>
           <div className="two-columns">
             <p>

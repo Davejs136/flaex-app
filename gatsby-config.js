@@ -1,16 +1,33 @@
 module.exports = {
   siteMetadata: {
-    title: "@flaex_ diseñador gráfico desarrollador front-end",
-    titleTemplate: "%s · The Real Hero",
-    description: "Portafolio y blog @flaex_ Freddy Polanía",
+    title: "diseñador gráfico & desarrollador front-end",
+    titleTemplate: "%s · @flaex_",
+    description: "Portafolio & blog Freddy Polanía - @flaex_",
     keywords: "Diseño gráfico desarrollo fron-end pwa",
     author: "Freddy Polania",
     url: "https://www.flaex.netlify.com",
-    image: "/seo-img.gif", 
+    image: "/seo-img.jpg", 
     twitterUsername: "@Flaex_",
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
+    {
+      resolve: `gatsby-plugin-sitemap`,
+        options: {
+          exclude: [`/page`, `/404.html`, `/thank-you`]
+        }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {        
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },   
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-149595380-1`,
+      },
+    }, 
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -37,9 +54,7 @@ module.exports = {
         ],
         queryLimit: 1000,
       },
-    },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
+    },   
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -52,6 +67,9 @@ module.exports = {
         icon: "src/images/favicon.png", // This path is relative to the root of the site.
       },
     },
+    "gatsby-plugin-react-helmet",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     "gatsby-plugin-offline",
     `gatsby-plugin-less`,
   ],

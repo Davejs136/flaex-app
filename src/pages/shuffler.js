@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import SEO from "../components/seo";
 
 const shuffle = array => {
   let currentIndex = array.length,
@@ -41,6 +42,7 @@ const randomizer = array => {
 
 const Shuffler = ({ data }) => (
   <Layout>
+    <SEO /> 
     <h1 className="bgsize">Cabezas de @flaex_</h1>
     <div className="two-columns">
       <p>

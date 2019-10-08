@@ -2,6 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
+
 const ReactMarkdown = require("react-markdown/with-html")
 
 const openLightbox = event => {
@@ -14,11 +16,13 @@ const openLightbox = event => {
 
 const WorkTemplate = ({ data }) => (
   <Layout>
+    <SEO title={data.strapiWork.title} />   
     <div className="navsec">
       <button onClick={() => window.history.back()}>&#10229; volver</button>
     </div>
     <article>
       <h1>{data.strapiWork.title}</h1>
+      <div className="city-year">Ciudad: {data.strapiWork.city}. Año: {data.strapiWork.year}</div>
       <ul className="works">
         {data.strapiWork.images.map(document => (
           <li
@@ -54,6 +58,8 @@ export const query = graphql`
     strapiWork(id: { eq: $id }) {
       id
       title
+      year
+      city
       thumbnail {
         childImageSharp {
           fluid(maxWidth: 675) {

@@ -11,7 +11,8 @@ library.add(fab, fas)
 
 const IndexPage = () => (
   <div className="home">
-    <SEO />   
+    <SEO /> 
+    <h1 className="hidden">Portafolio & blog Freddy Polanía - @flaex_</h1>    
     <div className="menu">
       <Header />
       <Navigation />

@@ -2,10 +2,13 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
+
 const ReactMarkdown = require("react-markdown/with-html")
 
 const ArticleTemplate = ({ data }) => (
   <Layout>
+    <SEO title={data.strapiArticle.title} />          
     <div className="navsec">
       <Link to="/blog">&#10229; volver</Link>
     </div>

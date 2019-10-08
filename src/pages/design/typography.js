@@ -3,6 +3,7 @@ import Layout from "../../components/layout"
 import Desnav from "../../components/desnav"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import SEO from "../../components/seo"
 
 const TypographyPage = () => (
   <StaticQuery
@@ -29,6 +30,8 @@ const TypographyPage = () => (
     `}
     render={data => (
       <Layout>
+        <SEO title="diseño tipográfico" />
+        <h1 className="hidden">diseño tipográfico</h1> 
         <Desnav />
         <ul className="works">
           {data.allStrapiWork.edges.map(document => (

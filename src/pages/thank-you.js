@@ -2,6 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
+import SEO from "../components/seo";
 
 const ThankYouPage = () => (
   <StaticQuery
@@ -17,7 +18,8 @@ const ThankYouPage = () => (
       }
     `}
     render={data => (
-      <Layout>        
+      <Layout> 
+        <SEO />        
         <h1 className="bgsize">¡Mensaje enviado!</h1>
     <p>Te responderé a la brevedad posible</p>
         <div className="notfound">

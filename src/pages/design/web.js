@@ -3,6 +3,7 @@ import Layout from "../../components/layout"
 import Desnav from "../../components/desnav"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import SEO from "../../components/seo"
 
 const WebPage = () => (
   <StaticQuery
@@ -29,6 +30,8 @@ const WebPage = () => (
     `}
     render={data => (
       <Layout>
+        <SEO title="diseño web" />
+        <h1 className="hidden">diseño web</h1> 
         <Desnav />
         <ul className="works">
           {data.allStrapiWork.edges.map(document => (

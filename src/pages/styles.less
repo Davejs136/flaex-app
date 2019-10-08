@@ -217,7 +217,7 @@ body {
   color: #1a1b1a;
   background-image: url("../images/bg.jpg");
   background-repeat: repeat;
-  font-family: "Ubuntu Condensed", sans-serif;
+  font-family: "Ubuntu Condensed", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -706,6 +706,9 @@ This element renders outside home and page containers
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  .hidden {
+    display: none;
+  }
   /* Main navigation */
   nav a {
     font-size: 0.95rem;
@@ -762,6 +765,7 @@ This element renders outside home and page containers
         .logotag {
           position: relative;
           .tooltiptext { 
+            min-width: 60px;
             right: 110%;
             text-align: left;
             font-size: 0.9rem;
@@ -902,6 +906,14 @@ This element renders outside home and page containers
     }
     .imgContainer {
       border: solid 1px #bbb;
+    }
+    .city-year {
+      text-transform: capitalize; 
+      font-weight: 100;
+      font-size: 1rem;
+      padding: 0.65em;
+ 
+      
     }
     .works {
       display: flex;

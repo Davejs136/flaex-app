@@ -2,6 +2,7 @@ import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
+import SEO from "../components/seo"
 
 const DevelopmentPage = () => (
   <StaticQuery
@@ -28,6 +29,8 @@ const DevelopmentPage = () => (
     `}
     render={data => (
       <Layout>
+        <SEO title="desarrollo front-end" />
+        <h1 className="hidden">desarrollo front-end</h1>  
         <div className="navsec">
           <Link className="firstactive" to="/development">
             front-end
