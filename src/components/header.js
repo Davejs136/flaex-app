@@ -35,7 +35,7 @@ const Header = () => (
             <Link to="/about-me" aria-label="Ir al perfil">
               <Img fluid={data.tag.childImageSharp.fluid} />
             </Link>
-            <span className="tooltiptext">sobre mi</span>
+            <span className="tooltiptext">sobre&nbsp;mi</span>
           </div>
         </div>
       </header>

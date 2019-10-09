@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import { navigate } from "gatsby-link"
 import Layout from "../components/layout"
@@ -71,8 +71,11 @@ export default function ContactPage() {
               tijeras, cartulina negra, papel bond blanco y pega; similar a
               cuando se balancea el peso y volumen en el diseño tipográfico.
               También forma parte de la identidad, una serie de “caras”
-              acompañadas de posiciones para reforzar sus rasgos y como
-              ejercicio de relación de formas.
+              acompañadas de{" "}
+              <Link to="/shuffler" aria-label="Ir al randomizador">
+                posiciones
+              </Link>{" "}
+              para reforzar sus rasgos y como ejercicio de relación de formas.
             </p>
           </div>
           <h2 className="bgsize">¡Envíame un mensaje!</h2>
