@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import SEO from "../components/seo";
+import SEO from "../components/seo"
 
 const shuffle = array => {
   let currentIndex = array.length,
@@ -42,13 +42,12 @@ const randomizer = array => {
 
 const Shuffler = ({ data }) => (
   <Layout>
-    <SEO /> 
-    <h1 className="bgsize">Cabezas de @flaex_</h1>
+    <SEO />
+    <h1 className="bgsize">Caras de @flaex_</h1>
     <div className="two-columns">
       <p>
-        Cada expresión está acompañada de una posición del cuerpo distinta para
-        reforzar los rasgos. Hice esto para ver cómo se relacionan las formas
-        del personaje. ¡Presiona el botón para cambiar la animación!
+        Cada cara está acompañada de una posición del cuerpo distinta.¡Presiona
+        el botón para cambiar la animación!
       </p>
     </div>
     <button

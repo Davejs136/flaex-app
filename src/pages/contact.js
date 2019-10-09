@@ -67,12 +67,13 @@ export default function ContactPage() {
           <h1 className="bgsize">Info + contacto</h1>
           <div className="two-columns">
             <p>
-              La idea del diseño del logo está inspirada en el trabajo manual
-              utilizando tijeras, cartulina negra, papel bond blanco y pega. Mi objetivo es presentar un concepto que salga de lo convencional
-              apartándose de las tendencias del diseño web a través de una
-              navegación sencilla en donde el contenido del sitio web es el
-              factor principal.
-            </p>            
+              El concepto del logo está inspirado en el proceso manual con
+              tijeras, cartulina negra, papel bond blanco y pega; similar a
+              cuando se balancea el peso y volumen en el diseño tipográfico.
+              También forma parte de la identidad, una serie de “caras”
+              acompañadas de posiciones para reforzar sus rasgos y como
+              ejercicio de relación de formas.
+            </p>
           </div>
           <h2 className="bgsize">¡Envíame un mensaje!</h2>
           <Form
