@@ -63,7 +63,7 @@ const WorkTemplate = ({ data }) => (
             image="text"
             windowWidth={675}
             windowHeight={675}
-            description={data.strapiArticle.description}
+            description={data.strapiWork.description}
           >
             <PinterestIcon size={32} />
           </PinterestShareButton>         
