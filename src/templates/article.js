@@ -13,7 +13,7 @@ import {
   LinkedinIcon,
 } from "react-share"
 
-const shareUrl = window.location.href
+const viewUrl = window.location.href
 
 const ReactMarkdown = require("react-markdown/with-html")
 
@@ -22,7 +22,7 @@ const ArticleTemplate = ({ data }) => (
     <SEO
       title={data.strapiArticle.title}
       image={data.strapiArticle.image.childImageSharp.fluid.src}
-      siteUrl={shareUrl}
+      siteUrl={viewUrl}
     />
     <div className="navsec">
       <Link to="/blog" aria-label="volver a la página anterior">
