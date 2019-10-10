@@ -53,17 +53,17 @@ const ArticleTemplate = ({ data }) => (
       <h3 className="share-title">Comparte este artículo:</h3>
       <ul className="share">
         <li>
-          <FacebookShareButton children="a" url={shareUrl} quote={data.strapiArticle.title}>
+          <FacebookShareButton children="a" url={viewUrl} quote={data.strapiArticle.title}>
             <FacebookIcon size={32} />
           </FacebookShareButton>
         </li>
         <li>
-          <TwitterShareButton children="a" url={shareUrl} title={data.strapiArticle.title}>
+          <TwitterShareButton children="a" url={viewUrl} title={data.strapiArticle.title}>
             <TwitterIcon size={32} />
           </TwitterShareButton>
         </li>
         <li>
-          <LinkedinShareButton children="a" url={shareUrl}>
+          <LinkedinShareButton children="a" url={viewUrl}>
             <LinkedinIcon size={32} />
           </LinkedinShareButton>
         </li>
