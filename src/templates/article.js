@@ -14,7 +14,7 @@ import {
 } from "react-share"
 
 const shareUrl = window.location.href
-const image = data.strapiArticle.image.childImageSharp.fluid.src
+const image = ({ data }) =>  (data.strapiArticle.image.childImageSharp.fluid.src)
 
 const ReactMarkdown = require("react-markdown/with-html")
 
