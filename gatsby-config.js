@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "diseñador gráfico & desarrollador front-end",
+    title: "Diseñador gráfico & desarrollador front-end",
     titleTemplate: "%s · @flaex_",
-    description: "Portafolio & blog Freddy Polanía - @flaex_",
+    description: "Portafolio & blog | Freddy Polanía",
     keywords: "Diseño gráfico desarrollo fron-end pwa",
     author: "Freddy Polania",
     siteUrl: "https://flaex.netlify.com",

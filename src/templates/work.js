@@ -3,6 +3,10 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { window } from "browser-monads"
+import { PinterestShareButton, PinterestIcon } from "react-share"
+
+const shareUrl = window.location.href
 
 const ReactMarkdown = require("react-markdown/with-html")
 
@@ -16,13 +20,15 @@ const openLightbox = event => {
 
 const WorkTemplate = ({ data }) => (
   <Layout>
-    <SEO title={data.strapiWork.title} />   
+    <SEO title={data.strapiWork.title} />
     <div className="navsec">
       <button onClick={() => window.history.back()}>&#10229; volver</button>
     </div>
     <article>
       <h1>{data.strapiWork.title}</h1>
-      <div className="city-year">Ciudad: {data.strapiWork.city}. Año: {data.strapiWork.year}</div>
+      <div className="city-year">
+        Ciudad: {data.strapiWork.city}. Año: {data.strapiWork.year}
+      </div>
       <ul className="works">
         {data.strapiWork.images.map(document => (
           <li
@@ -47,6 +53,20 @@ const WorkTemplate = ({ data }) => (
           escapeHtml={false}
         />
       </div>
+      <h3 className="share-title">Comparte este artículo:</h3>
+      <ul className="share">
+        <li>
+          <PinterestShareButton
+            url={shareUrl}
+            media={`${window.location.hostname}/${data.strapiWork.thumbnail.childImageSharp.fluid}}`}
+            windowWidth={675}
+            windowHeight={675}
+          >
+            <PinterestIcon size={32} />
+          </PinterestShareButton>
+          {console.log(`${window.location.hostname}${data.strapiWork.thumbnail.childImageSharp.fluid.src}}`)}
+        </li>
+      </ul>
     </article>
   </Layout>
 )

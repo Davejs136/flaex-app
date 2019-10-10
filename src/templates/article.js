@@ -51,7 +51,6 @@ const ArticleTemplate = ({ data }) => (
         <li>
           <FacebookShareButton
             url={shareUrl}
-            quote="Yes"
           >
             <FacebookIcon size={32} />
           </FacebookShareButton>
@@ -59,7 +58,6 @@ const ArticleTemplate = ({ data }) => (
         <li>
           <TwitterShareButton
             url={shareUrl}
-            quote="Yes"
           >
             <TwitterIcon size={32} />
           </TwitterShareButton>
@@ -67,7 +65,6 @@ const ArticleTemplate = ({ data }) => (
         <li>
           <LinkedinShareButton
             url={shareUrl}
-            quote="Yes"
           >
             <LinkedinIcon size={32} />
           </LinkedinShareButton>
