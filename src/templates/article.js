@@ -14,6 +14,7 @@ import {
 } from "react-share"
 
 const shareUrl = window.location.href
+const image = data.strapiArticle.image.childImageSharp.fluid.src
 
 const ReactMarkdown = require("react-markdown/with-html")
 
@@ -21,7 +22,7 @@ const ArticleTemplate = ({ data }) => (
   <Layout>
     <SEO
       title={data.strapiArticle.title}
-      image={data.strapiArticle.image.childImageSharp.fluid.src}
+      image={image}
       siteUrl={shareUrl}
     />
     <div className="navsec">
