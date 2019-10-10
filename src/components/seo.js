@@ -36,15 +36,15 @@ const SEO = ({ title, description, keywords, image, pathname, article }) => (
             <meta name="description" content={seo.description} />
             <meta name="keywords" content={seo.keywords} />
             <meta name="image" content={seo.image} />
-            {seo.url && <meta property="og:url" content={seo.url} />}
+            {seo.url && <meta property="url" content={seo.url} />}
             {(article ? true : null) && (
               <meta property="og:type" content="article" />
             )}
-            {seo.title && <meta property="og:title" content={seo.title} />}
+            {seo.title && <meta property="title" content={seo.title} />}
             {seo.description && (
-              <meta property="og:description" content={seo.description} />
+              <meta property="description" content={seo.description} />
             )}
-            {seo.image && <meta property="og:image" content={seo.image} />}
+            {seo.image && <meta property="image" content={seo.image} />}
             <meta name="twitter:card" content="summary_large_image" />
             {twitterUsername && (
               <meta name="twitter:creator" content={twitterUsername} />
