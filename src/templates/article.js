@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { window } from 'browser-monads';
+import { window } from "browser-monads"
 import {
   FacebookShareButton,
   FacebookIcon,
@@ -19,7 +19,11 @@ const ReactMarkdown = require("react-markdown/with-html")
 
 const ArticleTemplate = ({ data }) => (
   <Layout>
-    <SEO title={data.strapiArticle.title} image={data.strapiArticle.image.childImageSharp.fluid.src} siteUrl={shareUrl} />
+    <SEO
+      title={data.strapiArticle.title}
+      image={data.strapiArticle.image.childImageSharp.fluid.src}
+      siteUrl={shareUrl}
+    />
     <div className="navsec">
       <Link to="/blog" aria-label="volver a la página anterior">
         &#10229; volver
@@ -46,26 +50,20 @@ const ArticleTemplate = ({ data }) => (
           escapeHtml={false}
         />
       </div>
-      <h3 className="share-title">Comparte este artículo:</h3>        
-      <ul className="share">        
+      <h3 className="share-title">Comparte este artículo:</h3>
+      <ul className="share">
         <li>
-          <FacebookShareButton
-            url={shareUrl}
-          >
+          <FacebookShareButton children="a" url={shareUrl} quote={data.strapiArticle.title}>
             <FacebookIcon size={32} />
           </FacebookShareButton>
         </li>
         <li>
-          <TwitterShareButton
-            url={shareUrl}
-          >
+          <TwitterShareButton children="a" url={shareUrl} title={data.strapiArticle.title}>
             <TwitterIcon size={32} />
           </TwitterShareButton>
         </li>
         <li>
-          <LinkedinShareButton
-            url={shareUrl}
-          >
+          <LinkedinShareButton children="a" url={shareUrl}>
             <LinkedinIcon size={32} />
           </LinkedinShareButton>
         </li>
