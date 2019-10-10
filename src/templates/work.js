@@ -58,13 +58,12 @@ const WorkTemplate = ({ data }) => (
         <li>
           <PinterestShareButton
             url={shareUrl}
-            media={`${window.location.hostname}/${data.strapiWork.thumbnail.childImageSharp.fluid}}`}
+            media={`${window.location.hostname}/${data.strapiWork.thumbnail.childImageSharp.fluid.src}}`}
             windowWidth={675}
             windowHeight={675}
           >
             <PinterestIcon size={32} />
-          </PinterestShareButton>
-          {console.log(`${window.location.hostname}${data.strapiWork.thumbnail.childImageSharp.fluid.src}}`)}
+          </PinterestShareButton>         
         </li>
       </ul>
     </article>
