@@ -3,6 +3,12 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import {
+  PinterestShareButton,
+  PinterestIcon,
+} from "react-share"
+
+const shareUrl = window.location.href
 
 const ReactMarkdown = require("react-markdown/with-html")
 
@@ -47,6 +53,19 @@ const WorkTemplate = ({ data }) => (
           escapeHtml={false}
         />
       </div>
+      <h3 className="share-title">Comparte este artículo:</h3>        
+      <ul className="share">        
+        <li>
+          <PinterestShareButton
+              url={shareUrl}
+              media={`${data.strapiWork.thumbnail.childImageSharp.fluid}`}
+              windowWidth={675}
+              windowHeight={675}
+          >
+            <PinterestIcon size={32} />
+          </PinterestShareButton>      
+        </li>
+      </ul>
     </article>
   </Layout>
 )

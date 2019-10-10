@@ -3,19 +3,34 @@ import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+} from "react-share"
+
+const shareUrl = window.location.href
 
 const ReactMarkdown = require("react-markdown/with-html")
 
 const ArticleTemplate = ({ data }) => (
   <Layout>
-    <SEO title={data.strapiArticle.title} />          
+    <SEO title={data.strapiArticle.title} />
     <div className="navsec">
-      <Link to="/blog" aria-label="volver a la página anterior">&#10229; volver</Link>
+      <Link to="/blog" aria-label="volver a la página anterior">
+        &#10229; volver
+      </Link>
     </div>
     <article>
       <h1>{data.strapiArticle.title}</h1>
       <p className="author">
-        por <Link to="/about-me" aria-label="Ir al perfil">{data.strapiArticle.author.username}</Link>
+        por{" "}
+        <Link to="/about-me" aria-label="Ir al perfil">
+          {data.strapiArticle.author.username}
+        </Link>
       </p>
       <div className="mainImage">
         <Img fluid={data.strapiArticle.image.childImageSharp.fluid} />
@@ -30,6 +45,33 @@ const ArticleTemplate = ({ data }) => (
           escapeHtml={false}
         />
       </div>
+      <h3 className="share-title">Comparte este artículo:</h3>        
+      <ul className="share">        
+        <li>
+          <FacebookShareButton
+            url={shareUrl}
+            quote="Yes"
+          >
+            <FacebookIcon size={32} />
+          </FacebookShareButton>
+        </li>
+        <li>
+          <TwitterShareButton
+            url={shareUrl}
+            quote="Yes"
+          >
+            <TwitterIcon size={32} />
+          </TwitterShareButton>
+        </li>
+        <li>
+          <LinkedinShareButton
+            url={shareUrl}
+            quote="Yes"
+          >
+            <LinkedinIcon size={32} />
+          </LinkedinShareButton>
+        </li>
+      </ul>
     </article>
   </Layout>
 )
