@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { window } from 'browser-monads';
 import {
   FacebookShareButton,
   FacebookIcon,
