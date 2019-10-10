@@ -19,7 +19,7 @@ const ReactMarkdown = require("react-markdown/with-html")
 
 const ArticleTemplate = ({ data }) => (
   <Layout>
-    <SEO title={data.strapiArticle.title} />
+    <SEO title={data.strapiArticle.title} image={data.strapiArticle.image.childImageSharp.fluid.src} />
     <div className="navsec">
       <Link to="/blog" aria-label="volver a la página anterior">
         &#10229; volver
@@ -51,7 +51,6 @@ const ArticleTemplate = ({ data }) => (
         <li>
           <FacebookShareButton
             url={shareUrl}
-            media={`${window.location.protocol}//${window.location.hostname}${data.strapiArticle.image.childImageSharp.fluid.src}`}
           >
             <FacebookIcon size={32} />
           </FacebookShareButton>
@@ -59,7 +58,6 @@ const ArticleTemplate = ({ data }) => (
         <li>
           <TwitterShareButton
             url={shareUrl}
-            media={`${window.location.protocol}//${window.location.hostname}${data.strapiArticle.image.childImageSharp.fluid.src}`}
           >
             <TwitterIcon size={32} />
           </TwitterShareButton>
@@ -67,7 +65,6 @@ const ArticleTemplate = ({ data }) => (
         <li>
           <LinkedinShareButton
             url={shareUrl}
-            media={`${window.location.protocol}//${window.location.hostname}${data.strapiArticle.image.childImageSharp.fluid.src}`}
           >
             <LinkedinIcon size={32} />
           </LinkedinShareButton>
