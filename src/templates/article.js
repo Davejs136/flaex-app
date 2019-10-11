@@ -22,7 +22,7 @@ const ArticleTemplate = ({ data }) => (
     <SEO
       title={data.strapiArticle.title}
       image={data.strapiArticle.image.childImageSharp.fluid.src}
-      siteUrl={viewUrl}
+      url={viewUrl}
     />
     <div className="navsec">
       <Link to="/blog" aria-label="volver a la página anterior">
