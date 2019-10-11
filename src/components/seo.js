@@ -2,6 +2,8 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import { window } from "browser-monads"
+
 
 const SEO = ({ title, description, image, pathname, article }) => (
   <StaticQuery
@@ -22,7 +24,7 @@ const SEO = ({ title, description, image, pathname, article }) => (
         title: title || defaultTitle,
         description: description || defaultDescription,
         image: `${siteUrl}${image || defaultImage}`,
-        url: `${siteUrl}${pathname || "/"}`,
+        url: window.location.href,
       }
 
       return (
