@@ -1,13 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: "Diseñador gráfico & desarrollador front-end",
-    titleTemplate: "%s · @flaex_",
-    description: "Portafolio & blog | Freddy Polanía",
-    keywords: "Diseño gráfico desarrollo fron-end pwa",
-    author: "Freddy Polania",
-    siteUrl: "https://flaex.netlify.com",
-    image: "/seo-img.jpg", 
-    twitterUsername: "@Flaex_",
+    title: "Severus Snape",
+    titleTemplate: "%s · The Real Hero",
+    description:
+      "Hogwarts Potions master, Head of Slytherin house and former Death Eater.",
+    url: "https://www.doe.com", // No trailing slash allowed!
+    image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
+    twitterUsername: "@occlumency",
   },
   plugins: [
     {
