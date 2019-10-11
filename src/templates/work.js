@@ -53,7 +53,7 @@ const WorkTemplate = ({ data }) => (
           escapeHtml={false}
         />
       </div>
-      <h3 className="share-title">Comparte este artículo:</h3>
+      <h3 className="share-title">Comparte esta página:</h3>
       <ul className="share">
         <li>
           <PinterestShareButton
