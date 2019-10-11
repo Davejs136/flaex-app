@@ -2,6 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+
 const SEO = ({ title, description, keywords, image, pathname, article }) => (
   <StaticQuery
     query={query}
@@ -10,9 +11,9 @@ const SEO = ({ title, description, keywords, image, pathname, article }) => (
         siteMetadata: {
           defaultTitle,
           titleTemplate,
-          defautltKeywords,       
           defaultDescription,
-          url,
+          defaultKeywords,
+          siteUrl,
           defaultImage,
           twitterUsername,
         },
@@ -21,13 +22,17 @@ const SEO = ({ title, description, keywords, image, pathname, article }) => (
       const seo = {
         title: title || defaultTitle,
         description: description || defaultDescription,
-        keywords: keywords || defautltKeywords,
-        image: `${url}${image || defaultImage}`,
-        url: `${url}${pathname || "/"}`,
+        keywords: keywords || defaultKeywords,
+        image: `${siteUrl}${image || defaultImage}`,
+        url: `${siteUrl}${pathname || "/"}`,
       }
       return (
         <>
-          <Helmet title={seo.title} titleTemplate={titleTemplate}>
+          <Helmet            
+            title={seo.title}
+            titleTemplate={titleTemplate}
+          >
+            <html lang="es" />
             <meta name="description" content={seo.description} />
             <meta name="keywords" content={seo.keywords} />
             <meta name="image" content={seo.image} />
@@ -79,8 +84,8 @@ const query = graphql`
         defaultTitle: title
         titleTemplate
         defaultDescription: description
-        defautltKeywords: keywords
-        url
+        defaultKeywords: keywords
+        siteUrl: url
         defaultImage: image
         twitterUsername
       }
