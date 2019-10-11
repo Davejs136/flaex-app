@@ -12,7 +12,7 @@ const SEO = ({ title, description, keywords, image, pathname, article }) => (
           titleTemplate,
           defautltKeywords,       
           defaultDescription,
-          siteUrl,
+          url,
           defaultImage,
           twitterUsername,
         },
@@ -22,8 +22,8 @@ const SEO = ({ title, description, keywords, image, pathname, article }) => (
         title: title || defaultTitle,
         description: description || defaultDescription,
         keywords: keywords || defautltKeywords,
-        image: `${siteUrl}${image || defaultImage}`,
-        url: `${siteUrl}${pathname || "/"}`,
+        image: `${url}${image || defaultImage}`,
+        url: `${url}${pathname || "/"}`,
       }
       return (
         <>
