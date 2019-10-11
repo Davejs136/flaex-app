@@ -32,10 +32,7 @@ const SEO = ({ title, description, keywords, image, pathname, article }) => (
             title={seo.title}
             titleTemplate={titleTemplate}
           >
-            <html lang="es" />
-            <meta name="description" content={seo.description} />
-            <meta name="keywords" content={seo.keywords} />
-            <meta name="image" content={seo.image} />
+            <html lang="es" />            
             {seo.url && <meta property="og:url" content={seo.url} />}
             {(article ? true : null) && (
               <meta property="og:type" content="article" />
