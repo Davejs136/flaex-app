@@ -1,8 +1,8 @@
+Copysrc/components/SEO.js: copy code to clipboard
 import React from "react"
 import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-
 const SEO = ({ title, description, keywords, image, pathname, article }) => (
   <StaticQuery
     query={query}
@@ -11,8 +11,8 @@ const SEO = ({ title, description, keywords, image, pathname, article }) => (
         siteMetadata: {
           defaultTitle,
           titleTemplate,
+          defautltKeywords,       
           defaultDescription,
-          defaultKeywords,
           siteUrl,
           defaultImage,
           twitterUsername,
@@ -22,17 +22,13 @@ const SEO = ({ title, description, keywords, image, pathname, article }) => (
       const seo = {
         title: title || defaultTitle,
         description: description || defaultDescription,
-        keywords: keywords || defaultKeywords,
+        keywords: keywords || defautltKeywords,
         image: `${siteUrl}${image || defaultImage}`,
         url: `${siteUrl}${pathname || "/"}`,
       }
       return (
         <>
-          <Helmet            
-            title={seo.title}
-            titleTemplate={titleTemplate}
-          >
-            <html lang="es" />
+          <Helmet title={seo.title} titleTemplate={titleTemplate}>
             <meta name="description" content={seo.description} />
             <meta name="keywords" content={seo.keywords} />
             <meta name="image" content={seo.image} />
@@ -84,8 +80,8 @@ const query = graphql`
         defaultTitle: title
         titleTemplate
         defaultDescription: description
-        defaultKeywords: keywords
-        siteUrl
+        defautltKeywords: keywords
+        siteUrl: url
         defaultImage: image
         twitterUsername
       }
