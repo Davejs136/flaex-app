@@ -15,6 +15,10 @@ import {
 
 const viewUrl = window.location.href
 
+const truncate = (str, no_words) => {
+  return str.split(" ").splice(0,no_words).join(" ");
+}
+
 const ReactMarkdown = require("react-markdown/with-html")
 
 const ArticleTemplate = ({ data }) => (
@@ -22,6 +26,7 @@ const ArticleTemplate = ({ data }) => (
     <SEO
       title={data.strapiArticle.title}
       image={data.strapiArticle.image.childImageSharp.fluid.src}
+      summary_large_image={truncate(data.strapiArticle.description, 18)}
     />
     <div className="navsec">
       <Link to="/blog" aria-label="volver a la página anterior">

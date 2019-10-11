@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from "gatsby"
 import { window } from "browser-monads"
 
 
-const SEO = ({ title, description, image, pathname, article }) => (
+const SEO = ({ title, description, keywords, image, summary_large_image, article }) => (
   <StaticQuery
     query={query}
     render={({
@@ -14,8 +14,10 @@ const SEO = ({ title, description, image, pathname, article }) => (
           defaultTitle,
           titleTemplate,
           defaultDescription,
-          siteUrl,
+          defaultKeywords,
           defaultImage,
+          siteUrl,
+          defaultSummary,
           twitterUsername,
         },
       },
@@ -23,14 +25,17 @@ const SEO = ({ title, description, image, pathname, article }) => (
       const seo = {
         title: title || defaultTitle,
         description: description || defaultDescription,
+        keywords: keywords || defaultKeywords,
         image: `${siteUrl}${image || defaultImage}`,
         url: window.location.href,
+        summary_large_image: summary_large_image || defaultSummary
       }
 
       return (
         <>
           <Helmet title={seo.title} titleTemplate={titleTemplate}>
             <meta name="description" content={seo.description} />
+            <meta name="keywords" content={seo.keywords} />
             <meta name="image" content={seo.image} />
             {seo.url && <meta property="og:url" content={seo.url} />}
             {(article ? true : null) && (
@@ -41,7 +46,7 @@ const SEO = ({ title, description, image, pathname, article }) => (
               <meta property="og:description" content={seo.description} />
             )}
             {seo.image && <meta property="og:image" content={seo.image} />}
-            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:card" content={seo.summary_large_image} />
             {twitterUsername && (
               <meta name="twitter:creator" content={twitterUsername} />
             )}
@@ -62,6 +67,7 @@ export default SEO
 SEO.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
+  keywords: PropTypes.string,
   image: PropTypes.string,
   pathname: PropTypes.string,
   article: PropTypes.bool,
@@ -70,6 +76,7 @@ SEO.propTypes = {
 SEO.defaultProps = {
   title: null,
   description: null,
+  keywords: null,
   image: null,
   pathname: null,
   article: false,
@@ -82,6 +89,8 @@ const query = graphql`
         defaultTitle: title
         titleTemplate
         defaultDescription: description
+        defaultKeywords: keywords
+        defaultSummary: summary_large_image
         siteUrl
         defaultImage: image
         twitterUsername

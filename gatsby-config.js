@@ -9,6 +9,7 @@ module.exports = {
     siteUrl: "https://flaex.netlify.com",
     image: "/seo-img.jpg", 
     twitterUsername: "@Flaex_",
+    summary_large_image: "Portafolio & blog Freddy Polanía - Diseño gráfico desarrollo fron-end PWA" 
   },
   plugins: [
     {
