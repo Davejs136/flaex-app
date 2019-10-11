@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from "gatsby"
 import { window } from "browser-monads"
 
 
-const SEO = ({ title, description, keywords, image, summary_large_image, article }) => (
+const SEO = ({ title, description, keywords, image, article }) => (
   <StaticQuery
     query={query}
     render={({
@@ -15,9 +15,8 @@ const SEO = ({ title, description, keywords, image, summary_large_image, article
           titleTemplate,
           defaultDescription,
           defaultKeywords,
-          defaultImage,
           siteUrl,
-          defaultSummary,
+          defaultImage,
           twitterUsername,
         },
       },
@@ -27,8 +26,7 @@ const SEO = ({ title, description, keywords, image, summary_large_image, article
         description: description || defaultDescription,
         keywords: keywords || defaultKeywords,
         image: `${siteUrl}${image || defaultImage}`,
-        url: window.location.href,
-        summary_large_image: summary_large_image || defaultSummary
+        url: window.location.href   
       }
 
       return (
@@ -46,7 +44,7 @@ const SEO = ({ title, description, keywords, image, summary_large_image, article
               <meta property="og:description" content={seo.description} />
             )}
             {seo.image && <meta property="og:image" content={seo.image} />}
-            <meta name="twitter:card" content={seo.summary_large_image} />
+            <meta name="twitter:card" content="summary" />
             {twitterUsername && (
               <meta name="twitter:creator" content={twitterUsername} />
             )}
@@ -90,7 +88,6 @@ const query = graphql`
         titleTemplate
         defaultDescription: description
         defaultKeywords: keywords
-        defaultSummary: summary_large_image
         siteUrl
         defaultImage: image
         twitterUsername
