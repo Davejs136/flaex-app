@@ -49,7 +49,7 @@ const ArticleTemplate = ({ data }) => (
           escapeHtml={false}
         />
       </div>
-      <h3 className="share-title">Comparte este artículo:</h3>
+      <h4 className="share-title">Comparte este artículo:</h4>
       <ul className="share">
         <li>
           <FacebookShareButton children="a" url={viewUrl} quote={data.strapiArticle.title}>
