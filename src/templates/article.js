@@ -37,7 +37,11 @@ const ArticleTemplate = ({ data }) => (
         </Link>
       </p>
       <div className="mainImage">
-        <Img fluid={data.strapiArticle.image.childImageSharp.fluid} />
+        <Img
+          fluid={data.strapiArticle.image.childImageSharp.fluid}
+          title={data.strapiArticle.img_title}
+          alt={data.strapiArticle.img_alt}
+         />
       </div>
       <div className="two-columns">
         <ReactMarkdown
@@ -85,6 +89,8 @@ export const query = graphql`
           }
         }
       }
+      img_title
+      img_alt
       author {
         id
         username

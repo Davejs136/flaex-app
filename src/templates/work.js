@@ -38,7 +38,7 @@ const WorkTemplate = ({ data }) => (
             <Img
               className="galleryImage"
               fluid={document.localFile.childImageSharp.fluid}
-              alt="Project gallery image"
+              alt="A project gallery image"
             />
           </li>
         ))}
@@ -65,7 +65,7 @@ const WorkTemplate = ({ data }) => (
             description={data.strapiWork.description}
           >
             <PinterestIcon size={32} />
-          </PinterestShareButton>         
+          </PinterestShareButton>        
         </li>
       </ul>
     </article>
