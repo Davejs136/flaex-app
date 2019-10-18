@@ -12,7 +12,7 @@ const defaultProps = {
 const GoogleMap = () => (
   <div className="map">
     <GoogleMapReact
-      bootstrapURLKeys={{ key: process.env.GOOGLE_MAPS_API_KEY }}
+      bootstrapURLKeys={{ key: `${process.env.GATSBY_GOOGLE_MAPS_API_KEY}` }}
       defaultCenter={defaultProps.center}
       defaultZoom={defaultProps.zoom}
     />
