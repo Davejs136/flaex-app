@@ -29,12 +29,7 @@ const ArticleTemplate = ({ data }) => (
       </Link>
     </div>
     <article>
-      <h1>
-        <ReactMarkdown
-          source={data.strapiArticle.title}
-          escapeHtml={false}
-        />
-      </h1>
+      <h1>{data.strapiArticle.title}</h1>
       <p className="author">
         por{" "}
         <Link to="/about-me" aria-label="Ir al perfil">
@@ -46,7 +41,7 @@ const ArticleTemplate = ({ data }) => (
           fluid={data.strapiArticle.image.childImageSharp.fluid}
           title={data.strapiArticle.img_title}
           alt={data.strapiArticle.img_alt}
-        />
+         />
       </div>
       <div className="two-columns">
         <ReactMarkdown
