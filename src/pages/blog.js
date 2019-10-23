@@ -38,7 +38,9 @@ const BlogPage = () => (
               <li key={document.node.id}>
                 <Link
                   to={`/blog/${document.node.title
+                    .replace(/\u{00BF}/gu,"")                    
                     .replace(/\s+/g, "-")
+                    .replace(/\u{003F}/gu,"")
                     .toLowerCase()}`}
                   aria-label={`Ir al artículo ${document.node.title}`}
                 >
@@ -50,7 +52,9 @@ const BlogPage = () => (
                 <h2>
                   <Link
                     to={`/blog/${document.node.title
+                      .replace(/\u{00BF}/gu,"")                      
                       .replace(/\s+/g, "-")
+                      .replace(/\u{003F}/gu,"")
                       .toLowerCase()}`}
                     aria-label={`Ir al artículo ${document.node.title}`}
                   >

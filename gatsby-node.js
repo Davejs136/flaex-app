@@ -37,7 +37,7 @@ exports.createPages = ({ actions, graphql }) => {
     // Create pages for each article.
     result.data.allStrapiArticle.edges.forEach(({ node }) => {
       createPage({
-        path: `/blog/${node.title.replace(/\s+/g, "-").toLowerCase()}`,
+        path: `/blog/${node.title.replace(/\u{00BF}/gu,"").replace(/\s+/g, "-").replace(/\u{003F}/gu,"").toLowerCase()}`,
         component: path.resolve(`src/templates/article.js`),
         context: {
           id: node.id,
