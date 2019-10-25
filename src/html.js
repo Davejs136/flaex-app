@@ -13,6 +13,7 @@ export default function HTML(props) {
         />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="google-site-verification" content="F7F5vM_OhTfK5HAMYwutty2sNP6473gcea4AoKA5qu4" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
