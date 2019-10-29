@@ -22,6 +22,7 @@ const ArticleTemplate = ({ data }) => (
     <SEO
       title={data.strapiArticle.title}
       image={data.strapiArticle.image.childImageSharp.fluid.src}
+      description={data.strapiArticle.seo_description}
     />
     <div className="navsec">
       <Link to="/blog" aria-label="volver a la página anterior">
@@ -91,10 +92,12 @@ export const query = graphql`
       }
       img_title
       img_alt
+      seo_description
       author {
         id
         username
-      }
+      }     
+      
     }
   }
 `

@@ -15,6 +15,7 @@ const DesignPage = () => (
               title
               category
               subcategory
+              slug
               thumbnail {
                 childImageSharp {
                   fluid(maxWidth: 675, maxHeight: 675) {
@@ -45,9 +46,9 @@ const DesignPage = () => (
               <Link
                 to={`/${document.node.category}/${
                   document.node.subcategory
-                }/${document.node.title.replace(/\s+/g, "-").toLowerCase()}`
+                }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`
               }
-              aria-label={`Ir al artículo ${document.node.title}`}  
+              aria-label={`Ir al artículo ${document.node.slug}`}  
               >
                 <Img fluid={document.node.thumbnail.childImageSharp.fluid} />
                 <h2>{document.node.title}</h2>

@@ -14,13 +14,17 @@ const openLightbox = event => {
   const node = document.querySelector("#___gatsby")
   node.insertAdjacentHTML(
     "afterbegin",
-    `<div id="button-close" class="lightbox"><p onClick="document.getElementById('button-close').remove()">✖</p><img src=${event} alt="Project gallery image" /></div>`
+    `<div id="lightbox" class="lightbox" onClick="document.getElementById('lightbox').remove()"><p onClick="document.getElementById('lightbox').remove()">✖</p><img src=${event} alt="Project gallery image" /></div>`
   )
 }
 
 const WorkTemplate = ({ data }) => (
   <Layout>
-    <SEO title={data.strapiWork.title} />
+    <SEO
+      title={data.strapiWork.title}
+      image={data.strapiWork.thumbnail.childImageSharp.fluid.src}
+      description={data.strapiWork.seo_description}
+    />
     <div className="navsec">
       <button onClick={() => window.history.back()}>&#10229; volver</button>
     </div>
@@ -38,7 +42,8 @@ const WorkTemplate = ({ data }) => (
             <Img
               className="galleryImage"
               fluid={document.localFile.childImageSharp.fluid}
-              alt="A project gallery image"
+              title={data.strapiWork.img_title}
+              alt={data.strapiWork.img_alt}
             />
           </li>
         ))}
@@ -88,6 +93,8 @@ export const query = graphql`
           }
         }
       }
+      img_title
+      img_alt
       description
       images {
         localFile {
@@ -99,6 +106,7 @@ export const query = graphql`
           }
         }
       }
+      seo_description
     }
   }
 `

@@ -25,6 +25,7 @@ const BlogPage = () => (
                     }
                   }
                 }
+                slug
               }
             }
           }
@@ -37,12 +38,7 @@ const BlogPage = () => (
             {data.allStrapiArticle.edges.map(document => (
               <li key={document.node.id}>
                 <Link
-                  to={`/blog/${document.node.title
-                    .replace(/\u{00BF}/gu,"")                    
-                    .replace(/\s+/g, "-")
-                    .replace(/\u{003F}/gu,"")
-                    .toLowerCase()}`}
-                  aria-label={`Ir al artículo ${document.node.title}`}
+                  to={`/blog/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
                 >
                   <div className="mainImage">
                     <Img fluid={document.node.image.childImageSharp.fluid} />
@@ -51,11 +47,7 @@ const BlogPage = () => (
                 <time>{document.node.date}</time>
                 <h2>
                   <Link
-                    to={`/blog/${document.node.title
-                      .replace(/\u{00BF}/gu,"")                      
-                      .replace(/\s+/g, "-")
-                      .replace(/\u{003F}/gu,"")
-                      .toLowerCase()}`}
+                    to={`/blog/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
                     aria-label={`Ir al artículo ${document.node.title}`}
                   >
                     {document.node.title}

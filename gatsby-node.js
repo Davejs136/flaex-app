@@ -28,6 +28,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             id
             title
+            slug
           }
         }
       }
@@ -37,7 +38,7 @@ exports.createPages = ({ actions, graphql }) => {
     // Create pages for each article.
     result.data.allStrapiArticle.edges.forEach(({ node }) => {
       createPage({
-        path: `/blog/${node.title.replace(/\u{00BF}/gu,"").replace(/\s+/g, "-").replace(/\u{003F}/gu,"").toLowerCase()}`,
+        path: `/blog/${node.slug.replace(/\s+/g, "-").toLowerCase()}`,        
         component: path.resolve(`src/templates/article.js`),
         context: {
           id: node.id,
@@ -53,10 +54,10 @@ exports.createPages = ({ actions, graphql }) => {
       allStrapiWork {
         edges {
           node {
-            id
-            title
+            id          
             category
             subcategory
+            slug
           }
         }
       }
@@ -66,7 +67,7 @@ exports.createPages = ({ actions, graphql }) => {
     // Create pages for each article.
     result.data.allStrapiWork.edges.forEach(({ node }) => {
       createPage({
-        path: `/${node.category}/${node.subcategory}/${node.title
+        path: `/${node.category}/${node.subcategory}/${node.slug
           .replace(/\s+/g, "-")
           .toLowerCase()}`,
         component: path.resolve(`src/templates/work.js`),
