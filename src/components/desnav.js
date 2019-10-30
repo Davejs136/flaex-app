@@ -12,7 +12,7 @@ const activeStyles = {
 
 const DesnavComponent = () => (
   <div className="navsec">
-    <Link to="/design" aria-label="Ir al portafolio de diseño gráfico">logos</Link>
+    <Link to="/design/logos" activeStyle={activeStyles} aria-label="Ir al portafolio de logos">logos</Link>
     <Link to="/design/prints" activeStyle={activeStyles} aria-label="Ir al portafolio de impresos">
       impresos
     </Link>

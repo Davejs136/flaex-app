@@ -5,11 +5,11 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../../components/seo"
 
-const TypographyPage = () => (
+const LogosPage = () => (
   <StaticQuery
     query={graphql`
-      query TypographyPage {
-        allStrapiWork(filter: { subcategory: { eq: "typography" } }) {
+      query LogosPage {
+        allStrapiWork(filter: { subcategory: { eq: "logo" } }) {
           edges {
             node {
               id
@@ -31,8 +31,8 @@ const TypographyPage = () => (
     `}
     render={data => (
       <Layout>
-        <SEO title="diseño tipográfico" />
-        <h1 className="hidden">diseño tipográfico</h1> 
+        <SEO title="diseño impresos" />
+        <h1 className="hidden">diseño logos</h1>  
         <Desnav />
         <ul className="works">
           {data.allStrapiWork.edges.map(document => (
@@ -53,4 +53,4 @@ const TypographyPage = () => (
   />
 )
 
-export default TypographyPage
+export default LogosPage

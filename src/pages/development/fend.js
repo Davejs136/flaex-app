@@ -1,22 +1,21 @@
 import React from "react"
 import Layout from "../../components/layout"
-import Desnav from "../../components/desnav"
+import Devnav from "../../components/devnav"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../../components/seo"
 
-const TypographyPage = () => (
+const FendPage = () => (
   <StaticQuery
     query={graphql`
-      query TypographyPage {
-        allStrapiWork(filter: { subcategory: { eq: "typography" } }) {
+      query FendPage {
+        allStrapiWork(filter: { subcategory: { eq: "front-end" } }) {
           edges {
             node {
               id
               title
               category
               subcategory
-              slug
               thumbnail {
                 childImageSharp {
                   fluid(maxWidth: 675, maxHeight: 675) {
@@ -31,16 +30,16 @@ const TypographyPage = () => (
     `}
     render={data => (
       <Layout>
-        <SEO title="diseño tipográfico" />
-        <h1 className="hidden">diseño tipográfico</h1> 
-        <Desnav />
+        <SEO title="desarrollo temas CMS" />
+        <h1 className="hidden">desarrollo temas CMS</h1>  
+        <Devnav />
         <ul className="works">
           {data.allStrapiWork.edges.map(document => (
             <li key={document.node.id}>
               <Link
                 to={`/${document.node.category}/${
                   document.node.subcategory
-                }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
+                }/${document.node.title.replace(/\s+/g, "-").toLowerCase()}`}
               >
                 <Img fluid={document.node.thumbnail.childImageSharp.fluid} />
                 <h2>{document.node.title}</h2>
@@ -53,4 +52,4 @@ const TypographyPage = () => (
   />
 )
 
-export default TypographyPage
+export default FendPage

@@ -12,8 +12,18 @@ const activeStyles = {
 
 const DevnavComponent = () => (
   <div className="navsec">
-    <Link to="/development" aria-label="Ir al portafolio de desarrollo front-end">front-end</Link>
-    <Link to="/development/cms" activeStyle={activeStyles} aria-label="Ir al portafolio de temas CMS">
+    <Link
+      to="/development/fend"
+      activeStyle={activeStyles}
+      aria-label="Ir al portafolio de desarrollo front-end"
+    >
+      front-end
+    </Link>
+    <Link
+      to="/development/cms"
+      activeStyle={activeStyles}
+      aria-label="Ir al portafolio de temas CMS"
+    >
       temas CMS
     </Link>
   </div>

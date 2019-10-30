@@ -17,7 +17,7 @@ const BlogPage = () => (
                 id
                 title
                 description
-                date(formatString: "DD MMMM YYYY", locale: "en-US")
+                date(formatString: "DD MMMM YYYY", locale: "es-es")
                 image {
                   childImageSharp {
                     fluid(maxWidth: 600) {
