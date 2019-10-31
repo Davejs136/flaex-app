@@ -1,16 +1,14 @@
 import React from "react"
-import Layout from "../../components/layout"
-import Desnav from "../../components/desnav"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import SEO from "../../components/seo"
 
-const LogosPage = () => (
+const WebSlide = (props) => (
   <StaticQuery
     query={graphql`
-      query LogosPage {
-        allStrapiWork(          
-          filter: { subcategory: { eq: "logo" } }
+      query WebSlide {
+        allStrapiWork(  
+          limit: 2        
+          filter: { subcategory: { eq: "web" } }
           sort: {
             fields: [createdAt]
             order: DESC
@@ -36,12 +34,11 @@ const LogosPage = () => (
       }
     `}
     render={data => (
-      <Layout>
-        <SEO title="diseño impresos" />
-        <h1 className="hidden">diseño logos</h1>
-        <Desnav />
+      <div className="subcategory-slide">
+        <h2>{props.title}</h2>
         <ul className="works">
           {data.allStrapiWork.edges.map(document => (
+
             <li key={document.node.id}>
               <Link
                 to={`/${document.node.category}/${
@@ -54,9 +51,10 @@ const LogosPage = () => (
             </li>
           ))}
         </ul>
-      </Layout>
+      </div>
     )}
   />
 )
 
-export default LogosPage
+export default WebSlide
+
