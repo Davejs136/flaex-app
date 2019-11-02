@@ -5,6 +5,7 @@ import Slider from "react-slick"
 
 export default function WebSlide(props) {
   const settings = {
+    arrows: true,
     dots: false,
     infinite: true,
     speed: 500,
