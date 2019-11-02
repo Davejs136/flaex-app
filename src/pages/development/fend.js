@@ -39,7 +39,7 @@ const FendPage = () => (
               <Link
                 to={`/${document.node.category}/${
                   document.node.subcategory
-                }/${document.node.title.replace(/\s+/g, "-").toLowerCase()}`}
+                  }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
               >
                 <Img fluid={document.node.thumbnail.childImageSharp.fluid} />
                 <h2>{document.node.title}</h2>
