@@ -5,7 +5,6 @@ import Slider from "react-slick"
 
 export default function WebSlide(props) {
   const settings = {
-    arrows: true,
     dots: false,
     infinite: true,
     speed: 500,
@@ -18,7 +17,7 @@ export default function WebSlide(props) {
         query WebSlide {
           allStrapiWork(
             limit: 6 
-            filter: { subcategory: { eq: "web" } }
+            filter: { tag: { eq: "web" } }
             sort: { fields: [createdAt], order: DESC }
           ) {
             edges {
@@ -45,18 +44,19 @@ export default function WebSlide(props) {
           <h3>{props.title}</h3>
           <Slider {...settings}>
             {data.allStrapiWork.edges.map(document => (
-              <Link
-                key={document.node.id}
-                to={`/${document.node.category}/${
-                  document.node.subcategory
-                }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
-              >
-                <Img fluid={document.node.thumbnail.childImageSharp.fluid} />
-              </Link>
+              <li key={document.node.id}>
+                <Link
+                  to={`/${document.node.category}/${
+                    document.node.subcategory
+                  }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
+                >
+                  <Img fluid={document.node.thumbnail.childImageSharp.fluid} />
+                </Link>
+              </li>
             ))}
           </Slider>
-          <div className="all">
-            <Link to="/design/web" aria-label="Ir al portafolio de diseño web">
+          <div className="all" >
+            <Link to="/design/prints" aria-label="Ir al portafolio de impresos">
               ver todos
             </Link>
           </div>
