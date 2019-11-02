@@ -14,7 +14,7 @@ const DesignPage = () => (
     <h1 className="hidden">diseño gráfico</h1>
     <p className="two-columns">
       Estos son algunos de los proyectos que he completado tales como creación de logos, branding impreso y digital en
-      papelería comercial, catálogos, manuales de identidad gráfica, señalización y tipografía. En algunos casos fue posible combinar varias especialidades del diseño gráfico para crear identidades corporativas con herramientas diversas de comunicación visual.
+      papelería comercial, catálogos, manuales de identidad gráfica, señalización y tipografía. En algunos casos fue posible combinar varias especialidades del diseño gráfico para crear identidades corporativas en diversas medios de la comunicación visual.
     </p>
     <Logos title="logotipos" />
     <Prints title="impresos" />
