@@ -3,7 +3,7 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Slider from "react-slick"
 
-export default function LogosSlide(props) {
+export default function PrintsSlide(props) {
   const settings = {
     dots: false,
     infinite: true,
@@ -14,9 +14,10 @@ export default function LogosSlide(props) {
   return (
     <StaticQuery
       query={graphql`
-        query LogosSlide {
+        query PrintsSlide {
           allStrapiWork(
-            filter: { subcategory: { eq: "logo" } }
+            limit: 6 
+            filter: { subcategory: { eq: "prints" } }
             sort: { fields: [createdAt], order: DESC }
           ) {
             edges {
@@ -40,7 +41,7 @@ export default function LogosSlide(props) {
       `}
       render={data => (
         <div className="slider">
-          <h2>{props.title}</h2>
+          <h3>{props.title}</h3>
           <Slider {...settings}>
             {data.allStrapiWork.edges.map(document => (
               <li key={document.node.id}>
@@ -49,12 +50,16 @@ export default function LogosSlide(props) {
                     document.node.subcategory
                   }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
                 >
-                  <Img fluid={document.node.thumbnail.childImageSharp.fluid} />              
+                  <Img fluid={document.node.thumbnail.childImageSharp.fluid} />
                 </Link>
               </li>
             ))}
           </Slider>
-          <Link className="mas" to="/design/logos" aria-label="Ir al portafolio de logos">>> ver más</Link>
+          <div className="all" >
+            <Link to="/design/prints" aria-label="Ir al portafolio de impresos">
+              ver todos
+            </Link>
+          </div>
         </div>
       )}
     />

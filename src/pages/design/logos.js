@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../../components/layout"
-import Desnav from "../../components/desnav"
+import Navigation from "./components/navigation"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../../components/seo"
@@ -39,7 +39,7 @@ const LogosPage = () => (
       <Layout>
         <SEO title="diseño impresos" />
         <h1 className="hidden">diseño logos</h1>
-        <Desnav />
+        <Navigation />
         <ul className="works">
           {data.allStrapiWork.edges.map(document => (
             <li key={document.node.id}>

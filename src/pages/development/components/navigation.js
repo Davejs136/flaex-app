@@ -10,7 +10,7 @@ const activeStyles = {
   borderStyle: "solid",
 }
 
-const DevnavComponent = () => (
+const DevelopmentNavigationComponent = () => (
   <div className="navsec">
     <Link
       to="/development/fend"
@@ -29,4 +29,4 @@ const DevnavComponent = () => (
   </div>
 )
 
-export default DevnavComponent
+export default DevelopmentNavigationComponent

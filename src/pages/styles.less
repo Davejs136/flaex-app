@@ -918,6 +918,8 @@ This element renders outside home and page containers
       font-weight: 100;
       font-size: 1rem;
       padding: 0.65em;
+      margin-bottom: 0.3rem;
+    background-color: #DCDCDC;
     }
     .works {
       display: flex;
@@ -938,6 +940,7 @@ This element renders outside home and page containers
       }
     }
   }
+  /* Portafolio styles*/
   .works {
     display: flex;
     flex-wrap: wrap;
@@ -966,6 +969,31 @@ This element renders outside home and page containers
     border-color: #1a1a1a;
     background-color: #fff;
     background-image: none !important;
+  }
+  .slider {   
+    width: 100%; 
+    display:inline-block;  
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem; 
+    text-decoration: none;       
+    h2 {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    li {
+      margin-bottom: 0;
+    }
+    .all {
+      width:100%;
+      padding: 0.3rem;
+      background-color: #DCDCDC;
+      text-align: center;
+      a {  
+        color:#1a1a1a;
+        text-decoration: none;
+        cursor: pointer;
+      }        
+    }
   }
   .navsec {
     display: flex;
@@ -1669,27 +1697,13 @@ This element renders outside home and page containers
           margin-right: 0;
         }
       }
-    }
+    }    
     .slider {
-      width: 50%;
-      float: left;
-      padding-right: 0;
-      padding-bottom: 1.2rem;      
-      &:nth-child(2n) {
-        padding-right: 0.5rem;
-      }
-      text-decoration: none;
-      h2 {
-        margin-bottom: 0;
-        margin-top: 0;
-      }
-      li {
-        margin-bottom: 0;
-      }
-      a {
-        font-weight: 900;
-        color:#1a1a1a;
-        text-decoration: none;
+      width: 49%;
+      &:nth-child(1n) {
+        margin-right: 0;
+      }&:nth-child(2n) {
+        margin-left: 2%;
       }
     }
     /* Blog styles */
@@ -2198,6 +2212,14 @@ This element renders outside home and page containers
     }
   }
   .page {
+    .two-columns {
+      -webkit-column-count: 2; /* Old Chrome, Safari and Opera */
+      -moz-column-count: 2; /* Old Firefox */
+      column-count: 2;
+      -webkit-column-gap: 1.5em; /* Chrome, Safari, Opera */
+      -moz-column-gap: 1.5em; /* Firefox */
+      column-gap: 1.5em;
+    }
     /* Main navigation home */
     .menu {
       width: 53vw;
@@ -2221,12 +2243,15 @@ This element renders outside home and page containers
     .works {
       width: 100%;
       li {
-        width: 23%;
-        padding-right: 0.5%;
+        width: 23%;        
         &:nth-child(3n) {
           margin-right: 2%;
         }
       }
+    }
+    .slider {
+      width: 30%; 
+      margin-right:3.3334%           
     }
     /* Blog */
     .articles {
@@ -2352,6 +2377,7 @@ This element renders outside home and page containers
       width: 100% !important;
       height: 50vh !important;
     }
+    /* Contact styles */
     .stack {
       li {
         width: 20%;
@@ -2437,9 +2463,9 @@ This element renders outside home and page containers
       -webkit-column-count: 2; /* Old Chrome, Safari and Opera */
       -moz-column-count: 2; /* Old Firefox */
       column-count: 2;
-      -webkit-column-gap: 3.5em; /* Chrome, Safari, Opera */
-      -moz-column-gap: 3.5em; /* Firefox */
-      column-gap: 3.5em;
+      -webkit-column-gap: 1.5em; /* Chrome, Safari, Opera */
+      -moz-column-gap: 1.5em; /* Firefox */
+      column-gap: 1.5em;
     }
     p {
       font-size: 1.12rem;
@@ -2479,7 +2505,6 @@ This element renders outside home and page containers
       }
     }
     /* Portfolio */
-
     .works {
       margin-bottom: 0;
       li {
@@ -2489,6 +2514,10 @@ This element renders outside home and page containers
         margin-bottom: 2%;
         box-sizing: border-box;
       }
+    }
+    .slider {
+      width: 30%; 
+      margin-right:3.3334%           
     }
     /* Bio styles */
     .profile {

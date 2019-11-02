@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../../components/layout"
-import Devnav from "../../components/devnav"
+import Navigation from "./components/navigation"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../../components/seo"
@@ -32,7 +32,7 @@ const CMSPage = () => (
       <Layout>
         <SEO title="desarrollo temas CMS" />
         <h1 className="hidden">desarrollo temas CMS</h1>  
-        <Devnav />
+        <Navigation />
         <ul className="works">
           {data.allStrapiWork.edges.map(document => (
             <li key={document.node.id}>

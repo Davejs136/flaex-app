@@ -3,7 +3,7 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Slider from "react-slick"
 
-export default function TypographySlide(props) {
+export default function LogosSlide(props) {
   const settings = {
     dots: false,
     infinite: true,
@@ -14,9 +14,10 @@ export default function TypographySlide(props) {
   return (
     <StaticQuery
       query={graphql`
-        query TypographySlide {
+        query LogosSlide {
           allStrapiWork(
-            filter: { subcategory: { eq: "typography" } }
+            limit: 6 
+            filter: { subcategory: { eq: "logo" } }
             sort: { fields: [createdAt], order: DESC }
           ) {
             edges {
@@ -40,21 +41,24 @@ export default function TypographySlide(props) {
       `}
       render={data => (
         <div className="slider">
-          <h2>{props.title}</h2>
+          <h3>{props.title}</h3>
           <Slider {...settings}>
             {data.allStrapiWork.edges.map(document => (
-              <li key={document.node.id}>
-                <Link
-                  to={`/${document.node.category}/${
-                    document.node.subcategory
-                  }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
-                >
-                  <Img fluid={document.node.thumbnail.childImageSharp.fluid} />  
-                </Link>
-              </li>
+              <Link
+                key={document.node.id}
+                to={`/${document.node.category}/${
+                  document.node.subcategory
+                }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
+              >
+                <Img fluid={document.node.thumbnail.childImageSharp.fluid} />
+              </Link>
             ))}
           </Slider>
-          <Link to="/design/typography" aria-label="Ir al portafolio de tipografía">>> ver más</Link>
+          <div className="all">
+            <Link to="/design/logos" aria-label="Ir al portafolio de logos">
+              ver todos
+            </Link>
+          </div>
         </div>
       )}
     />

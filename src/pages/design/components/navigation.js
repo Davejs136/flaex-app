@@ -10,7 +10,7 @@ const activeStyles = {
   borderStyle: "solid",
 }
 
-const DesnavComponent = () => (
+const DesignNavigationComponent = () => (
   <div className="navsec">
     <Link to="/design/logos" activeStyle={activeStyles} aria-label="Ir al portafolio de logos">logos</Link>
     <Link to="/design/prints" activeStyle={activeStyles} aria-label="Ir al portafolio de impresos">
@@ -25,4 +25,4 @@ const DesnavComponent = () => (
   </div>
 )
 
-export default DesnavComponent
+export default DesignNavigationComponent

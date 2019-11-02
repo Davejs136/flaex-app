@@ -3,7 +3,7 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Slider from "react-slick"
 
-export default function WebSlide(props) {
+export default function FendSlide(props) {
   const settings = {
     dots: false,
     infinite: true,
@@ -14,9 +14,10 @@ export default function WebSlide(props) {
   return (
     <StaticQuery
       query={graphql`
-        query WebSlide {
+        query FendSlide {
           allStrapiWork(
-            filter: { subcategory: { eq: "web" } }
+            limit: 6 
+            filter: { subcategory: { eq: "front-end" } }
             sort: { fields: [createdAt], order: DESC }
           ) {
             edges {
@@ -40,21 +41,24 @@ export default function WebSlide(props) {
       `}
       render={data => (
         <div className="slider">
-          <h2>{props.title}</h2>
+          <h3>{props.title}</h3>
           <Slider {...settings}>
             {data.allStrapiWork.edges.map(document => (
-              <li key={document.node.id}>
-                <Link
-                  to={`/${document.node.category}/${
-                    document.node.subcategory
-                  }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
-                >
-                  <Img fluid={document.node.thumbnail.childImageSharp.fluid} />  
-                </Link>
-              </li>
+              <Link
+                key={document.node.id}
+                to={`/${document.node.category}/${
+                  document.node.subcategory
+                }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
+              >
+                <Img fluid={document.node.thumbnail.childImageSharp.fluid} />
+              </Link>
             ))}
           </Slider>
-          <Link to="/design/web" aria-label="Ir al portafolio de web">>> ver más</Link>
+          <div className="all">
+            <Link to="/development/fend" aria-label="Ir al portafolio de desarrollo front-end">
+              ver todos
+            </Link>
+          </div>
         </div>
       )}
     />
