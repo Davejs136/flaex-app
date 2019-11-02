@@ -16,6 +16,7 @@ const CMSPage = () => (
               title
               category
               subcategory
+              slug
               thumbnail {
                 childImageSharp {
                   fluid(maxWidth: 675, maxHeight: 675) {
