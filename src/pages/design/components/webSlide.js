@@ -56,7 +56,7 @@ export default function WebSlide(props) {
             ))}
           </Slider>
           <div className="all" >
-            <Link to="/design/prints" aria-label="Ir al portafolio de impresos">
+            <Link to="/design/web" aria-label="Ir al portafolio de diseño web">
               ver todos
             </Link>
           </div>
