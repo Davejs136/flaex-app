@@ -217,7 +217,8 @@ body {
   color: #1a1b1a;
   background-image: url("../images/bg.jpg");
   background-repeat: repeat;
-  font-family: "Ubuntu Condensed", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-family: "Ubuntu Condensed", "Lucida Sans Unicode", "Lucida Grande",
+    sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -268,7 +269,7 @@ h2 {
 h3 {
   margin-left: 0;
   margin-right: 0;
-  margin-top: 1.5rem; 
+  margin-top: 1.5rem;
   margin-bottom: 0.5rem;
   padding: 0.55rem;
   .bg();
@@ -769,7 +770,7 @@ This element renders outside home and page containers
         .logohead,
         .logotag {
           position: relative;
-          .tooltiptext {             
+          .tooltiptext {
             right: 110%;
             text-align: left;
             font-size: 0.9rem;
@@ -844,6 +845,7 @@ This element renders outside home and page containers
   /* Main navigation internal links */
   .menu {
     header {
+      padding-bottom: 0.5em;
       div {
         .logohead,
         .logotag {
@@ -912,11 +914,11 @@ This element renders outside home and page containers
       border: solid 1px #bbb;
     }
     .city-year {
-      text-transform: capitalize; 
+      text-transform: capitalize;
       font-weight: 100;
       font-size: 1rem;
-      padding: 0.65em;      
-    }   
+      padding: 0.65em;
+    }
     .works {
       display: flex;
       flex-wrap: wrap;
@@ -967,7 +969,7 @@ This element renders outside home and page containers
   }
   .navsec {
     display: flex;
-    padding: 0.5em 0 0.5em 0;
+    padding: 0 0 0.5em 0;
     a,
     button {
       font-size: 0.9rem;
@@ -1057,18 +1059,18 @@ This element renders outside home and page containers
       }
     }
   }
-  
+
   /* Contact form */
-  .contact_form {   
+  .contact_form {
     input:required,
     input:invalid,
     textarea:required {
-      box-shadow:none;
-  }
-  input:invalid {
-    box-shadow:none;
-  }
-    
+      box-shadow: none;
+    }
+    input:invalid {
+      box-shadow: none;
+    }
+
     margin-top: 5%;
     input[type="text"],
     input[type="email"],
@@ -1127,12 +1129,12 @@ This element renders outside home and page containers
     font-weight: bold;
   }
   .share {
-    display: flex;   
-    margin-bottom: 0 !important;  
-      li {
-        padding-right: 0.5em;
-        list-style: none
-      }
+    display: flex;
+    margin-bottom: 0 !important;
+    li {
+      padding-right: 0.5em;
+      list-style: none;
+    }
   }
 }
 /* Mobile Portrait */
@@ -1337,7 +1339,6 @@ This element renders outside home and page containers
       flex-direction: column;
       justify-content: center;
       nav {
-        
         a {
           width: 85px;
           height: 85px;
@@ -1543,7 +1544,7 @@ This element renders outside home and page containers
         margin-right: 2%;
         &:nth-child(2n) {
           margin-right: 0;
-        }        
+        }
       }
     }
   }
@@ -1667,6 +1668,28 @@ This element renders outside home and page containers
         &:nth-child(3n) {
           margin-right: 0;
         }
+      }
+    }
+    .slider {
+      width: 50%;
+      float: left;
+      padding-right: 0;
+      padding-bottom: 1.2rem;      
+      &:nth-child(2n) {
+        padding-right: 0.5rem;
+      }
+      text-decoration: none;
+      h2 {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+      li {
+        margin-bottom: 0;
+      }
+      a {
+        font-weight: 900;
+        color:#1a1a1a;
+        text-decoration: none;
       }
     }
     /* Blog styles */
@@ -2174,7 +2197,7 @@ This element renders outside home and page containers
       }
     }
   }
-  .page {    
+  .page {
     /* Main navigation home */
     .menu {
       width: 53vw;
@@ -2456,7 +2479,7 @@ This element renders outside home and page containers
       }
     }
     /* Portfolio */
-    
+
     .works {
       margin-bottom: 0;
       li {
@@ -2519,7 +2542,7 @@ This element renders outside home and page containers
         width: 50%;
       }
       .description {
-        width: 100%;        
+        width: 100%;
       }
     }
     /* Contact */

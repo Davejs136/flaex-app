@@ -9,57 +9,54 @@ export default function LogosSlide(props) {
     infinite: true,
     speed: 500,
     slidesToShow: 2,
-    slidesToScroll: 2
+    slidesToScroll: 2,
   }
   return (
     <StaticQuery
       query={graphql`
-      query LogosSlide {
-        allStrapiWork(               
-          filter: { subcategory: { eq: "logo" } }
-          sort: {
-            fields: [createdAt]
-            order: DESC
-          }
-        ) {
-          edges {
-            node {
-              id
-              title
-              category
-              subcategory
-              slug
-              thumbnail {
-                childImageSharp {
-                  fluid(maxWidth: 675, maxHeight: 675) {
-                    ...GatsbyImageSharpFluid
+        query LogosSlide {
+          allStrapiWork(
+            filter: { subcategory: { eq: "logo" } }
+            sort: { fields: [createdAt], order: DESC }
+          ) {
+            edges {
+              node {
+                id
+                title
+                category
+                subcategory
+                slug
+                thumbnail {
+                  childImageSharp {
+                    fluid(maxWidth: 675, maxHeight: 675) {
+                      ...GatsbyImageSharpFluid
+                    }
                   }
                 }
               }
             }
           }
         }
-      }
-    `}
-      render={
-        data => (
-          <Slider className="works slider"  {...settings}>
+      `}
+      render={data => (
+        <div className="slider">
+          <h2>{props.title}</h2>
+          <Slider {...settings}>
             {data.allStrapiWork.edges.map(document => (
               <li key={document.node.id}>
                 <Link
                   to={`/${document.node.category}/${
                     document.node.subcategory
-                    }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
+                  }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
                 >
-                  <Img fluid={document.node.thumbnail.childImageSharp.fluid} />
-                  <h2>{document.node.title}</h2>
+                  <Img fluid={document.node.thumbnail.childImageSharp.fluid} />              
                 </Link>
               </li>
             ))}
           </Slider>
-        )}
+          <Link className="mas" to="/design/logos" aria-label="Ir al portafolio de logos">>> ver más</Link>
+        </div>
+      )}
     />
   )
 }
-
-
