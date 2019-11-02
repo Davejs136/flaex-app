@@ -44,19 +44,18 @@ export default function WebSlide(props) {
           <h3>{props.title}</h3>
           <Slider {...settings}>
             {data.allStrapiWork.edges.map(document => (
-              <li key={document.node.id}>
-                <Link
-                  to={`/${document.node.category}/${
-                    document.node.subcategory
-                  }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
-                >
-                  <Img fluid={document.node.thumbnail.childImageSharp.fluid} />  
-                </Link>
-              </li>
+              <Link
+                key={document.node.id}
+                to={`/${document.node.category}/${
+                  document.node.subcategory
+                }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
+              >
+                <Img fluid={document.node.thumbnail.childImageSharp.fluid} />
+              </Link>
             ))}
           </Slider>
-          <div className="all" >
-            <Link to="/design/web" aria-label="Ir al portafolio de web">
+          <div className="all">
+            <Link to="/design/web" aria-label="Ir al portafolio de diseño web">
               ver todos
             </Link>
           </div>

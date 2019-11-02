@@ -44,18 +44,17 @@ export default function TypographySlide(props) {
           <h3>{props.title}</h3>
           <Slider {...settings}>
             {data.allStrapiWork.edges.map(document => (
-              <li key={document.node.id}>
-                <Link
-                  to={`/${document.node.category}/${
-                    document.node.subcategory
-                  }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
-                >
-                  <Img fluid={document.node.thumbnail.childImageSharp.fluid} />  
-                </Link>
-              </li>
+              <Link
+                key={document.node.id}
+                to={`/${document.node.category}/${
+                  document.node.subcategory
+                }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
+              >
+                <Img fluid={document.node.thumbnail.childImageSharp.fluid} />
+              </Link>
             ))}
           </Slider>
-          <div className="all" >
+          <div className="all">
             <Link to="/design/typography" aria-label="Ir al portafolio de tipografía">
               ver todos
             </Link>
