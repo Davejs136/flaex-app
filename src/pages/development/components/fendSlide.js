@@ -16,7 +16,7 @@ export default function FendSlide(props) {
       query={graphql`
         query FendSlide {
           allStrapiWork(
-            limit: 6 
+            limit: 6
             filter: { subcategory: { eq: "front-end" } }
             sort: { fields: [createdAt], order: DESC }
           ) {
@@ -41,7 +41,9 @@ export default function FendSlide(props) {
       `}
       render={data => (
         <div className="slider">
-          <h3>{props.title}</h3>
+          <h2>
+            <span className="title">{props.title}</span>
+          </h2>
           <Slider {...settings}>
             {data.allStrapiWork.edges.map(document => (
               <Link
@@ -55,8 +57,11 @@ export default function FendSlide(props) {
             ))}
           </Slider>
           <div className="all">
-            <Link to="/development/fend" aria-label="Ir al portafolio de desarrollo front-end">
-              ver todos
+            <Link
+              to="/development/fend"
+              aria-label="Ir al portafolio de desarrollo front-end"
+            >
+              ver todos&nbsp;➝
             </Link>
           </div>
         </div>

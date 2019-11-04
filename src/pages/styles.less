@@ -919,7 +919,7 @@ This element renders outside home and page containers
       font-size: 1rem;
       padding: 0.65em;
       margin-bottom: 0.3rem;
-    background-color: #DCDCDC;
+      background-color: #dcdcdc;
     }
     .works {
       display: flex;
@@ -957,42 +957,38 @@ This element renders outside home and page containers
       }
     }
   }
-  .active {
-    border: 1px;
-    border-color: #dedede;
-    border-style: solid;
-  }
-  a.firstactive {
-    color: #1a1a1a !important;
-    border: 1px;
-    border-style: solid;
-    border-color: #1a1a1a;
-    background-color: #fff;
-    background-image: none !important;
-  }
-  .slider {   
-    width: 100%; 
-    display:inline-block;  
-    padding-top: 0.6rem;
-    padding-bottom: 0.6rem; 
-    text-decoration: none;       
+  .slider {
+    width: 100%;
+    display: inline-block;
+    padding-bottom: 0.6rem;
+    text-decoration: none;
     h2 {
+      padding-left: 0;
       margin-bottom: 0;
-      margin-top: 0;
+      background: none;
+      margin-bottom: 0.5em;
+      .title {
+        font-size: 0.95rem;
+        color: white;
+        .bg();
+        text-decoration: none;
+        padding: 0.75em;
+      }
     }
     li {
       margin-bottom: 0;
     }
     .all {
-      width:100%;
-      padding: 0.3rem;
-      background-color: #DCDCDC;
-      text-align: center;
-      a {  
-        color:#1a1a1a;
+      width: 100%;      
+      background-color: #E0E0E0;
+      text-align: right;
+      a {     
+        font-size: 0.85rem;   
+        color: #1a1a1a;
+        padding-right: 0.5rem;
         text-decoration: none;
         cursor: pointer;
-      }        
+      }
     }
   }
   .navsec {
@@ -1006,6 +1002,7 @@ This element renders outside home and page containers
       text-decoration: none;
       padding: 0.4em 0.8em 0.4em 0.8em;
       margin: 0 0.7em 0 0;
+      cursor: pointer;
     }
     button {
       border: none;
@@ -1697,12 +1694,13 @@ This element renders outside home and page containers
           margin-right: 0;
         }
       }
-    }    
+    }
     .slider {
       width: 49%;
       &:nth-child(1n) {
         margin-right: 0;
-      }&:nth-child(2n) {
+      }
+      &:nth-child(2n) {
         margin-left: 2%;
       }
     }
@@ -2243,15 +2241,15 @@ This element renders outside home and page containers
     .works {
       width: 100%;
       li {
-        width: 23%;        
+        width: 23%;
         &:nth-child(3n) {
           margin-right: 2%;
         }
       }
     }
     .slider {
-      width: 30%; 
-      margin-right:3.3334%           
+      width: 30%;
+      margin-right: 3.3334%;
     }
     /* Blog */
     .articles {
@@ -2516,8 +2514,8 @@ This element renders outside home and page containers
       }
     }
     .slider {
-      width: 30%; 
-      margin-right:3.3334%           
+      width: 30%;
+      margin-right: 3.3334%;
     }
     /* Bio styles */
     .profile {

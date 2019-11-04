@@ -12,6 +12,7 @@ const activeStyles = {
 
 const DesignNavigationComponent = () => (
   <div className="navsec">
+    <button onClick={() => window.history.back()}>&#10229;</button>
     <Link to="/design/logos" activeStyle={activeStyles} aria-label="Ir al portafolio de logos">logos</Link>
     <Link to="/design/prints" activeStyle={activeStyles} aria-label="Ir al portafolio de impresos">
       impresos

@@ -26,7 +26,7 @@ const ArticleTemplate = ({ data }) => (
     />
     <div className="navsec">
       <Link to="/blog" aria-label="volver a la página anterior">
-        &#10229; volver
+        &#10229;
       </Link>
     </div>
     <article>

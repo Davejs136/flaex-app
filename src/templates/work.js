@@ -26,7 +26,7 @@ const WorkTemplate = ({ data }) => (
       description={data.strapiWork.seo_description}
     />
     <div className="navsec">
-      <button onClick={() => window.history.back()}>&#10229; volver</button>
+      <button onClick={() => window.history.back()}>&#10229;</button>
     </div>
     <article>
       <h1>{data.strapiWork.title}</h1>

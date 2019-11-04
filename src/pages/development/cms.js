@@ -32,7 +32,7 @@ const CMSPage = () => (
     render={data => (
       <Layout>
         <SEO title="desarrollo temas CMS" />
-        <h1 className="hidden">desarrollo temas CMS</h1>  
+        <h1 className="hidden">desarrollo temas CMS</h1>
         <Navigation />
         <ul className="works">
           {data.allStrapiWork.edges.map(document => (

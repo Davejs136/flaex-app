@@ -12,6 +12,7 @@ const activeStyles = {
 
 const DevelopmentNavigationComponent = () => (
   <div className="navsec">
+    <button onClick={() => window.history.back()}>&#10229;</button>
     <Link
       to="/development/fend"
       activeStyle={activeStyles}

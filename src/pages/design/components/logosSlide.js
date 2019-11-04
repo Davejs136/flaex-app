@@ -16,7 +16,7 @@ export default function LogosSlide(props) {
       query={graphql`
         query LogosSlide {
           allStrapiWork(
-            limit: 6 
+            limit: 6
             filter: { subcategory: { eq: "logo" } }
             sort: { fields: [createdAt], order: DESC }
           ) {
@@ -41,7 +41,9 @@ export default function LogosSlide(props) {
       `}
       render={data => (
         <div className="slider">
-          <h3>{props.title}</h3>
+          <h2>
+            <span className="title">{props.title}</span>
+          </h2>
           <Slider {...settings}>
             {data.allStrapiWork.edges.map(document => (
               <Link
@@ -56,7 +58,7 @@ export default function LogosSlide(props) {
           </Slider>
           <div className="all">
             <Link to="/design/logos" aria-label="Ir al portafolio de logos">
-              ver todos
+              ver todos&nbsp;➝
             </Link>
           </div>
         </div>

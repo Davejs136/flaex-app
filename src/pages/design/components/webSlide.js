@@ -16,7 +16,7 @@ export default function WebSlide(props) {
       query={graphql`
         query WebSlide {
           allStrapiWork(
-            limit: 6 
+            limit: 6
             filter: { tag: { eq: "web" } }
             sort: { fields: [createdAt], order: DESC }
           ) {
@@ -41,7 +41,9 @@ export default function WebSlide(props) {
       `}
       render={data => (
         <div className="slider">
-          <h3>{props.title}</h3>
+          <h2>
+            <span className="title">{props.title}</span>
+          </h2>
           <Slider {...settings}>
             {data.allStrapiWork.edges.map(document => (
               <li key={document.node.id}>
@@ -55,9 +57,9 @@ export default function WebSlide(props) {
               </li>
             ))}
           </Slider>
-          <div className="all" >
+          <div className="all">
             <Link to="/design/web" aria-label="Ir al portafolio de diseño web">
-              ver todos
+              ver todos&nbsp;➝
             </Link>
           </div>
         </div>

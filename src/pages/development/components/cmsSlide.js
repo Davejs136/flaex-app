@@ -16,7 +16,7 @@ export default function CmsSlide(props) {
       query={graphql`
         query CmsSlide {
           allStrapiWork(
-            limit: 6 
+            limit: 6
             filter: { subcategory: { eq: "cms" } }
             sort: { fields: [createdAt], order: DESC }
           ) {
@@ -41,7 +41,9 @@ export default function CmsSlide(props) {
       `}
       render={data => (
         <div className="slider">
-          <h3>{props.title}</h3>
+          <h2>
+            <span className="title">{props.title}</span>
+          </h2>
           <Slider {...settings}>
             {data.allStrapiWork.edges.map(document => (
               <li key={document.node.id}>
@@ -55,9 +57,12 @@ export default function CmsSlide(props) {
               </li>
             ))}
           </Slider>
-          <div className="all" >
-            <Link to="/development/cms" aria-label="Ir al portafolio de impresos">
-              ver todos
+          <div className="all">
+            <Link
+              to="/development/cms"
+              aria-label="Ir al portafolio de impresos"
+            >
+              ver todos&nbsp;➝
             </Link>
           </div>
         </div>

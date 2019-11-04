@@ -16,7 +16,7 @@ export default function PrintsSlide(props) {
       query={graphql`
         query PrintsSlide {
           allStrapiWork(
-            limit: 6 
+            limit: 6
             filter: { subcategory: { eq: "prints" } }
             sort: { fields: [createdAt], order: DESC }
           ) {
@@ -41,7 +41,9 @@ export default function PrintsSlide(props) {
       `}
       render={data => (
         <div className="slider">
-          <h3>{props.title}</h3>
+          <h2>
+            <span className="title">{props.title}</span>
+          </h2>
           <Slider {...settings}>
             {data.allStrapiWork.edges.map(document => (
               <li key={document.node.id}>
@@ -55,9 +57,9 @@ export default function PrintsSlide(props) {
               </li>
             ))}
           </Slider>
-          <div className="all" >
+          <div className="all">
             <Link to="/design/prints" aria-label="Ir al portafolio de impresos">
-              ver todos
+              ver todos&nbsp;➝
             </Link>
           </div>
         </div>
