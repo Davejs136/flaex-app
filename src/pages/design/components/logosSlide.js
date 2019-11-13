@@ -41,9 +41,7 @@ export default function LogosSlide(props) {
       `}
       render={data => (
         <div className="slider">
-          <h2>
-            <span className="title">{props.title}</span>
-          </h2>
+          <h3>{props.title}</h3>
           <Slider {...settings}>
             {data.allStrapiWork.edges.map(document => (
               <Link
