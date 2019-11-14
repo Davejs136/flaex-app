@@ -38,7 +38,7 @@ const WebPage = () => (
           {data.allStrapiWork.edges.map(document => (
             <li key={document.node.id}>
               <Link
-                to={`/${document.node.category}/${
+                to={`/portfolio/${document.node.category}/${
                   document.node.subcategory
                 }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
               >

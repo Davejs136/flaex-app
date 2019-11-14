@@ -33,7 +33,7 @@ const WorkTemplate = ({ data }) => (
       <div className="city-year">
         Ciudad: {data.strapiWork.city}. Año: {data.strapiWork.year}
       </div>
-      <ul className="works">
+      <ul className="works work-images">
         {data.strapiWork.images.map(document => (
           <li
             key={document.localFile.name}
