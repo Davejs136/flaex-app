@@ -1,15 +1,21 @@
 import React from "react"
-import Layout from "../../components/layout"
+import Layout from "../../../components/layout"
 import Navigation from "./components/navigation"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import SEO from "../../components/seo"
+import SEO from "../../../components/seo"
 
-const CMSPage = () => (
+const LogosPage = () => (
   <StaticQuery
     query={graphql`
-      query CMSPage {
-        allStrapiWork(filter: { subcategory: { eq: "cms" } }) {
+      query LogosPage {
+        allStrapiWork(          
+          filter: { subcategory: { eq: "logo" } }
+          sort: {
+            fields: [createdAt]
+            order: DESC
+          }
+        ) {
           edges {
             node {
               id
@@ -31,14 +37,14 @@ const CMSPage = () => (
     `}
     render={data => (
       <Layout>
-        <SEO title="desarrollo temas CMS" />
-        <h1 className="hidden">desarrollo temas CMS</h1>
+        <SEO title="diseño impresos" />
+        <h1 className="hidden">diseño logos</h1>
         <Navigation />
         <ul className="works">
           {data.allStrapiWork.edges.map(document => (
             <li key={document.node.id}>
               <Link
-                to={`/${document.node.category}/${
+                to={`/portfolio/${document.node.category}/${
                   document.node.subcategory
                   }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
               >
@@ -53,4 +59,4 @@ const CMSPage = () => (
   />
 )
 
-export default CMSPage
+export default LogosPage

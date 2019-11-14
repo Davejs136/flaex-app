@@ -46,7 +46,7 @@ export default function LogosSlide(props) {
             {data.allStrapiWork.edges.map(document => (
               <Link
                 key={document.node.id}
-                to={`/${document.node.category}/${
+                to={`/portfolio/${document.node.category}/${
                   document.node.subcategory
                 }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
               >
@@ -55,7 +55,7 @@ export default function LogosSlide(props) {
             ))}
           </Slider>
           <div className="all">
-            <Link to="/design/logos" aria-label="Ir al portafolio de logos">
+            <Link to="/portfolio/design/logos" aria-label="Ir al portafolio de logos">
               ver todos&nbsp;➝
             </Link>
           </div>

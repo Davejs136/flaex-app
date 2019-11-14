@@ -43,7 +43,7 @@ const randomizer = array => {
 const Shuffler = ({ data }) => (
   <Layout>
     <SEO />
-    <h1 className="bgsize">Caras de @flaex_</h1>
+    <h1>Caras de @flaex_</h1>
     <div className="two-columns">
       <p>
         Cada cara está acompañada de una posición del cuerpo distinta.¡Presiona

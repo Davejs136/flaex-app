@@ -14,14 +14,14 @@ const DevelopmentNavigationComponent = () => (
   <div className="navsec">
     <button onClick={() => window.history.back()}>&#10229;</button>
     <Link
-      to="/development/fend"
+      to="/portfolio/development/fend"
       activeStyle={activeStyles}
       aria-label="Ir al portafolio de desarrollo front-end"
     >
       front-end
     </Link>
     <Link
-      to="/development/cms"
+      to="/portfolio/development/cms"
       activeStyle={activeStyles}
       aria-label="Ir al portafolio de temas CMS"
     >

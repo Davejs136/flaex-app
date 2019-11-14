@@ -3,7 +3,7 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Slider from "react-slick"
 
-export default function TypographySlide(props) {
+export default function FendSlide(props) {
   const settings = {
     dots: false,
     infinite: true,
@@ -14,10 +14,10 @@ export default function TypographySlide(props) {
   return (
     <StaticQuery
       query={graphql`
-        query TypographySlide {
+        query FendSlide {
           allStrapiWork(
             limit: 6
-            filter: { subcategory: { eq: "typography" } }
+            filter: { subcategory: { eq: "front-end" } }
             sort: { fields: [createdAt], order: DESC }
           ) {
             edges {
@@ -46,7 +46,7 @@ export default function TypographySlide(props) {
             {data.allStrapiWork.edges.map(document => (
               <Link
                 key={document.node.id}
-                to={`/${document.node.category}/${
+                to={`/portfolio/${document.node.category}/${
                   document.node.subcategory
                 }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
               >
@@ -56,8 +56,8 @@ export default function TypographySlide(props) {
           </Slider>
           <div className="all">
             <Link
-              to="/design/typography"
-              aria-label="Ir al portafolio de tipografía"
+              to="/portfolio/development/fend"
+              aria-label="Ir al portafolio de desarrollo front-end"
             >
               ver todos&nbsp;➝
             </Link>

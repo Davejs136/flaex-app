@@ -67,7 +67,7 @@ exports.createPages = ({ actions, graphql }) => {
     // Create pages for each article.
     result.data.allStrapiWork.edges.forEach(({ node }) => {
       createPage({
-        path: `/${node.category}/${node.subcategory}/${node.slug
+        path: `/portfolio/${node.category}/${node.subcategory}/${node.slug
           .replace(/\s+/g, "-")
           .toLowerCase()}`,
         component: path.resolve(`src/templates/work.js`),

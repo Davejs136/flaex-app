@@ -247,7 +247,7 @@ h1 {
   margin-bottom: 0;
   padding: 0.65rem;
   background-color: #1a1a1a;
-  display:inline-block;
+  display: inline-block;
   clear: none;
   color: #fff;
   font-weight: 100;
@@ -262,13 +262,16 @@ h2 {
   margin-bottom: 0.5rem;
   padding: 0.55rem;
   background-color: #1a1a1a;
-  display:inline-block;
+  display: inline-block;
   clear: none;
   color: #fff;
   font-weight: 100;
   text-rendering: optimizeLegibility;
   font-size: 1.1rem;
   line-height: 1.1;
+}
+h2.no-top {
+  margin-top: 0 !important;
 }
 h3 {
   margin-left: 0;
@@ -277,7 +280,7 @@ h3 {
   margin-bottom: 0.5rem;
   padding: 0.55rem;
   background-color: #1a1a1a;
-  display:inline-block;
+  display: inline-block;
   clear: none;
   color: #fff;
   font-weight: 100;
@@ -637,9 +640,6 @@ pre tt:after {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.bgsize {
-  background-size: auto !important;
-}
 .galleryImage {
   cursor: zoom-in;
 }
@@ -927,24 +927,6 @@ This element renders outside home and page containers
       margin-bottom: 0.3rem;
       background-color: #dcdcdc;
     }
-    .works {
-      display: flex;
-      flex-wrap: wrap;
-      list-style: none;
-      width: 100%;
-      li {
-        max-height: 500px;
-        overflow: hidden;
-        background-image: none;
-        a {
-          text-decoration: none;
-          h2 {
-            background-image: none;
-            margin-top: 0;
-          }
-        }
-      }
-    }
   }
   /* Portafolio styles*/
   .works {
@@ -953,11 +935,10 @@ This element renders outside home and page containers
     list-style: none;
     width: 100%;
     li {
-      .bg();
       a {
         text-decoration: none;
         h2 {
-          background-image: none;
+          display: block;
           margin-top: 0;
         }
       }
@@ -967,16 +948,16 @@ This element renders outside home and page containers
     width: 100%;
     display: inline-block;
     padding-bottom: 0.6rem;
-    text-decoration: none;    
+    text-decoration: none;
     li {
       margin-bottom: 0;
     }
     .all {
-      width: 100%;      
-      background-color: #E0E0E0;
+      width: 100%;
+      background-color: #e0e0e0;
       text-align: right;
-      a {     
-        font-size: 0.85rem;   
+      a {
+        font-size: 0.85rem;
         color: #1a1a1a;
         padding-right: 0.5rem;
         text-decoration: none;
@@ -1002,6 +983,12 @@ This element renders outside home and page containers
     }
   }
   //* Bio styles */
+  .profile {
+    .avatar {
+      margin-top: 2%;
+    margin-bottom: 2%;
+    }
+  }
   .skills {
     display: flex;
     flex-wrap: wrap;
@@ -1034,35 +1021,42 @@ This element renders outside home and page containers
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    margin: 0;
+    margin: 2% 0 0 0;
     li {
-      .bg();
+      div img {
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(0%);
+        transition: all 1s ease-in;
+        &:hover {
+          -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+          filter: grayscale(100%);
+        }
+        margin-bottom: 1.45rem;
+      }
+      h2 {
+        margin-top: 0;
+        margin-bottom: 0;
+        display: block;
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
       time {
-        color: #fff;
-        font-size: 0.95rem;
+        font-size: 0.8rem;
         font-style: italic;
-        padding-top: 0.4rem;
-        padding-left: 0.4rem;
+        font-weight: bold;
       }
-    }
-    h2 {
-      margin-top: 0;
-      margin-bottom: 0;
-      background-image: none;
-      a {
-        color: #fff;
+      .excerpt p {
+        font-size: 0.95rem;
+        line-height: 1.1rem;
+      }
+      .excerpt-link {
         text-decoration: none;
+        font-size: 0.8rem;
+        font-weight: bold;
+        color: #1a1a1a;
       }
-    }
-    div img {
-      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-      filter: grayscale(0%);
-      transition: all 1s ease-in;
-      &:hover {
-        -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
-        filter: grayscale(100%);
-      }
-      margin-bottom: 1.45rem;
     }
   }
   article {
@@ -1280,8 +1274,7 @@ This element renders outside home and page containers
     }
     .profile {
       .avatar {
-        width: 98px;
-        margin-bottom: 2%;
+        width: 98px;        
       }
     }
     /* Blog */
@@ -1720,6 +1713,14 @@ This element renders outside home and page containers
         }
       }
     }
+    .articles {
+      li {
+        .excerpt p {
+          font-size: 1.05rem;
+          line-height: 1.2rem;
+        }
+      }
+    }
     /* Contact */
     .contact_form {
       width: 70%;
@@ -1788,6 +1789,9 @@ This element renders outside home and page containers
   }
   .page {
     h1 {
+      font-size: 1.75rem;
+    }
+    h2 {
       font-size: 1.65rem;
     }
     p {
@@ -2514,8 +2518,7 @@ This element renders outside home and page containers
     .profile {
       .avatar {
         width: 115px;
-        height: 115px;
-        margin-bottom: 2%;
+        height: 115px;        
       }
     }
     .skills {
@@ -2662,6 +2665,17 @@ This element renders outside home and page containers
         }
       }
     }
+    .articles {
+      li {
+        .excerpt p {
+          font-size: 0.9rem;
+        }
+        time,
+        .excerpt-link {
+          font-size: 0.85rem;
+        }
+      }
+    }
   }
 }
 
@@ -2747,6 +2761,17 @@ This element renders outside home and page containers
         }
       }
     }
+    .articles {
+      li {
+        .excerpt p {
+          font-size: 1.1rem;
+        }
+        time,
+        .excerpt-link {
+          font-size: 1rem;
+        }
+      }
+    }
     .contact_form {
       label,
       input,
@@ -2788,9 +2813,6 @@ This element renders outside home and page containers
     }
   }
   .page {
-    .bgsize {
-      background-size: 250px !important;
-    }
     h1 {
       font-size: 1.5rem;
     }
@@ -2832,6 +2854,13 @@ This element renders outside home and page containers
       div {
         p {
           font-size: 1.2rem;
+        }
+      }
+    }
+    .articles {
+      li {
+        .excerpt p {
+          font-size: 1.15rem;
         }
       }
     }
@@ -2880,15 +2909,11 @@ This element renders outside home and page containers
     }
   }
   .page {
-    .bgsize {
-      background-size: 300px !important;
-    }
     h1 {
       font-size: 1.9rem;
     }
     h2 {
       font-size: 1.8rem;
-      padding: 0.5%;
     }
     p {
       font-size: 1.7rem;
@@ -2926,6 +2951,19 @@ This element renders outside home and page containers
       div {
         p {
           font-size: 1.8rem;
+        }
+      }
+    }
+    .articles {
+      li {
+        .excerpt p {
+          font-size: 1.45rem;
+          line-height: 1.6rem;
+        }
+        time,
+        .excerpt-link {
+          font-size: 1.35rem;
+          line-height: 1.8rem;
         }
       }
     }
@@ -2974,9 +3012,6 @@ This element renders outside home and page containers
     }
   }
   .page {
-    .bgsize {
-      background-size: 400px !important;
-    }
     h1 {
       font-size: 2.8em;
     }
@@ -3024,6 +3059,19 @@ This element renders outside home and page containers
         }
         svg {
           font-size: 3.6rem;
+        }
+      }
+    }
+    .articles {
+      li {
+        .excerpt p {
+          font-size: 2.2rem;
+          line-height: 2.2rem;
+        }
+        time,
+        .excerpt-link {
+          font-size: 2rem;
+          line-height: 2.6rem;
         }
       }
     }

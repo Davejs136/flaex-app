@@ -3,7 +3,7 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Slider from "react-slick"
 
-export default function PrintsSlide(props) {
+export default function CmsSlide(props) {
   const settings = {
     dots: false,
     infinite: true,
@@ -14,10 +14,10 @@ export default function PrintsSlide(props) {
   return (
     <StaticQuery
       query={graphql`
-        query PrintsSlide {
+        query CmsSlide {
           allStrapiWork(
             limit: 6
-            filter: { subcategory: { eq: "prints" } }
+            filter: { subcategory: { eq: "cms" } }
             sort: { fields: [createdAt], order: DESC }
           ) {
             edges {
@@ -46,7 +46,7 @@ export default function PrintsSlide(props) {
             {data.allStrapiWork.edges.map(document => (
               <li key={document.node.id}>
                 <Link
-                  to={`/${document.node.category}/${
+                  to={`/portfolio/${document.node.category}/${
                     document.node.subcategory
                   }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
                 >
@@ -56,7 +56,10 @@ export default function PrintsSlide(props) {
             ))}
           </Slider>
           <div className="all">
-            <Link to="/design/prints" aria-label="Ir al portafolio de impresos">
+            <Link
+              to="/portfolio/development/cms"
+              aria-label="Ir al portafolio de impresos"
+            >
               ver todos&nbsp;➝
             </Link>
           </div>

@@ -64,7 +64,7 @@ export default function ContactPage() {
       render={data => (
         <Layout>
           <SEO title="contacto" />
-          <h1 className="bgsize">Info + contacto</h1>
+          <h1>Contacto</h1>
           <div className="two-columns">
             <p>
               El concepto del logo está inspirado en el proceso manual con
@@ -78,7 +78,7 @@ export default function ContactPage() {
               para reforzar sus rasgos y como ejercicio de relación de formas.
             </p>
           </div>
-          <h2 className="bgsize">¡Envíame un mensaje!</h2>
+          <h2>¡Envíame un mensaje!</h2>
           <Form
             onSubmit={handleSubmit}
             render={({ handleSubmit, pristine, invalid }) => (

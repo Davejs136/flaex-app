@@ -1,15 +1,15 @@
 import React from "react"
-import Layout from "../../components/layout"
+import Layout from "../../../components/layout"
 import Navigation from "./components/navigation"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import SEO from "../../components/seo"
+import SEO from "../../../components/seo"
 
-const FendPage = () => (
+const PrintsPage = () => (
   <StaticQuery
     query={graphql`
-      query FendPage {
-        allStrapiWork(filter: { subcategory: { eq: "front-end" } }) {
+      query PrintsPage {
+        allStrapiWork(filter: { subcategory: { eq: "prints" } }) {
           edges {
             node {
               id
@@ -31,16 +31,16 @@ const FendPage = () => (
     `}
     render={data => (
       <Layout>
-        <SEO title="desarrollo temas CMS" />
-        <h1 className="hidden">desarrollo temas CMS</h1>  
-        <Navigation/>
+        <SEO title="diseño impresos" />
+        <h1 className="hidden">diseño impresos</h1>  
+        <Navigation />
         <ul className="works">
           {data.allStrapiWork.edges.map(document => (
             <li key={document.node.id}>
               <Link
-                to={`/${document.node.category}/${
+                to={`/portfolio/${document.node.category}/${
                   document.node.subcategory
-                  }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
+                }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
               >
                 <Img fluid={document.node.thumbnail.childImageSharp.fluid} />
                 <h2>{document.node.title}</h2>
@@ -53,4 +53,4 @@ const FendPage = () => (
   />
 )
 
-export default FendPage
+export default PrintsPage

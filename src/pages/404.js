@@ -20,7 +20,7 @@ const NotFoundPage = () => (
     render={data => (
       <Layout>
         <SEO title="404: No encontrado" />
-        <h1 className="bgsize">
+        <h1>
           Página inexistente{" "}
           <span aria-label="emoji" role="img">
             😔

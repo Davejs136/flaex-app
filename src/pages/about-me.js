@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql, Link } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import GoogleMap from "../components/googleMap"
@@ -16,12 +16,6 @@ let faprefix = null
 const BioTemplate = () => (
   <Layout>
     <SEO title="sobre mi" />
-    <div className="navsec">
-      <Link className="firstactive" to="/about-me" aria-label="Ir al perfil">
-        bio
-      </Link>
-      <Link to="/blog" aria-label="Ir al blog">blog</Link>
-    </div>
     <StaticQuery
       query={graphql`
         query BioTemplateEs {
@@ -55,13 +49,14 @@ const BioTemplate = () => (
         }
       `}
       render={data => (
-        <section className="bio">
-          <div className="profile">
-            <div className="avatar">
+        <section className="bio">           
+          <div className="profile"> 
+            <h1 className="about-me">Sobre mi</h1>          
+            <div className="avatar">            
               <Img fluid={data.strapiProfile.avatar.childImageSharp.fluid} />
             </div>
-            <h1>{data.strapiProfile.headline}</h1>
-          </div>       
+            <h2 className="no-top">{data.strapiProfile.headline}</h2>
+          </div>
           <div className="two-columns">
             <ReactMarkdown
               source={data.strapiProfile.summary}
@@ -92,19 +87,19 @@ const BioTemplate = () => (
 
           <h2>Mi historia</h2>
           <div className="two-columns">
-          <ReactMarkdown
-            source={data.strapiProfile.story}
-            escapeHtml={false}
-            transformImageUri={uri =>
-              uri.startsWith("http")
-                ? uri
-                : `${process.env.IMAGE_BASE_URL}${uri}`
-            }
-          />
+            <ReactMarkdown
+              source={data.strapiProfile.story}
+              escapeHtml={false}
+              transformImageUri={uri =>
+                uri.startsWith("http")
+                  ? uri
+                  : `${process.env.IMAGE_BASE_URL}${uri}`
+              }
+            />
           </div>
-        <h2>Donde vivo</h2>
-        <GoogleMap />
-        <ReactMarkdown
+          <h2>Donde vivo</h2>
+          <GoogleMap />
+          <ReactMarkdown
             source={data.strapiLocation.description}
             escapeHtml={false}
             transformImageUri={uri =>
@@ -114,8 +109,8 @@ const BioTemplate = () => (
             }
           />
         </section>
-  )}
-/>
+      )}
+    />
   </Layout>
 )
 

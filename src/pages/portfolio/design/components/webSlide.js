@@ -3,7 +3,7 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Slider from "react-slick"
 
-export default function FendSlide(props) {
+export default function WebSlide(props) {
   const settings = {
     dots: false,
     infinite: true,
@@ -14,10 +14,10 @@ export default function FendSlide(props) {
   return (
     <StaticQuery
       query={graphql`
-        query FendSlide {
+        query WebSlide {
           allStrapiWork(
             limit: 6
-            filter: { subcategory: { eq: "front-end" } }
+            filter: { tag: { eq: "web" } }
             sort: { fields: [createdAt], order: DESC }
           ) {
             edges {
@@ -44,21 +44,19 @@ export default function FendSlide(props) {
           <h3>{props.title}</h3>
           <Slider {...settings}>
             {data.allStrapiWork.edges.map(document => (
-              <Link
-                key={document.node.id}
-                to={`/${document.node.category}/${
-                  document.node.subcategory
-                }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
-              >
-                <Img fluid={document.node.thumbnail.childImageSharp.fluid} />
-              </Link>
+              <li key={document.node.id}>
+                <Link
+                  to={`/portfolio/${document.node.category}/${
+                    document.node.subcategory
+                  }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
+                >
+                  <Img fluid={document.node.thumbnail.childImageSharp.fluid} />
+                </Link>
+              </li>
             ))}
           </Slider>
           <div className="all">
-            <Link
-              to="/development/fend"
-              aria-label="Ir al portafolio de desarrollo front-end"
-            >
+            <Link to="/portfolio/design/web" aria-label="Ir al portafolio de diseño web">
               ver todos&nbsp;➝
             </Link>
           </div>
