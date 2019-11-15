@@ -46,7 +46,7 @@ const BlogPage = () => (
                   <div className="mainImage">
                     <Img fluid={document.node.image.childImageSharp.fluid} />
                   </div>
-                </Link>                
+                </Link>
                 <h2>
                   <Link
                     to={`/blog/${document.node.slug
@@ -60,18 +60,20 @@ const BlogPage = () => (
                 <time>{document.node.date}</time>
                 <ReactMarkdown
                   className="excerpt"
-                  source={document.node.description.substring(0, 80).concat("...")}                 
+                  source={document.node.description
+                    .substring(0, 80)
+                    .concat("...")}
                   escapeHtml={false}
                 />
-                 <Link
-                    to={`/blog/${document.node.slug
-                      .replace(/\s+/g, "-")
-                      .toLowerCase()}`}
-                    aria-label={`Ir al artículo ${document.node.title}`}
-                    className="excerpt-link"
-                  >
-                    Leer más >
-                  </Link>
+                <Link
+                  to={`/blog/${document.node.slug
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()}`}
+                  aria-label={`Ir al artículo ${document.node.title}`}
+                  className="excerpt-link"
+                >
+                  Leer más >
+                </Link>
               </li>
             ))}
           </ul>
