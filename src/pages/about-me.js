@@ -49,10 +49,10 @@ const BioTemplate = () => (
         }
       `}
       render={data => (
-        <section className="bio">           
-          <div className="profile"> 
-            <h1 className="about-me">Sobre mi</h1>          
-            <div className="avatar">            
+        <section className="bio">
+          <div className="profile">
+            <h1 className="about-me">Sobre mi</h1>
+            <div className="avatar">
               <Img fluid={data.strapiProfile.avatar.childImageSharp.fluid} />
             </div>
             <h2 className="no-top">{data.strapiProfile.headline}</h2>
