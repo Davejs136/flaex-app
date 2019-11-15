@@ -603,8 +603,11 @@ td:last-child {
 }
 tt,
 code {
-  background-color: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
+  background-color: #E8E8E8;
+  color: #ff4d4d;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
     "Liberation Mono", Menlo, Courier, monospace;
   padding: 0;
@@ -612,7 +615,7 @@ code {
   padding-bottom: 0.2em;
 }
 pre code {
-  background: none;
+  background-color: #E8E8E8;
   line-height: 1.42;
 }
 code:before,
@@ -1080,24 +1083,8 @@ This element renders outside home and page containers
         max-width: 100%;
         overflow: hidden;
       }
-    }
-    pre {
-      white-space: pre-wrap;
-      white-space: -moz-pre-wrap;
-      white-space: -o-pre-wrap;
-      word-wrap: break-word; 
-      background-color: #E8E8E8;      
-    } 
-    code {
-      font-family: Courier, 'New Courier', monospace;      
-      border-radius: 5px;
-      -moz-border-radius: 5px;
-      -webkit-border-radius: 5px;
-      margin: 1em 0;     
-      color: #ff4d4d;
-    }
+    }    
   }
-
   /* Contact form */
   .contact_form {
     input:required,
