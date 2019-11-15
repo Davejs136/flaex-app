@@ -1072,11 +1072,31 @@ This element renders outside home and page containers
       margin-bottom: 0.3%;
     }
     .description {
+      width: 100%;
       h2:first-child {
         margin-top: 0 !important;
       }
+      img {
+        max-width: 100%;
+        overflow: hidden;
+      }
     }
-  }
+    /* Code Styles */
+    pre {
+      white-space: pre-wrap;
+      white-space: -moz-pre-wrap;
+      white-space: -o-pre-wrap;
+      word-wrap: break-word;      
+      code {
+      font-family: Courier, 'New Courier', monospace;      
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      margin: 1em 0;     
+      background-color: #1e1e1e;
+      color: #6089b4;
+      }
+    } 
 
   /* Contact form */
   .contact_form {
