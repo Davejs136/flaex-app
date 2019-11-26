@@ -3,6 +3,8 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Slider from "react-slick"
 
+// react-slick component for portfolio page
+
 export default function PrintsSlide(props) {
   const settings = {
     dots: false,
@@ -56,7 +58,10 @@ export default function PrintsSlide(props) {
             ))}
           </Slider>
           <div className="all">
-            <Link to="/portfolio/design/prints" aria-label="Ir al portafolio de impresos">
+            <Link
+              to="/portfolio/design/prints"
+              aria-label="Ir al portafolio de impresos"
+            >
               ver todos&nbsp;➝
             </Link>
           </div>

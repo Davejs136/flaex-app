@@ -8,11 +8,14 @@ import Fend from "./portfolio/development/components/fendSlide"
 import Cms from "./portfolio/development/components/cmsSlide"
 import SEO from "../components/seo"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// @fortawesome icons
 import { faPalette } from "@fortawesome/free-solid-svg-icons"
 import { faSimplybuilt } from "@fortawesome/free-brands-svg-icons"
-
+// Styles for react-slick
 import "./slick.less"
 import "./slick-theme.less"
+
+// This portfolio page needs the files in 'scr/pages/design' and 'scr/pages/development' in order to render properly
 
 const PortfolioPage = () => (
   <Layout>
@@ -20,8 +23,7 @@ const PortfolioPage = () => (
     <h1 className="hidden">portafolio</h1>
     <section>
       <h2 className="no-top">
-        <FontAwesomeIcon icon={faPalette} fixedWidth size="1x" />{" "}
-        Diseño gráfico
+        <FontAwesomeIcon icon={faPalette} fixedWidth size="1x" /> Diseño gráfico
       </h2>
 
       <p className="two-columns">
@@ -37,8 +39,8 @@ const PortfolioPage = () => (
     </section>
     <section>
       <h2>
-        <FontAwesomeIcon icon={faSimplybuilt} fixedWidth size="1x" />{" "}
-        Desarrollo front-end
+        <FontAwesomeIcon icon={faSimplybuilt} fixedWidth size="1x" /> Desarrollo
+        front-end
       </h2>
       <p className="two-columns">
         Sitios web estáticos y dinámicos, implementación de templates en CMS

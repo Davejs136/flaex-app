@@ -7,19 +7,22 @@ import { Form } from "react-final-form"
 import { Field } from "react-final-form-html5-validation"
 import SEO from "../components/seo"
 
+// Join values taken form user's input
 function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&")
 }
 
+// Contact page component
 export default function ContactPage() {
+  // React state management access
   const [state, setState] = React.useState({})
-
+  // Handle input changes
   const handleChange = e => {
     setState({ ...state, [e.target.name]: e.target.value })
   }
-
+  // Submmit the form values
   const handleSubmit = e => {
     e.preventDefault()
     const form = e.target
@@ -88,6 +91,7 @@ export default function ContactPage() {
                 name="contact"
                 method="post"
                 action="/thank-you/"
+                // Netlify form
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
               >

@@ -12,6 +12,8 @@ const activeStyles = {
 
 const linkStyles = {}
 
+// Main page navigation component
+
 const Navigation = () => (
   <nav>
     <Link

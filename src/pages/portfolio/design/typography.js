@@ -5,6 +5,8 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../../../components/seo"
 
+// Main typography page
+
 const TypographyPage = () => (
   <StaticQuery
     query={graphql`
@@ -32,7 +34,7 @@ const TypographyPage = () => (
     render={data => (
       <Layout>
         <SEO title="diseño tipográfico" />
-        <h1 className="hidden">diseño tipográfico</h1> 
+        <h1 className="hidden">diseño tipográfico</h1>
         <Navigation />
         <ul className="works">
           {data.allStrapiWork.edges.map(document => (

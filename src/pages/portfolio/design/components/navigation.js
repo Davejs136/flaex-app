@@ -10,6 +10,8 @@ const activeStyles = {
   borderStyle: "solid",
 }
 
+// Navigation links for design category
+
 const DesignNavigationComponent = () => (
   <div className="navsec">
     <button onClick={() => window.history.back()}>&#10229;</button>

@@ -2,6 +2,8 @@ import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
+// Internal page header component
+
 const HeaderPage = () => (
   <StaticQuery
     query={graphql`

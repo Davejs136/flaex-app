@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import { window } from "browser-monads"
 import { PinterestShareButton, PinterestIcon } from "react-share"
 
+//Share work URL
 const shareUrl = window.location.href
 
 const ReactMarkdown = require("react-markdown/with-html")

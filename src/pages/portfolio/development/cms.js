@@ -5,6 +5,8 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../../../components/seo"
 
+// Main CMS page
+
 const CMSPage = () => (
   <StaticQuery
     query={graphql`

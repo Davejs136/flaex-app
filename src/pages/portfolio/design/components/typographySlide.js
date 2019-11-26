@@ -3,6 +3,8 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Slider from "react-slick"
 
+// react-slick component for portfolio page
+
 export default function TypographySlide(props) {
   const settings = {
     dots: false,

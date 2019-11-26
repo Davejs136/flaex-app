@@ -5,16 +5,15 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../../../components/seo"
 
+// Main logos page
+
 const LogosPage = () => (
   <StaticQuery
     query={graphql`
       query LogosPage {
-        allStrapiWork(          
+        allStrapiWork(
           filter: { subcategory: { eq: "logo" } }
-          sort: {
-            fields: [createdAt]
-            order: DESC
-          }
+          sort: { fields: [createdAt], order: DESC }
         ) {
           edges {
             node {
@@ -46,7 +45,7 @@ const LogosPage = () => (
               <Link
                 to={`/portfolio/${document.node.category}/${
                   document.node.subcategory
-                  }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
+                }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
               >
                 <Img fluid={document.node.thumbnail.childImageSharp.fluid} />
                 <h2>{document.node.title}</h2>

@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { window } from "browser-monads"
+// Social network share buttons from react-share
 import {
   FacebookShareButton,
   FacebookIcon,
@@ -13,6 +14,7 @@ import {
   LinkedinIcon,
 } from "react-share"
 
+// Get article URL
 const viewUrl = window.location.href
 
 const ReactMarkdown = require("react-markdown/with-html")
@@ -54,7 +56,7 @@ const ArticleTemplate = ({ data }) => (
           escapeHtml={false}
         />
       </div>
-      <h4 className="share-title">Comparte este artículo:</h4>
+      <h4 className="share-title">Comparte este artículo:</h4>     
       <ul className="share">
         <li>
           <FacebookShareButton children="a" url={viewUrl} quote={data.strapiArticle.title}>

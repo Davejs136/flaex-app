@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+// Randomize function
 const shuffle = array => {
   let currentIndex = array.length,
     temporaryValue,
@@ -22,20 +23,20 @@ const shuffle = array => {
   return array
 }
 
+//Randomize videos array order to change index 0
 let positonZero = array => {
   shuffle(array)
   let newArray = array[0]
   return newArray
 }
 
+// Change video file element to a new one
 const randomizer = array => {
   positonZero(array)
   const videoContainer = document.querySelector(".video-container")
   videoContainer.innerHTML = `<div key=${array[0].node.id}>             
     <video autoPlay>
-      <source src=${
-        array[0].node.video.publicURL
-      } type="video/mp4" />                           
+      <source src=${array[0].node.video.publicURL} type="video/mp4" />                           
     </video>
   </div>`
 }

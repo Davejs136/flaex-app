@@ -5,6 +5,8 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../../../components/seo"
 
+// Main prints page
+
 const PrintsPage = () => (
   <StaticQuery
     query={graphql`
@@ -32,7 +34,7 @@ const PrintsPage = () => (
     render={data => (
       <Layout>
         <SEO title="diseño impresos" />
-        <h1 className="hidden">diseño impresos</h1>  
+        <h1 className="hidden">diseño impresos</h1>
         <Navigation />
         <ul className="works">
           {data.allStrapiWork.edges.map(document => (

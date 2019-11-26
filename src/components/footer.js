@@ -6,6 +6,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 let faicon = null
 let faprefix = null
+
+// Main footer component
+
 const Navigation = () => (
   <StaticQuery
     query={graphql`

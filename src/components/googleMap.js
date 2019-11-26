@@ -9,6 +9,8 @@ const defaultProps = {
   zoom: 15,
 }
 
+// GoogleMaps component
+
 const GoogleMap = () => (
   <div className="map">
     <GoogleMapReact
