@@ -15,7 +15,7 @@ let faprefix = null
 
 const BioTemplate = () => (
   <Layout>
-    <SEO title="sobre mi" />
+    <SEO title="about me" />
     <StaticQuery
       query={graphql`
         query BioTemplate_es {
@@ -58,7 +58,7 @@ const BioTemplate = () => (
       render={data => (
         <section className="bio">
           <div className="profile">
-            <h1 className="about-me">Sobre mi</h1>
+            <h1 className="about-me">About me</h1>
             <div className="avatar">
               <Img fluid={data.strapiProfile.avatar.childImageSharp.fluid} />
             </div>
@@ -75,7 +75,7 @@ const BioTemplate = () => (
               }
             />
           </div>
-          <h2>Mis habilidades</h2>
+          <h2>My skills</h2>
           <div className="skills">
             {data.allStrapiSkill.edges.map(document => (
               <div key={document.node.id}>
@@ -92,7 +92,7 @@ const BioTemplate = () => (
             ))}
           </div>
 
-          <h2>Mi historia</h2>
+          <h2>My story</h2>
           <div className="two-columns">
             <ReactMarkdown
               source={data.strapiProfile.content_es.story}
@@ -104,7 +104,7 @@ const BioTemplate = () => (
               }
             />
           </div>
-          <h2>Donde vivo</h2>
+          <h2>Where I live</h2>
           <GoogleMap />
           <ReactMarkdown
             source={data.strapiLocation.description_es}
