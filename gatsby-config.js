@@ -38,28 +38,7 @@ module.exports = {
         ],
         queryLimit: 1000,
       },
-    },
-    {
-      resolve: 'gatsby-plugin-i18n',
-      options: {        
-        langKeyDefault: 'en',
-        useLangKeyLayout: false,
-        prefixDefault: false,
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-i18n-duplicate',
-      options: {
-        path: `${__dirname}/src/pages`,
-        languages: ['es'],
-        defaultLanguage: 'en',
-        files : [
-          '404',
-          'index',
-          'about-me',          
-        ] 
-      }
-    },
+    },    
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
