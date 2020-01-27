@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import GoogleMap from "../components/googleMap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import SEO from "../components/seo"
+import injectIntl from "../../plugins/gatsby-plugin-intl-graphql"
 
 const ReactMarkdown = require("react-markdown/with-html")
 
@@ -13,46 +14,21 @@ const ReactMarkdown = require("react-markdown/with-html")
 let faicon = null
 let faprefix = null
 
-const BioTemplate = () => (
+const BioTemplate = ()  => (
   <Layout>
     <SEO title="about me" />
     <StaticQuery
       query={graphql`
-        query BioTemplate_en {
-          strapiProfile {
-            name
-            city
+        query BioTemplate {
+          strapiProfile {            
             avatar {
               childImageSharp {
                 fluid(maxWidth: 80) {
                   ...GatsbyImageSharpFluid
                 }
               }
-            }
-            content_en {
-              summary
-              story
-              seo_description
-              seo_img_alt
-              seo_img_description
-              seo_img_title
-              headline
-            }
-          }
-          strapiLocation {
-            city
-            description_en
-          }
-          allStrapiSkill {
-            edges {
-              node {
-                id
-                title_en
-                icon
-                prefix
-              }
-            }
-          }
+            }            
+          }         
         }
       `}
       render={data => (
@@ -62,9 +38,10 @@ const BioTemplate = () => (
             <div className="avatar">
               <Img fluid={data.strapiProfile.avatar.childImageSharp.fluid} />
             </div>
-            <h2 className="no-top">{data.strapiProfile.content_en.headline}</h2>
+            {console.log(messages)}
+            {/* <h2 className="no-top">{data.strapiProfile.content_en.headline}</h2> */}
           </div>
-          <div className="two-columns">
+          {/* <div className="two-columns">
             <ReactMarkdown
               source={data.strapiProfile.content_en.summary}
               escapeHtml={false}
@@ -114,7 +91,7 @@ const BioTemplate = () => (
                 ? uri
                 : `${process.env.IMAGE_BASE_URL}${uri}`
             }
-          />
+          /> */}
         </section>
       )}
     />

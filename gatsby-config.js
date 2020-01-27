@@ -2,6 +2,8 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const query = require("./queries/query")
+
 module.exports = {
   siteMetadata: {
     title: "Diseñador gráfico & desarrollador front-end",
@@ -37,6 +39,21 @@ module.exports = {
           "work",
         ],
         queryLimit: 1000,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-intl-graphql`,
+      options: {
+        url: `http://localhost:1337/graphql`,
+        // language JSON resource path
+        path: `${__dirname}/src/lang`,
+        // supported language
+        languages: [`en`, `es`],
+        // language file path
+        defaultLanguage: `en`,
+        // option to redirect to `/ko` when connecting `/`
+        redirect: true,
+        query,
       },
     },    
     {
