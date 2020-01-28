@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import GoogleMap from "../components/googleMap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import SEO from "../components/seo"
-import injectIntl from "../../plugins/gatsby-plugin-intl-graphql"
+import { injectIntl } from "../../plugins/gatsby-plugin-intl-graphql"
 
 const ReactMarkdown = require("react-markdown/with-html")
 
@@ -14,7 +14,7 @@ const ReactMarkdown = require("react-markdown/with-html")
 let faicon = null
 let faprefix = null
 
-const BioTemplate = ()  => (
+const BioTemplate = ( { intl: { messages } } )  => (
   <Layout>
     <SEO title="about me" />
     <StaticQuery
@@ -98,4 +98,4 @@ const BioTemplate = ()  => (
   </Layout>
 )
 
-export default BioTemplate
+export default injectIntl(BioTemplate)

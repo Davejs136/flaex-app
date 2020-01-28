@@ -1,0 +1,77 @@
+{
+  "static": {
+    "lang": "en"
+  },
+  "profiles": [
+    {
+      "name": "Freddy Polanía",
+      "city": "caracas",
+      "content": {
+        "headline": "Graphic designer and frontend developer",
+        "summary": "My name is Freddy Polanía. I am a graphic designer and front-end web developer who likes to build web applications to improve the user experience. I'm intestered in participate in the creation and design of web products to combine usability and design properly. I like to do UI, logos, display letters, icons. HMTL / CSS / JS is the power combo 💥💻💥. <br/> <br/>\n \nI have managed projects from logo design, printed and digital branding in commercial stationery, catalogs, graphic identity manuals to websites, interactive presentations and social media campaigns. Also, I have participated and directed projects of static and dynamic websites, implementation of templates in proprietary and open source CMS, development of PWA applications in front-end libraries using HTML5, CSS3 and Javascript.",
+        "story": "I graduated from the Darias Design Institute in 2013. Previously, I studied computer engineering and became interested in web design, to the point that I changed of career. In Darias, I learned the basics of design, typography, illustration, corporate identity, photography, among many other things. I completed HTML / Flash courses and this is how I started making my first web pages. <br/> <br/>\n \nI worked as director's assistant of Darias Institue in 2008 in charge of the school's website. I participated in the installation of the Latin American typography exhibition Latin Types in the Museum of Design and Prints Carlos Cruz-Diez. That same, year I got my first web designer job and met the content managers; There I started taking the first steps with CSS style sheets to improve the appearance of HTML views. <br/> <br/>\n\nIn October 2014, a website I made for Banco del Libro was selected to participate in the IDB Latin American Design Biennial of the same year in the digital design category. I collaborated in the development and design of the website for the Design Congress [Caracas Design](https://www.facebook.com/groups/caracasdesign/)  in its 2013, 2014 and 2015 editions. At the beginning of 2019 I certified myself as a front-end web developer; Since January 2010 I have been director and manager in the areas of design and front-end web development projects at Novanet.",
+        "seo_description": "Freddy Polanía, graphic designer and front-end web developer who likes to build web applications to improve the user experience.",
+        "seo_img_title": "Freddy Polania's avatar",
+        "seo_img_alt": "Profile authot's image"
+      }
+    }
+  ],
+  "locations": [
+    {
+      "city": "Caracas",
+      "content": {
+        "description": "Santiago de León de **Caracas**, capital of Venezuela. City where I was born and where I live."
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "5e131fff3dc85f21d2f05a9f",
+      "prefix": "fas",
+      "icon": "file-code",
+      "content": {
+        "title": "HTML/CSS/JS"
+      }
+    },
+    {
+      "id": "5e13202b3dc85f21d2f05aa0",
+      "prefix": "fas",
+      "icon": "pencil-ruler",
+      "content": {
+        "title": "branding"
+      }
+    },
+    {
+      "id": "5e13207c3dc85f21d2f05aa1",
+      "prefix": "fab",
+      "icon": "simplybuilt",
+      "content": {
+        "title": "frontend web development"
+      }
+    },
+    {
+      "id": "5e1320a03dc85f21d2f05aa2",
+      "prefix": "fas",
+      "icon": "font",
+      "content": {
+        "title": "typography design"
+      }
+    },
+    {
+      "id": "5e1320bc3dc85f21d2f05aa3",
+      "prefix": "fas",
+      "icon": "palette",
+      "content": {
+        "title": "web design"
+      }
+    },
+    {
+      "id": "5e1320ee3dc85f21d2f05aa4",
+      "prefix": "fas",
+      "icon": "cube",
+      "content": {
+        "title": "CMS themes"
+      }
+    }
+  ]
+}

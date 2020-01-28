@@ -1,4 +1,6 @@
-`  profiles {
+const query = `  
+{
+  profiles {
     name
     city
     content_en {
@@ -38,4 +40,6 @@
       title
     }
   }
+}
 `
+module.exports = query
