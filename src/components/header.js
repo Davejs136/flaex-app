@@ -1,10 +1,12 @@
 import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
+import { injectIntl } from "../../plugins/gatsby-plugin-intl-graphql"
+
 
 // Main page header component
 
-const Header = () => (
+const Header = ({ intl: { messages } }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -31,13 +33,13 @@ const Header = () => (
             <Link to="/shuffler" aria-label="Ir al randomizador">
               <Img fluid={data.head.childImageSharp.fluid} />
             </Link>
-            <span className="tooltiptext">caras</span>
+            <span className="tooltiptext">{messages.static.components.header.faces}</span>
           </div>
           <div className="logotag">
             <Link to="/about-me" aria-label="Ir al perfil">
               <Img fluid={data.tag.childImageSharp.fluid} />
             </Link>
-            <span className="tooltiptext">sobre&nbsp;mi</span>
+            <span className="tooltiptext">{messages.static.components.header.about_me}</span>
           </div>
         </div>
       </header>
@@ -45,4 +47,4 @@ const Header = () => (
   />
 )
 
-export default Header
+export default injectIntl(Header)

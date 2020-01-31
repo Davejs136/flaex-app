@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { injectIntl } from "../../plugins/gatsby-plugin-intl-graphql"
 
 const activeStyles = {
   backgroundColor: "#ffffff",
@@ -14,7 +15,7 @@ const linkStyles = {}
 
 // Main page navigation component
 
-const Navigation = () => (
+const Navigation = ({ intl: { messages } }) => (
   <nav>
     <Link
       to="/portfolio"
@@ -27,7 +28,7 @@ const Navigation = () => (
       aria-label="Ir al portafolio de diseño gráfico"
     >
       <span>
-        portafolio
+      {messages.static.components.navigation.portfolio}
       </span>
     </Link>
     <Link
@@ -42,15 +43,15 @@ const Navigation = () => (
       aria-label="Ir al portafolio de desarrollo front-end"
     >
       <span>
-        blog
+        {messages.static.components.navigation.blog}
       </span>
     </Link>
     <Link to="/contact" activeStyle={activeStyles} aria-label="Ir a la información de contacto">
       <span>        
-        contacto
+        {messages.static.components.navigation.contact}
       </span>
     </Link>
   </nav>
 )
 
-export default Navigation
+export default injectIntl(Navigation)

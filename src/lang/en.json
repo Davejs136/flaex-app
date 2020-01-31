@@ -1,6 +1,25 @@
 {
   "static": {
-    "lang": "en"
+    "lang": "en",
+    "components": {
+      "header": {
+        "faces": "faces",
+        "about_me": "about me"
+      },
+      "navigation": {
+        "portfolio": "portfolio",
+        "blog": "blog",
+        "contact": "contact"
+      }
+    },
+    "views": {
+      "about_me": {
+        "title": "About me",
+        "skills": "My skills",
+        "story": "My story",
+        "location": "Where I live"
+      }
+    }
   },
   "profiles": [
     {
@@ -29,49 +48,37 @@
       "id": "5e131fff3dc85f21d2f05a9f",
       "prefix": "fas",
       "icon": "file-code",
-      "content": {
-        "title": "HTML/CSS/JS"
-      }
+      "content": { "title": "HTML/CSS/JS" }
     },
     {
       "id": "5e13202b3dc85f21d2f05aa0",
       "prefix": "fas",
       "icon": "pencil-ruler",
-      "content": {
-        "title": "branding"
-      }
+      "content": { "title": "branding" }
     },
     {
       "id": "5e13207c3dc85f21d2f05aa1",
       "prefix": "fab",
       "icon": "simplybuilt",
-      "content": {
-        "title": "frontend web development"
-      }
+      "content": { "title": "frontend web development" }
     },
     {
       "id": "5e1320a03dc85f21d2f05aa2",
       "prefix": "fas",
       "icon": "font",
-      "content": {
-        "title": "typography design"
-      }
+      "content": { "title": "typography design" }
     },
     {
       "id": "5e1320bc3dc85f21d2f05aa3",
       "prefix": "fas",
       "icon": "palette",
-      "content": {
-        "title": "web design"
-      }
+      "content": { "title": "web design" }
     },
     {
       "id": "5e1320ee3dc85f21d2f05aa4",
       "prefix": "fas",
       "icon": "cube",
-      "content": {
-        "title": "CMS themes"
-      }
+      "content": { "title": "CMS themes" }
     }
   ]
 }
