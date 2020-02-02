@@ -38,7 +38,6 @@ const BioTemplate = ({ intl: { messages } }) => (
             <div className="avatar">
               <Img fluid={data.strapiProfile.avatar.childImageSharp.fluid} />
             </div>
-            {console.log(messages)}
             <h2 className="no-top">{messages.profiles[0].content.headline}</h2>
           </div>
           <div className="two-columns">

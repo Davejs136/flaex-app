@@ -40,6 +40,40 @@ const query = `
       title
     }
   }
+  links {
+    id
+    title
+    prefix
+    icon
+    url
+  }
+  logos: works(sort: "createdAt:desc", where: {
+    subcategory: "logo"
+  }) {
+    id
+    title
+    year
+    city
+    category    
+    slug
+    tag
+    content_en {
+      title
+      description
+      seo_image_title
+      seo_image_alt
+      seo_description
+      
+    }
+    content_es {
+      title
+      description
+      seo_image_title
+      seo_image_alt
+      seo_description
+      
+    }
+  }
 }
 `
 module.exports = query

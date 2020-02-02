@@ -1,6 +1,6 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { injectIntl } from "../../plugins/gatsby-plugin-intl-graphql"
 
 /* eslint-disable */
 
@@ -9,48 +9,31 @@ let faprefix = null
 
 // Main footer component
 
-const Navigation = () => (
-  <StaticQuery
-    query={graphql`
-      query FooterTemplate {
-        allStrapiLink {
-          nodes {
-            id
-            title
-            icon
-            url
-            prefix
-          }
-        }
-      }
-    `}
-    render={data => (
-      <footer>
-        <p>flaex.com - {new Date().getFullYear()}</p>
-        <div className="links">
-          {data.allStrapiLink.nodes.map(document => (
-            <div key={document.id}>
-              <a
-                href={document.url}
-                rel="noopener noreferrer"
-                target="_blank"
-                aria-label={`Ir a ${document.title}`}
-              >
-                <FontAwesomeIcon
-                  icon={[
-                    (faprefix = document.prefix.replace(/'/g, "")),
-                    (faicon = document.icon.replace(/'/g, "")),
-                  ]}
-                  fixedWidth
-                  size="lg"
-                />
-              </a>
-            </div>
-          ))}
+const Navigation = ({ intl: { messages } }) => (
+  <footer>
+    <p>flaex.com - {new Date().getFullYear()}</p>
+    <div className="links">
+      {messages.links.map(item => (
+        <div key={item.id}>
+          <a
+            href={item.url}
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label={`Ir a ${item.title}`}
+          >
+            <FontAwesomeIcon
+              icon={[
+                (faprefix = item.prefix.replace(/'/g, "")),
+                (faicon = item.icon.replace(/'/g, "")),
+              ]}
+              fixedWidth
+              size="lg"
+            />
+          </a>
         </div>
-      </footer>
-    )}
-  />
+      ))}
+    </div>
+  </footer>
 )
 
-export default Navigation
+export default injectIntl(Navigation)

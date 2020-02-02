@@ -30,13 +30,13 @@ const Header = ({ intl: { messages } }) => (
       <header>
         <div>
           <div className="logohead">
-            <Link to="/shuffler" aria-label="Ir al randomizador">
+            <Link to="/shuffler" aria-label="Go to the randomizer">
               <Img fluid={data.head.childImageSharp.fluid} />
             </Link>
             <span className="tooltiptext">{messages.static.components.header.faces}</span>
           </div>
           <div className="logotag">
-            <Link to="/about-me" aria-label="Ir al perfil">
+            <Link to="/about-me" aria-label="Go to the bio">
               <Img fluid={data.tag.childImageSharp.fluid} />
             </Link>
             <span className="tooltiptext">{messages.static.components.header.about_me}</span>

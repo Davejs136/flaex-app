@@ -25,7 +25,7 @@ const Navigation = ({ intl: { messages } }) => (
           ? { style: { ...linkStyles, ...activeStyles } }
           : null
       }
-      aria-label="Ir al portafolio de diseño gráfico"
+      aria-label="Go to the graphic design portfolio page"
     >
       <span>
       {messages.static.components.navigation.portfolio}
@@ -40,13 +40,13 @@ const Navigation = ({ intl: { messages } }) => (
           : null
       }
 
-      aria-label="Ir al portafolio de desarrollo front-end"
+      aria-label="Go to the frontend portfolio page"
     >
       <span>
         {messages.static.components.navigation.blog}
       </span>
     </Link>
-    <Link to="/contact" activeStyle={activeStyles} aria-label="Ir a la información de contacto">
+    <Link to="/contact" activeStyle={activeStyles} aria-label="Go to the contact page">
       <span>        
         {messages.static.components.navigation.contact}
       </span>
