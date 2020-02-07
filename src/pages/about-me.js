@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import GoogleMap from "../components/googleMap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import SEO from "../components/seo"
-import { injectIntl } from "../../plugins/gatsby-plugin-intl-graphql"
+import { injectIntl } from "gatsby-plugin-intl-graphql"
 
 const ReactMarkdown = require("react-markdown/with-html")
 

@@ -12,6 +12,7 @@
     "browser-monads": "^1.0.0",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.34",
+    "gatsby-plugin-intl-graphql": "git+https://github.com/Davejs136/gatsby-plugin-intl-graphql.git#v2.1",
     "gatsby-plugin-less": "^3.0.18",
     "gatsby-plugin-manifest": "^2.2.31",
     "gatsby-plugin-offline": "^3.0.27",

@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { injectIntl } from "../../plugins/gatsby-plugin-intl-graphql"
+import { injectIntl } from "gatsby-plugin-intl-graphql"
 
 const activeStyles = {
   backgroundColor: "#ffffff",

@@ -1,6 +1,6 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { injectIntl } from "../../plugins/gatsby-plugin-intl-graphql"
+import { injectIntl } from "gatsby-plugin-intl-graphql"
 
 /* eslint-disable */
 

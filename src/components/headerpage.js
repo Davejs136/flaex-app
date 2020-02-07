@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
-import { injectIntl } from "../../plugins/gatsby-plugin-intl-graphql"
+import { injectIntl } from "gatsby-plugin-intl-graphql"
 
 
 // Main page header component
