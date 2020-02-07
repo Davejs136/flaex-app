@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../../../components/layout"
 import SEO from "../../../components/seo"
+import { injectIntl } from "gatsby-plugin-intl-graphql"
 import { window } from "browser-monads"
 import { PinterestShareButton, PinterestIcon } from "react-share"
 
@@ -13,51 +14,61 @@ const ReactMarkdown = require("react-markdown/with-html")
 
 const openLightbox = event => {
   const node = document.querySelector("#___gatsby")
+  /*  const src = event.target.src */
   node.insertAdjacentHTML(
     "afterbegin",
-    `<div id="lightbox" class="lightbox" onClick="document.getElementById('lightbox').remove()"><p onClick="document.getElementById('lightbox').remove()">✖</p><img src=${event} alt="Project gallery image" /></div>`
+    `<div id="lightbox" class="lightbox" onClick="document.getElementById('lightbox').remove()">
+        <p onClick="document.getElementById('lightbox').remove()">✖</p>
+        <img src=${event} alt="Project gallery image" />
+     </div>`
   )
 }
 
-const WorkTemplate = ({ data }) => (
+const WorkTemplate = ({ data, intl: { messages }}) => (
   <Layout>
     <SEO
       title={data.strapiWork.title}
-      image={data.strapiWork.thumbnail.childImageSharp.fluid.src}
+      image={data.strapiWork.image.childImageSharp.fluid.src}
       description={data.strapiWork.seo_description}
     />
     <div className="navsec">
       <button onClick={() => window.history.back()}>&#10229;</button>
     </div>
     <article>
-      <h1>{data.strapiWork.title}</h1>
+      <h1>{messages.logos[1].title}</h1>
       <div className="city-year">
-        Ciudad: {data.strapiWork.city}. Año: {data.strapiWork.year}
-      </div>
+        {messages.static.views.works.city}: {messages.logos[1].city}. {messages.static.views.works.year}: {messages.logos[1].year}
+      </div>    
       <ul className="works work-images">
-        {data.strapiWork.images.map(document => (
-          <li
-            key={document.localFile.name}
-            onClick={event => openLightbox(event.target.src)}
-          >
-            <Img
-              className="galleryImage"
-              fluid={document.localFile.childImageSharp.fluid}
-              title={data.strapiWork.img_title}
-              alt={data.strapiWork.img_alt}
-            />
+        {data.strapiWork.gallery.map(items => (
+          <li key={items.localFile.name}>
+            {/* eslint-disable */}
+            <div
+              onClick={event => openLightbox(event.target.src)}
+              onKeyDown={event => openLightbox(event.target.src)}
+            >
+              <Img
+                className="galleryImage"
+                fluid={items.localFile.childImageSharp.fluid}
+                title={data.strapiWork.img_title}
+                alt={data.strapiWork.img_alt}
+                onClick={event => openLightbox(event.target.src)}
+                onKeyDown={event => openLightbox(event.target.src)}
+              />
+            </div>
           </li>
         ))}
       </ul>
       <div className="two-columns">
         <ReactMarkdown
           className="description"
-          source={data.strapiWork.description}
+          source={messages.logos[1].content.description}
           transformImageUri={uri =>
             uri.startsWith("http") ? uri : `${process.env.IMAGE_BASE_URL}${uri}`
           }
           escapeHtml={false}
         />
+        
       </div>
       <h4 className="share-title">Comparte este proyecto:</h4>
       <ul className="share">
@@ -65,10 +76,10 @@ const WorkTemplate = ({ data }) => (
           <PinterestShareButton
             children="a"
             url={shareUrl}
-            media={`${window.location.protocol}//${window.location.hostname}${data.strapiWork.thumbnail.childImageSharp.fluid.src}`}
+            media={`${window.location.protocol}//${window.location.hostname}${data.strapiWork.image.childImageSharp.fluid.src}`}
             windowWidth={675}
             windowHeight={675}
-            description={data.strapiWork.description}
+            description={messages.logos[1].content.description}
           >
             <PinterestIcon size={32} />
           </PinterestShareButton>
@@ -78,22 +89,29 @@ const WorkTemplate = ({ data }) => (
   </Layout>
 )
 
-export default WorkTemplate
+export default injectIntl(WorkTemplate)
 
 export const query = graphql`
-  query WorkTemplate($id: String!) {
+  query WorkTemplate($id: String) {
     strapiWork(id: { eq: $id }) {
-      id
-      title
-      year
-      city
+      id   
       image {
         childImageSharp {
           fluid(maxWidth: 675) {
             ...GatsbyImageSharpFluid
           }
         }
-      }    
+      }
+      gallery {
+        localFile {
+          name
+          childImageSharp {
+            fluid(maxWidth: 675) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
     }
   }
 `

@@ -52,7 +52,7 @@ export default function LogosSlide(props) {
                   document.node.subcategory
                 }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
               >
-                <Img fluid={document.node.thumbnail.childImageSharp.fluid} />
+                <Img fluid={document.node.image.childImageSharp.fluid} />
               </Link>
             ))}
           </Slider>

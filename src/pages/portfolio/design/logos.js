@@ -59,4 +59,4 @@ const LogosPage = ({ intl: { messages } }) => (
   />
 )
 
-export default LogosPage
+export default injectIntl(LogosPage)
