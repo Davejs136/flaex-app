@@ -40,13 +40,13 @@ const WorkTemplate = ({ data, intl: { messages } }) => (
         <article>
           <h1>{item.title}</h1>
           <div className="city-year">
-            {messages.static.views.works.city}: {item.city}
-            {messages.static.views.works.year}: {item.year}
+            {messages.static.views.portfolio.works.city}: {item.city} {" - "}
+            {messages.static.views.portfolio.works.year}: {item.year}
           </div>
 
           <ul className="works work-images">
-            {data.strapiWork.gallery.map(items => (
-              <li key={items.localFile.name}>
+            {data.strapiWork.gallery.map(item => (
+              <li key={item.localFile.name}>
                 {/* eslint-disable */}
                 <div
                   onClick={event => openLightbox(event.target.src)}
@@ -54,7 +54,7 @@ const WorkTemplate = ({ data, intl: { messages } }) => (
                 >
                   <Img
                     className="galleryImage"
-                    fluid={items.localFile.childImageSharp.fluid}
+                    fluid={item.localFile.childImageSharp.fluid}
                     title={data.strapiWork.img_title}
                     alt={data.strapiWork.img_alt}
                     onClick={event => openLightbox(event.target.src)}

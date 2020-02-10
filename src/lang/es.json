@@ -1,1 +1,204 @@
-{"static":{"lang":"es","components":{"header":{"faces":"caras","about_me":"perfil"},"navigation":{"portfolio":"portafolio","blog":"blog","contact":"contacto"}},"views":{"about_me":{"title":"Sobre mi","skills":"Mis habilidades","story":"Mi historia","location":"Donde vivo"},"works":{"city":"Ciudad","year":"Año"}}},"profiles":[{"name":"Freddy Polanía","city":"caracas","content":{"headline":"Diseñador gráfico y desarrollador web frontend","summary":"Mi nombre es Freddy Polanía. Soy diseñador gráfico y desarrollador web front end apasionado  en diseñar aplicaciones web para mejorar ;a experiencias de usuario. Estoy involucrado activamente en la creación de productos web para que su usabilidad y diseño se encuentren bien alineados. Me gusta hacer UI, logotipos, letras display, iconos. HMTL/CSS/JS es el combo del poder 💥💻💥.<br/><br/>\n \nHe realizado proyectos de creación de logos, branding impreso y digital en papelería comercial, catálogos, manuales de identidad gráfica, sitios web, presentaciones interactivas y campañas en redes sociales. También, he participado y dirigido proyectos de sitios web estáticos y dinámicos, implementación de templates en CMS propietarios y open source, desarrollo de aplicaciones PWA en librerías front-end utilizando HTML5, CSS3 y Javascript.","story":"Egresé del Instituto de Diseño Darias en el año 2013. Previamente estudié ingeniería en computación y me interesé por el diseño web, a tal punto que cambié de carrera. En el Darias, aprendí los fundamentos del diseño, tipografía, ilustración, identidad corporativa, fotografía, entre muchas otras cosas. Recibí clases de grandes profesores y maestros, algunos de los cuales se volvieron grandes amigos. Hice cursos web de *HTML* / *Flash* y así empecé a hacer mis primeras páginas web.<br/><br/>\n \nTrabajé como asistente del director del Darias en 2008 a cargo de la página web del instituto. Participé en la preparación de la exposición de tipografía latinoamericana Tipos Latinos en el Museo del Diseño y de la Estampa Carlos Cruz-Diez. Ese mismo año conseguí mi primer trabajo de diseñador web y conocí los gestores de contenido; ahí empecé a dar los primeros pasos con las hojas de estilos CSS para mejorar la apariencia de las vistas HTML.<br/><br/>\n\nEn octubre de 2014, el sitio web que hice para Banco del Libro fue seleccionado para participar en la Bienal Iberoamericana de Diseño BID de ese mismo año en la categoría de diseño digital. Colaboré en el desarrollo y diseño del sitio web para el Congreso de diseño <a href=\"https://www.facebook.com/pg/Congreso-Caracas-Design-523755717785848\" target=\"_blank\">Caracas Design</a> en sus ediciones 2013, 2014 y 2015. A comienzos de 2019 me certifiqué como front-end web developer; desde enero de 2010 me desempeño como director y gerente en las áreas de proyectos de diseño y desarrollo web front-end en Novanet.\n","seo_description":"Freddy Polania, diseñador gráfico y desarrollador web front-end apasionado del diseño y las aplicaciones web","seo_img_title":"Avatar de Freddy Polanía","seo_img_alt":"Imagen de perfil del autor"}}],"locations":[{"city":"Caracas","content":{"description":"Santiago de León de **Caracas**, capital de Venezuela. Ciudad donde nací y vivo."}}],"skills":[{"id":"5e131fff3dc85f21d2f05a9f","prefix":"fas","icon":"file-code","content":{"title":"HTML/CSS/JS"}},{"id":"5e13202b3dc85f21d2f05aa0","prefix":"fas","icon":"pencil-ruler","content":{"title":"branding"}},{"id":"5e13207c3dc85f21d2f05aa1","prefix":"fab","icon":"simplybuilt","content":{"title":"desarrollo web frontend"}},{"id":"5e1320a03dc85f21d2f05aa2","prefix":"fas","icon":"font","content":{"title":"diseño tipográfico"}},{"id":"5e1320bc3dc85f21d2f05aa3","prefix":"fas","icon":"palette","content":{"title":"diseño web"}},{"id":"5e1320ee3dc85f21d2f05aa4","prefix":"fas","icon":"cube","content":{"title":"temas CMS"}}],"links":[{"id":"5e131de91686e31dd43ecadd","title":"github","prefix":"fab","icon":"github","url":"https://github.com/Flaex"},{"id":"5e131e8ea1f86421079595cd","title":"instagram","prefix":"fab","icon":"instagram","url":"https://www.instagram.com/flaex_"},{"id":"5e131efc2d5f43214d0435c6","title":"linkedinin","prefix":"fab","icon":"linkedin-in","url":"https://www.linkedin.com/in/freddypolania/"},{"id":"5e131f172d5f43214d0435c7","title":"pinterest","prefix":"fab","icon":"pinterest","url":"https://www.pinterest.com/flaex/"},{"id":"5e131f422d5f43214d0435c8","title":"twitter","prefix":"fab","icon":"twitter","url":"https://twitter.com/Flaex_"}],"logos":[{"id":"5e24a6b580d26024e61907bd","title":"Dr.MacQ - Logo","year":2018,"city":"Windhoek","category":"design","slug":"DrMacQ","tag":null,"content":{"title":null,"description":"Uno de los requisitos para este logotipo era parecerse de alguna manera a la marca principal, por esta razón, se decidió mantener la misma tipografía y la forma del torso humano. El logotipo de Dr.MacQ fue diseñado para una aplicación móvil de telemedicina, el torso está inscrito en un estetoscopio en \"forma de corazón\" que termina con el símbolo \"wi-fi\" como la pieza del cofre.\n<br/> <br/>\n\nLa tarjeta de miembro y el volante a doble cara en formato A4 son parte de la implementación de la marca.","seo_image_title":"Dr.MacQ logo ","seo_image_alt":"Imagen del logo Dr.MacQ","seo_description":"Entrada de portafolio del logo de Dr.MacQ con implementación de branding en piezas impresas"}},{"id":"5e24446080d26024e61907ae","title":"Novanet - Logo","year":2018,"city":"Caracas","category":"design","slug":"novanet","tag":null,"content":{"title":"novanet logo","description":"\n\nEl número de elementos presentes en el emblema de la identidad tiene una relación directa con las tres entidades presentes en la Santísima Trinidad. Además, estas tres partes se han colocado de manera tal que se asemeja al Triskele celta; en este caso, la base del triángulo está en el lado derecho en lugar de en la parte inferior. La tipografía se ha diseñado alrededor del elemento en forma de círculo para que coincida con el sistema de diseño.\n<br/> <br/>\n\nLas imágenes muestran dos aplicaciones de branding en papelería diferentes, de las versiones 2018 y 2015, respectivamente.","seo_image_title":"Novanet logo 2018","seo_image_alt":"Logo de novanet versión 2018","seo_description":"Entrada de cartera de imágenes del logotipo de novanet de las versiones 2018 y 2015"}},{"id":"5e131a781686e31dd43ecab7","title":"Athlos - Logo","year":2019,"city":"Caracas","category":"design","slug":"athlos","tag":null,"content":{"title":"Athlos logo","description":"El nombre para la marca surgió como resultado de un intercambio de ideas con el cliente; el concepto para el diseño partió desde la construcción geométrica de las letras que componen el logo, como lo es el caso de la 'A', que es el triángulo que se dibuja cuando se super pone un cuadrado y circulo de iguales ancho y alto. El resto de las letras del nombre se crearon siguiendo el mismo patrón de diseño para lograr que se vieran como un mismo sistema, lo más similares a una familia tipográfica. Dado que desde un principio el cliente estuvo integrado al proceso creativo, este logotipo se dio con mucha fluidez, por lo que la implementación de la marca surgió de forma natural. \n\nDiseño de identidad gráfica para [compañía](https://www.instagram.com/athlos.ve/) de ropa deportiva.","seo_image_title":"Título de la imagen","seo_image_alt":"Texto alternativo para la imagen","seo_description":"Descripción SEO"}}]}
+{
+  "static": {
+    "lang": "es",
+    "components": {
+      "header": {
+        "faces": "caras",
+        "about_me": "perfil"
+      },
+      "navigation": {
+        "portfolio": "portafolio",
+        "blog": "blog",
+        "contact": "contacto"
+      }
+    },
+    "views": {
+      "about_me": {
+        "title": "Sobre mi",
+        "skills": "Mis habilidades",
+        "story": "Mi historia",
+        "location": "Donde vivo"
+      },
+      "portfolio": {
+        "title": "portafolio",
+        "design": {
+          "title": "Diseño gráfico",
+          "description": "Creación de logos, branding impreso y digital en papelería comercial, catálogos, manuales de identidad gráfica, señalización y tipografía. En algunos casos fue posible combinar varias especialidades para crear identidades corporativas en diversas medios de la comunicación visual.",
+          "logos": "logotipos",
+          "prints": "impresos",
+          "web": "web",
+          "typography": "tipografía"
+        },
+        "development": {
+          "title": "Desarrollo web",
+          "description": "Sitios web estáticos y dinámicos, implementación de templates en CMS propietarios y open source, desarrollo de aplicaciones PWA en librerías front-end utilizando HTML5, CSS3 y Javascript. En varios de estos trabajos pude combinar especialidades del diseño gráfico y del desarrollo web para crear aplicaciones que funcionan como extensiones de la identidad gráfica.",
+          "fend": "front-end",
+          "cms": "Temas CMS"
+        },
+        "works": {
+          "city": "Ciudad",
+          "year": "Año"
+        }
+      }
+    }
+  },
+  "profiles": [
+    {
+      "name": "Freddy Polanía",
+      "city": "caracas",
+      "content": {
+        "headline": "Diseñador gráfico y desarrollador web frontend",
+        "summary": "Mi nombre es Freddy Polanía. Soy diseñador gráfico y desarrollador web front end apasionado  en diseñar aplicaciones web para mejorar ;a experiencias de usuario. Estoy involucrado activamente en la creación de productos web para que su usabilidad y diseño se encuentren bien alineados. Me gusta hacer UI, logotipos, letras display, iconos. HMTL/CSS/JS es el combo del poder 💥💻💥.<br/><br/>\n \nHe realizado proyectos de creación de logos, branding impreso y digital en papelería comercial, catálogos, manuales de identidad gráfica, sitios web, presentaciones interactivas y campañas en redes sociales. También, he participado y dirigido proyectos de sitios web estáticos y dinámicos, implementación de templates en CMS propietarios y open source, desarrollo de aplicaciones PWA en librerías front-end utilizando HTML5, CSS3 y Javascript.",
+        "story": "Egresé del Instituto de Diseño Darias en el año 2013. Previamente estudié ingeniería en computación y me interesé por el diseño web, a tal punto que cambié de carrera. En el Darias, aprendí los fundamentos del diseño, tipografía, ilustración, identidad corporativa, fotografía, entre muchas otras cosas. Recibí clases de grandes profesores y maestros, algunos de los cuales se volvieron grandes amigos. Hice cursos web de *HTML* / *Flash* y así empecé a hacer mis primeras páginas web.<br/><br/>\n \nTrabajé como asistente del director del Darias en 2008 a cargo de la página web del instituto. Participé en la preparación de la exposición de tipografía latinoamericana Tipos Latinos en el Museo del Diseño y de la Estampa Carlos Cruz-Diez. Ese mismo año conseguí mi primer trabajo de diseñador web y conocí los gestores de contenido; ahí empecé a dar los primeros pasos con las hojas de estilos CSS para mejorar la apariencia de las vistas HTML.<br/><br/>\n\nEn octubre de 2014, el sitio web que hice para Banco del Libro fue seleccionado para participar en la Bienal Iberoamericana de Diseño BID de ese mismo año en la categoría de diseño digital. Colaboré en el desarrollo y diseño del sitio web para el Congreso de diseño <a href=\"https://www.facebook.com/pg/Congreso-Caracas-Design-523755717785848\" target=\"_blank\">Caracas Design</a> en sus ediciones 2013, 2014 y 2015. A comienzos de 2019 me certifiqué como front-end web developer; desde enero de 2010 me desempeño como director y gerente en las áreas de proyectos de diseño y desarrollo web front-end en Novanet.\n",
+        "seo_description": "Freddy Polania, diseñador gráfico y desarrollador web front-end apasionado del diseño y las aplicaciones web",
+        "seo_img_title": "Avatar de Freddy Polanía",
+        "seo_img_alt": "Imagen de perfil del autor"
+      }
+    }
+  ],
+  "locations": [
+    {
+      "city": "Caracas",
+      "content": {
+        "description": "Santiago de León de **Caracas**, capital de Venezuela. Ciudad donde nací y vivo."
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "5e131fff3dc85f21d2f05a9f",
+      "prefix": "fas",
+      "icon": "file-code",
+      "content": {
+        "title": "HTML/CSS/JS"
+      }
+    },
+    {
+      "id": "5e13202b3dc85f21d2f05aa0",
+      "prefix": "fas",
+      "icon": "pencil-ruler",
+      "content": {
+        "title": "branding"
+      }
+    },
+    {
+      "id": "5e13207c3dc85f21d2f05aa1",
+      "prefix": "fab",
+      "icon": "simplybuilt",
+      "content": {
+        "title": "desarrollo web frontend"
+      }
+    },
+    {
+      "id": "5e1320a03dc85f21d2f05aa2",
+      "prefix": "fas",
+      "icon": "font",
+      "content": {
+        "title": "diseño tipográfico"
+      }
+    },
+    {
+      "id": "5e1320bc3dc85f21d2f05aa3",
+      "prefix": "fas",
+      "icon": "palette",
+      "content": {
+        "title": "diseño web"
+      }
+    },
+    {
+      "id": "5e1320ee3dc85f21d2f05aa4",
+      "prefix": "fas",
+      "icon": "cube",
+      "content": {
+        "title": "temas CMS"
+      }
+    }
+  ],
+  "links": [
+    {
+      "id": "5e131de91686e31dd43ecadd",
+      "title": "github",
+      "prefix": "fab",
+      "icon": "github",
+      "url": "https://github.com/Flaex"
+    },
+    {
+      "id": "5e131e8ea1f86421079595cd",
+      "title": "instagram",
+      "prefix": "fab",
+      "icon": "instagram",
+      "url": "https://www.instagram.com/flaex_"
+    },
+    {
+      "id": "5e131efc2d5f43214d0435c6",
+      "title": "linkedinin",
+      "prefix": "fab",
+      "icon": "linkedin-in",
+      "url": "https://www.linkedin.com/in/freddypolania/"
+    },
+    {
+      "id": "5e131f172d5f43214d0435c7",
+      "title": "pinterest",
+      "prefix": "fab",
+      "icon": "pinterest",
+      "url": "https://www.pinterest.com/flaex/"
+    },
+    {
+      "id": "5e131f422d5f43214d0435c8",
+      "title": "twitter",
+      "prefix": "fab",
+      "icon": "twitter",
+      "url": "https://twitter.com/Flaex_"
+    }
+  ],
+  "logos": [
+    {
+      "id": "5e24a6b580d26024e61907bd",
+      "title": "Dr.MacQ - Logo",
+      "year": 2018,
+      "city": "Windhoek",
+      "category": "design",
+      "slug": "DrMacQ",
+      "tag": null,
+      "content": {
+        "title": null,
+        "description": "Uno de los requisitos para este logotipo era parecerse de alguna manera a la marca principal, por esta razón, se decidió mantener la misma tipografía y la forma del torso humano. El logotipo de Dr.MacQ fue diseñado para una aplicación móvil de telemedicina, el torso está inscrito en un estetoscopio en \"forma de corazón\" que termina con el símbolo \"wi-fi\" como la pieza del cofre.\n<br/> <br/>\n\nLa tarjeta de miembro y el volante a doble cara en formato A4 son parte de la implementación de la marca.",
+        "seo_image_title": "Dr.MacQ logo ",
+        "seo_image_alt": "Imagen del logo Dr.MacQ",
+        "seo_description": "Entrada de portafolio del logo de Dr.MacQ con implementación de branding en piezas impresas"
+      }
+    },
+    {
+      "id": "5e24446080d26024e61907ae",
+      "title": "Novanet - Logo",
+      "year": 2018,
+      "city": "Caracas",
+      "category": "design",
+      "slug": "novanet",
+      "tag": null,
+      "content": {
+        "title": "novanet logo",
+        "description": "\n\nEl número de elementos presentes en el emblema de la identidad tiene una relación directa con las tres entidades presentes en la Santísima Trinidad. Además, estas tres partes se han colocado de manera tal que se asemeja al Triskele celta; en este caso, la base del triángulo está en el lado derecho en lugar de en la parte inferior. La tipografía se ha diseñado alrededor del elemento en forma de círculo para que coincida con el sistema de diseño.\n<br/> <br/>\n\nLas imágenes muestran dos aplicaciones de branding en papelería diferentes, de las versiones 2018 y 2015, respectivamente.",
+        "seo_image_title": "Novanet logo 2018",
+        "seo_image_alt": "Logo de novanet versión 2018",
+        "seo_description": "Entrada de cartera de imágenes del logotipo de novanet de las versiones 2018 y 2015"
+      }
+    },
+    {
+      "id": "5e131a781686e31dd43ecab7",
+      "title": "Athlos - Logo",
+      "year": 2019,
+      "city": "Caracas",
+      "category": "design",
+      "slug": "athlos",
+      "tag": null,
+      "content": {
+        "title": "Athlos logo",
+        "description": "El nombre para la marca surgió como resultado de un intercambio de ideas con el cliente; el concepto para el diseño partió desde la construcción geométrica de las letras que componen el logo, como lo es el caso de la 'A', que es el triángulo que se dibuja cuando se super pone un cuadrado y circulo de iguales ancho y alto. El resto de las letras del nombre se crearon siguiendo el mismo patrón de diseño para lograr que se vieran como un mismo sistema, lo más similares a una familia tipográfica. Dado que desde un principio el cliente estuvo integrado al proceso creativo, este logotipo se dio con mucha fluidez, por lo que la implementación de la marca surgió de forma natural. \n\nDiseño de identidad gráfica para [compañía](https://www.instagram.com/athlos.ve/) de ropa deportiva.",
+        "seo_image_title": "Título de la imagen",
+        "seo_image_alt": "Texto alternativo para la imagen",
+        "seo_description": "Descripción SEO"
+      }
+    }
+  ]
+}

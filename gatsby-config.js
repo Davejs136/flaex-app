@@ -55,7 +55,7 @@ module.exports = {
         redirect: true,
         query,
       },
-    },    
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

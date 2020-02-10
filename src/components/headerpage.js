@@ -3,7 +3,6 @@ import { StaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import { injectIntl } from "gatsby-plugin-intl-graphql"
 
-
 // Main page header component
 
 const HeaderPage = ({ intl: { messages } }) => (
@@ -33,13 +32,17 @@ const HeaderPage = ({ intl: { messages } }) => (
             <Link to="/shuffler" aria-label="Go to the randomizer">
               <Img fluid={data.head.childImageSharp.fluid} />
             </Link>
-            <span className="tooltiptext">{messages.static.components.header.faces}</span>
+            <span className="tooltiptext">
+              {messages.static.components.header.faces}
+            </span>
           </div>
           <div className="logotag">
             <Link to="/about-me" aria-label="Go to the bio">
               <Img fluid={data.tag.childImageSharp.fluid} />
             </Link>
-            <span className="tooltiptext">{messages.static.components.header.about_me}</span>
+            <span className="tooltiptext">
+              {messages.static.components.header.about_me}
+            </span>
           </div>
         </div>
       </header>
