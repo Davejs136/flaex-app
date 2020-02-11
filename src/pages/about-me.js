@@ -16,7 +16,11 @@ let faprefix = null
 
 const BioTemplate = ({ intl: { messages } }) => (
   <Layout>
-    <SEO title="about me" />
+    <SEO 
+      title={messages.static.views.about_me.seo_title}
+      description={messages.static.views.about_me.seo_description} 
+      keywords={messages.static.views.about_me.seo_keywords}  
+    />
     <StaticQuery
       query={graphql`
         query BioTemplate {

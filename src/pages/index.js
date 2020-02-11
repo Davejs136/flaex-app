@@ -2,7 +2,9 @@ import React from "react"
 import Header from "../components/header"
 import Navigation from "../components/navigation"
 import Footer from "../components/footer"
+import { injectIntl } from "gatsby-plugin-intl-graphql"
 import SEO from "../components/seo"
+
 // @fortawesome libraries
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { fab } from "@fortawesome/free-brands-svg-icons"
@@ -11,10 +13,14 @@ import { fas } from "@fortawesome/free-solid-svg-icons"
 library.add(fab, fas)
 
 // Main app page
-const IndexPage = () => (
+const IndexPage = ({ intl: { messages } }) => (
   <div className="home">
-    <SEO />
-    <h1 className="hidden">Portafolio & blog Freddy Polanía - @flaex_</h1>
+    <SEO
+      title={messages.static.views.index.seo_title}
+      description={messages.static.views.index.seo_description} 
+      keywords={messages.static.views.index.seo_keywords} 
+    />
+    <h1 className="hidden">{messages.static.views.index.seo_title}</h1>
     <div className="menu">
       <Header />
       <Navigation />
@@ -23,4 +29,4 @@ const IndexPage = () => (
   </div>
 )
 
-export default IndexPage
+export default injectIntl(IndexPage)

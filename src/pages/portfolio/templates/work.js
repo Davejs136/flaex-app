@@ -14,7 +14,6 @@ const ReactMarkdown = require("react-markdown/with-html")
 
 const openLightbox = event => {
   const node = document.querySelector("#___gatsby")
-  /*  const src = event.target.src */
   node.insertAdjacentHTML(
     "afterbegin",
     `<div id="lightbox" class="lightbox" onClick="document.getElementById('lightbox').remove()">
@@ -43,7 +42,6 @@ const WorkTemplate = ({ data, intl: { messages } }) => (
             {messages.static.views.portfolio.works.city}: {item.city} {" - "}
             {messages.static.views.portfolio.works.year}: {item.year}
           </div>
-
           <ul className="works work-images">
             {data.strapiWork.gallery.map(item => (
               <li key={item.localFile.name}>

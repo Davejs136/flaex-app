@@ -20,7 +20,11 @@ import "../../styles/slick-theme.less"
 
 const PortfolioPage = ({ intl: { messages } }) => (
   <Layout>
-    <SEO title="diseño gráfico" />
+    <SEO
+      title={messages.static.views.portfolio.seo_title}
+      description={messages.static.views.portfolio.seo_description} 
+      keywords={messages.static.views.portfolio.seo_keywords}
+    />
     <h1 className="hidden">{messages.static.views.portfolio.title}</h1>
     <section>
       <h2 className="no-top">

@@ -13,14 +13,25 @@
       }
     },
     "views": {
+      "index": {
+        "seo_title": "@flaex_ | Freddy Polanía Portafolio & blog",
+        "seo_description": "Portfolio showcase and blog about graphic design and web tecenologies",
+        "seo_keywords": "Logo print web typography design CMS themes front-end web development"
+      },
       "about_me": {
         "title": "About me",
+        "seo_title": "Profile information and resume",
+        "seo_description": "My story, graphic designer and front-end web developer skills",
+        "seo_keywords": "Graphic designer front-end web developer resume skills",
         "skills": "My skills",
         "story": "My story",
         "location": "Where I live"
       },
       "portfolio": {
         "title": "portfolio",
+        "seo_title": "Works showcase",
+        "seo_description": "Features, examples and information about the delivered projects",
+        "seo_keywords": "Logo print web typography design CMS themes front-end web development showcase",
         "design": {
           "title": "Graphic design",
           "description": "Creation of logos, printed and digital branding in commercial stationery, catalogs, graphic identity manuals, signage and typography. In some cases it was possible to combine several specialties to create corporate identities in various visual communication media.",

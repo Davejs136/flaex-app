@@ -6,10 +6,10 @@ const query = require("./queries/query")
 
 module.exports = {
   siteMetadata: {
-    title: "Diseñador gráfico & desarrollador front-end",
+    title: "Portafolio & blog @flaex_ | Freddy Polanía",
     titleTemplate: "%s · @flaex_",
-    description: "Portafolio & blog | Freddy Polanía",
-    keywords: "Diseño gráfico desarrollo fron-end pwa",
+    description: "Portfolio showcase and blog about graphic design and web tecenologies",
+    keywords: "Logo print web typography design CMS themes front-end web development",
     author: "Freddy Polania",
     siteUrl: "https://flaex.netlify.com",
     image: "/seo-img.jpg",
