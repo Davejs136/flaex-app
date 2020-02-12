@@ -37,19 +37,33 @@ const LogosPage = ({ intl: { messages } }) => (
     `}
     render={data => (
       <Layout>
-        <SEO title="diseño impresos" />
-        <h1 className="hidden">diseño logos</h1>
+        <SEO
+          title={messages.static.views.portfolio.design.logos.seo_title}
+          description={
+            messages.static.views.portfolio.design.logos.seo_description
+          }
+          keywords={messages.static.views.portfolio.design.logos.seo_keywords}
+        />
+
+        <h1 className="hidden">
+          {messages.static.views.portfolio.design.logos.title}
+        </h1>
         <Navigation />
+        {console.log(messages)}
         <ul className="works">
           {data.allStrapiWork.edges.map(document => (
             <li key={document.node.id}>
               <Link
-                to={`/portfolio/${document.node.category}/${
+                to={`${messages.static.lang}/portfolio/${document.node.category}/${
                   document.node.subcategory
                 }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
               >
                 <Img fluid={document.node.image.childImageSharp.fluid} />
-                <h2>{document.node.title}</h2>
+                {messages.logos
+                  .filter(item => item.id === document.node.id.slice(5))
+                  .map(item => (
+                    <h2 key={item.id}>{item.title}</h2>
+                  ))}
               </Link>
             </li>
           ))}

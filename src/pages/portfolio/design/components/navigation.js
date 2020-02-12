@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { injectIntl } from "gatsby-plugin-intl-graphql"
 
 const activeStyles = {
   backgroundColor: "#ffffff",
@@ -12,38 +13,38 @@ const activeStyles = {
 
 // Navigation links for design category
 
-const DesignNavigationComponent = () => (
+const DesignNavigationComponent = ({ intl: { messages } }) => (
   <div className="navsec">
     <button onClick={() => window.history.back()}>&#10229;</button>
     <Link
       to="/portfolio/design/logos"
       activeStyle={activeStyles}
-      aria-label="Ir al portafolio de logos"
+      aria-label={messages.static.views.portfolio.design.logos.seo_title}
     >
-      logos
+      {messages.static.views.portfolio.design.logos.title}
     </Link>
     <Link
-      to="/portfolio/design/prints"
+      to={`${messages.static.lang}/portfolio/design/prints`}
       activeStyle={activeStyles}
-      aria-label="Ir al portafolio de impresos"
+      aria-label={messages.static.views.portfolio.design.prints.seo_title}
     >
-      impresos
+      {messages.static.views.portfolio.design.prints.title}
     </Link>
     <Link
-      to="/portfolio/design/web"
+      to={`${messages.static.lang}/portfolio/design/web`}
       activeStyle={activeStyles}
-      aria-label="Ir al portafolio de diseño web"
+      aria-label={messages.static.views.portfolio.design.web.seo_title}
     >
-      web
+      {messages.static.views.portfolio.design.web.title}
     </Link>
     <Link
-      to="/portfolio/design/typography"
+      to={`${messages.static.lang}/portfolio/design/typography`}
       activeStyle={activeStyles}
-      aria-label="Ir al portafolio de diseño tipográfico"
+      aria-label={messages.static.views.portfolio.design.typography.seo_title}
     >
-      tipografía
+      {messages.static.views.portfolio.design.typography.title}
     </Link>
   </div>
 )
 
-export default DesignNavigationComponent
+export default injectIntl(DesignNavigationComponent)

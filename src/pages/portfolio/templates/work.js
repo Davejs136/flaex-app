@@ -25,71 +25,74 @@ const openLightbox = event => {
 
 const WorkTemplate = ({ data, intl: { messages } }) => (
   <Layout>
-    <SEO
-      title={data.strapiWork.title}
-      image={data.strapiWork.image.childImageSharp.fluid.src}
-      description={data.strapiWork.seo_description}
-    />
-    <div className="navsec">
-      <button onClick={() => window.history.back()}>&#10229;</button>
-    </div>
     {messages.logos
       .filter(item => item.id === data.strapiWork.id.slice(5))
       .map(item => (
-        <article>
-          <h1>{item.title}</h1>
-          <div className="city-year">
-            {messages.static.views.portfolio.works.city}: {item.city} {" - "}
-            {messages.static.views.portfolio.works.year}: {item.year}
+        <div>
+          <SEO
+            title={item.content.title}
+            description={item.content.seo_description}
+            image={data.strapiWork.image.childImageSharp.fluid.src}
+          />
+          <div className="navsec">
+            <button onClick={() => window.history.back()}>&#10229;</button>
           </div>
-          <ul className="works work-images">
-            {data.strapiWork.gallery.map(item => (
-              <li key={item.localFile.name}>
-                {/* eslint-disable */}
-                <div
-                  onClick={event => openLightbox(event.target.src)}
-                  onKeyDown={event => openLightbox(event.target.src)}
-                >
-                  <Img
-                    className="galleryImage"
-                    fluid={item.localFile.childImageSharp.fluid}
-                    title={data.strapiWork.img_title}
-                    alt={data.strapiWork.img_alt}
+
+          <article>
+            <h1>{item.title}</h1>
+            <div className="city-year">
+              {messages.static.views.portfolio.works.city}: {item.city} {" - "}
+              {messages.static.views.portfolio.works.year}: {item.year}
+            </div>
+            <ul className="works work-images">
+              {data.strapiWork.gallery.map(item => (
+                <li key={item.localFile.name}>
+                  {/* eslint-disable */}
+                  <div
                     onClick={event => openLightbox(event.target.src)}
                     onKeyDown={event => openLightbox(event.target.src)}
-                  />
-                </div>
+                  >
+                    <Img
+                      className="galleryImage"
+                      fluid={item.localFile.childImageSharp.fluid}
+                      title={data.strapiWork.img_title}
+                      alt={data.strapiWork.img_alt}
+                      onClick={event => openLightbox(event.target.src)}
+                      onKeyDown={event => openLightbox(event.target.src)}
+                    />
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <div className="two-columns">
+              <ReactMarkdown
+                className="description"
+                source={item.content.description}
+                transformImageUri={uri =>
+                  uri.startsWith("http")
+                    ? uri
+                    : `${process.env.IMAGE_BASE_URL}${uri}`
+                }
+                escapeHtml={false}
+              />
+            </div>
+            <h4 className="share-title">Comparte este proyecto:</h4>
+            <ul className="share">
+              <li>
+                <PinterestShareButton
+                  children="a"
+                  url={shareUrl}
+                  media={`${window.location.protocol}//${window.location.hostname}${data.strapiWork.image.childImageSharp.fluid.src}`}
+                  windowWidth={675}
+                  windowHeight={675}
+                  description={item.content.description}
+                >
+                  <PinterestIcon size={32} />
+                </PinterestShareButton>
               </li>
-            ))}
-          </ul>
-          <div className="two-columns">
-            <ReactMarkdown
-              className="description"
-              source={item.content.description}
-              transformImageUri={uri =>
-                uri.startsWith("http")
-                  ? uri
-                  : `${process.env.IMAGE_BASE_URL}${uri}`
-              }
-              escapeHtml={false}
-            />
-          </div>
-          <h4 className="share-title">Comparte este proyecto:</h4>
-          <ul className="share">
-            <li>
-              <PinterestShareButton
-                children="a"
-                url={shareUrl}
-                media={`${window.location.protocol}//${window.location.hostname}${data.strapiWork.image.childImageSharp.fluid.src}`}
-                windowWidth={675}
-                windowHeight={675}
-                description={item.content.description}
-              >
-                <PinterestIcon size={32} />
-              </PinterestShareButton>
-            </li>
-          </ul>
-        </article>
+            </ul>
+          </article>
+        </div>
       ))}
   </Layout>
 )

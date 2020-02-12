@@ -32,13 +32,28 @@
         "seo_title": "Works showcase",
         "seo_description": "Features, examples and information about the delivered projects",
         "seo_keywords": "Logo print web typography design CMS themes front-end web development showcase",
+        "all": "see more",
         "design": {
           "title": "Graphic design",
           "description": "Creation of logos, printed and digital branding in commercial stationery, catalogs, graphic identity manuals, signage and typography. In some cases it was possible to combine several specialties to create corporate identities in various visual communication media.",
-          "logos": "logos",
-          "prints": "prints",
-          "web": "web",
-          "typography": "typography"
+          "logos": {
+            "title": "logos",
+            "seo_title": "logo design",
+            "seo_description": "logos showcase",
+            "seo_keywords": "logos graphic identity corporate image"
+          },
+          "prints": {
+            "title": "prints",
+            "seo_title": "prints design"
+          },
+          "web": {
+            "title": "web",
+            "seo_title": "web design"
+          },
+          "typography": {
+            "title": "typography",
+            "seo_title": "typography design "
+          }
         },
         "development": {
           "title": "Web development",

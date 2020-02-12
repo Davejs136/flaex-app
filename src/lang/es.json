@@ -32,13 +32,28 @@
         "seo_title": "Catálogo de trabajos realizados",
         "seo_description": "Características, muestras e información de los proyectos entregados",
         "seo_keywords": "portafolio catálogo diseño logos impresos web tipografía desarrollo web front-end temas CMS",
+        "all": "ver más",
         "design": {
           "title": "Diseño gráfico",
           "description": "Creación de logos, branding impreso y digital en papelería comercial, catálogos, manuales de identidad gráfica, señalización y tipografía. En algunos casos fue posible combinar varias especialidades para crear identidades corporativas en diversas medios de la comunicación visual.",
-          "logos": "logotipos",
-          "prints": "impresos",
-          "web": "web",
-          "typography": "tipografía"
+          "logos": {
+            "title": "logos",
+            "seo_title": "diseño de logotipos",
+            "seo_description": "Muestra de logotipos",
+            "seo_keywords": "logotipos identidad gráfica imagen corporativa"
+          },
+          "prints": {
+            "title": "impresos",
+            "seo_title": "diseño de impresos"
+          },
+          "web": {
+            "title": "web",
+            "seo_title": "diseño de páginas web"
+          },
+          "typography": {
+            "title": "tipografía",
+            "seo_title": "diseño de tipografía"
+          }
         },
         "development": {
           "title": "Desarrollo web",

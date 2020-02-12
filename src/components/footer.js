@@ -19,7 +19,7 @@ const Navigation = ({ intl: { messages } }) => (
             href={item.url}
             rel="noopener noreferrer"
             target="_blank"
-            aria-label={`Ir a ${item.title}`}
+            aria-label={item.title}
           >
             <FontAwesomeIcon
               icon={[

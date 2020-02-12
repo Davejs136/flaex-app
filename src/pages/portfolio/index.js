@@ -34,7 +34,7 @@ const PortfolioPage = ({ intl: { messages } }) => (
       <p className="two-columns">
       {messages.static.views.portfolio.design.description} 
       </p>
-      <Logos title={messages.static.views.portfolio.design.logos}  />
+      <Logos title={messages.static.views.portfolio.design.logos.title}  />
       {/* <Prints title="impresos" />
       <Web title="web" />
       <Typography title="tipografía" /> */}
