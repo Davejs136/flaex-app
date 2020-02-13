@@ -49,7 +49,7 @@ const LogosSlide = ({ intl: { messages } }) => (
           {data.allStrapiWork.edges.map(document => (
             <Link
               key={document.node.id}
-              to={`${messages.static.lang}/portfolio/${document.node.category}/${
+              to={`/${messages.static.lang}/portfolio/${document.node.category}/${
                 document.node.subcategory
               }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
             >
@@ -59,8 +59,8 @@ const LogosSlide = ({ intl: { messages } }) => (
         </Slider>
         <div className="all">
           <Link
-            to={`${messages.static.lang}/portfolio/design/logos`}
-            aria-label="Ir al portafolio de logos"
+            to={`/${messages.static.lang}/portfolio/design/logos`}
+            aria-label={messages.static.views.portfolio.design.logos.seo_title}
           >
             {messages.static.views.portfolio.all} {" ➝"}
           </Link>

@@ -49,12 +49,11 @@ const LogosPage = ({ intl: { messages } }) => (
           {messages.static.views.portfolio.design.logos.title}
         </h1>
         <Navigation />
-        {console.log(messages)}
         <ul className="works">
           {data.allStrapiWork.edges.map(document => (
             <li key={document.node.id}>
               <Link
-                to={`${messages.static.lang}/portfolio/${document.node.category}/${
+                to={`/${messages.static.lang}/portfolio/${document.node.category}/${
                   document.node.subcategory
                 }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
               >

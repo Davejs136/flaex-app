@@ -33,6 +33,10 @@
         "seo_description": "Características, muestras e información de los proyectos entregados",
         "seo_keywords": "portafolio catálogo diseño logos impresos web tipografía desarrollo web front-end temas CMS",
         "all": "ver más",
+        "works": {
+          "city": "Ciudad",
+          "year": "Año"
+        },
         "design": {
           "title": "Diseño gráfico",
           "description": "Creación de logos, branding impreso y digital en papelería comercial, catálogos, manuales de identidad gráfica, señalización y tipografía. En algunos casos fue posible combinar varias especialidades para crear identidades corporativas en diversas medios de la comunicación visual.",
@@ -44,26 +48,38 @@
           },
           "prints": {
             "title": "impresos",
-            "seo_title": "diseño de impresos"
+            "seo_title": "diseño de impresos",
+            "seo_description": "impresos y editorial",
+            "seo_keywords": "impreso editorial papelería comercial tarjeta presentación hoja membrete sobre"
           },
           "web": {
             "title": "web",
-            "seo_title": "diseño de páginas web"
+            "seo_title": "diseño de páginas web",
+            "seo_description": "Muestras de diseño web",
+            "seo_keywords": "diseño web páginas UI UX sitio"
           },
           "typography": {
             "title": "tipografía",
-            "seo_title": "diseño de tipografía"
+            "seo_title": "diseño de tipografía",
+            "seo_description": "Muestra tipografía",
+            "seo_keywords": "lettering tipografía títulos iconos"
           }
         },
         "development": {
           "title": "Desarrollo web",
           "description": "Sitios web estáticos y dinámicos, implementación de templates en CMS propietarios y open source, desarrollo de aplicaciones PWA en librerías front-end utilizando HTML5, CSS3 y Javascript. En varios de estos trabajos pude combinar especialidades del diseño gráfico y del desarrollo web para crear aplicaciones que funcionan como extensiones de la identidad gráfica.",
-          "fend": "front-end",
-          "cms": "Temas CMS"
-        },
-        "works": {
-          "city": "Ciudad",
-          "year": "Año"
+          "fend": {
+            "title": "front-end",
+            "seo_title": "Desarrollo web front-end",
+            "seo_description": "muestras de proyectos front-end",
+            "seo_keywords": "desarrollo web front-end HTMl CSS JS librerías"
+          },
+          "cms": {
+            "title": "Temas CMS",
+            "seo_title": "Temas CMS",
+            "seo_description": "Muestras de diseño implementación temas",
+            "seo_keywords": "CMS builders constructores visuales elementor wordpress"
+          }
         }
       }
     }
@@ -224,6 +240,106 @@
         "seo_image_title": "Título de la imagen",
         "seo_image_alt": "Texto alternativo para la imagen",
         "seo_description": "Descripción SEO"
+      }
+    }
+  ],
+  "prints": [
+    {
+      "id": "5e25b1f36f6e221701021954",
+      "title": "Dr.MacQ - Impresos",
+      "year": 2018,
+      "city": "Windhoek",
+      "category": "design",
+      "slug": "DrMacQ",
+      "tag": null,
+      "content": {
+        "title": "DrMacQ - Impresos y digital",
+        "description": "Para este proyecto, se requería diseñar un volante a doble cara de tamaño A4 para explicar cómo usar la aplicación de telemedicina para los afiliados de la compañía, un formulario de historial médico en PDF rellenable y un diseño de tarjeta de miembro spara la marca Dr.MacQ.\n<br/> <br/>\nLa idea detrás del volante a dos caras, es explicar el proceso sobre cómo usar la aplicación de telemedicina de manera \"paso a paso\" usando íconos para informar cada etapa y colores que se ajustan a la paleta de la marca; el primer lado muestra el proceso general y el otro lado explica cada paso en detalle. El formulario PDF rellenable se generó en 3 idiomas diferentes. En el caso del diseño de la tarjeta de miembro, se tomaron muchos de los patrones de diseño del volante a dos caras.",
+        "seo_image_title": "Diseño de tarjeta de miembros de DR.MacQ",
+        "seo_image_alt": "Imagen del diseño de la tarjeta de miembros DR.MacQ",
+        "seo_description": "Entrada de portafolio de las distintas piezas diseñadas para Dr.MacQ; un volante impreso a 2 caras, un formulario rellenable en PDF y un diseño para la tarjeta de miembros de la compañía"
+      }
+    },
+    {
+      "id": "5e259f6d6f6e221701021943",
+      "title": "EJ Supply - Piezas impresas",
+      "year": 2013,
+      "city": "Caracas",
+      "category": "design",
+      "slug": "ejsupply",
+      "tag": null,
+      "content": {
+        "title": "EJSUPPLY impresos",
+        "description": "Antes de trabajar en las piezas impresas de este proyecto, se actualizó el logotipo de la empresa: se redujo la cantidad de elementos, se eliminaron los gradientes del emblema y se seleccionó una nueva familia tipográfica.\n<br/> <br/>\nEJSUPPLY era una empresa de servicios de mantenimiento de ascensores, el resultado de la actualización permitió usar algunas formas presentes en el logotipo. Las piezas impresas diseñadas para la papelería fueron: tarjeta de presentación, carta membrete, sobre de tamaño oficio, sobres de número 11, hojas de servicio, carnet de operadores, agendas, letreros de identificación de la sala y 2 infografías de tamaño tabloide para informar el proceso de emergencia en caso de evacuación.",
+        "seo_image_title": "EJSUPPLY papelería comercial",
+        "seo_image_alt": "Imagen con algunas piezas impresas de EJSUPPLY",
+        "seo_description": "Entrada de portafolio del diseño de papelería comercial para EJSUPPLY con muestras de las piezas impresas diseñadas y una descripción breve del proyecto"
+      }
+    },
+    {
+      "id": "5e2598aa6f6e221701021938",
+      "title": "Take on Bar - Papelería comercial",
+      "year": 2015,
+      "city": "Caracas",
+      "category": "design",
+      "slug": "take on bar",
+      "tag": null,
+      "content": {
+        "title": "Take on bar papelería comercial",
+        "description": "Este diseño de papelería, sigue el mismo patrón de diseño del logotipo: alto contraste y minimalsita. Una de las intenciones, era tener la menor cantidad de elementos en las piezas impresas; se realizó un diseño especial para el CEO de la empresa y otro para los operadores del bar.",
+        "seo_image_title": "Tarjeta de presentación de Take on Bar",
+        "seo_image_alt": "Imagen de una versión de la tarjeta de presentación de Take on Bar",
+        "seo_description": "Entrada de portafolio del diseño de papelería de Take on Bar con detalles de las piezas realizadas."
+      }
+    }
+  ],
+  "web": [
+    {
+      "id": "5e2573876294450c5ea90a83",
+      "title": "Caracas Design",
+      "year": 2015,
+      "city": "Caracas",
+      "category": "development",
+      "slug": "caracas design",
+      "tag": "web",
+      "content": {
+        "title": "Caracas Design 2015",
+        "description": "Caracas Design fue un congreso anual que tuvo lugar en la capital venezolana de 2013 a 2015. El evento fue un esfuerzo por reunir a la comunidad de diseño gráfico del país y ofreció charlas, talleres y foros sobre carteles, tipografía, animación, ilustración, fotografía, editorial, arte urbano y gestión profesional.\n<br/> <br/>\nEl diseño web se inspiró en el póster oficial del congreso de la edición de 2015, el sitio se creó sobre SiIlverstripe CMS, el diseño se desarrolló como un tema de CMS responsive.",
+        "seo_image_title": "Página de inicio del sitio web de Caracas Design 2015",
+        "seo_image_alt": "Imagen que muestra información del concfrso Caracas Design 2015",
+        "seo_description": "Entrada de portafolio del Congreso Caracas Design 2015"
+      }
+    },
+    {
+      "id": "5e24bdbfff1b8a5f00b8a1e3",
+      "title": "Novanet - Vistas web",
+      "year": 2015,
+      "city": "Caracas",
+      "category": "design",
+      "slug": "Novanet web 2015",
+      "tag": "web",
+      "content": {
+        "title": "Novanet web 2015",
+        "description": "La versión 2015 de novanet web fue una implementación estática completa con PHP / jQuery / CSS. Las animaciones se realizaron utilizando la biblioteca de animación CreateJS, el diseño se arregló para adaptarse a una gran cantidad de dispositivos de pantalla",
+        "seo_image_title": "Página de inicio novanet web versión 2015",
+        "seo_image_alt": "Imagen del diseño de la página de inicio de la web de novanet versión 2015",
+        "seo_description": "Entrada de portafolio del diseño del sitio web de novanet versión 2015"
+      }
+    },
+    {
+      "id": "5e131c1b1686e31dd43ecac2",
+      "title": "Banco del libro",
+      "year": 2013,
+      "city": "Caracas",
+      "category": "development",
+      "slug": "banco del libro",
+      "tag": "web",
+      "content": {
+        "title": "Banco del libro sitio web",
+        "description": "El concepto para el diseño está estrechamente relacionado con las formas del logotipo del Banco del Libro; a partir de esto se estableció la disposición entre los diferentes elementos. Se buscó hacer la navegación del sitio web de tal forma que invitara tanto a niños, jóvenes y adultos a interesarse en las actividades que desarrolla el Banco del Libro. <br/><br/>\n\nCon todo ello en mente, se diseñó y desarrolló una animación en la página de inicio que presenta el logo y una barra de navegación que responden a la interacción del visitante de la página. Los vínculos internos mantienen el mismo concepto de menú animado y contenido generado  a través de un gestor de contenido. <br/><br/>\n\nLa implementación gráfica se realizó en html/css, animaciones en Flash y el CMS de código abierto utilizado es SilverStripe v2.4.5 (php,mysql), aplicado conjuntamente a la instalación e implementación de los módulos de noticias y galería de imágenes. [Vínculo](http://galerias.bid-dimad.org/bid_14/?p=4191) al artículo de la selección del proyecto en la Bienal Iberoamericana de Diseño BID 2014.",
+        "seo_image_title": "Página de inicio del Banco del Libro",
+        "seo_image_alt": "Imagen del diseño de la página de inico del sitio web del Banco del Libro",
+        "seo_description": "Entrada de portafolio del diseño web del Banco del Libro"
       }
     }
   ]

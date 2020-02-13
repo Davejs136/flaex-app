@@ -18,7 +18,7 @@ const linkStyles = {}
 const Navigation = ({ intl: { messages } }) => (
   <nav>
     <Link
-      to={`${messages.static.lang}/portfolio`}
+      to={`/${messages.static.lang}/portfolio`}
       activeStyle={activeStyles}
       getProps={({ isPartiallyCurrent }) =>
         isPartiallyCurrent
@@ -30,7 +30,7 @@ const Navigation = ({ intl: { messages } }) => (
       <span>{messages.static.components.navigation.portfolio}</span>
     </Link>
     <Link
-      to={`${messages.static.lang}/blog`}
+      to={`/${messages.static.lang}/blog`}
       activeStyle={activeStyles}
       getProps={({ isPartiallyCurrent }) =>
         isPartiallyCurrent
@@ -42,7 +42,7 @@ const Navigation = ({ intl: { messages } }) => (
       <span>{messages.static.components.navigation.blog}</span>
     </Link>
     <Link
-      to={`${messages.static.lang}/contact`}
+      to={`/${messages.static.lang}/contact`}
       activeStyle={activeStyles}
       aria-label="Go to the contact page"
     >

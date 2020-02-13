@@ -1,8 +1,8 @@
 import React from "react"
 import Layout from "../../components/layout"
 import Logos from "./design/components/logosSlide"
-/* import Prints from "./portfolio/design/components/printsSlide"
-import Web from "./portfolio/design/components/webSlide"
+import Prints from "./design/components/printsSlide"
+/* import Web from "./portfolio/design/components/webSlide"
 import Typography from "./portfolio/design/components/typographySlide"
 import Fend from "./portfolio/development/components/fendSlide"
 import Cms from "./portfolio/development/components/cmsSlide" */
@@ -35,8 +35,8 @@ const PortfolioPage = ({ intl: { messages } }) => (
       {messages.static.views.portfolio.design.description} 
       </p>
       <Logos title={messages.static.views.portfolio.design.logos.title}  />
-      {/* <Prints title="impresos" />
-      <Web title="web" />
+      <Prints title={messages.static.views.portfolio.design.prints.title} />
+      {/* <Web title="web" />
       <Typography title="tipografía" /> */}
     </section>
     <section>

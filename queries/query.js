@@ -73,7 +73,7 @@ const query = `
       seo_description
       
     }
-  }
+  } 
 }
 `
 module.exports = query

@@ -17,28 +17,28 @@ const DesignNavigationComponent = ({ intl: { messages } }) => (
   <div className="navsec">
     <button onClick={() => window.history.back()}>&#10229;</button>
     <Link
-      to="/portfolio/design/logos"
+      to={`/${messages.static.lang}/portfolio/design/logos`}
       activeStyle={activeStyles}
       aria-label={messages.static.views.portfolio.design.logos.seo_title}
     >
       {messages.static.views.portfolio.design.logos.title}
     </Link>
     <Link
-      to={`${messages.static.lang}/portfolio/design/prints`}
+      to={`/${messages.static.lang}/portfolio/design/prints`}
       activeStyle={activeStyles}
       aria-label={messages.static.views.portfolio.design.prints.seo_title}
     >
       {messages.static.views.portfolio.design.prints.title}
     </Link>
     <Link
-      to={`${messages.static.lang}/portfolio/design/web`}
+      to={`/${messages.static.lang}/portfolio/design/web`}
       activeStyle={activeStyles}
       aria-label={messages.static.views.portfolio.design.web.seo_title}
     >
       {messages.static.views.portfolio.design.web.title}
     </Link>
     <Link
-      to={`${messages.static.lang}/portfolio/design/typography`}
+      to={`/${messages.static.lang}/portfolio/design/typography`}
       activeStyle={activeStyles}
       aria-label={messages.static.views.portfolio.design.typography.seo_title}
     >

@@ -28,7 +28,7 @@ const WorkTemplate = ({ data, intl: { messages } }) => (
     {messages.logos
       .filter(item => item.id === data.strapiWork.id.slice(5))
       .map(item => (
-        <div>
+        <div key={item.id}>
           <SEO
             title={item.content.title}
             description={item.content.seo_description}
