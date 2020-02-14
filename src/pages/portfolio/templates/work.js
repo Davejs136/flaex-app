@@ -25,7 +25,7 @@ const openLightbox = event => {
 
 const WorkTemplate = ({ data, intl: { messages } }) => (
   <Layout>
-    {messages.logos
+    {messages.works
       .filter(item => item.id === data.strapiWork.id.slice(5))
       .map(item => (
         <div key={item.id}>
@@ -76,7 +76,7 @@ const WorkTemplate = ({ data, intl: { messages } }) => (
                 escapeHtml={false}
               />
             </div>
-            <h4 className="share-title">Comparte este proyecto:</h4>
+            <h4 className="share-title"> {messages.static.views.portfolio.share}:</h4>
             <ul className="share">
               <li>
                 <PinterestShareButton

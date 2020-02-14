@@ -2,10 +2,10 @@ import React from "react"
 import Layout from "../../components/layout"
 import Logos from "./design/components/logosSlide"
 import Prints from "./design/components/printsSlide"
-/* import Web from "./portfolio/design/components/webSlide"
-import Typography from "./portfolio/design/components/typographySlide"
-import Fend from "./portfolio/development/components/fendSlide"
-import Cms from "./portfolio/development/components/cmsSlide" */
+import Web from "./design/components/webSlide"
+import Typography from "./design/components/typographySlide"
+import Fend from "./development/components/fendSlide"
+import Cms from "./development/components/cmsSlide"
 import SEO from "../../components/seo"
 import { injectIntl } from "gatsby-plugin-intl-graphql"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -36,8 +36,8 @@ const PortfolioPage = ({ intl: { messages } }) => (
       </p>
       <Logos title={messages.static.views.portfolio.design.logos.title}  />
       <Prints title={messages.static.views.portfolio.design.prints.title} />
-      {/* <Web title="web" />
-      <Typography title="tipografía" /> */}
+      <Web ttitle={messages.static.views.portfolio.design.web.title}itle="web" />
+      <Typography title={messages.static.views.portfolio.design.typography.title} />
     </section>
     <section>
       <h2>
@@ -47,8 +47,8 @@ const PortfolioPage = ({ intl: { messages } }) => (
       <p className="two-columns">
       {messages.static.views.portfolio.development.description} 
       </p>
-      {/*  <Fend title="front-end" />
-      <Cms title="temas CMS" /> */}
+        <Fend title={messages.static.views.portfolio.development.fend.title} />
+        <Cms title={messages.static.views.portfolio.development.cms.title}  />
     </section>
   </Layout>
 )

@@ -29,7 +29,7 @@ const HeaderPage = ({ intl: { messages } }) => (
       <header>
         <div>
           <div className="logohead">
-            <Link to="/shuffler" aria-label="Go to the randomizer">
+            <Link to={`/${messages.static.lang}/shuffler`} aria-label="Go to the randomizer">
               <Img fluid={data.head.childImageSharp.fluid} />
             </Link>
             <span className="tooltiptext">
@@ -37,7 +37,7 @@ const HeaderPage = ({ intl: { messages } }) => (
             </span>
           </div>
           <div className="logotag">
-            <Link to="/about-me" aria-label="Go to the bio">
+            <Link to={`/${messages.static.lang}/about-me`} aria-label="Go to the bio">
               <Img fluid={data.tag.childImageSharp.fluid} />
             </Link>
             <span className="tooltiptext">

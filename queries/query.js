@@ -47,14 +47,13 @@ const query = `
     icon
     url
   }
-  logos: works(sort: "createdAt:desc", where: {
-    subcategory: "logo"
-  }) {
+  works {
     id
     title
     year
     city
-    category    
+    category 
+    subcategory   
     slug
     tag
     content_en {
@@ -73,6 +72,7 @@ const query = `
       seo_description
       
     }
+    
   } 
 }
 `

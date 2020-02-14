@@ -6,14 +6,14 @@ import Img from "gatsby-image"
 import SEO from "../../../components/seo"
 import { injectIntl } from "gatsby-plugin-intl-graphql"
 
-// Main logos page
+// Main cms page
 
-const LogosPage = ({ intl: { messages } }) => (
+const CMSPage = ({ intl: { messages } }) => (
   <StaticQuery
     query={graphql`
-      query LogosPage {
+      query CMSPage {
         allStrapiWork(
-          filter: { subcategory: { eq: "logo" } }
+          filter: { subcategory: { eq: "cms" } }
           sort: { fields: [createdAt], order: DESC }
         ) {
           edges {
@@ -38,15 +38,15 @@ const LogosPage = ({ intl: { messages } }) => (
     render={data => (
       <Layout>
         <SEO
-          title={messages.static.views.portfolio.design.logos.seo_title}
+          title={messages.static.views.portfolio.development.cms.seo_title}
           description={
-            messages.static.views.portfolio.design.logos.seo_description
+            messages.static.views.portfolio.development.cms.seo_description
           }
-          keywords={messages.static.views.portfolio.design.logos.seo_keywords}
+          keywords={messages.static.views.portfolio.development.cms.seo_keywords}
         />
 
         <h1 className="hidden">
-          {messages.static.views.portfolio.design.logos.title}
+          {messages.static.views.portfolio.development.cms.title}
         </h1>
         <Navigation />
         <ul className="works">
@@ -72,4 +72,4 @@ const LogosPage = ({ intl: { messages } }) => (
   />
 )
 
-export default injectIntl(LogosPage)
+export default injectIntl(CMSPage)

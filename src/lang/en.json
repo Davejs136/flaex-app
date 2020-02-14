@@ -33,6 +33,7 @@
         "seo_description": "Features, examples and information about the delivered projects",
         "seo_keywords": "Logo print web typography design CMS themes front-end web development showcase",
         "all": "see more",
+        "share": "Share this entry",
         "works": {
           "city": "City",
           "year": "Year"
@@ -340,6 +341,263 @@
         "seo_image_title": "Home page of the Banco del libro  web site",
         "seo_image_alt": "Image of the design of the home page design of the banco del libro site",
         "seo_description": "Portfolio entry of Bank of the book web design"
+      }
+    }
+  ],
+  "works": [
+    {
+      "id": "5e131a781686e31dd43ecab7",
+      "title": "Athlos - Logo",
+      "year": 2019,
+      "city": "Caracas",
+      "category": "design",
+      "subcategory": "logo",
+      "slug": "athlos",
+      "tag": null,
+      "content": {
+        "title": "Athlos logo",
+        "description": "The name for the brand emerged as a result of an exchange of ideas with the client; The concept for the design started from the geometric construction of the letters, as is the case of the 'A', where the  triangle tis drawn when a square and circle of equal width and height are superimposed. The rest of the letters of the name were created following the same design pattern to make them look like the same design system. From the start of the project, the client was integrated into the creative process, this logo design was very fluid, so the implementation of the brand came naturally.\n\nGraphic identity design for [company] (https://www.instagram.com/athlos.ve/) of sportswear.",
+        "seo_image_title": "Image title",
+        "seo_image_alt": "Image alternative text",
+        "seo_description": "SEO description"
+      }
+    },
+    {
+      "id": "5e131c1b1686e31dd43ecac2",
+      "title": "Banco del libro",
+      "year": 2013,
+      "city": "Caracas",
+      "category": "development",
+      "subcategory": "frontend",
+      "slug": "banco del libro",
+      "tag": "web",
+      "content": {
+        "title": "Banco del libro web site",
+        "description": "The concept for the design is closely related to the shapes of the Bank of the Book logo; from this the disposition between the different elements was established. The aim was to navigate the website in such a way that it invited both children, youth and adults to be interested in the activities carried out by the Banco del Libro. <br/> <br/>\n\nWith all this in mind, an animation was designed and developed on the home page that features the logo and a navigation bar that respond to the interaction of the page visitor. Internal links maintain the same concept of animated menu and content generated through a content manager. <br/> <br/>\n\nThe graphic implementation was done in html / css, Flash animations and the open source CMS used is SilverStripe v2.4.5 (php, mysql), applied jointly to the installation and implementation of the news modules and image gallery. [Link] (http://galerias.bid-dimad.org/bid_14/?p=4191) to the project selection article at the Ibero-American Design Biennial IDB 2014.",
+        "seo_image_title": "Home page of the Banco del libro  web site",
+        "seo_image_alt": "Image of the design of the home page design of the banco del libro site",
+        "seo_description": "Portfolio entry of Bank of the book web design"
+      }
+    },
+    {
+      "id": "5e131d591686e31dd43ecacf",
+      "title": "Barahunda",
+      "year": 2016,
+      "city": "Caracas",
+      "category": "design",
+      "subcategory": "typography",
+      "slug": "barahunda",
+      "tag": null,
+      "content": {
+        "title": "Barahunda display font",
+        "description": "This display font is inspired by the contrast of the behaviour of the hatitants of Caracas city. Its sharp and rounded forms present in the structure of the design represent two factors that generate opposite positions and that are present in the city: our nobility and aggressiveness, the wide and negative reduced spaces evoke these aspects in a graphic manner. <br/>\n\nEach character seeks its own identity in a comfortable way; they try to find their own place in an honest way without sacrificing readability. Because of its wide appearance, barahúnda is a display type font, for use in headlines and short texts. <br/> <br/>\n\nThe intention with this typograpy is to have an alphabet (in this case uppercase) that is culturally related to the citizen who participates in the daily life on the capital.",
+        "seo_image_title": "Barahunda typographic poster",
+        "seo_image_alt": "Poster showing some words on Barahunda font family ",
+        "seo_description": "Portfolio entry of the Barahunda typography"
+      }
+    },
+    {
+      "id": "5e24446080d26024e61907ae",
+      "title": "Novanet - Logo",
+      "year": 2018,
+      "city": "Caracas",
+      "category": "design",
+      "subcategory": "logo",
+      "slug": "novanet",
+      "tag": null,
+      "content": {
+        "title": "novanet logo",
+        "description": "The numbers of elements present on the identity's emblem have a direct relation with the three entities present on the Holy Trinity. Also, these three parts have been placed in a way that resembles the old celtic Triskele; in this case the base of the triangle is on the right side instead of the bottom. The typography has been designed around the circle shaped element to match the design system.\n<br/><br/>\n\nThe images show two different branding stationery applications, from 2018 and 2015 versions respectively.",
+        "seo_image_title": "Novanet 2018 logo",
+        "seo_image_alt": "Logo of novanet logo 2018 version",
+        "seo_description": "Portfolio entry of novanet logo images from 2018 and 2015 versions"
+      }
+    },
+    {
+      "id": "5e24a6b580d26024e61907bd",
+      "title": "Dr.MacQ - Logo",
+      "year": 2018,
+      "city": "Windhoek",
+      "category": "design",
+      "subcategory": "logo",
+      "slug": "DrMacQ",
+      "tag": null,
+      "content": {
+        "title": "Dr.MacQ  logo",
+        "description": "One of the requirements for this logo was to resemble in some way the main brand, for this reason, it was decided to retain the same typography and the shape of human torso. Dr.MacQ logo was designed for a telemedicine mobile application, the torso is inscribed in a \"heart-shaped\" stethoscope that ends with \"wi-fi\" symbol as the chest piece.\n<br/><br/>\n\nThe member card and the two-sided A4 format flyer are part of the branding implementation.",
+        "seo_image_title": "Dr.MacQ logo",
+        "seo_image_alt": "Dr.MacQ logo image",
+        "seo_description": "Portfolio entry of the Dr.MacQ logo and printed branding implementation"
+      }
+    },
+    {
+      "id": "5e24b1cd80d26024e61907ce",
+      "title": "Novanet - Tipografía",
+      "year": 2018,
+      "city": "Caracas",
+      "category": "design",
+      "subcategory": "typography",
+      "slug": "novatipo",
+      "tag": null,
+      "content": {
+        "title": "Novatipo",
+        "description": "This font family, was created from the shape of the element present on the logo's emblem; both uppercase and lowercase characters, are defined in the same design system. One of the main features on this display font are the negative serif built inside each letter area, allowing ease of readability of the typography.\n<br/> <br/>\nAs an addition of the typography and as an extension of the brand, there were created a set of icons for general use in the company's design pieces. An implementation of the icons can be seen in this <a href=\"http://gruponovanet.com.ve/site/\" target=\"_blank\"> link </a>.",
+        "seo_image_title": "Poster of novatipo typography",
+        "seo_image_alt": "A poster showing random words to check the typography behavior",
+        "seo_description": "Portfolio entry of novanet typography and icons design"
+      }
+    },
+    {
+      "id": "5e24bdbfff1b8a5f00b8a1e3",
+      "title": "Novanet - Vistas web",
+      "year": 2015,
+      "city": "Caracas",
+      "category": "design",
+      "subcategory": "web",
+      "slug": "Novanet web 2015",
+      "tag": "web",
+      "content": {
+        "title": "Novanet web 2015",
+        "description": "The novanet web 2015 version was a full static implementation with PHP/jQuery/CSS. The animations were made using CreateJS animation library, the layout was fixed to fit a large number of screen devices",
+        "seo_image_title": "Home page of 2015 novanet web ",
+        "seo_image_alt": "Image of the home page of novanet 2015 web",
+        "seo_description": "Portfolio entry of novanet web design 2015 version"
+      }
+    },
+    {
+      "id": "5e2573876294450c5ea90a83",
+      "title": "Caracas Design",
+      "year": 2015,
+      "city": "Caracas",
+      "category": "development",
+      "subcategory": "frontend",
+      "slug": "caracas design",
+      "tag": "web",
+      "content": {
+        "title": "Caracas Design 2015",
+        "description": "Caracas Design was a yearly congress that took place in the Venezuelan capital from 2013 to 2015. The event was an effort to bring together the country's graphic design community and offered talks, workshops and forums on poster, typography, animation, illustration, photography, editorial design, urban art and profession management. \n<br/><br/>\nThe web design was inspired in official congress poster of the 2015 edition, the site was built on top of SiIlverstripe CMS, the layout was developed as a responsive CMS theme.",
+        "seo_image_title": "Home page of the Caracas Design 2015 edition web site",
+        "seo_image_alt": "Image showing Caracas Design 2015 congress information",
+        "seo_description": "Portfolio entry of Caracas Design 2015 congress"
+      }
+    },
+    {
+      "id": "5e258d1c6f6e22170102192c",
+      "title": "Psi-cocina web",
+      "year": 2010,
+      "city": "Caracas",
+      "category": "development",
+      "subcategory": "frontend",
+      "slug": "Psi cocina",
+      "tag": null,
+      "content": {
+        "title": "psi-cocina",
+        "description": "Psi-cocina, was one of my firsts full CMS installations and frontend implementations. It was a project that arose from the desire of a clinical psychologist to offer and share a space in which people (children, youth and adults) can enjoy the benefits and advances of psychology and psychotherapy in a non-stigmatizing context, enjoyment and practical learning as is cooking. I had the opportunity to personally met and worked with the creator of the idea, so I really fell in love with this amazing project. \n<br/><br/>\nThe web design was inspired on the manual work involved when working in a kitchen. In that time, the workshops were taken by children on vacation time were on its prime, becasue of this, the intention was to offer a layout for the attractive for parents and fun for the kids. The CMS of choice was Silvestripe, the theme was specifically design and developed for this website.",
+        "seo_image_title": "Psi-cocina home page design",
+        "seo_image_alt": "Web design of the home page ",
+        "seo_description": "Portfolio entry of Psi-cocina web project with a brief story of the project features"
+      }
+    },
+    {
+      "id": "5e2598aa6f6e221701021938",
+      "title": "Take on Bar - Papelería comercial",
+      "year": 2015,
+      "city": "Caracas",
+      "category": "design",
+      "subcategory": "prints",
+      "slug": "take on bar",
+      "tag": null,
+      "content": {
+        "title": "Take on Bar prints",
+        "description": "This stationery design, follows the same design pattern from the logo: high contrast and minimal. One of the intentions, was to have the less amount elements across print pieces; a special design was made for the CEO of the company and another one for the bar tenders.",
+        "seo_image_title": "Take on bar presentation card",
+        "seo_image_alt": "Image of a special design of the presentation card",
+        "seo_description": "Portfolio entry of Take on Bar brand stationery design with general details about the project"
+      }
+    },
+    {
+      "id": "5e259f6d6f6e221701021943",
+      "title": "EJ Supply - Piezas impresas",
+      "year": 2013,
+      "city": "Caracas",
+      "category": "design",
+      "subcategory": "prints",
+      "slug": "ejsupply",
+      "tag": null,
+      "content": {
+        "title": "Ejsupply prints",
+        "description": "Before working on the print pieces of this project, a refresh was made to the company's logo: the amount of elements were reduced, gradients were removed from the emblem and a new typographic family was selected.\n<br/><br/>\nEJSUPPLY was an elevator maintenance service company, the result of the logo refreshing allowed me to use some shapes present on the logo. The print pieces designed for the stationery were: presentation card, letterhead, legal size envelope, number 11 type envelopes, service sheets, crew member cards, notebooks, room identifier signs and 2 tabloid size infographics to inform the emergency process in case of evacuation.",
+        "seo_image_title": "EJSUPPLY Stationery design",
+        "seo_image_alt": "Image showing some of the EJSUPPLY printed pieces",
+        "seo_description": "Portfolio entry of EJSUPPLY printed pieces with a brief story of project and general specifications of the designs"
+      }
+    },
+    {
+      "id": "5e25b1f36f6e221701021954",
+      "title": "Dr.MacQ - Impresos",
+      "year": 2018,
+      "city": "Windhoek",
+      "category": "design",
+      "subcategory": "prints",
+      "slug": "DrMacQ",
+      "tag": null,
+      "content": {
+        "title": "DrMacQ - Print and digital pieces",
+        "description": "For this project, it was required to design a A4 size two-sided flyer to explain how to use the telemedicine app to the company afiliates, a fillable PDF History form and a member card design for the Dr.MacQ brand.\n<br/><br/>\nThe idea behind the two-sided flyer, was to explain the process on how to use the telemedicine app in a \"step by step\" way using icons to inform each stage and colors that fit with the brand palette; the first side shows the general process and the other side explains each step in detail. The fillable PDF form was generated in 3 different languages. In the case of the member card design, many of the design patterns of the two-sided flyer were taken.   ",
+        "seo_image_title": "Member card design for DrMacQ brand",
+        "seo_image_alt": "Image of the DR.MacQ's member card design",
+        "seo_description": "Portfolio entry showing different design for the Dr.MacQ brand; a two-sided flyer, a fillable PDF form and a member card design"
+      }
+    },
+    {
+      "id": "5e25b84c6f6e221701021961",
+      "title": "Pronotas - Vistas web",
+      "year": 2017,
+      "city": "Santiago de Chile",
+      "category": "development",
+      "subcategory": "cms",
+      "slug": "pronotas",
+      "tag": null,
+      "content": {
+        "title": "Pronotas landing page",
+        "description": "Pronotas is a web and mobile application to help schools to manage the information about the students scores, activities, tasks, among other functionalities. \n<br/><br/>\nThis landing page had the purpose of marketing the application features, benefits and how to acquire it. The CMS of choice was WordPress + DIVI builder; the design layout was specially made for this web view.",
+        "seo_image_title": "Pronotas landing page",
+        "seo_image_alt": "Image of the Pronota's landing page",
+        "seo_description": "Portfolio entry of Pronotas landing page project, with details about the landing page purpose and the service characteristics"
+      }
+    },
+    {
+      "id": "5e25bd346f6e22170102196a",
+      "title": "Euroquartz - Landing page",
+      "year": 2019,
+      "city": "Miami",
+      "category": "development",
+      "subcategory": "cms",
+      "slug": "euroquartz",
+      "tag": null,
+      "content": {
+        "title": "Euroquartz Landing page",
+        "description": "Euriquartz is a marble tile reseller; the idea for this landing page was to resemble the tile angles in some shapes of the design elements with soft and light colors to fit the brand values.\n<br/><br/>\nThe platform of choice was WordPress CMS with Elementor Pro as the builder for this layout design.",
+        "seo_image_title": "Euroquartz landing page",
+        "seo_image_alt": "Image of the landing page design of Euroquartz",
+        "seo_description": "Portfolio entry of Euroquartz landing page project with general details about the design layout and the web platform used."
+      }
+    },
+    {
+      "id": "5e25c09b6f6e221701021973",
+      "title": "Global Protection Group - Landing page",
+      "year": 2019,
+      "city": "Miami",
+      "category": "development",
+      "subcategory": "cms",
+      "slug": "global protection group",
+      "tag": null,
+      "content": {
+        "title": "Global Protection Group - Landing page",
+        "description": "Global Protection Group is a company that offers life insurance advisoring services, they required a simple and easy to read landing page to present all of its services. \n<br/><br/>\nThe CMS of choice was WordPress + Elementor Pro as the design layout builder.",
+        "seo_image_title": "Global Protection Group landing page",
+        "seo_image_alt": "Image with the design of Global Protection Group landing page",
+        "seo_description": "Portfolio entry of Global Protection Group landing page with a short description about the project."
       }
     }
   ]

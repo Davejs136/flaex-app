@@ -33,6 +33,7 @@
         "seo_description": "Características, muestras e información de los proyectos entregados",
         "seo_keywords": "portafolio catálogo diseño logos impresos web tipografía desarrollo web front-end temas CMS",
         "all": "ver más",
+        "share": "Compartir este proyecto",
         "works": {
           "city": "Ciudad",
           "year": "Año"
@@ -340,6 +341,263 @@
         "seo_image_title": "Página de inicio del Banco del Libro",
         "seo_image_alt": "Imagen del diseño de la página de inico del sitio web del Banco del Libro",
         "seo_description": "Entrada de portafolio del diseño web del Banco del Libro"
+      }
+    }
+  ],
+  "works": [
+    {
+      "id": "5e131a781686e31dd43ecab7",
+      "title": "Athlos - Logo",
+      "year": 2019,
+      "city": "Caracas",
+      "category": "design",
+      "subcategory": "logo",
+      "slug": "athlos",
+      "tag": null,
+      "content": {
+        "title": "Athlos logo",
+        "description": "El nombre para la marca surgió como resultado de un intercambio de ideas con el cliente; el concepto para el diseño partió desde la construcción geométrica de las letras que componen el logo, como lo es el caso de la 'A', que es el triángulo que se dibuja cuando se super pone un cuadrado y circulo de iguales ancho y alto. El resto de las letras del nombre se crearon siguiendo el mismo patrón de diseño para lograr que se vieran como un mismo sistema, lo más similares a una familia tipográfica. Dado que desde un principio el cliente estuvo integrado al proceso creativo, este logotipo se dio con mucha fluidez, por lo que la implementación de la marca surgió de forma natural. \n\nDiseño de identidad gráfica para [compañía](https://www.instagram.com/athlos.ve/) de ropa deportiva.",
+        "seo_image_title": "Título de la imagen",
+        "seo_image_alt": "Texto alternativo para la imagen",
+        "seo_description": "Descripción SEO"
+      }
+    },
+    {
+      "id": "5e131c1b1686e31dd43ecac2",
+      "title": "Banco del libro",
+      "year": 2013,
+      "city": "Caracas",
+      "category": "development",
+      "subcategory": "frontend",
+      "slug": "banco del libro",
+      "tag": "web",
+      "content": {
+        "title": "Banco del libro sitio web",
+        "description": "El concepto para el diseño está estrechamente relacionado con las formas del logotipo del Banco del Libro; a partir de esto se estableció la disposición entre los diferentes elementos. Se buscó hacer la navegación del sitio web de tal forma que invitara tanto a niños, jóvenes y adultos a interesarse en las actividades que desarrolla el Banco del Libro. <br/><br/>\n\nCon todo ello en mente, se diseñó y desarrolló una animación en la página de inicio que presenta el logo y una barra de navegación que responden a la interacción del visitante de la página. Los vínculos internos mantienen el mismo concepto de menú animado y contenido generado  a través de un gestor de contenido. <br/><br/>\n\nLa implementación gráfica se realizó en html/css, animaciones en Flash y el CMS de código abierto utilizado es SilverStripe v2.4.5 (php,mysql), aplicado conjuntamente a la instalación e implementación de los módulos de noticias y galería de imágenes. [Vínculo](http://galerias.bid-dimad.org/bid_14/?p=4191) al artículo de la selección del proyecto en la Bienal Iberoamericana de Diseño BID 2014.",
+        "seo_image_title": "Página de inicio del Banco del Libro",
+        "seo_image_alt": "Imagen del diseño de la página de inico del sitio web del Banco del Libro",
+        "seo_description": "Entrada de portafolio del diseño web del Banco del Libro"
+      }
+    },
+    {
+      "id": "5e131d591686e31dd43ecacf",
+      "title": "Barahunda",
+      "year": 2016,
+      "city": "Caracas",
+      "category": "design",
+      "subcategory": "typography",
+      "slug": "barahunda",
+      "tag": null,
+      "content": {
+        "title": "Barahunda tipografía",
+        "description": "Es una fuente inspirada en los contrastes que protagonizamos en los habitantes de Caracas. Sus formas afiladas y redondeadas presentes en la estructura del diseño representan dos factores que generan posiciones opuestas y que están presentes en la ciudad: nuestra nobleza y agresividad, sus espacios amplios y negativos reducidos evocan gráficamente estos aspectos. <br/>\n\nCada personaje busca su propia identidad de una manera cómoda; Intenta encontrar tu lugar de manera honesta sin sacrificar la legibilidad. Debido a su amplia apariencia, barahúnda es una fuente tipo pantalla, para usar en titulares y textos cortos. <br/> <br/>\n\nLa intención con esta fuente es tener un alfabeto (en este caso mayúscula) que esté culturalmente relacionado con el ciudadano que participa en la reunión diaria de vivir y viajar en la capital.",
+        "seo_image_title": "Poster tipográfico de Barahunda",
+        "seo_image_alt": "Poster mostrando palabras aleatorias en Barahunda",
+        "seo_description": "Entrada de portafolio de la tipografía Barahunda"
+      }
+    },
+    {
+      "id": "5e24446080d26024e61907ae",
+      "title": "Novanet - Logo",
+      "year": 2018,
+      "city": "Caracas",
+      "category": "design",
+      "subcategory": "logo",
+      "slug": "novanet",
+      "tag": null,
+      "content": {
+        "title": "novanet logo",
+        "description": "\n\nEl número de elementos presentes en el emblema de la identidad tiene una relación directa con las tres entidades presentes en la Santísima Trinidad. Además, estas tres partes se han colocado de manera tal que se asemeja al Triskele celta; en este caso, la base del triángulo está en el lado derecho en lugar de en la parte inferior. La tipografía se ha diseñado alrededor del elemento en forma de círculo para que coincida con el sistema de diseño.\n<br/> <br/>\n\nLas imágenes muestran dos aplicaciones de branding en papelería diferentes, de las versiones 2018 y 2015, respectivamente.",
+        "seo_image_title": "Novanet logo 2018",
+        "seo_image_alt": "Logo de novanet versión 2018",
+        "seo_description": "Entrada de cartera de imágenes del logotipo de novanet de las versiones 2018 y 2015"
+      }
+    },
+    {
+      "id": "5e24a6b580d26024e61907bd",
+      "title": "Dr.MacQ - Logo",
+      "year": 2018,
+      "city": "Windhoek",
+      "category": "design",
+      "subcategory": "logo",
+      "slug": "DrMacQ",
+      "tag": null,
+      "content": {
+        "title": null,
+        "description": "Uno de los requisitos para este logotipo era parecerse de alguna manera a la marca principal, por esta razón, se decidió mantener la misma tipografía y la forma del torso humano. El logotipo de Dr.MacQ fue diseñado para una aplicación móvil de telemedicina, el torso está inscrito en un estetoscopio en \"forma de corazón\" que termina con el símbolo \"wi-fi\" como la pieza del cofre.\n<br/> <br/>\n\nLa tarjeta de miembro y el volante a doble cara en formato A4 son parte de la implementación de la marca.",
+        "seo_image_title": "Dr.MacQ logo ",
+        "seo_image_alt": "Imagen del logo Dr.MacQ",
+        "seo_description": "Entrada de portafolio del logo de Dr.MacQ con implementación de branding en piezas impresas"
+      }
+    },
+    {
+      "id": "5e24b1cd80d26024e61907ce",
+      "title": "Novanet - Tipografía",
+      "year": 2018,
+      "city": "Caracas",
+      "category": "design",
+      "subcategory": "typography",
+      "slug": "novatipo",
+      "tag": null,
+      "content": {
+        "title": null,
+        "description": "\nEsta familia tipográfica se creó a partir de la forma del elemento presente en el emblema del logotipo; ambos caracteres, tanto en mayúsculas y minúsculas se definen en el mismo sistema de diseño. Una de las características principales de esta fuente de pantalla son las serif negativas incorporadas dentro de cada área de letras, lo que permite una fácil lectura de la tipografía.\n<br/> <br/>\nComo una adición de la tipografía y como una extensión de la marca, se crearon un conjunto de iconos para uso general en las piezas de diseño de la compañía. Se puede ver una implementación de los iconos en este <a href=\"http://gruponovanet.com.ve/site/\" target=\"_blank\"> enlace </a>.",
+        "seo_image_title": "Poster tipográfico de novatipo ",
+        "seo_image_alt": "Poster mostrando palabras aleatorias compuestas en novatipo",
+        "seo_description": "Entrada de portafolio de la tipografía e iconos de novanet"
+      }
+    },
+    {
+      "id": "5e24bdbfff1b8a5f00b8a1e3",
+      "title": "Novanet - Vistas web",
+      "year": 2015,
+      "city": "Caracas",
+      "category": "design",
+      "subcategory": "web",
+      "slug": "Novanet web 2015",
+      "tag": "web",
+      "content": {
+        "title": "Novanet web 2015",
+        "description": "La versión 2015 de novanet web fue una implementación estática completa con PHP / jQuery / CSS. Las animaciones se realizaron utilizando la biblioteca de animación CreateJS, el diseño se arregló para adaptarse a una gran cantidad de dispositivos de pantalla",
+        "seo_image_title": "Página de inicio novanet web versión 2015",
+        "seo_image_alt": "Imagen del diseño de la página de inicio de la web de novanet versión 2015",
+        "seo_description": "Entrada de portafolio del diseño del sitio web de novanet versión 2015"
+      }
+    },
+    {
+      "id": "5e2573876294450c5ea90a83",
+      "title": "Caracas Design",
+      "year": 2015,
+      "city": "Caracas",
+      "category": "development",
+      "subcategory": "frontend",
+      "slug": "caracas design",
+      "tag": "web",
+      "content": {
+        "title": "Caracas Design 2015",
+        "description": "Caracas Design fue un congreso anual que tuvo lugar en la capital venezolana de 2013 a 2015. El evento fue un esfuerzo por reunir a la comunidad de diseño gráfico del país y ofreció charlas, talleres y foros sobre carteles, tipografía, animación, ilustración, fotografía, editorial, arte urbano y gestión profesional.\n<br/> <br/>\nEl diseño web se inspiró en el póster oficial del congreso de la edición de 2015, el sitio se creó sobre SiIlverstripe CMS, el diseño se desarrolló como un tema de CMS responsive.",
+        "seo_image_title": "Página de inicio del sitio web de Caracas Design 2015",
+        "seo_image_alt": "Imagen que muestra información del concfrso Caracas Design 2015",
+        "seo_description": "Entrada de portafolio del Congreso Caracas Design 2015"
+      }
+    },
+    {
+      "id": "5e258d1c6f6e22170102192c",
+      "title": "Psi-cocina web",
+      "year": 2010,
+      "city": "Caracas",
+      "category": "development",
+      "subcategory": "frontend",
+      "slug": "Psi cocina",
+      "tag": null,
+      "content": {
+        "title": "Psi-cocina",
+        "description": "Psi-cocina, fue una de mis primeras instalaciones de CMS e implementaciones frontend. Fue un proyecto que surgió del deseo de un psicólogo clínico de ofrecer y compartir un espacio en el que las personas (niños, jóvenes y adultos) puedan disfrutar de los beneficios y avances de la psicología y la psicoterapia en un contexto no estigmatizante, el disfrute y el aprendizaje práctico, como es cocinar. Tuve la oportunidad de conocer y trabajar personalmente con el creador de la idea, pude conocer a fondo de que iba este increíble proyecto.\n<br/> <br/>\nEl diseño web se inspiró en el trabajo manual involucrado cuando se trabaja en una cocina. En ese momento, los talleres que los niños tomaban en vacaciones estaban en su mejor momento, debido a esto, la intención era ofrecer un diseño atractivo para los padres y divertido para los niños. El CMS de elección fue Silvestripe, el tema fue específicamente diseñado y desarrollado para este sitio web.",
+        "seo_image_title": "Página de inicio del sitio Psi-cocina",
+        "seo_image_alt": "Diseño de la página de inicio del sitio web de psi-cocina",
+        "seo_description": "Entrada de portafolio psi-cocina con breve historia del proyecto y sus características"
+      }
+    },
+    {
+      "id": "5e2598aa6f6e221701021938",
+      "title": "Take on Bar - Papelería comercial",
+      "year": 2015,
+      "city": "Caracas",
+      "category": "design",
+      "subcategory": "prints",
+      "slug": "take on bar",
+      "tag": null,
+      "content": {
+        "title": "Take on bar papelería comercial",
+        "description": "Este diseño de papelería, sigue el mismo patrón de diseño del logotipo: alto contraste y minimalsita. Una de las intenciones, era tener la menor cantidad de elementos en las piezas impresas; se realizó un diseño especial para el CEO de la empresa y otro para los operadores del bar.",
+        "seo_image_title": "Tarjeta de presentación de Take on Bar",
+        "seo_image_alt": "Imagen de una versión de la tarjeta de presentación de Take on Bar",
+        "seo_description": "Entrada de portafolio del diseño de papelería de Take on Bar con detalles de las piezas realizadas."
+      }
+    },
+    {
+      "id": "5e259f6d6f6e221701021943",
+      "title": "EJ Supply - Piezas impresas",
+      "year": 2013,
+      "city": "Caracas",
+      "category": "design",
+      "subcategory": "prints",
+      "slug": "ejsupply",
+      "tag": null,
+      "content": {
+        "title": "EJSUPPLY impresos",
+        "description": "Antes de trabajar en las piezas impresas de este proyecto, se actualizó el logotipo de la empresa: se redujo la cantidad de elementos, se eliminaron los gradientes del emblema y se seleccionó una nueva familia tipográfica.\n<br/> <br/>\nEJSUPPLY era una empresa de servicios de mantenimiento de ascensores, el resultado de la actualización permitió usar algunas formas presentes en el logotipo. Las piezas impresas diseñadas para la papelería fueron: tarjeta de presentación, carta membrete, sobre de tamaño oficio, sobres de número 11, hojas de servicio, carnet de operadores, agendas, letreros de identificación de la sala y 2 infografías de tamaño tabloide para informar el proceso de emergencia en caso de evacuación.",
+        "seo_image_title": "EJSUPPLY papelería comercial",
+        "seo_image_alt": "Imagen con algunas piezas impresas de EJSUPPLY",
+        "seo_description": "Entrada de portafolio del diseño de papelería comercial para EJSUPPLY con muestras de las piezas impresas diseñadas y una descripción breve del proyecto"
+      }
+    },
+    {
+      "id": "5e25b1f36f6e221701021954",
+      "title": "Dr.MacQ - Impresos",
+      "year": 2018,
+      "city": "Windhoek",
+      "category": "design",
+      "subcategory": "prints",
+      "slug": "DrMacQ",
+      "tag": null,
+      "content": {
+        "title": "DrMacQ - Impresos y digital",
+        "description": "Para este proyecto, se requería diseñar un volante a doble cara de tamaño A4 para explicar cómo usar la aplicación de telemedicina para los afiliados de la compañía, un formulario de historial médico en PDF rellenable y un diseño de tarjeta de miembro spara la marca Dr.MacQ.\n<br/> <br/>\nLa idea detrás del volante a dos caras, es explicar el proceso sobre cómo usar la aplicación de telemedicina de manera \"paso a paso\" usando íconos para informar cada etapa y colores que se ajustan a la paleta de la marca; el primer lado muestra el proceso general y el otro lado explica cada paso en detalle. El formulario PDF rellenable se generó en 3 idiomas diferentes. En el caso del diseño de la tarjeta de miembro, se tomaron muchos de los patrones de diseño del volante a dos caras.",
+        "seo_image_title": "Diseño de tarjeta de miembros de DR.MacQ",
+        "seo_image_alt": "Imagen del diseño de la tarjeta de miembros DR.MacQ",
+        "seo_description": "Entrada de portafolio de las distintas piezas diseñadas para Dr.MacQ; un volante impreso a 2 caras, un formulario rellenable en PDF y un diseño para la tarjeta de miembros de la compañía"
+      }
+    },
+    {
+      "id": "5e25b84c6f6e221701021961",
+      "title": "Pronotas - Vistas web",
+      "year": 2017,
+      "city": "Santiago de Chile",
+      "category": "development",
+      "subcategory": "cms",
+      "slug": "pronotas",
+      "tag": null,
+      "content": {
+        "title": "Pronotas landing page",
+        "description": "Pronotas es una aplicación web y móvil para ayudar a las escuelas a administrar la información sobre los puntajes, actividades, tareas de los estudiantes, entre otras funciones.\n<br/><br/>\nEsta landign page tenía el propósito de comercializar las características de la aplicación, los beneficios y cómo adquirirla. El CMS de elección fue WordPress + DIVI Builder; el diseño fue especialmente diseñado para esta vista web.",
+        "seo_image_title": "Landing page de Pronotas",
+        "seo_image_alt": "Imagen del landing page de pronotas",
+        "seo_description": "Entrada de portafolio del landing page de pronotas con detalles del servicio que ofrece y de las características del diseño"
+      }
+    },
+    {
+      "id": "5e25bd346f6e22170102196a",
+      "title": "Euroquartz - Landing page",
+      "year": 2019,
+      "city": "Miami",
+      "category": "development",
+      "subcategory": "cms",
+      "slug": "euroquartz",
+      "tag": null,
+      "content": {
+        "title": "Euroquartz Landing page",
+        "description": "Euriquartz es un revendedor de baldosas de mármol; La idea para esta página de inicio era asemejarse a los ángulos de mosaico en algunas formas de los elementos de diseño con colores suaves y claros para ajustarse a los valores de la marca.\n<br/> <br/>\nLa plataforma elegida fue WordPress CMS con Elementor Pro como creador de este diseño de diseño.",
+        "seo_image_title": "Euroquartz landing oage",
+        "seo_image_alt": "Imagen del diseño del landing page de Euroquartz",
+        "seo_description": "Entrada de portafolio de Euroquartz con detalles generales del diseño y de la plataforma de publicación utilizada"
+      }
+    },
+    {
+      "id": "5e25c09b6f6e221701021973",
+      "title": "Global Protection Group - Landing page",
+      "year": 2019,
+      "city": "Miami",
+      "category": "development",
+      "subcategory": "cms",
+      "slug": "global protection group",
+      "tag": null,
+      "content": {
+        "title": "Global Protection Group - Landing page",
+        "description": "Global Protection Group es una compañía que ofrece servicios de asesoría de seguros de vida, requerán una página de inicio simple y fácil de leer para presentar todos sus servicios.\n<br/> <br/>\nEl CMS elegido fue WordPress + Elementor Pro como constructor del diseño.",
+        "seo_image_title": "Landing page de Global Protection Group",
+        "seo_image_alt": "Imagen del diseño del landing page de Global Protection Group",
+        "seo_description": "Entrada de portafolio del proyecto de landing page de Global Protection Group con una descripción corta del mismo"
       }
     }
   ]
