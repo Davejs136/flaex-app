@@ -39,7 +39,7 @@ const WorkTemplate = ({ data, intl: { messages } }) => (
           </div>
 
           <article>
-            <h1>{item.title}</h1>
+            <h1>{item.content.title}</h1>
             <div className="city-year">
               {messages.static.views.portfolio.works.city}: {item.city} {" - "}
               {messages.static.views.portfolio.works.year}: {item.year}
