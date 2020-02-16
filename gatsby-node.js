@@ -19,7 +19,7 @@ const makeRequest = (graphql, request) =>
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  /* const getArticles = makeRequest(
+  const getArticles = makeRequest(
     graphql,
     `
     {
@@ -27,7 +27,6 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             id
-            title
             slug
           }
         }
@@ -39,13 +38,13 @@ exports.createPages = ({ actions, graphql }) => {
     result.data.allStrapiArticle.edges.forEach(({ node }) => {
       createPage({
         path: `/blog/${node.slug.replace(/\s+/g, "-").toLowerCase()}`,        
-        component: path.resolve(`src/templates/article.js`),
+        component: path.resolve(`src/pages/blog/templates/article.js`),
         context: {
           id: node.id,
         },
       })
     })
-  }) */
+  })
 
   const getWorks = makeRequest(
     graphql,
@@ -79,5 +78,5 @@ exports.createPages = ({ actions, graphql }) => {
   })
 
   // Queries for articles and authors nodes to use in creating pages.
-  return Promise.all([getWorks])
+  return Promise.all([getWorks, getArticles])
 }

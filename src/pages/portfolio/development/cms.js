@@ -18,8 +18,7 @@ const CMSPage = ({ intl: { messages } }) => (
         ) {
           edges {
             node {
-              id
-              title
+              id              
               category
               subcategory
               slug
@@ -61,7 +60,7 @@ const CMSPage = ({ intl: { messages } }) => (
                 {messages.works
                   .filter(item => item.id === document.node.id.slice(5))
                   .map(item => (
-                    <h2 key={item.id}>{item.title}</h2>
+                    <h2 key={item.id}>{item.content.title}</h2>
                   ))}
               </Link>
             </li>

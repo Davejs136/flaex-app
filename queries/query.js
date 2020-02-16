@@ -52,8 +52,7 @@ const query = `
     title
     year
     city
-    category 
-    subcategory   
+    category    
     slug
     tag
     content_en {
@@ -61,19 +60,33 @@ const query = `
       description
       seo_image_title
       seo_image_alt
-      seo_description
-      
+      seo_description      
     }
     content_es {
       title
       description
       seo_image_title
       seo_image_alt
+      seo_description      
+    }    
+  }
+  articles {
+    id
+    content_en {
+      title
+      description
       seo_description
-      
+      seo_image_title
+      seo_image_alt
     }
-    
-  } 
+    content_es {
+      title
+      description
+      seo_description
+      seo_image_title
+      seo_image_alt
+    }
+  }
 }
 `
 module.exports = query

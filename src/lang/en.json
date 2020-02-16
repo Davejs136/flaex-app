@@ -82,6 +82,17 @@
             "seo_keywords": "CMS builders elementor wordpress"
           }
         }
+      },
+      "blog": {
+        "title": "@flaex_ blog",
+        "seo_title": "blog",
+        "seo_description": "articles and tutorials about graphic design and web technologies",
+        "seo_keywords": "blog graphic design front-end web development",
+        "back": "go back to the previous page",
+        "profile": "go to profile",
+        "share": "share this post",
+        "more": "Read more",
+        "go_to": "go to"
       }
     }
   },
@@ -201,7 +212,6 @@
       "year": 2019,
       "city": "Caracas",
       "category": "design",
-      "subcategory": "logo",
       "slug": "athlos",
       "tag": null,
       "content": {
@@ -218,7 +228,6 @@
       "year": 2013,
       "city": "Caracas",
       "category": "development",
-      "subcategory": "frontend",
       "slug": "banco del libro",
       "tag": "web",
       "content": {
@@ -235,7 +244,6 @@
       "year": 2016,
       "city": "Caracas",
       "category": "design",
-      "subcategory": "typography",
       "slug": "barahunda",
       "tag": null,
       "content": {
@@ -252,7 +260,6 @@
       "year": 2018,
       "city": "Caracas",
       "category": "design",
-      "subcategory": "logo",
       "slug": "novanet",
       "tag": null,
       "content": {
@@ -269,7 +276,6 @@
       "year": 2018,
       "city": "Windhoek",
       "category": "design",
-      "subcategory": "logo",
       "slug": "DrMacQ",
       "tag": null,
       "content": {
@@ -286,7 +292,6 @@
       "year": 2018,
       "city": "Caracas",
       "category": "design",
-      "subcategory": "typography",
       "slug": "novatipo",
       "tag": null,
       "content": {
@@ -303,7 +308,6 @@
       "year": 2015,
       "city": "Caracas",
       "category": "design",
-      "subcategory": "web",
       "slug": "Novanet web 2015",
       "tag": "web",
       "content": {
@@ -320,7 +324,6 @@
       "year": 2015,
       "city": "Caracas",
       "category": "development",
-      "subcategory": "frontend",
       "slug": "caracas design",
       "tag": "web",
       "content": {
@@ -337,7 +340,6 @@
       "year": 2010,
       "city": "Caracas",
       "category": "development",
-      "subcategory": "frontend",
       "slug": "Psi cocina",
       "tag": null,
       "content": {
@@ -354,7 +356,6 @@
       "year": 2015,
       "city": "Caracas",
       "category": "design",
-      "subcategory": "prints",
       "slug": "take on bar",
       "tag": null,
       "content": {
@@ -371,7 +372,6 @@
       "year": 2013,
       "city": "Caracas",
       "category": "design",
-      "subcategory": "prints",
       "slug": "ejsupply",
       "tag": null,
       "content": {
@@ -388,7 +388,6 @@
       "year": 2018,
       "city": "Windhoek",
       "category": "design",
-      "subcategory": "prints",
       "slug": "DrMacQ",
       "tag": null,
       "content": {
@@ -405,7 +404,6 @@
       "year": 2017,
       "city": "Santiago de Chile",
       "category": "development",
-      "subcategory": "cms",
       "slug": "pronotas",
       "tag": null,
       "content": {
@@ -422,7 +420,6 @@
       "year": 2019,
       "city": "Miami",
       "category": "development",
-      "subcategory": "cms",
       "slug": "euroquartz",
       "tag": null,
       "content": {
@@ -439,7 +436,6 @@
       "year": 2019,
       "city": "Miami",
       "category": "development",
-      "subcategory": "cms",
       "slug": "global protection group",
       "tag": null,
       "content": {
@@ -448,6 +444,38 @@
         "seo_image_title": "Global Protection Group landing page",
         "seo_image_alt": "Image with the design of Global Protection Group landing page",
         "seo_description": "Portfolio entry of Global Protection Group landing page with a short description about the project."
+      }
+    }
+  ],
+  "articles": [
+    {
+      "id": "5e0f9654a61c155399fc12c8",
+      "content": {
+        "title": "Graphic design and web development",
+        "description": "Addressing web development from a graphic designer's point of view can be complex. In general, in graphic design (or visual communication) a large part of the elements are tangible since we know previously the content of the piece to be designed, its approximate size, we can glimpse what colors and typography to use, among other things. <br/> <br/>\nGraphic design programs are adapted to this nature; if you want to make an ellipse just choose the indicated tool and draw it in the workspace. In contrast, abstract thinking is used in web design to solve the requirements that are presented to us; For example, if we want to change the width of a component in our web view it would be necessary to modify the properties in the CSS style. <br/> <br/>\n\nThe ways to address the change to be made is different because in the graphic design the properties of the ellipse are handled by selecting the element and modifying its properties. On the web it is different because you have to edit a file that aims to give the page a visual style. <br/> <br/>\n\nThat is why I have decided to share information to facilitate the web design learning process and offer interested parties the necessary approach and guidance to start making web pages; Mainly, the content is aimed at graphic designers, amateurs and enthusiasts. It could also be useful for web developers looking to improve the visual style of their web views through the basic design basics. <br/> <br/>\n\n### What is @flaex_?\n\nHe is a character inspired by work with scissors, cardboard and paper. The composition of the logo is done manually, similar to the traditional design process before the arrival of the computers. <br/> <br/>\n\nThe graphic identity is complemented by series of [\"faces\"] (https://flaex.netlify.com/shuffler) made from typographic characters placed in such a way that they create \"expressions\". It also works as a form relationship exercise. <br/> <br/>\n\n### Themes <br/>\n\nThe content I will share through the blog will include the following topics: <br/> <br/>\n\n** I. What is web design?**\n- **Graphic design**\n- Fundamentals.\n- Logos, printed, typography.\n- **Web development**\n- Fundamentals (backend, frontend).\n- HTML, CSS, JS.\n- Types of websites (static, web apps, CMS).\n\n** II. Guides **\n- ** Graphic design programs **\n- Illustrator, Photoshop, Animate, Gimp, Inkscape, FontBase.\n- ** Web development programs **\n- Visual Studio Code, GitHub, Google Chrome Dev Tools.\n- ** Libraries and frameworks **\n- Bootstrap, React, CreateJS.\n\n** II. Reviews **\n- Graphic design, web development and information technologies.\n\n### Why this blog? <br/>\n\nMainly the objective is to create content in Spanish for web design and development since the vast majority of information found is in English, which makes learning difficult. Share and interact with people interested in graphic design, web development and new technologies.",
+        "seo_description": "Presentation of the @flaex_ blog with a short explanation of the relationship between graphic design and web development.",
+        "seo_image_title": "@flaex_: Graphic design and front-end web development",
+        "seo_image_alt": "Graphic design for face-shaped typographic characters"
+      }
+    },
+    {
+      "id": "5e130e82b0e07f08a5cef3fe",
+      "content": {
+        "title": "What is web design?",
+        "description": "The rise and rise of the Internet as a means of disseminating content has placed it as the protagonist in many of our daily activities such as work, studies, recreation and entertainment spaces. Its immediate availability and better use of resources has made it the preferred means of communication for many people and companies that want to publish information of interest either through social networks or websites with specific objectives and functions.\n\nBeing a mass communication channel, graphic design, through web design, has been integrated into web development projects through a series of technologies that allow us to implement our static designs on functional web pages; It is very important to understand web design as a specialty where two disciplines are mainly combined: graphic design and web development.\n\n## *Graphic design*\n\nAs defined by Wicius Wong <sup> [1] (# fn1) </sup> in his book Fundamentals of Design <sup> [2] (# fn2) </sup>, it is not just a matter of aesthetics : <br/> <br/>\n\n> * Design is a process of visual creation with a purpose. Unlike painting and sculpture, which are the realization of the personal visions and dreams of an artist, the design covers practical requirements. A graphic design unit must be placed in front of the public's eyes and carry a preset message. An industrial product must meet the needs of the consumer. *\n\nIn graphic design, factors such as functionality and purpose are taken into account in the creative process; that is, web design is also based on these principles. Visual language seeks to be practical, readable and inform users; Its objective nature is evident. Similarly, it is very important to recognize and understand their role in our society and their purpose as a means of transmitting information; Joan Costa <sup> [3] (# fn3) </sup> designates it this way in her book Design for the eyes <sup> [4] (# fn4) </sup>: <br/> <br/>\n\n> * Its most noble design is to work to improve our visual environment, make the world intelligible and improve the quality of life; provide information and improve things; Disseminate civic causes and collective interest and culture. Its specificity as a discipline is to transmit sensations, emotions and knowledge. *\n\n> * While the purpose of graphic design is communication, discipline has its own language for it. It is the basic language of the image and the text. *\n\nKnowing its practical nature and its role in the development of society, \"graphics\" is closely linked to industry and commerce, audiovisual media, marketing and communication sciences. Its growth is directly related to the development of new technologies. Therefore, its association with web development is direct.\n\n\n## *Web development*\nWikipedia defines it on its website <sup> [5] (# fn5) </sup> as follows:\n> * It is the activity of developing web applications on the internet or intranet. Web development covers everything from developing simple static text pages to complex web-based applications, e-commerce and social networking services. He is involved in web engineering, web design, content design, client and server side rendering, web servers and network security. *\n\nIn the case of information technologies, it has been web development that has had the necessary standards to create content through the combination of software tools, databases and web browsers. As I mentioned in a [previous article] (https://flaex.netlify.com/blog/blog-de-@flaex_), addressing web development from a graphic designer's point of view can be complex.\n\nTherefore, it is convenient to use abstract thinking to solve the requirements that we face; For example, in web design, the structure of content elements (texts, images) are saved in * HTML * files, their graphic configuration (sizes, colors) in * CSS * files and the code to manage their behavior in * JS * files.",
+        "seo_description": "Web design is a fairly new discipline. What is it and what is its structure? Here we give you the answer",
+        "seo_image_title": null,
+        "seo_image_alt": "Landscape drawn with chalk to contrast graphic design with web design"
+      }
+    },
+    {
+      "id": "5e131154b0e07f08a5cef407",
+      "content": {
+        "title": "HMTL & graphic design",
+        "description": "HMTL (HyperText Markup Language) is the language and main component of the web. Its specification is in charge of The Web World Wide Web Consortium <sup> [1] (# fn1) </sup>, an international community where its members and the general public work together to develop web standards. W3C <sup> [1] (# fn1) </sup> defines it as follows: <br/> <br/>\n  \n\n> * HTML is the language to describe the structure of web pages, it gives authors the means to: *\n> * - Publish documents online with headings, text, tables, lists, photos, among other elements. *\n> * - Get information online through hypertext links, with the click of a button. *\n> * - Design forms to carry out transactions with remote services, find information, make reservations, order products, among other tasks. *\n> * - Include spreadsheets, video clips, sound clips and other applications directly in your documents. * <br/>\n> * With HTML, the authors describe the structure of the pages using markup tags. The language elements label pieces of content as \"titles\", \"paragraphs\", \"lists\", \"tables\", \"images\", among other elements. *\n\nIn addition to W3C <sup> [1] (# fn1) </sup>, there are other websites that offer information on web technologies such as MDN Web Docs <sup> [2] (# fn2) </sup> from Mozilla; A very complete site to learn other related languages. Regarding HTML, this is the way this platform defines it: <br/> <br/>\n\n> HTML is not a programming language; It is a markup language that defines the structure of a content. HTML consists of a series of elements, used to encapsulate different parts of the content and make them behave in a certain way. The labels surrounding the content can redirect words or images to another web page, italicize the texts, make the font larger or smaller, among other options. *\n\n## Anatomy of an HTML element\n\nThe language consists of a series of predetermined labels intended to give hierarchy to the content of the documents. Before showing examples of some of your basic labels, it is important to understand their anatomy: <br/> <br/>\n\n- Except for some cases, a large part of the labels are made up of an opening tag `` tag ''.\n- To complete the content declaration, a closing tag `</label>` is required.\n\nTherefore, the general way to declare an HTML content follows the following rule: `<h1> This is a title </h1>`. The following image illustrates these concepts:\n<a href=\"https://res.cloudinary.com/flaex/image/upload/v1573764772/blog/anatomia-1_mjcpp1.png\" target=\"_blank\"> <img src = \"https: //res.cloudinary. com / flaex / image / upload / v1573764772 / blog / anatomia-1_mjcpp1.png \"alt =\" Structure of an html tag \"/> </a>\n<br/> <br/>\n\nHTML elements can have attributes, the image demonstrates this feature:\n\n<a href=\"https://res.cloudinary.com/flaex/image/upload/v1573766174/blog/anatomia-2_rlirlr.png\" target=\"_blank\"> <img src = \"https: //res.cloudinary. com / flaex / image / upload / v1573766174 / blog / anatomia-2_rlirlr.png \"alt =\" Example of using the class attribute in an html tag \"/> </a>\n<br/> <br/>\n\nThe attributes contain additional information about the elements. In the image above, * class * is the name of the attribute and the * note *, its value. The * class * attribute allows the element to be given an identifier that can be used to include * CSS * style information. <br/> <br/>\n\n* The images and their description in \"Anatomy of an HTML element\" were extracted from MDN Web Docs <sup> [3] (# fn3) </sup>. * <br/> <br/>\n\nIn turn, it is possible to declare tags within other tags following the same rule, as can be seen in the example structure, where the h1 and p tags are nested inside body:\n\n``\n<body>\n   <h1> My First Title </h1>\n   <p> My first paragraph </p>\n</body>\n``\nFrom the point of view of graphic design, these labels may in some cases delimit \"containers\" or components; It is important to note that using HTML it is not possible to give graphic attributes to our pages. For this purpose, CSS is used. <br/> <br/>\n\nThe tags allow us to organize our documents in a structured way, that is, we could think of HTML as the \"skeleton\" of our information. The following code illustrates an example of the structure of the base tags that will allow us to describe the content of the pages:\n\n``\n<! DOCTYPE html>\n<html>\n   <head>\n      <title> Page title </title>\n   </head>\n   <body>\n      <h1> My First Title </h1>\n      <p> My first paragraph </p>\n      </body>\n</html>\n``\nEvery HTML document needs a base structure that provides information to web browsers on how to process that document. Next we will describe the purpose of the labels that make up the structure given in the first example: <br/> <br/>\n\n`<! DOCTYPE html>`: Indicates the version in which the document is presented, in this case, it is the 5th version of HTML. Previously, different variations of HTML could be defined in this tag; Since W3C defined HTML5 as the standard to follow, this form of declaration is the most used. As you can see, this label does not require closure. <br/> <br/>\n\n`<html>`: This tag is the one that contains all the elements of our document, one of its most common attributes is to declare the language of the HTML content. <br/> <br/>\n\n`<head>`: This tag is intended to contain others with meta document information, for example: <br/> <br/>\n\n- `<title>`: page title.\n- `<meta>`: short descriptions that inform the search engines of the topic of the document.\n- `<style>`: CSS style declarations to give graphic attributes.\n- `<script>`: code routines in other client-side languages ​​(user's browser).\n- `<link>`: connection to other resources related to the document.\n\n``\n<head>\n   <title> Page title </title>\n   <meta name = \"description\" content = \"HTML description\">\n   <style>\n      // CSS example to define color of h1 elements\n      h1 {color: blue}\n   <style>\n   <script>\n      // JavaScript example to multiply 2 given values\n      function myFunction (p1, p2) {\n         return p1 * p2\n      }\n   </script>\n</head>\n``\n\n* The information from `<head>` was taken from htmlquick.com <sup> [4] (# fn4) </sup> * <br/> <br/>\n\nThe tags described so far serve to give general information about the page and include other resources related to the HTML document. Much of the elements related to the elements visible by browsers are contained in the `<body>` tag. <br/> <br/>\n\n`<body>`: It is the section of our document that contains all the visible elements. All content declared within this tag will be \"rendered\" by the browser and, therefore, displayed by visitors to our website.\n\n## Relation of the code with the design\nTo better understand the role of HTML tags, we will use the following design as an example to establish its relationship with the code structure in a modular way to emphasize each of its sections. We will present some of the most common labels to give context about how they can be used in case studies.\n\n## The design proposal\nThe sample design that we will implement in HTML is referenced with letters to be able to show the code of each section separately:\n  \n\n<a href=\"https://res.cloudinary.com/flaex/image/upload/v1573766942/blog/html-layout-section_vw3lvv.png\" target=\"_blank\"> <img src = \"https: // res. cloudinary.com/flaex/image/upload/v1573766942/blog/html-layout-section_vw3lvv.png \"alt =\" Minimum structure to follow in html to create a web page \"/> </a> <br/>\n\na) Header (header). <br/>\nb) Navigation (navigation menu). <br/>\nc) Summary article 1. <br/>\nd) Summary article 2. <br/>\ne) Footer (footer).\n  \n\n## The HTML code\nAs mentioned earlier, there are labels that are intended to provide information about the document and the resources related to it. Since they are not part of the \"visible\" elements drawn by the web browser, we will explain them first: <br/> <br/>\n\nIn the \"Anatomy of an HTML element\" section, the role of each of the tags contained in `<head>` is explained in detail. In our code, the first tag `<link>` connects our HTML document with a * CSS * style sheet; in the case of the second, connect our file with the online fonts service Google Fonts <sup> [5] (# fn5) </sup>\n  \n\n<a href=\"https://res.cloudinary.com/flaex/image/upload/v1573767135/blog/html-head_ztl35u.png\" target=\"_blank\"> <img src = \"https: //res.cloudinary. com / flaex / image / upload / v1573767135 / blog / html-head_ztl35u.png \"alt =\" Snippet with html tags that are usually contained in the <head> \"/> </a> <br/>\n\nThe HTML equivalent of the design proposal, as well as the use reference of the labels used in each section, is shown below: <br/> <br/>\n\nThe `<body>` tags mark the beginning of the structure and define the \"visible\" body of the file. Consequently, `<div class =\" container \">` fulfills the function of main container, the * class * attribute of name \"container\" allows you to give the dimensions in * CSS * and designate the background image. Due to the code extension of the document, it is not possible to display the closing tags `</div>` and `</body>`. In section \"e\" there are their respective closures.\n<br/> <br/>\n\n**Section A:**\n<a href=\"https://res.cloudinary.com/flaex/image/upload/v1573767332/blog/header_klwxfk.png\" target=\"_blank\"> <img src = \"https://res.cloudinary.com/flaex/image/upload/v1573767332/blog/header_klwxfk.png\" alt=\" Snippet with the html <div> and <header> tags\"/></a><br/>\n\nIt contains `<header>` reserved for the headings of our documents; `<img>`, meanwhile, is intended to declare the images we wish to embed; In the example, it is accompanied by the attributes: <br/> <br/>\n\n- `src`: image path in the file system.\n\n- `width`: width of the image.\n\n- `height`: height of the image.\n\n<br/> <br/>\n\n**Section b**\n<a href=\"https://res.cloudinary.com/flaex/image/upload/v1573767462/blog/nav_mh7b9j.png\" target=\"_blank\"> <img src = \"https://res.cloudinary.com/ flaex / image / upload / v1573767462 / blog / nav_mh7b9j.png \"alt =\" Snippet with the minimum structure to make lists in html \"/> </a>\n<br/>\n\nThe tag `<nav>`, is used exclusively for the navigation menu of our website. The following label `<ul>`, initials in English of * Unordered list * (unordered list), is intended to group series of similar elements in both content and behavior. <br/> <br/>\n\nIn the image, the label groups the menu buttons, each within its own `<li>` label, as an independent item in the list. In the case of the 2nd item in the list, you can see how it is accompanied by the `class` attribute that allows reference in * CSS * to give it the appearance of an\" active \"element. <br/> <br/>\n\nIn turn, the menu links are contained within a `<a>` tag and its function is to reference elements that serve as hyperlinks to other sections or pages of our website. The `href` attribute indicates the destination; finally, in the 3rd element `<a>` an HTML Entity <sup> [6] (# fn6) </sup> `&nbsp;` can be displayed useful in this case to avoid creating a new line break for each word present . <br/> <br/>\n\n** Section c and d **\n<a href=\"https://res.cloudinary.com/flaex/image/upload/v1573767906/blog/article-1_xs9jf3.png\" target=\"_blank\"> <img src = \"https: //res.cloudinary. com / flaex / image / upload / v1573767906 / blog / article-1_xs9jf3.png \"alt =\" Snippet with an example of how to use the <main> tag in html \"/> </a> <br/>\n\nIt is possible to see that it contains the opening of the `<main>` tag, used to indicate the main content of our document. Next, the unordered list `<ul>` is declared with a `class` attribute named\" list \". This allows you to differentiate the navigation menu lists and the list of items in the * CSS * file which helps to give them different characteristics since their contents do not have the same hierarchy or purpose. <br/> <br/>\n\nThe next item in the `<li>` list defines all the elements of the first article; start with the declaration of a `<img>` tag set to the `src` attributes to define the file path,` width`to designate the width of the image and `height` its height and pixels. <br/> < br />\n\nThe following tag `<div>` has the function of serving as a container element for any type of information, it is one of the most used tags from previous versions of HTML for its versatility when grouping elements. <br/> <br/>\n\nIn this case, it groups the tags `<h2>` whose purpose is to declare headings (headings in English, so the letter h is used) or titles; The language allows us to use up to 6 different hierarchy levels that allow us to organize the information legibly: `<h1>` `<h2>` `<h3>` `<h4>` `<h5>` `<h6> ` The next element in the group is the one declared in `<p>`, used for long texts as paragraphs. <br/> <br/>\n\nThe last tag that is part of this group is `button`; Its purpose is to define the elements that look and behave like buttons to activate functions, take to other sections or links of the website. <br/> <br/>\n\nIn HTML it is important to maintain consistency in the structure of elements that have the same hierarchy, as this makes it possible to use the same * CSS * definitions and make them look the same way; The following article contained in the tag `<li>`, has the same anatomy as the first, so it is not necessary to explain its structure.\n\n<a href=\"https://res.cloudinary.com/flaex/image/upload/v1573768030/blog/article-2_feelqg.png\" target=\"_blank\"> <img src = \"https: //res.cloudinary. com / flaex / image / upload / v1573768030 / blog / article-2_feelqg.png \"alt =\" Snippet with example of using the html tag <button> \"/> </a> <br/>\n\nIt is important to mention that, just as the opening of the unordered list `<ul>` was declared before the first list item `<li>`, it is necessary to declare its closure just after the last item with a `</ul> `; Similarly, the main content of the document is closed by declaring the closing with `</main>`. <br/> <br/>\n  \n\n** Section e **\n<a href=\"https://res.cloudinary.com/flaex/image/upload/v1573768109/blog/footer_bnu4ii.png\" target=\"_blank\"> <img src = \"https://res.cloudinary.com/ flaex / image / upload / v1573768109 / blog / footer_bnu4ii.png \"alt =\" Snippet that reflects the use of the <footer> tag in html \"/> </a> <br/>\n\nThe closing element in the document code is `<footer>`, it is reserved to define the footer of a document or section of the HTML file. It is usually used as a container for legal notices, copyrights, social media links or other pages associated with the website. <br/> <br/>\n\nInside the footer a `<p>` tag is used, used for texts or paragraphs. Being the last element of our page it is necessary to make the respective closures of the declared labels at the beginning of `<body>`, such as `</div>`, `</body>` and `</html>`. <br/> <br/>\n  \n\n** Important note ** <br/>\nThe HTML code presented does not establish a unique and immutable structure. It aims to help the understanding of language by visualizing its components modularly to know how they relate to a particular design and how it is drawn in users' browsers. <br/> <br/>\n\n** Tags present in HTML code ** <br/>\nAs a review, these are the labels used within the element `` <body> '', in the same order declared and combined with their respective uses: <br/> <br/>\n  \n\n`<header>`: page headers. <br/>\n`<img>`: images. <br/>\n`<nav>`: navigation menu. <br/>\n`<ul>`: group of items in unordered lists. <br/>\n`<li>`: list group item. <br/>\n`<a>`: hyperlinks to other sections or pages. <br/>\n`<main>`: main content of the document. <br/>\n`<div>`: generic container. <br/>\n`<h2>`: 2nd level title. <br/>\n`<p>`: paragraphs. <br/>\n`<footer>`: footer. <br/> <br/>\n\nThe complete code used in this article and its related resources are available on the online development platform repl.it <sup> [7] (# fn7) </sup>. The [HTML implementation] (https://html--flaex.repl.co/) was done using the Repl web application.\n  \n\n### References\n<a name=\"fn1\"> 1 </a>: <a href=\"https://www.w3.org/Consortium/\" target =\"_blank\"> W3C </a> <br/>\n\n<a name=\"fn2\"> 2 </a>: <a href=\"https://developer.mozilla.org/es/docs/MDN/About\" target =\"_blank\"> MDN Web Docs </a> <br/>\n\n<a name=\"fn3\"> 3 </a>: <a href=\"https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics\" target =\"_blank\"> MDN Web Docs - HTML basics </a> <br/>\n\n<a name=\"fn4\"> 4 </a>: <a href=\"https://www.htmlquick.com/tutorials/document-structure.html#the-documents-head\" target =\"_blank\"> htmlquick .com - The document's head </a> <br/>\n\n<a name=\"fn5\"> 5 </a>: <a href=\"https://fonts.google.com/about\" target =\"_blank\"> Google Fonts </a> <br/>\n\n<a name=\"fn6\"> 6 </a>: <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Entity\" target =\"_blank\"> HTML Entity </ a > <br/>\n\n<a name=\"fn7\"> 7 </a>: <a href=\"https://repl.it/@Flaex/html\" target =\"_blank\"> Full HTML code in repl.it </a>",
+        "seo_description": "HTML and graphic design are fundamental tools in web design. How do they work together? Here we share a practical example.",
+        "seo_image_title": "@flaex_ html blog for designers",
+        "seo_image_alt": "HTML label drawn with marker and with yellow background"
       }
     }
   ]

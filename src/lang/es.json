@@ -33,7 +33,7 @@
         "seo_description": "Características, muestras e información de los proyectos entregados",
         "seo_keywords": "portafolio catálogo diseño logos impresos web tipografía desarrollo web front-end temas CMS",
         "all": "ver más",
-        "share": "Compartir este proyecto",
+        "share": "Comparte este proyecto",
         "works": {
           "city": "Ciudad",
           "year": "Año"
@@ -82,6 +82,17 @@
             "seo_keywords": "CMS builders constructores visuales elementor wordpress"
           }
         }
+      },
+      "blog": {
+        "title": "blog de @flaex_",
+        "seo_title": "blog",
+        "seo_description": "artículos y tutoriales de diseño web y tecnologías web",
+        "seo_keywords": "blog diseño gráfico desarrollo web front-end",
+        "back": "volver a la página anterior",
+        "profile": "ir al perfil",
+        "share": "Comparte ese artículo",
+        "more": "Leer más",
+        "go_to": "ir a"
       }
     }
   },
@@ -201,7 +212,6 @@
       "year": 2019,
       "city": "Caracas",
       "category": "design",
-      "subcategory": "logo",
       "slug": "athlos",
       "tag": null,
       "content": {
@@ -218,7 +228,6 @@
       "year": 2013,
       "city": "Caracas",
       "category": "development",
-      "subcategory": "frontend",
       "slug": "banco del libro",
       "tag": "web",
       "content": {
@@ -235,7 +244,6 @@
       "year": 2016,
       "city": "Caracas",
       "category": "design",
-      "subcategory": "typography",
       "slug": "barahunda",
       "tag": null,
       "content": {
@@ -252,7 +260,6 @@
       "year": 2018,
       "city": "Caracas",
       "category": "design",
-      "subcategory": "logo",
       "slug": "novanet",
       "tag": null,
       "content": {
@@ -269,7 +276,6 @@
       "year": 2018,
       "city": "Windhoek",
       "category": "design",
-      "subcategory": "logo",
       "slug": "DrMacQ",
       "tag": null,
       "content": {
@@ -286,7 +292,6 @@
       "year": 2018,
       "city": "Caracas",
       "category": "design",
-      "subcategory": "typography",
       "slug": "novatipo",
       "tag": null,
       "content": {
@@ -303,7 +308,6 @@
       "year": 2015,
       "city": "Caracas",
       "category": "design",
-      "subcategory": "web",
       "slug": "Novanet web 2015",
       "tag": "web",
       "content": {
@@ -320,7 +324,6 @@
       "year": 2015,
       "city": "Caracas",
       "category": "development",
-      "subcategory": "frontend",
       "slug": "caracas design",
       "tag": "web",
       "content": {
@@ -337,7 +340,6 @@
       "year": 2010,
       "city": "Caracas",
       "category": "development",
-      "subcategory": "frontend",
       "slug": "Psi cocina",
       "tag": null,
       "content": {
@@ -354,7 +356,6 @@
       "year": 2015,
       "city": "Caracas",
       "category": "design",
-      "subcategory": "prints",
       "slug": "take on bar",
       "tag": null,
       "content": {
@@ -371,7 +372,6 @@
       "year": 2013,
       "city": "Caracas",
       "category": "design",
-      "subcategory": "prints",
       "slug": "ejsupply",
       "tag": null,
       "content": {
@@ -388,7 +388,6 @@
       "year": 2018,
       "city": "Windhoek",
       "category": "design",
-      "subcategory": "prints",
       "slug": "DrMacQ",
       "tag": null,
       "content": {
@@ -405,7 +404,6 @@
       "year": 2017,
       "city": "Santiago de Chile",
       "category": "development",
-      "subcategory": "cms",
       "slug": "pronotas",
       "tag": null,
       "content": {
@@ -422,7 +420,6 @@
       "year": 2019,
       "city": "Miami",
       "category": "development",
-      "subcategory": "cms",
       "slug": "euroquartz",
       "tag": null,
       "content": {
@@ -439,7 +436,6 @@
       "year": 2019,
       "city": "Miami",
       "category": "development",
-      "subcategory": "cms",
       "slug": "global protection group",
       "tag": null,
       "content": {
@@ -448,6 +444,38 @@
         "seo_image_title": "Landing page de Global Protection Group",
         "seo_image_alt": "Imagen del diseño del landing page de Global Protection Group",
         "seo_description": "Entrada de portafolio del proyecto de landing page de Global Protection Group con una descripción corta del mismo"
+      }
+    }
+  ],
+  "articles": [
+    {
+      "id": "5e0f9654a61c155399fc12c8",
+      "content": {
+        "title": "Diseño gráfico y desarrollo web ",
+        "description": "Abordar el desarrollo web desde el punto de vista de un diseñador gráfico puede ser complejo. Por lo general, en el diseño gráfico (o comunicación visual) gran parte de los elementos son tangibles ya que conocemos previamente el contenido de la pieza a diseñar, su tamaño aproximado, podemos vislumbrar qué colores y tipografía a utilizar, entre otras cosas. <br/><br/>\nLos programas de diseño gráfico están adaptados a esta naturaleza; si quieres hacer un elipse basta con elegir la herramienta indicada y dibujarla en el espacio de trabajo. En contraste, en el diseño web se utiliza el pensamiento abstracto para resolver los requerimientos que se nos plantean; por ejemplo, si queremos cambiar el ancho de un componente en nuestra vista web sería necesario modificar las propiedades en el estilo CSS.<br/><br/> \n\nLas maneras de abordar el cambio a realizar es diferente porque en el diseño gráfico las propiedades de la elipse se manejan seleccionando el elemento y modificando sus propiedades. En la web es distinto pues hay que editar un archivo que tiene por propósito darle estilo visual a la página. <br/><br/>  \n\nEs por esto que he decidido compartir información para facilitar el proceso de aprendizaje del diseño web y ofrecer a los interesados el enfoque y orientación necesarios para empezar a hacer páginas web; Principalmente, el contenido va dirigido a diseñadores gráficos, aficionados y entusiastas. También podría ser de utilidad para desarrolladores web que buscan mejorar el estilo visual de sus vistas web a través de los fundamentos básicos del diseño. <br/><br/>\n\n### ¿Qué es @flaex_? \n\nEs un personaje inspirado en el trabajo con tijera, cartulina y papel. La composición del logo está realizada manualmente, similar al proceso tradicional del diseño antes de la llegada de las computadoras. <br/><br/>  \n\nLa identidad gráfica está complementada con series de [“caras”](https://flaex.netlify.com/shuffler) hechas a partir de caracteres tipográficos puestos de tal forma que crean “expresiones”. Funciona también como ejercicio de relación de las formas. <br/><br/>\n\n### Temas<br/>  \n\nEl contenido que compartiré a través del blog contemplará los siguientes temas:<br/><br/>  \n\n**I. ¿Qué es el diseño web?**\n- **Diseño gráfico**\n\t- Fundamentos.\n\t- Logotipos, impresos, tipografía.\n- **Desarrollo web**\n\t- Fundamentos (backend, frontend).\t\n\t- HTML, CSS, JS.\n\t- Tipos de sitios web (estáticos, web apps, CMS).\n\n**II. Guías**\n- **Programas de diseño gráfico**\n\t- Illustrator, Photoshop, Animate, Gimp, Inkscape, FontBase.\n- **Programas de desarrollo web**\n\t- Visual Studio Code, GitHub, Google Chrome Dev Tools.\n- **Librerías y frameworks**\n\t- Bootstrap, React, CreateJS.\n\n**II. Reseñas**\n- Diseño gráfico, desarrollo web y tecnologías de la información.\n\n### ¿Para qué este blog? <br/>  \n\nPrincipalmente el objetivo es crear contenido en español de diseño y desarrollo web ya que la gran mayoría de información que se encuentra está en inglés, lo que dificulta el aprendizaje. Compartir e interactuar con personas interesadas en el diseño gráfico, el desarrollo web y las nuevas tecnologías.",
+        "seo_description": "Presentación del blog de @flaex_ con una explicación corta de la relación entre diseño gráfico y desarrollo web.",
+        "seo_image_title": "@flaex_: Diseño gráfico y desarrollo web front-end",
+        "seo_image_alt": "Diseño gráfico para caracteres tipográficos con forma de caras"
+      }
+    },
+    {
+      "id": "5e130e82b0e07f08a5cef3fe",
+      "content": {
+        "title": "¿Qué es el diseño web?",
+        "description": "El surgimiento y auge de internet como medio de difusión de contenido lo ha colocado como protagonista en muchas de nuestras actividades cotidianas tales como el trabajo, los estudios, espacios de recreación y entretenimiento. Su disponibilidad inmediata y mejor uso de recursos lo ha convertido en el medio de comunicación de preferencia de muchas personas y empresas que quieren publicar información de interés ya sea por medio de las redes sociales o sitios web con objetivos y funciones específicas. \n\nAl tratarse de un canal de comunicación masivo, el diseño gráfico, a través del diseño web, se ha integrado a los proyectos de desarrollo web por medio de una serie de tecnologías que nos permiten implementar nuestros diseños estáticos en páginas web funcionales; es muy importante entender al diseño web como una especialidad en donde se combinan principalmente 2 disciplinas: diseño gráfico y desarrollo web.\n\n## *Diseño gráfico*\n\nTal como lo define Wicius Wong<sup>[1](#fn1)</sup> en su libro Fundamentos del diseño<sup>[2](#fn2)</sup>, no se trata únicamente de una cuestión de estética:<br/><br/>\n\n> *El diseño es un proceso de creación visual con un propósito. A diferencia de la pintura y escultura, que son la realización de las visiones personales y los sueños de un artista, el diseño cubre exigencias prácticas. Una unidad de diseño gráfico debe ser colocada a frente a los ojos del público y transportar un mensaje prefijado. Un producto industrial debe cubrir las necesidades del consumidor.*  \n\nEn el diseño gráfico se toman en cuenta factores como la funcionalidad y propósito en el proceso de creativo; es decir, el diseño web también se fundamenta en estos principios. El lenguaje visual busca ser práctico, legible e informar a los usuarios; su naturaleza objetiva es evidente. De igual manera, es muy importante reconocer y comprender su rol en nuestra sociedad y su finalidad como medio para transmitir información; Joan Costa<sup>[3](#fn3)</sup> lo designa así en su libro Diseñar para los ojos<sup>[4](#fn4)</sup>: <br/><br/>\n\n> *Su designio mas noble es trabajar para mejorar nuestro entorno visual, hacer el mundo intelegible y mejorar la calidad de vida; aportar informaciones y mejorar las cosas; difundir las causas cívicas y de interés colectivo y la cultura. Su especifidad como disciplina es transmitir sensaciones, emociones y conocimiento.*\n\n> *En tanto que el cometido del diseño gráfico es la comunicación, la disciplina cuenta para ello con un lenguaje propio . Es el lenguaje básico de la imagen y el texto. *\n\nConociendo su naturaleza práctica y su rol en el desarrollo de la sociedad, el \"grafismo\" está estrechamente vinculado a la industria y el comercio, a los medios audiovisuales, al marketing y a las ciencias de la comunicación. Su crecimiento está directamente relacionado con el desarrollo de nuevas tecnologías. Por lo tanto, su asociación con el desarrollo web es directa.\n\n\n## *Desarrollo web*\nWikipedia lo define en su sitio web<sup>[5](#fn5)</sup> de la siguiente manera :\n> *Es la actividad de desarrollar aplicaciones web en internet o intranet. El desarrollo web contempla desde elaborar páginas estáticas de texto simples hasta aplicaciones complejas basadas en la web, comercios electrónicos y servicios de redes sociales. Está involucrado en tareas de ingeniería web, diseño web, diseño de contenido, renderizado lado cliente y servidor, servidores web y seguridad en redes.*\n\nEn el caso de las tecnologías de la información, ha sido el desarrollo web el que ha dispuesto de los estándares necesarios para crear contenido a través de la combinación de herramientas de software, bases de datos y navegadores web. Así como mencioné en un [articulo anterior](https://flaex.netlify.com/blog/blog-de-@flaex_), abordar el desarrollo web desde el punto de vista de un diseñador gráfico puede ser complejo.\n\nPor ende, es conveniente usar el pensamiento abstracto para resolver los requerimientos que se nos plantean; por dar un ejemplo, en el diseño web, la estructura de los elementos del contenido (textos, imágenes) se guardan en archivos *HTML*, su configuración gráfica (tamaños, colores) en archivos *CSS* y el código para manejar su comportamiento en archivos *JS*. ",
+        "seo_description": "El diseño web es una disciplina  bastante nueva. ¿Qué es y cuál es su estructura? Aquí te damos la respuesta.",
+        "seo_image_title": "¿Qué es el diseño web?",
+        "seo_image_alt": "Paisaje dibujado con tiza para contrastar el diseño gráfico con el diseño web"
+      }
+    },
+    {
+      "id": "5e131154b0e07f08a5cef407",
+      "content": {
+        "title": "HTML y el diseño gráfico",
+        "description": "HMTL (HyperText Markup Language) es el lenguaje y componente principal de la web. Su especificación está a cargo de The Web World Wide Web Consortium<sup>[1](#fn1)</sup>, una comunidad internacional en donde sus miembros y el público en general trabajan en conjunto para desarrollar estándares web. La W3C<sup>[1](#fn1)</sup> lo define de la siguiente manera:<br/><br/>\n  \n\n> *HTML es el lenguaje para describir la estructura de las páginas web, brinda a los autores los medios para:*\n> *- Publicar documentos en línea con encabezados, texto, tablas, listas, fotos, entre otros elementos.*\n> *- Obtener información en línea a través de enlaces de hipertexto, con el clic de un botón.*\n> *- Diseñar formularios para realizar transacciones con servicios remotos, buscar información, hacer reservas, ordenar productos, entre otras tareas.*\n> *- Incluir hojas de cálculo, videoclips, clips de sonido y otras aplicaciones directamente en sus documentos.*<br/>\n> *Con HTML, los autores describen la estructura de las páginas mediante etiquetas de marcado. Los elementos del idioma etiquetan piezas de contenido como \"títulos\", \"párrafos\", \"listas\", \"tablas\", \"imágenes\", entre otros elementos.*  \n\nAdemás del W3C<sup>[1](#fn1)</sup>, existen otros sitios web que ofrecen información de tecnologías web como MDN Web Docs<sup>[2](#fn2)</sup> de Mozilla; un sitio muy completo para aprender otros lenguajes relacionados. Con respecto a HTML, esta es la forma en que esta plataforma lo define:<br/><br/>  \n\n> *HTML no es un lenguaje de programación; Es un lenguaje de marcado que define la estructura de un contenido. HTML consiste en una serie de elementos, usados para encapsular diferentes partes del contenido y hacer que se comporten de forma determinada. Las etiquetas que rodean el contenido pueden redireccionar palabras o imagenes a otra página web, poner en cursiva los textos, hacer que la fuente sea más grande o más pequeña, entre otras opciones.*  \n\n## Anatomía de un elemento HTML\n\nEl lenguaje consiste en una serie de etiquetas predeterminadas destinadas a darle jerarquía al contenido de los documentos. Antes de mostrar ejemplos de algunas de sus etiquetas básicas, es importante entender su anatomía : <br/><br/>\n\n- Exceptuando algunos casos, gran parte de las etiquetas están conformadas por una etiqueta de apertura `<etiqueta>`. \n- Para completar la declaración del contenido, es necesaria una etiqueta de cierre `</etiqueta>`.  \n\nPor lo tanto, la forma general para declarar un contenido en HTML, sigue la siguiente regla: `<h1>Este es un título</h1>`. La siguiente imagen ilustra estos conceptos:\n<a href=\"https://res.cloudinary.com/flaex/image/upload/v1573764772/blog/anatomia-1_mjcpp1.png\" target=\"_blank\"><img src=\"https://res.cloudinary.com/flaex/image/upload/v1573764772/blog/anatomia-1_mjcpp1.png\" alt=\"Estructura de una etiqueta html\" /></a>\n<br/><br/>  \n\nLos elementos HTML pueden tener atributos, la imagen demuestra esta característica: \n\n<a href=\"https://res.cloudinary.com/flaex/image/upload/v1573766174/blog/anatomia-2_rlirlr.png\" target=\"_blank\"><img src=\"https://res.cloudinary.com/flaex/image/upload/v1573766174/blog/anatomia-2_rlirlr.png\" alt=\"Ejemplo de uso del atributo class en una etiqueta html\" /></a>\n<br/><br/>  \n\nLos atributos contienen información adicional sobre los elementos. En la imagen de arriba, *class* es el nombre del atributo y la *nota*, su valor. El atributo *class* permite dar al elemento un identificador que se puede usar para incluir información de estilos *CSS*.<br/><br/>  \n\n*Las imágenes y su descripción en \"Anatomía de un elemento HTML\", fueron extraídas de MDN Web Docs <sup>[3](#fn3)</sup> .* <br/><br/>  \n\nA su vez, es posible declarar etiquetas dentro de otras etiquetas siguiendo la misma regla, como se puede ver en la estructura de ejemplo, en donde las etiquetas h1 y p, están anidadas dentro de body: \n\n```\n<body>\n   <h1>Mi Primer título</h1>\n   <p>Mi primer párrafo</p>\n</body>\n```\nDesde el punto de vista del diseño gráfico, dichas etiquetas pueden en algunos casos delimitar \"contenedores\" o componentes; es importante tener en cuenta que mediante HTML no es posible darle atributos gráficos a nuestras páginas. Para este fin, se utiliza CSS. <br/><br/> \n\nLas etiquetas nos permiten organizar nuestros documentos de manera estructurada, es decir, podríamos pensar en HTML como el \"esqueleto\" de nuestra información. El siguiente código ilustra un ejemplo de la estructura de las etiquetas base que nos permitirán describir el contenido de las páginas: \n\n```\n<!DOCTYPE html>\n<html>\n   <head>\n      <title>Título de la página</title>\n   </head>\n   <body>\n      <h1>Mi Primer título</h1>\n      <p>Mi primer párrafo</p>\n      </body>\n</html>\n```\nTodo documento HTML necesita una estructura base que aporte información a los navegadores web sobre como procesar dicho documento. A continuación describiremos el propósito de las etiquetas que conforman la estructura dada en el primer ejemplo: <br/><br/>  \n\n`<!DOCTYPE html>`: Indica la versión en la que se presenta el documento, en este caso, es la 5ta versión de HTML. Anteriormente, en esta etiqueta se podían definir diferentes variaciones de HTML; desde que la W3C definió a HTML5 cómo el estándar a seguir, esta forma de declaración es la más usada. Como se puede observar, esta etiqueta no requiere cierre. <br/><br/>  \n\n`<html>`: Esta etiqueta es la que contiene todos los elementos de nuestro documento, uno de sus atributos más comunes sirve para declarar el idioma del contenido del HTML. <br/><br/> \n\n`<head>`: Esta etiqueta está destinada a contener otras con meta información del documento, por ejemplo:<br/><br/>\n\n- `<title>`: título de la página.\n- `<meta>`: descripciones cortas que informan a los buscadores el tópico del documento.\n- `<style>`: declaraciones de estilos CSS para dar atributos gráficos.\n- `<script>`: rutinas de código en otros lenguajes del lado del cliente (navegador del usuario).\n- `<link>`: conexión a otros recursos relacionados con el documento.\n\n```\n<head>\n   <title>Título de la página</title>\n   <meta name=\"description\" content=\"Descripción de HTML\">\n   <style>\n      //Ejemplo CSS para definir color de los elementos h1\n      h1 {color: blue}\n   <style>\n   <script>\n      //Ejemplo JavaScript para multplicar 2 valores dados\n      function myFunction(p1, p2) {\n         return p1 * p2\n      }\n   </script>\n</head>\n```  \n\n*La información de `<head>` fue tomada de htmlquick.com <sup>[4](#fn4)</sup> *<br/><br/>  \n\nLas etiquetas descritas hasta el momento sirven para dar información general de la página e incluir otros recursos relacionados con el documento HTML. Gran parte de los elementos relacionados con los elementos visibles por los navegadores están contenidos en la etiqueta `<body>`. <br/><br/>  \n\n`<body>`: Es la sección de nuestro documento que contiene todo los elementos visibles. Todo el contenido que se declare dentro de esta etiqueta será \"renderizado\" por el navegador y, por consiguiente, visualizado por los visitantes de nuestra página web.  \n\n## Relación del código con el diseño\nPara comprender de una mejor manera el rol que tienen las etiquetas HTML, utilizaremos el siguiente diseño como ejemplo para establecer su relación con la estructura del código de manera modular para hacer énfasis en cada una de sus secciones. Presentaremos algunas de las etiquetas más comunes para dar contexto acerca de como pueden ser usadas en casos prácticos.  \n\n## La propuesta de diseño\nEl diseño de ejemplo que implementaremos en HTML está referenciado con letras para poder mostrar el código de cada sección separadamente:\n  \n\n<a href=\"https://res.cloudinary.com/flaex/image/upload/v1573766942/blog/html-layout-section_vw3lvv.png\" target=\"_blank\"><img src=\"https://res.cloudinary.com/flaex/image/upload/v1573766942/blog/html-layout-section_vw3lvv.png\" alt=\"Estructura mínima a seguir en html para crear una página web\" /></a><br/>\n\na) Header (encabezado).<br/>\nb) Navigation (menú de navegación).<br/>\nc) Resumen artículo 1.<br/>\nd) Resumen artículo 2.<br/>\ne) Footer (pie de página).\n  \n\n## El código HTML\nComo se mencionó anteriormente, existen etiquetas que tienen por cometido aportar información del documento y de los recursos relacionados con el mismo. Dado que no forman parte de los elementos \"visibles\" que dibuja el navegador web, las explicaremos primero:<br/><br/>  \n\nEn el apartado de \"Anatomía de un elemento HTML\", se explica en detalle el rol de cada una de las etiquetas contenidas en `<head>`. En nuestro código, la primera etiqueta `<link>` conecta nuestro documento HTML con una hoja de estilos *CSS*; en el caso de la segunda, conecta nuestro archivo con el servicio de fuentes online Google Fonts<sup>[5](#fn5)</sup>\n  \n\n<a href=\"https://res.cloudinary.com/flaex/image/upload/v1573767135/blog/html-head_ztl35u.png\" target=\"_blank\"><img src=\"https://res.cloudinary.com/flaex/image/upload/v1573767135/blog/html-head_ztl35u.png\" alt=\"Snippet con etiquetas html que suelen ir contenidas en el <head>\" /></a><br/>  \n\nEl equivalente en HTML de la propuesta de diseño, al igual que la referencia de uso de las etiquetas utilizadas en cada sección, se muestra a continuación:<br/><br/>  \n\nLas etiqueta `<body>` marca el inicio de la estructura y define el cuerpo \"visible\" del archivo. Consiguientemente, `<div class=\"container\">` cumple la función de contenedor principal, el atributo *class* de nombre \"container\" permite darle las dimensiones en *CSS* y designarle la imagen de fondo. Debido a la extensión de código del documento, no es posible mostrar las etiquetas de cierre `</div>` y `</body>`. En la sección \"e\" se encuentran sus respectivos cierres.\n<br/><br/>  \n\n**Sección a:**\n<a href=\"https://res.cloudinary.com/flaex/image/upload/v1573767332/blog/header_klwxfk.png\" target=\"_blank\"><img src=\"https://res.cloudinary.com/flaex/image/upload/v1573767332/blog/header_klwxfk.png\" alt=\"Snippet con las etiquetas html <div> y <header>\" /></a><br/>  \n\nContiene a`<header>` reservada para los encabezados de nuestros documentos;`<img>`, por su parte, tiene por propósito declarar las imágenes que deseamos incrustar; en el ejemplo, está acompañada por los atributos: <br/><br/>  \n\n- `src`: ruta de la imagen en el sistema de archivos.\n\n- `width`: ancho de la imagen.\n\n- `height`: alto de la imagen.\n\n<br/> <br/>  \n\n**Sección b**\n<a href=\"https://res.cloudinary.com/flaex/image/upload/v1573767462/blog/nav_mh7b9j.png\" target=\"_blank\"><img src=\"https://res.cloudinary.com/flaex/image/upload/v1573767462/blog/nav_mh7b9j.png\" alt=\"Snippet con la estructura mínima para hacer listas en html\" /></a>\n<br/>  \n\nLa etiqueta `<nav>`, es utilizada exclusivamente para el menú de navegación de nuestra página web. La siguiente etiqueta`<ul>`, iniciales en inglés de *Unordered list* (lista no ordenada), tiene como cometido agrupar series de elementos similares tanto en contenido como en comportamiento. <br/><br/>  \n\nEn la imagen, la etiqueta agrupa los botones del menú, cada uno dentro de su propia etiqueta `<li>`, como ítem independiente de la lista. En el caso del 2do ítem de la lista, se puede observar como está acompañado por el atributo `class` que permite hacer referencia en *CSS* para darle el aspecto de elemento \"activo\".<br/><br/>  \n\nA su vez, los vínculos del menú están contenidos dentro de una etiqueta `<a>` y tiene por función referenciar elementos que sirven como hipervínculos a otras secciones o páginas de nuestro sitio web. El atributo `href` permite indicar el destino; por último, en el 3er elemento `<a>` se puede visualizar una Entidad HTML<sup>[6](#fn6)</sup> `&nbsp;`, útil en este caso para evitar que se cree un salto de línea nuevo por cada palabra presente.<br/><br/>  \n\n**Sección c y d**\n<a href=\"https://res.cloudinary.com/flaex/image/upload/v1573767906/blog/article-1_xs9jf3.png\" target=\"_blank\"><img src=\"https://res.cloudinary.com/flaex/image/upload/v1573767906/blog/article-1_xs9jf3.png\" alt=\"Snippet con un ejemplo de cómo usar la etiqueta <main> en html\" /></a><br/>  \n\nEs posible ver que contiene la apertura de la etiqueta `<main>`, utlizada para indicar el contenido principal de nuestro documento. Seguidamente, se encuentra declarada la lista no ordenada `<ul>` con un atributo `class` de nombre \"lista\". Esto permite diferenciar las listas del menú de navegación y la lista de los artículos en el archivo *CSS* lo cual ayuda a darles distintas características ya que sus contenidos no tienen la misma jerarquía ni propósito. <br/><br/> \n\nEl siguiente item de la lista `<li>` define todos los elementos del primer artículo; comienza con la declaración de una etiqueta `<img>` conjunto a los atributos `src`para definir la ruta del archivo, `width`para designar el ancho de la imagen y `height` su alto e píxeles.<br/><br/>  \n\nLa siguiente etiqueta `<div>` tiene por función servir de elemento contenedor para cualquier tipo de información, es una de las etiquetas mas utilizadas desde versiones anteriores de HTML por su versatilidad a la hora de agrupar elementos. <br/><br/>  \n\nEn este caso, agrupa a las etiquetas `<h2>` que tiene por propósito declarar encabezados (headings en inglés, por ello se utliza la letra h) o títulos; el lenguaje nos permite utilizar hasta 6 niveles de jerarquía distintos que nos permiten organizar la información de manera legible: `<h1>` `<h2>` `<h3>` `<h4>` `<h5>` `<h6>`. El siguiente elemento en el grupo es el declarado en `<p>`, utlizado para textos largos como párrafos. <br/><br/>  \n\nLa última etiqueta que forma parte de este grupo es `button`; su propósito es definir los elementos que lucen y se comportan como botones para activar funciones, llevar a otras secciones o vínculos del sitio web. <br/><br/>  \n\nEn HTML es importante mantener la consistencia en la estructura de elementos que tienen igual jerarquía, pues esto hace posible utilizar las mismas definiciones *CSS* y hacer que se vean de la misma manera; el siguiente artículo contenido en la etiqueta `<li>`, tiene la misma anatomía del primero, por lo que no es necesario explicar su estructura.  \n\n<a href=\"https://res.cloudinary.com/flaex/image/upload/v1573768030/blog/article-2_feelqg.png\" target=\"_blank\"><img src=\"https://res.cloudinary.com/flaex/image/upload/v1573768030/blog/article-2_feelqg.png\" alt=\"Snippet con ejemplo de uso de la etiqueta html <button>\" /></a><br/>  \n\nEs importante mencionar que, así como se declaró la apertura de la lista no ordenada `<ul>` antes del primer item de lista `<li>`, es necesario declarar su cierre justo despues del último item con un`</ul>`; de igual manera, se hace el cierre del contenido principal del documento declarando el cierre con `</main>`. <br/><br/>\n  \n\n**Sección e**\n<a href=\"https://res.cloudinary.com/flaex/image/upload/v1573768109/blog/footer_bnu4ii.png\" target=\"_blank\"><img src=\"https://res.cloudinary.com/flaex/image/upload/v1573768109/blog/footer_bnu4ii.png\" alt=\"Snippet que refleja el uso de la etiqueta <footer> en html\" /></a><br/>  \n\nEl elemento de cierre en el código del documento es `<footer>`, está reservado para definir el pie de página de un documento o sección del archivo HTML. Usualmente es usado como contenedor de avisos legales, derechos de autor, vínculos de redes sociales u otras páginas asociadas al sitio web. <br/><br/>  \n\nDentro del pie de página está declarada una etiqueta `<p>`, utilizada para textos o párrafos. Al ser el ultimo elemento de nuestra página es necesario hacer los cierres respectivos de las etiquetas declardas al inicio de `<body>`, tales como `</div>`, `</body>` y `</html>`.<br/><br/>\n  \n\n**Nota importante**<br/>\nEl código HTML presentado no establece una estructura única e inmutable. Tiene como objetivo ayudar a la comprensión del lenguaje visualizando sus componentes modularmente para saber cómo se relacionan con un diseño determinado y cómo este se dibuja en los navegadores de los usuarios.<br/><br/>  \n\n**Etiquetas presentes en código HTML**<br/>\nA forma de repaso, estas son las etiquetas utlizadas dentro del elemento `<body>`, en el mismo orden declarado y conjunto a sus respectivos usos:<br/><br/>\n  \n\n`<header>`: encabezados de las páginas.<br/>\n`<img>`: imágenes.<br/>\n`<nav>`: menú de navegación.<br/>\n`<ul>`: grupo de items en listas no ordenadas.<br/>\n`<li>`: item del grupo de lista.<br/>\n`<a>`: hipervínculos a otras secciones o páginas.<br/>\n`<main>`: contenido principal del documento.<br/>\n`<div>`: contenedor genérico.<br/>\n`<h2>`: Título de 2do nivel.<br/>\n`<p>`: párrafos.<br/>\n`<footer>` : pie de página.<br/><br/>  \n\nEl código completo utilizado en este artículo y sus recursos relacionados están disponibles en la plataforma de desarrollo online repl.it<sup>[7](#fn7)</sup>. La [implementación HTML](https://html--flaex.repl.co/) se realizó usando la aplicación web Repl. \n  \n\n### Referencias\n<a name=\"fn1\">1</a>: <a href=\"https://www.w3.org/Consortium/\" target =\"_blank\">W3C</a><br/>  \n\n<a name=\"fn2\">2</a>: <a href=\"https://developer.mozilla.org/es/docs/MDN/About\" target =\"_blank\">MDN Web Docs</a><br/>  \n\n<a name=\"fn3\">3</a>: <a href=\"https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics\" target =\"_blank\">MDN Web Docs - HTML basics</a><br/>  \n\n<a name=\"fn4\">4</a>: <a href=\"https://www.htmlquick.com/tutorials/document-structure.html#the-documents-head\" target =\"_blank\">htmlquick.com - The document's head</a><br/>\n\n<a name=\"fn5\">5</a>: <a href=\"https://fonts.google.com/about\" target =\"_blank\">Google Fonts</a><br/> \n\n<a name=\"fn6\">6</a>: <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Entity\" target =\"_blank\">HTML Entity</a><br/> \n\n<a name=\"fn7\">7</a>: <a href=\"https://repl.it/@Flaex/html\" target =\"_blank\">Código HTML completo en repl.it</a>",
+        "seo_description": "HTML y el diseño gráfico son herramientas fundamentales en el diseño web. ¿Cómo funcionan juntas? Aquí compartimos un ejemplo práctico. ",
+        "seo_image_title": "blog de @flaex_ html para diseñadores",
+        "seo_image_alt": "Etiqueta html dibujada con marcador y con fondo amarillo"
       }
     }
   ]
