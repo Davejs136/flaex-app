@@ -30,12 +30,13 @@ const ArticleTemplate = ({ data, intl: { messages } }) => (
           <SEO
             title={item.content.title}
             description={item.content.seo_description}
-            image={data.strapiArticle.image.childImageSharp.fluid.src}            
+            image={data.strapiArticle.image.childImageSharp.fluid.src}
           />
           <div className="navsec">
-            <Link 
-            to={`/${messages.static.lang}/blog`} 
-            aria-label={messages.static.views.blog.back}>
+            <Link
+              to={`/${messages.static.lang}/blog`}
+              aria-label={messages.static.views.blog.back}
+            >
               &#10229;
             </Link>
           </div>
@@ -43,7 +44,10 @@ const ArticleTemplate = ({ data, intl: { messages } }) => (
             <h1>{item.content.title}</h1>
             <p className="author">
               por{" "}
-              <Link to="/about-me" aria-label={messages.static.views.blog.profile}>
+              <Link
+                to="/about-me"
+                aria-label={messages.static.views.blog.profile}
+              >
                 {data.strapiArticle.author.username}
               </Link>
             </p>
@@ -110,8 +114,8 @@ export const query = graphql`
             ...GatsbyImageSharpFluid
           }
         }
-      }    
-      author {     
+      }
+      author {
         username
       }
     }

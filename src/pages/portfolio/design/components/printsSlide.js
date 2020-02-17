@@ -49,9 +49,11 @@ const PrintsSlide = ({ intl: { messages } }) => (
           {data.allStrapiWork.edges.map(document => (
             <Link
               key={document.node.id}
-              to={`/${messages.static.lang}/portfolio/${document.node.category}/${
-                document.node.subcategory
-              }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
+              to={`/${messages.static.lang}/portfolio/${
+                document.node.category
+              }/${document.node.subcategory}/${document.node.slug
+                .replace(/\s+/g, "-")
+                .toLowerCase()}`}
             >
               <Img fluid={document.node.image.childImageSharp.fluid} />
             </Link>

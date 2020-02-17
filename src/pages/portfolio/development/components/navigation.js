@@ -30,7 +30,6 @@ const DesignNavigationComponent = ({ intl: { messages } }) => (
     >
       {messages.static.views.portfolio.development.cms.title}
     </Link>
-  
   </div>
 )
 

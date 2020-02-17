@@ -49,9 +49,11 @@ const TypographySlide = ({ intl: { messages } }) => (
           {data.allStrapiWork.edges.map(document => (
             <Link
               key={document.node.id}
-              to={`/${messages.static.lang}/portfolio/${document.node.category}/${
-                document.node.subcategory
-              }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
+              to={`/${messages.static.lang}/portfolio/${
+                document.node.category
+              }/${document.node.subcategory}/${document.node.slug
+                .replace(/\s+/g, "-")
+                .toLowerCase()}`}
             >
               <Img fluid={document.node.image.childImageSharp.fluid} />
             </Link>
@@ -60,7 +62,9 @@ const TypographySlide = ({ intl: { messages } }) => (
         <div className="all">
           <Link
             to={`/${messages.static.lang}/portfolio/design/typography`}
-            aria-label={messages.static.views.portfolio.design.typography.seo_title}
+            aria-label={
+              messages.static.views.portfolio.design.typography.seo_title
+            }
           >
             {messages.static.views.portfolio.all} {" ➝"}
           </Link>

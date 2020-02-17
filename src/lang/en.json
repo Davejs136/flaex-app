@@ -3,7 +3,7 @@
     "lang": "en",
     "components": {
       "header": {
-        "faces": "faces",
+        "home": "home",
         "about_me": "bio"
       },
       "navigation": {
@@ -93,6 +93,29 @@
         "share": "share this post",
         "more": "Read more",
         "go_to": "go to"
+      },
+      "contact": {
+        "title": "Contact me!",
+        "seo_title": "Contact form",
+        "seo_description": "Send a message to @flaex_ email",
+        "seo_keywords": "contact @flaex_ to graphic design front-end web develop",
+        "description": "Let's work together!. Let's design your company logo or your personal brand. Let's implement branding in commercial stationery and your social networks. Let's develop a web application to sell your services and products. Create your personal web page with your portfolio and blog. Consolidate your presence on the internet!",
+        "subtitle": "Send me a message!",
+        "submessage": "Write and send me a message to my personal email. I'm looking forward to helping you in solving your requirements.",
+        "form_name": "name",
+        "form_mail": "email",
+        "form_message": "message",
+        "form_button": "send",
+        "made_in": "This web app is built in:",
+        "dev_with": "Developed with:"
+      },
+      "not_found": {
+        "title": "404: Not found",
+        "description": "You tried to visit a link that does not exist.",
+        "message": "Use the navogation menu to return to the site!",
+        "seo_title": "non-existent page",
+        "seo_description": "page for non-existent pages on the site",
+        "seo_keywords": "contact @flaex_ graphic design front-end web development"
       }
     }
   },

@@ -3,8 +3,9 @@ import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { injectIntl } from "gatsby-plugin-intl-graphql"
 
-const NotFoundPage = () => (
+const NotFoundPage = ({ intl: { messages } }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -19,16 +20,20 @@ const NotFoundPage = () => (
     `}
     render={data => (
       <Layout>
-        <SEO title="404: No encontrado" />
+        <SEO
+          title={messages.static.views.not_found.seo_title}
+          description={messages.static.views.not_found.seo_description}
+          keywords={messages.static.views.not_found.seo_keywords}
+        />
         <h1>
-          Página inexistente{" "}
+          {messages.static.views.not_found.title}{" "}
           <span aria-label="emoji" role="img">
             😔
           </span>
         </h1>
-        <p>Intentaste visitar un vínculo que no existe.</p>
+        <p>{messages.static.views.not_found.description}</p>
         <p>
-          ¡Usa el menú para volver al sitio!{" "}
+          {messages.static.views.not_found.message}{" "}
           <span aria-label="emoji" role="img">
             😃
           </span>
@@ -41,4 +46,4 @@ const NotFoundPage = () => (
   />
 )
 
-export default NotFoundPage
+export default injectIntl(NotFoundPage)

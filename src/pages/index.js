@@ -17,8 +17,8 @@ const IndexPage = ({ intl: { messages } }) => (
   <div className="home">
     <SEO
       title={messages.static.views.index.seo_title}
-      description={messages.static.views.index.seo_description} 
-      keywords={messages.static.views.index.seo_keywords} 
+      description={messages.static.views.index.seo_description}
+      keywords={messages.static.views.index.seo_keywords}
     />
     <h1 className="hidden">{messages.static.views.index.seo_title}</h1>
     <div className="menu">

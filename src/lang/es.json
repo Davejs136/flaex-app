@@ -3,7 +3,7 @@
     "lang": "es",
     "components": {
       "header": {
-        "faces": "caras",
+        "home": "home",
         "about_me": "perfil"
       },
       "navigation": {
@@ -93,6 +93,29 @@
         "share": "Comparte ese artículo",
         "more": "Leer más",
         "go_to": "ir a"
+      },
+      "contact": {
+        "title": "¡Contáctame!",
+        "seo_title": "Formulario de contacto",
+        "seo_description": "envía un correo a @flaex_",
+        "seo_keywords": "contacta a @flaex_ to diseño gráfico desarrollo web front-end",
+        "description": "¡Trabajemos juntos! Diseñemos el logotipo de tu empresa o tu marca personal. Implementemos el branding en papelería comercial y en tus redes sociales. Desarrollemos una aplicación web para que vendas tus servicios y productos. Crea tu página web personal con tu portafolio y blog. ¡Consolida tu presencia en internet!",
+        "subtitle": "¡Envíame un mensaje!",
+        "submessage": "Escribe y envíame un mensaje a mi correo personal. Espero poder ayudarte a resolver tus requerimientos.",
+        "form_name": "nombre",
+        "form_mail": "correo electrónico",
+        "form_message": "mensaje",
+        "form_button": "enviar",
+        "made_in": "Este sitio está realizado en:",
+        "dev_with": "Desarrollado con:"
+      },
+      "not_found": {
+        "title": "404: No encontrado",
+        "description": "Intentaste visitar un vínculo que no existe.",
+        "message": "¡Usa el menú para volver al sitio!",
+        "seo_title": "página inexistente",
+        "seo_description": "vista para los vínculos inexistentes en el sitio",
+        "seo_keywords": "contacta @flaex_ to diseño gráfico desarrollo web front-end"
       }
     }
   },

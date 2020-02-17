@@ -29,15 +29,21 @@ const Header = ({ intl: { messages } }) => (
       <header>
         <div>
           <div className="logohead">
-            <Link to={`/${messages.static.lang}/shuffler`} aria-label="Go to the randomizer">
+            <Link
+              to={`/${messages.static.lang}`}
+              aria-label="Go to the randomizer"
+            >
               <Img fluid={data.head.childImageSharp.fluid} />
             </Link>
             <span className="tooltiptext">
-              {messages.static.components.header.faces}
+              {messages.static.components.header.home}
             </span>
           </div>
           <div className="logotag">
-            <Link to={`/${messages.static.lang}/about-me`} aria-label="Go to the bio">
+            <Link
+              to={`/${messages.static.lang}/about-me`}
+              aria-label="Go to the bio"
+            >
               <Img fluid={data.tag.childImageSharp.fluid} />
             </Link>
             <span className="tooltiptext">

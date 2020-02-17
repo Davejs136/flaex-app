@@ -42,7 +42,9 @@ const TypographyPage = ({ intl: { messages } }) => (
           description={
             messages.static.views.portfolio.design.typography.seo_description
           }
-          keywords={messages.static.views.portfolio.design.typography.seo_keywords}
+          keywords={
+            messages.static.views.portfolio.design.typography.seo_keywords
+          }
         />
 
         <h1 className="hidden">
@@ -53,9 +55,11 @@ const TypographyPage = ({ intl: { messages } }) => (
           {data.allStrapiWork.edges.map(document => (
             <li key={document.node.id}>
               <Link
-                to={`/${messages.static.lang}/portfolio/${document.node.category}/${
-                  document.node.subcategory
-                }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
+                to={`/${messages.static.lang}/portfolio/${
+                  document.node.category
+                }/${document.node.subcategory}/${document.node.slug
+                  .replace(/\s+/g, "-")
+                  .toLowerCase()}`}
               >
                 <Img fluid={document.node.image.childImageSharp.fluid} />
                 {messages.works

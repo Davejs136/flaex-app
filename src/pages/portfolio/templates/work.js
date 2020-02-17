@@ -76,7 +76,10 @@ const WorkTemplate = ({ data, intl: { messages } }) => (
                 escapeHtml={false}
               />
             </div>
-            <h4 className="share-title"> {messages.static.views.portfolio.share}:</h4>
+            <h4 className="share-title">
+              {" "}
+              {messages.static.views.portfolio.share}:
+            </h4>
             <ul className="share">
               <li>
                 <PinterestShareButton

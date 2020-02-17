@@ -8,8 +8,10 @@ module.exports = {
   siteMetadata: {
     title: "Portafolio & blog @flaex_ | Freddy Polanía",
     titleTemplate: "%s · @flaex_",
-    description: "Portfolio showcase and blog about graphic design and web tecenologies",
-    keywords: "Logo print web typography design CMS themes front-end web development",
+    description:
+      "Portfolio showcase and blog about graphic design and web tecenologies",
+    keywords:
+      "Logo print web typography design CMS themes front-end web development",
     author: "Freddy Polania",
     siteUrl: "https://flaex.netlify.com",
     image: "/seo-img.jpg",
@@ -50,7 +52,7 @@ module.exports = {
         // supported language
         languages: [`en`, `es`],
         // language file path
-        defaultLanguage: `en`,
+        defaultLanguage: `es`,
         // option to redirect to `/ko` when connecting `/`
         redirect: true,
         query,

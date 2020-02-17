@@ -11,13 +11,13 @@ const BlogPage = ({ intl: { messages } }) => (
   <Layout>
     <StaticQuery
       query={graphql`
-        query BlogTemplate {
+        query BlogTemplate($locale: String) {
           allStrapiArticle {
             edges {
               node {
                 id
                 slug
-                date(formatString: "DD MMMM YYYY")
+                date(formatString: "DD MMMM YYYY", locale: $locale)
                 image {
                   childImageSharp {
                     fluid(maxWidth: 1100) {
@@ -37,27 +37,35 @@ const BlogPage = ({ intl: { messages } }) => (
             description={messages.static.views.blog.seo_description}
             keywords={messages.static.views.blog.seo_keywords}
           />
-          <h1>{messages.static.views.blog.title} </h1>         
+          <h1>{messages.static.views.blog.title}</h1>
+          {console.log(
+            Intl.DateTimeFormat()
+              .resolvedOptions()
+              .locale.slice(0, -3)
+          )}
           <ul className="articles">
             {data.allStrapiArticle.edges.map(document => (
               <li key={document.node.id}>
-                 {console.log(document.node.id.slice(8))}
                 <Link
-                  to={`${messages.static.lang}/blog/${document.node.slug
+                  to={`/${
+                    messages.static.lang
+                  }/blog/${document.node.slug
                     .replace(/\s+/g, "-")
                     .toLowerCase()}`}
                 >
                   <div className="mainImage">
                     <Img fluid={document.node.image.childImageSharp.fluid} />
                   </div>
-                </Link>                
+                </Link>
                 {messages.articles
                   .filter(item => item.id === document.node.id.slice(8))
                   .map(item => (
                     <div key={item.id}>
                       <h2>
                         <Link
-                          to={`${messages.static.lang}/blog/${document.node.slug
+                          to={`/${
+                            messages.static.lang
+                          }/blog/${document.node.slug
                             .replace(/\s+/g, "-")
                             .toLowerCase()}`}
                           aria-label={`${messages.static.views.blog.go_to} ${item.content.title}`}
@@ -73,17 +81,19 @@ const BlogPage = ({ intl: { messages } }) => (
                           .concat("...")}
                         escapeHtml={false}
                       />
-                       <Link
-                          to={`${messages.static.lang}/blog/${document.node.slug
-                            .replace(/\s+/g, "-")
-                            .toLowerCase()}`}
-                          aria-label={`${messages.static.views.blog.go_to} ${item.content.title}`}
-                          className="excerpt-link"
-                        >
-                          {messages.static.views.blog.more} 
-                        </Link>
+                      <Link
+                        to={`/${
+                          messages.static.lang
+                        }/blog/${document.node.slug
+                          .replace(/\s+/g, "-")
+                          .toLowerCase()}`}
+                        aria-label={`${messages.static.views.blog.go_to} ${item.content.title}`}
+                        className="excerpt-link"
+                      >
+                        {messages.static.views.blog.more}
+                      </Link>
                     </div>
-                ))}   
+                  ))}
               </li>
             ))}
           </ul>

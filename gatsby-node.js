@@ -1,4 +1,7 @@
 const path = require(`path`)
+const lang = Intl.DateTimeFormat()
+  .resolvedOptions()
+  .locale.slice(0, -3)
 
 const makeRequest = (graphql, request) =>
   new Promise((resolve, reject) => {
@@ -37,10 +40,11 @@ exports.createPages = ({ actions, graphql }) => {
     // Create pages for each article.
     result.data.allStrapiArticle.edges.forEach(({ node }) => {
       createPage({
-        path: `/blog/${node.slug.replace(/\s+/g, "-").toLowerCase()}`,        
+        path: `/blog/${node.slug.replace(/\s+/g, "-").toLowerCase()}`,
         component: path.resolve(`src/pages/blog/templates/article.js`),
         context: {
           id: node.id,
+          locale: `${lang}-${lang}`,
         },
       })
     })

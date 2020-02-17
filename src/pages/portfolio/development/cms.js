@@ -18,7 +18,7 @@ const CMSPage = ({ intl: { messages } }) => (
         ) {
           edges {
             node {
-              id              
+              id
               category
               subcategory
               slug
@@ -41,7 +41,9 @@ const CMSPage = ({ intl: { messages } }) => (
           description={
             messages.static.views.portfolio.development.cms.seo_description
           }
-          keywords={messages.static.views.portfolio.development.cms.seo_keywords}
+          keywords={
+            messages.static.views.portfolio.development.cms.seo_keywords
+          }
         />
 
         <h1 className="hidden">
@@ -52,9 +54,11 @@ const CMSPage = ({ intl: { messages } }) => (
           {data.allStrapiWork.edges.map(document => (
             <li key={document.node.id}>
               <Link
-                to={`/${messages.static.lang}/portfolio/${document.node.category}/${
-                  document.node.subcategory
-                }/${document.node.slug.replace(/\s+/g, "-").toLowerCase()}`}
+                to={`/${messages.static.lang}/portfolio/${
+                  document.node.category
+                }/${document.node.subcategory}/${document.node.slug
+                  .replace(/\s+/g, "-")
+                  .toLowerCase()}`}
               >
                 <Img fluid={document.node.image.childImageSharp.fluid} />
                 {messages.works
