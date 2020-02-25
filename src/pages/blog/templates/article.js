@@ -30,7 +30,7 @@ const ArticleTemplate = ({ data, intl: { messages } }) => (
           <SEO
             title={item.content.title}
             description={item.content.seo_description}
-            image={data.strapiArticle.image.childImageSharp.fluid.src}
+            image={data.strapiArticle.image.publicURL}
           />
           <div className="navsec">
             <Link
@@ -52,11 +52,19 @@ const ArticleTemplate = ({ data, intl: { messages } }) => (
               </Link>
             </p>
             <div className="mainImage">
-              <Img
-                fluid={data.strapiArticle.image.childImageSharp.fluid}
-                title={item.content.seo_image_title}
-                alt={item.content.seo_image_alt}
-              />
+              {!!data.strapiArticle.image.publicURL &&
+              !!data.strapiArticle.childImageSharp ? (
+                <Img
+                  fluid={data.strapiArticle.image.childImageSharp.fluid}
+                  title={item.content.seo_image_title}
+                  alt={item.content.seo_image_alt}
+                />
+              ) : (
+                <img
+                  src={data.strapiArticle.image.publicURL}
+                  alt={item.content.seo_title}
+                />
+              )}
             </div>
             <div className="two-columns">
               <ReactMarkdown
@@ -114,6 +122,7 @@ export const query = graphql`
             ...GatsbyImageSharpFluid
           }
         }
+        publicURL
       }
       author {
         username

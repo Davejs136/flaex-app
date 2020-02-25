@@ -22,8 +22,9 @@ const BlogPage = ({ intl: { messages } }) => (
                   childImageSharp {
                     fluid(maxWidth: 1100) {
                       ...GatsbyImageSharpFluid
-                    }
+                    }                    
                   }
+                  publicURL
                 }
               }
             }
@@ -46,21 +47,31 @@ const BlogPage = ({ intl: { messages } }) => (
           <ul className="articles">
             {data.allStrapiArticle.edges.map(document => (
               <li key={document.node.id}>
-                <Link
-                  to={`/${
-                    messages.static.lang
-                  }/blog/${document.node.slug
-                    .replace(/\s+/g, "-")
-                    .toLowerCase()}`}
-                >
-                  <div className="mainImage">
-                    <Img fluid={document.node.image.childImageSharp.fluid} />
-                  </div>
-                </Link>
                 {messages.articles
                   .filter(item => item.id === document.node.id.slice(8))
                   .map(item => (
                     <div key={item.id}>
+                      <Link
+                        to={`/${
+                          messages.static.lang
+                        }/blog/${document.node.slug
+                          .replace(/\s+/g, "-")
+                          .toLowerCase()}`}
+                      >
+                        <div className="mainImage">
+                          {!!document.node.image.publicURL && !!document.node.image.childImageSharp ? (
+                            <Img
+                              fluid={document.node.image.childImageSharp.fluid}
+                              alt={item.content.seo_title}
+                            />
+                          ) : (
+                            <img
+                              src={document.node.image.publicURL}
+                              alt={item.content.seo_title}
+                            />
+                          )}
+                        </div>
+                      </Link>
                       <h2>
                         <Link
                           to={`/${
