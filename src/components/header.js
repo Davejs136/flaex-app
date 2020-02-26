@@ -35,9 +35,6 @@ const Header = ({ intl: { messages } }) => (
             >
               <Img fluid={data.head.childImageSharp.fluid} />
             </Link>
-            <span className="tooltiptext">
-              {messages.static.components.header.home}
-            </span>
           </div>
           <div className="logotag">
             <Link
