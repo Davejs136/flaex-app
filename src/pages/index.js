@@ -1,7 +1,6 @@
 import React from "react"
 import Header from "../components/header"
 import Navigation from "../components/navigation"
-import Gifs from "../components/gif"
 import Footer from "../components/footer"
 import { injectIntl } from "gatsby-plugin-intl-graphql"
 import SEO from "../components/seo"
@@ -25,7 +24,6 @@ const IndexPage = ({ intl: { messages } }) => (
     <div className="menu">
       <Header />
       <Navigation />
-      <Gifs />
     </div>
     <Footer />
   </div>
