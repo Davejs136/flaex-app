@@ -1,39 +1,67 @@
-import React, { Component } from "react"
+import React from "react"
+import { StaticQuery, graphql } from "gatsby"
 
-class Faces extends Component {
-  constructor(props) {
-    super(props)
-    this.el = props.el
-    this.path = props.path
-    this.state = {
-      images: props.allImages,
-      time: props.time
-    }
-  }
-
-  // Initialization
-  render() {
-    const { images } = this.state
-    const location = `${this.path}/${images[0]}`
-
-    /* setInterval(() => {
-      if (count === images.length) {
-        count = 0
+const Faces = props => (
+  <StaticQuery
+    query={query}
+    render={({
+      site: {
+        siteMetadata: { siteUrl },
+      },
+    }) => {
+      const { path, allImages } = props
+      const shuffle = array => {
+        let currentIndex = array.length,
+          temporaryValue,
+          randomIndex
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+          // Pick a remaining element...
+          randomIndex = Math.floor(Math.random() * currentIndex)
+          currentIndex -= 1
+          // And swap it with the current element.
+          temporaryValue = array[currentIndex]
+          array[currentIndex] = array[randomIndex]
+          array[randomIndex] = temporaryValue
+        }
+        return array
       }
 
-      img.src = `${path}/${images[count]}`
+      
+      /* const location = (index) =>  */
 
-      container.appendChild(img)
+      function location() {
+        setInterval(() => {
+          let count = 0;
+          let location = `http://localhost:8000/${path}/${shuffle(allImages)[count]}`
+          count++
+  
+          return location
+        }, 1000)
+      }
 
-      count++
-    }, time) */
+      console.log('crazy:', location())
 
-    return (
-      <div>
-        <img src={location}/>
-      </div>
-    )
-  }
-}
+      return (
+        <div style={{ width: "15em" }}>
+          <img src={location} />
+          <img src={location} />
+          <img src={location} />
+          <img src={location} /> 
+        </div>
+      )
+    }}
+  />
+)
 
 export default Faces
+
+const query = graphql`
+  query Faces {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
+  }
+`
