@@ -30,8 +30,28 @@ const IndexPage = ({ intl: { messages } }) => (
      
     </div>
     <Faces
+        id='one'
         path='faces'
         allImages={images}
+        timer={800}
+      />
+    <Faces
+        id='two'
+        path='faces'
+        allImages={images}
+        timer={1000}
+      />
+      <Faces
+        id='three'
+        path='faces'
+        allImages={images}
+        timer={1200}
+      />
+      <Faces
+        id='four'
+        path='faces'
+        allImages={images}
+        timer={1500}
       />
     <Footer />
   </div>
