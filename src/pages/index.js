@@ -13,7 +13,6 @@ import { fas } from "@fortawesome/free-solid-svg-icons"
 // add fas and fab to the library
 library.add(fab, fas)
 
-const images = ['1a.svg', '1b.svg', '1c.svg', '1d.svg']
 
 // Main app page
 const IndexPage = ({ intl: { messages } }) => (
@@ -32,27 +31,8 @@ const IndexPage = ({ intl: { messages } }) => (
     <Faces
         id='one'
         path='faces'
-        allImages={images}
         timer={800}
-      />
-    <Faces
-        id='two'
-        path='faces'
-        allImages={images}
-        timer={1000}
-      />
-      <Faces
-        id='three'
-        path='faces'
-        allImages={images}
-        timer={1200}
-      />
-      <Faces
-        id='four'
-        path='faces'
-        allImages={images}
-        timer={1500}
-      />
+      />   
     <Footer />
   </div>
 )

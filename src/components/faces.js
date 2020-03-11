@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 export default function Faces(props) {
+  const images = ["1a.svg", "1b.svg", "1c.svg", "1d.svg"]
   const [count, setCount] = useState(0)
-  const { id, path, allImages, timer } = props
+  const { id, path, timer } = props
 
   useEffect(() => {
     const timeout = setInterval(() => {
-      if (count < allImages.length - 1) {
+      if (count < images.length - 1) {
         setCount(count + 1)
       } else {
         setCount(0)
@@ -18,15 +19,15 @@ export default function Faces(props) {
     return () => {
       clearTimeout(timeout)
       const img = document.querySelector(`#${id}`)
-      img.src = ''
+      img.src = ""
     }
   }, [count])
 
   useEffect(() => {
     const img = document.querySelector(`#${id}`)
-    const random = shuffle(allImages)[0]
-    
-    if (img.src.includes('localhost')) {
+    const random = shuffle(images)[0]
+
+    if (img.src.includes("localhost")) {
       // Development Host
       img.src = `http://localhost:8000/${path}/${random}`
     } else {
@@ -34,7 +35,6 @@ export default function Faces(props) {
       const location = `${host}/${path}/${random}`
       img.src = location
     }
-    
   })
 
   const shuffle = array => {
@@ -56,7 +56,15 @@ export default function Faces(props) {
 
   return (
     <StaticQuery
-      query={query}
+      query={graphql`
+        query Faces {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+        }
+      `}
       render={({
         site: {
           siteMetadata: { siteUrl },
@@ -65,20 +73,14 @@ export default function Faces(props) {
         const local = "http://localhost:8000"
         return (
           <div style={{ width: "16rem" }}>
-            <img src={process.env.DEPLOY_URL ? siteUrl : local} alt={"image bla" + count} id={id} />
+            <img
+              src={process.env.DEPLOY_URL ? siteUrl : local}
+              alt={"image bla" + count}
+              id={id}
+            />
           </div>
         )
       }}
     />
   )
 }
-
-const query = graphql`
-  query Faces {
-    site {
-      siteMetadata {
-        siteUrl
-      }
-    }
-  }
-`
