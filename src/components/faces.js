@@ -1,86 +1,13 @@
-import React, { useState, useEffect } from "react"
-import { StaticQuery, graphql } from "gatsby"
+import React from "react"
+import ControlFaces from "./controlFaces"
 
-export default function Faces(props) {
-  const images = ["1a.svg", "1b.svg", "1c.svg", "1d.svg"]
-  const [count, setCount] = useState(0)
-  const { id, path, timer } = props
+const Faces = props => (
+  <div>
+    <ControlFaces id="one" path="faces" timer={800} />
+    <ControlFaces id="two" path="faces" timer={1000} />
+    <ControlFaces id="three" path="faces" timer={1200} />
+    <ControlFaces id="four" path="faces" timer={1400} />
+  </div>
+)
 
-  useEffect(() => {
-    const timeout = setInterval(() => {
-      if (count < images.length - 1) {
-        setCount(count + 1)
-      } else {
-        setCount(0)
-      }
-    }, timer)
-
-    // cleanup
-    return () => {
-      clearTimeout(timeout)
-      const img = document.querySelector(`#${id}`)
-      img.src = ""
-    }
-  }, [count])
-
-  useEffect(() => {
-    const img = document.querySelector(`#${id}`)
-    const random = shuffle(images)[0]
-
-    if (img.src.includes("localhost")) {
-      // Development Host
-      img.src = `http://localhost:8000/${path}/${random}`
-    } else {
-      const host = img.src // Production host
-      const location = `${host}/${path}/${random}`
-      img.src = location
-    }
-  })
-
-  const shuffle = array => {
-    let currentIndex = array.length,
-      temporaryValue,
-      randomIndex
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex)
-      currentIndex -= 1
-      // And swap it with the current element.
-      temporaryValue = array[currentIndex]
-      array[currentIndex] = array[randomIndex]
-      array[randomIndex] = temporaryValue
-    }
-    return array
-  }
-
-  return (
-    <StaticQuery
-      query={graphql`
-        query Faces {
-          site {
-            siteMetadata {
-              siteUrl
-            }
-          }
-        }
-      `}
-      render={({
-        site: {
-          siteMetadata: { siteUrl },
-        },
-      }) => {
-        const local = "http://localhost:8000"
-        return (
-          <div style={{ width: "16rem" }}>
-            <img
-              src={process.env.DEPLOY_URL ? siteUrl : local}
-              alt={"image bla" + count}
-              id={id}
-            />
-          </div>
-        )
-      }}
-    />
-  )
-}
+export default Faces
