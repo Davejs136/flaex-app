@@ -25,8 +25,8 @@ const IndexPage = ({ intl: { messages } }) => (
     <div className="menu">
       <Header />
       <Navigation />
-    </div>
-    <Faces />
+      {/* <Faces /> */}
+    </div>    
     <Footer />
   </div>
 )
