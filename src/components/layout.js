@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import HeaderPage from "./headerpage"
 import Navigation from "./navigation"
 import Footer from "./footer"
 import SEO from "../components/seo"
@@ -17,7 +16,6 @@ const Layout = ({ children }) => (
   <div className="page">
     <SEO />
     <div className="menu">
-      <HeaderPage />
       <Navigation />
     </div>
     <main>{children}</main>

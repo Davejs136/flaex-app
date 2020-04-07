@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Header from "./header"
 import { injectIntl } from "gatsby-plugin-intl-graphql"
 
 const activeStyles = {
@@ -17,6 +18,7 @@ const linkStyles = {}
 
 const Navigation = ({ intl: { messages } }) => (
   <nav>
+    <Header />
     <Link
       to={`/${messages.static.lang}/portfolio`}
       activeStyle={activeStyles}

@@ -72,7 +72,7 @@ export default function ControlFaces(props) {
       }) => {
         const local = "http://localhost:8000"
         return (
-          <div style={{ width: "16rem" }}>
+          <div className="faceItem">
             <img
               src={process.env.DEPLOY_URL ? siteUrl : local}
               alt={"image number " + count}

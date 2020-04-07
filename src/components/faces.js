@@ -3,10 +3,10 @@ import ControlFaces from "./controlFaces"
 
 const Faces = props => (
   <div className="faces">
-    <ControlFaces id="one" path="faces" timer={800} />
-    <ControlFaces id="two" path="faces" timer={1000} />
-    <ControlFaces id="three" path="faces" timer={1200} />
-    <ControlFaces id="four" path="faces" timer={1400} />
+    <ControlFaces id="one" path="faces" timer={1000} />
+    <ControlFaces id="two" path="faces" timer={1500} />
+    <ControlFaces id="three" path="faces" timer={2000} />
+    <ControlFaces id="four" path="faces" timer={2500} />
   </div>
 )
 

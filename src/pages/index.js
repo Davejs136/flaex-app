@@ -1,5 +1,5 @@
 import React from "react"
-import Header from "../components/header"
+
 import Navigation from "../components/navigation"
 import Faces from "../components/faces"
 import Footer from "../components/footer"
@@ -22,10 +22,9 @@ const IndexPage = ({ intl: { messages } }) => (
       keywords={messages.static.views.index.seo_keywords}
     />
     <h1 className="hidden">{messages.static.views.index.seo_title}</h1>
-    <div className="menu">
-      <Header />
+    <div className="menu">      
       <Navigation />
-      {/* <Faces /> */}
+      <Faces />
     </div>    
     <Footer />
   </div>
