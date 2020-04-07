@@ -745,9 +745,6 @@ This element renders outside home and page containers
       transform: rotate(-180deg);
     }
   }
-  .menu {
-    display: flex;
-  }
   .two-columns {
     margin-top: 0.3em;
     ul {
@@ -782,10 +779,17 @@ This element renders outside home and page containers
   /* Main navigation home */
   .menu {
     header {
+      width: fit-content;
+      height: fit-content;
       div {
         .logohead,
         .logotag {
           position: relative;
+          a {
+            width: fit-content;
+            height: fit-content;
+            background: transparent;
+          }
           .tooltiptext {
             right: 110%;
             text-align: left;
@@ -1177,6 +1181,7 @@ This element renders outside home and page containers
   .page {
     header {
       div {
+        width: 115px;
         .logotag {
           margin-top: 5.5%;
         }
@@ -1206,23 +1211,16 @@ This element renders outside home and page containers
     .menu {
       width: 85px;
       height: 87vh;
-      flex-direction: column;
       justify-content: center;
       nav {
-        height: 58vh;
-        flex-direction: column;
+        height: 37.5vh;
+        flex-wrap: wrap;
         a {
           width: 85px;
           height: 85px;
           span {
             padding-left: 12%;
           }
-        }
-      }
-      .gifcontainer {
-        overflow-x: hidden;
-        .gifs {
-          width: 200%;
         }
       }
     }
@@ -1233,8 +1231,6 @@ This element renders outside home and page containers
     .menu {
       padding: 1vw;
       width: 100%;
-      header div {
-      }
       nav {
         width: 80vw;
         a {
@@ -1343,7 +1339,7 @@ This element renders outside home and page containers
     header {
       div {
         .logotag {
-          margin-top: 5.5%;
+          margin-top: 1.25vh;
         }
       }
     }
@@ -1371,8 +1367,6 @@ This element renders outside home and page containers
     .menu {
       width: 85px;
       height: 87vh;
-      flex-direction: column;
-      justify-content: center;
       nav {
         a {
           width: 85px;
@@ -1541,8 +1535,10 @@ This element renders outside home and page containers
   }
   .home {
     /* Main navigation home */
+
     .menu {
-      width: 115px;
+      align-items: center;
+      width: 260px;
       height: 92vh;
       nav {
         a {
@@ -1550,6 +1546,15 @@ This element renders outside home and page containers
           line-height: 1.4;
           width: 115px;
           height: 115px;
+        }
+      }
+      .faces {
+        display: flex;  
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 260px;
+        .faceItem {
+          width: 115px;
         }
       }
     }
@@ -2387,11 +2392,7 @@ This element renders outside home and page containers
             padding-left: 13%;
           }
         }
-      }
-      .faces {
-        width: 100%;
-        flex-wrap: nowrap;
-      }
+      }    
     }
     footer {
       p {
