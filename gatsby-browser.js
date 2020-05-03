@@ -20,8 +20,10 @@ export const onServiceWorkerUpdateReady = () => {
 export const onClientEntry = () => {
   window.onload = () => {
     setTimeout(function() {
-      let viewheight = window.visualViewport.height
-      let viewwidth = window.visualViewport.width
+      /* let viewheight = window.visualViewport.height // webkit browsers
+      let viewwidth = window.visualViewport.width // webkit browsers */
+      let viewheight = window.innerHeight
+      let viewwidth = window.innerWidth
       let viewport = document.querySelector("meta[name=viewport]")
       viewport.setAttribute(
         "content",
