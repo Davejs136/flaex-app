@@ -24,7 +24,7 @@ const IndexPage = ({ intl: { messages } }) => (
     <h1 className="hidden">{messages.static.views.index.seo_title}</h1>
     <div className="menu">      
       <Navigation />
-      {/* <Faces /> */}
+      <Faces />
     </div>    
     <Footer />
   </div>

@@ -726,12 +726,22 @@ This element renders outside home and page containers
     display: none;
   }
   /* Main navigation */
-  nav a {
-    font-size: 0.95rem;
-    line-height: 1.35;
-    color: #fff;
-    text-decoration: none;
-    width: 100%;
+  nav {
+    display: flex;
+    justify-content: space-evenly;
+    animation-duration: 0.3s;
+    > a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .bg();
+      box-sizing: border-box;
+      font-size: 0.95rem;
+      line-height: 1.35;
+      color: #fff;
+      text-decoration: none;
+      width: 100%;
+    }
   }
   /* nav a:nth-child(2) {
     transform: rotate(90deg);
@@ -839,17 +849,11 @@ This element renders outside home and page containers
     header {
       animation-duration: 0.1s;
     }
-    nav {
+    .faces {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-evenly;
-      animation-duration: 0.3s;
-    }
-    nav a {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      .bg();
-      box-sizing: border-box;
+      width: 100%;
     }
   }
   footer {
@@ -907,17 +911,6 @@ This element renders outside home and page containers
             }
           }
         }
-      }
-    }
-    nav {
-      display: flex;
-      justify-content: space-evenly;
-      a {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        .bg();
-        box-sizing: border-box;
       }
     }
   }
@@ -1008,6 +1001,7 @@ This element renders outside home and page containers
     .avatar {
       margin-top: 2%;
       margin-bottom: 2%;
+  
     }
   }
   .skills {
@@ -1179,14 +1173,6 @@ This element renders outside home and page containers
   /* Main views styles */
   .home,
   .page {
-    header {
-      div {
-        width: 27vw;
-        .logotag {
-          margin-top: 6.5%;
-        }
-      }
-    }
     footer {
       p {
         margin-bottom: 0;
@@ -1217,6 +1203,14 @@ This element renders outside home and page containers
       nav {
         height: 32.5vh;
         flex-wrap: wrap;
+        header {
+          div {
+            width: 27vw;
+            .logotag {
+              margin-top: 6.5%;
+            }
+          }
+        }
         a {
           width: 27vw;
           height: 27vw;
@@ -1226,10 +1220,6 @@ This element renders outside home and page containers
         }
       }
       .faces {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        width: 100%;
         .faceItem {
           width: 27vw;
         }
@@ -1240,11 +1230,22 @@ This element renders outside home and page containers
   .page {
     /* Main navigation internal links */
     .menu {
-      padding: 1vw;
+      padding: 1vh;
       width: 100%;
       nav {
-        width: 80vw;
-        a {
+        justify-content: space-between;
+        header {
+          div {
+            width: 23vw;
+            .logotag {
+              margin-top: 6.5%;
+            }
+          }
+        }
+        > a {
+          width: 23vw;
+          height: 23vw;
+      
           span {
             padding-left: 12%;
           }
@@ -1305,7 +1306,7 @@ This element renders outside home and page containers
     }
     .profile {
       .avatar {
-        width: 98px;
+        width: 23vw;
       }
     }
     /* Blog */
@@ -1356,7 +1357,7 @@ This element renders outside home and page containers
       height: 94.5vh;
       header {
         div {
-          width: 32vw;
+          width: 32vw !important;
         }
       }
       nav {
@@ -1375,15 +1376,7 @@ This element renders outside home and page containers
       }
     }
   }
-  .page {
-    .menu {
-      header div {
-      }
-      nav {
-        a {
-        }
-      }
-    }
+  .page {   
     /* Blog styles */
     .articles {
       li {
@@ -1458,34 +1451,17 @@ This element renders outside home and page containers
       }
     }
   }
-  .page {
-    .menu {
-      header div {
-      }
-      nav {
-        width: 70vw;
-      }
-    }
-  }
 }
 
-@media only screen and (min-device-width: 414px) and (min-device-height: 896px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+@media only screen and (min-device-width: 411px) and (min-device-height: 823px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
   .home {
     /* Main navigation home */
     .menu {
       nav {
-        height: 31vh;
+        height: 34vh;
       }
     }
-  }
-  .page {
-    .menu {
-      header div {
-      }
-      nav {
-      }
-    }
-  }
+  }  
 }
 
 @media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
@@ -1501,19 +1477,21 @@ This element renders outside home and page containers
         padding: 0.15em 0.2em 0 0.2em;
         a {
           font-size: 0.8rem;
-        }
+        }    
       }
     }
   }
   .home {
     /* Main navigation home */
     .menu {
-      width: 47vw;
+      width: 46vw;
       height: 95vh;
       nav {
-        height: 33.25vh;
-        header div {
-          width: 21vw;
+        height: 33vh;
+        header {
+          div {
+            width: 21vw !important;
+          }
         }
         a {
           width: 21vw;
@@ -1522,7 +1500,6 @@ This element renders outside home and page containers
         }
       }
       .faces {
-        height: 19vh;
         .faceItem {
           width: 21vw;
         }
@@ -1531,12 +1508,17 @@ This element renders outside home and page containers
   }
   .page {
     .menu {
-      header div {
-      }
       nav {
-        width: 54vw;
+        width: 67vw;
+        header {
+          div {
+            width: 16vw !important;
+          }
+        }
         a {
-          font-size: 1.2rem;
+          width: 16vw;
+          height: 16vw;
+          font-size: 1.1rem;
         }
       }
     }
@@ -1578,8 +1560,7 @@ This element renders outside home and page containers
     .profile {
       margin-bottom: 1.5%;
       .avatar {
-        width: 122px;
-        height: 122px;
+        width: 16vw;
       }
     }
     .skills {
@@ -1743,11 +1724,10 @@ This element renders outside home and page containers
       }
       nav {
         width: 85vw;
+        justify-content: space-between;
         > a {
           width: 15vw;
           height: 15vw;
-          margin-left: 1.25vw;
-          box-sizing: border-box;
           span {
             padding-left: 12%;
           }
@@ -1780,21 +1760,30 @@ This element renders outside home and page containers
       width: 78vw;
       height: 87vh;
       display: flex;
-      flex-direction: row;
-      align-items: center;
+      flex-direction: column;
+      justify-content: center;
       nav {
-        .faces {
-          .faceItem {
-            width: 25%;
-          }
+        width: 100%;
+      }
+      .faces {
+        width: 100%;
+        padding-top: 1.25vw;
+        justify-content: space-between;
+        .faceItem {
+          width: 15vw;
         }
       }
-      
     }
   }
   /* Page styles */
   .page {
     /* Main navigation internal links */
+    .menu {
+      width: 100vw;
+      nav {
+        justify-content: left;
+      }
+    }
     main {
       padding: 1vw;
     }
@@ -1898,34 +1887,15 @@ This element renders outside home and page containers
 @media only screen and (min-device-width: 568px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
   .home,
   .page {
+    .menu {
+      width: 64vw;
+    }
     footer {
       p {
         padding-top: 0.5em;
       }
       .links div a {
         font-size: 0.525rem;
-      }
-    }
-  }
-  .home {
-    /* Main navigation home */
-    .menu {
-      width: 64vw;
-      header div {
-      }
-      nav {
-        width: 60vw;
-        a {
-        }
-      }
-    }
-  }
-  .page {
-    /* Main navigation home */
-    .menu {
-      width: 70vw;      
-      nav {
-        width: 60vw;        
       }
     }
   }
@@ -1936,27 +1906,9 @@ This element renders outside home and page containers
     /* Main navigation home */
     .menu {
       width: 65vw;
-      header div {
-      }
-      nav {
-        width: 60vw;
-        a {
-        }
-      }
     }
   }
   .page {
-    /* Main navigation home */
-    .menu {
-      width: 53vw;
-      header div {
-      }
-      nav {
-        width: 47.5vw;
-        a {
-        }
-      }
-    }
     /* Blog */
     .articles {
       li {
@@ -1977,50 +1929,7 @@ This element renders outside home and page containers
   .home {
     /* Main navigation home */
     .menu {
-      width: 59vw;
-      header div {
-      }
-    }
-  }
-  .page {
-    /* Main navigation home */
-    .menu {
-      width: 53vw;
-      header div {
-      }
-      nav {
-        width: 47.5vw;
-        a {
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (min-device-width: 812px) and (min-device-height: 375px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
-  .home {
-    /* Main navigation home */
-    .menu {
-      width: 56vw;
-      header div {
-      }
-      nav {
-        a {
-        }
-      }
-    }
-  }
-  .page {
-    /* Main navigation home */
-    .menu {
-      width: 53vw;
-      header div {
-      }
-      nav {
-        width: 38vw;
-        a {
-        }
-      }
+      width: 63.5vw;
     }
   }
 }
@@ -2039,12 +1948,6 @@ This element renders outside home and page containers
     /* Main navigation home */
     .menu {
       width: 54vw;
-      header div {
-      }
-      nav {
-        a {
-        }
-      }
     }
   }
   .page {
@@ -2058,13 +1961,8 @@ This element renders outside home and page containers
     }
     /* Main navigation home */
     .menu {
-      width: 53vw;
-      header div {
-      }
       nav {
         width: 34vw;
-        a {
-        }
       }
     }
     /* Portfolio */
@@ -2171,8 +2069,6 @@ This element renders outside home and page containers
     /* Main navigation home */
     .menu {
       width: 54vw;
-      header div {
-      }
       nav {
         a {
           font-size: 1.2rem;
@@ -2183,9 +2079,6 @@ This element renders outside home and page containers
   .page {
     /* Main navigation home */
     .menu {
-      width: 44vw;
-      header div {
-      }
       nav {
         width: 34vw;
         a {
